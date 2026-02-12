@@ -38,7 +38,7 @@ header h1 {
     font-size: 3rem;
     margin-bottom: 10px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    color: #ffd166; /* Warm accent color that works with many palettes */
+    color: #ffffff; /* Changed to white */
 }
 
 header p {

@@ -1,70 +1,199 @@
-# Kuhlshit.com Website - README
+# Kuhlshit.com - React Revamp
 
 ## Project Overview
-This is the welcome page for Kuhlshit.com, a website featuring local content including podcasts, music, and community discussions.
+
+A modern React-based platform for discovering musicians, comedy acts, and community events. Built with a "dark-mode-only" industrial aesthetic inspired by Al's Spirits & Music.
+
+## Architecture
+
+### Tech Stack
+- **React 18** - UI framework
+- **React Router v6** - Client-side routing
+- **Vite** - Build tool and dev server
+- **CSS3** - Custom styling with CSS variables
+
+### Project Structure
+
+```
+kuhl-shit/
+├── public/
+│   ├── resources/
+│   │   └── placeholder-artist.svg
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx          # Navigation header
+│   │   ├── Footer.jsx          # Site footer
+│   │   ├── ArtistCard.jsx      # Artist preview card
+│   │   ├── SearchBar.jsx       # Search input component
+│   │   ├── TrinityPlayer.jsx   # Video player for Still sessions
+│   │   └── VibeTag.jsx         # Tag display component
+│   ├── pages/
+│   │   ├── HomePage.jsx        # Landing page with hero
+│   │   ├── ArtistsPage.jsx     # Artist listing with filters
+│   │   ├── ArtistDetailPage.jsx # Individual artist page
+│   │   ├── ComedyPage.jsx      # Comedy portal
+│   │   ├── PorchFestPage.jsx   # Event calendar
+│   │   ├── PorchTalkPage.jsx   # YouTube integration
+│   │   └── SearchPage.jsx      # Tag-first search engine
+│   ├── data/
+│   │   └── data.json           # Centralized data store
+│   ├── App.jsx                 # Main app component
+│   ├── main.jsx                # Entry point
+│   ├── index.css               # Global styles
+│   └── App.css                 # App-specific styles
+├── index.html
+├── package.json
+└── vite.config.js
+```
 
 ## Features
-1. **Porch Talk** - Engaging conversations and community discussions
-2. **Closed on Sundays** - Podcast/Youtube featuring musicians playing 3-4 song sets
-3. **Al's Spirits and Music** - Experience the finest spirits paired with great music selections
 
-## Design Theme
-The website features a modern dark theme with the following characteristics:
-- Dark gradient background (#1a1a2e to #16213e)
-- Dark card backgrounds (#1e1e2e) with light text for readability
-- Blue accent colors for headings (#4cc9f0)
-- Responsive design that works on both desktop and mobile devices
+### Phase 1: Infrastructure ✅
+- **Data Decoupling**: All artist info in centralized `data.json`
+- **Dynamic Routing**: Single artist template generates pages on-the-fly
+- **Easy Artist Addition**: Add new artists in 30 seconds via JSON
 
-## Recent Changes Made
+### Phase 2: Still UI ✅
+- **Trinity Player**: Custom video layout showing all three segments (Electric → Interview → Acoustic)
+- **PorchTalk Integration**: Deep dive section on every artist page
 
-### Content Updates
-- Added "Welcome You" heading at the top of the page
-- Updated feature names and descriptions:
-  - "Porch Talk" with description about community discussions
-  - "Closed on Sundays" with description about the podcast featuring musicians
-  - "Al's Spirits and Music" with description about spirits and music
-- Replaced "Get Started" button with "Coming Soon" button
-- Added image support for the "Porch Talk" feature (porchtalk.jpg)
-- Added image support for the "Closed on Sundays" feature (closedonsundays.jpg)
-- Created a dedicated page for the "Porch Talk" podcast with Spotify embed
-- Made the "Porch Talk" feature clickable, linking to the dedicated podcast page
-- Added placeholder for future episode listing functionality with technical notes on Spotify API integration
-- Added placeholder for YouTube video integration with technical notes on YouTube Data API implementation
-- Added instructions on how to find the YouTube channel ID for @porchtalk_101
+### Phase 3: Vibe Engine ✅
+- **Atmospheric Tagging**: Tags like #Gritty, #Soulful, #Rough-In-The-Middle, #LateNight
+- **Tag-First Search**: Search bar prioritizes vibe matching over exact names
+- **Minimalist UI**: Center-stage search bar
 
-### Design Updates
-- Implemented a complete dark theme across the entire website
-- Changed body background to dark gradient (#1a1a2e to #16213e)
-- Updated container background to dark color (#0f0f1e)
-- Modified header to use darker gradient (#0f3460 to #1a1a2e) with white text
-- Updated feature cards to have dark background (#1e1e2e) with light text
-- Changed text colors to lighter shades (#e0e0e0, #c0c0c0) for better readability
-- Adjusted footer to match the dark theme (#0a0a16 background)
-- Added brightness filter to images in feature cards for better integration with dark theme
-- Ensured all color combinations provide good contrast for readability
+### Phase 4: Expansion ✅
+- **Comedy Portal**: "Still Funny" section with Set → Interview → Story format
+- **PorchFest Hub**: Dynamic event calendar with vibe-based lineup display
 
-### Technical Details
-- HTML file: index.html
-- CSS file: resources/index.css
-- Image file: resources/porchtalk.jpg (for the Porch Talk feature)
-- Responsive design using CSS Flexbox and media queries
-- Modern CSS features including gradients, shadows, and transitions
+## Design Philosophy
 
-## File Structure
-```
-Kuhl Shit/
-├── index.html          # Main HTML file
-├── resources/
-│   ├── index.css       # Stylesheet
-│   └── porchtalk.jpg   # Feature image
-└── README.md           # This file
+### Look & Feel
+- **Dark Mode Only**: Industrial grays, blacks, wood-grain textures
+- **Raw Over Polished**: High-res photography with clean, gritty UI
+- **Digital Front Porch**: Welcoming, authentic, community-focused
+
+### Color Palette
+```css
+--color-bg-primary: #121212      /* Deep black */
+--color-bg-secondary: #1a1a1a    /* Charcoal */
+--color-accent-primary: #d48c29  /* Whiskey amber */
+--color-text-primary: #e8dcc4    /* Warm cream */
 ```
 
-## How to View
-Open the index.html file in any modern web browser to view the welcome page.
+## Getting Started
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Opens at `http://localhost:3000`
+
+### Build
+
+```bash
+npm run build
+```
+
+Output in `dist/` directory
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+## Data Schema
+
+### Artist Object
+```json
+{
+  "id": "artist-001",
+  "name": "Artist Name",
+  "location": "City, State",
+  "bio": "Artist biography",
+  "imageUrl": "/path/to/image.jpg",
+  "thumbnailUrl": "/path/to/thumbnail.jpg",
+  "vibeTags": ["Gritty", "Soulful", "LateNight"],
+  "still": {
+    "electricSet": { "videoId": "youtube-id", "title": "...", "duration": "MM:SS" },
+    "interview": { "videoId": "youtube-id", "title": "...", "duration": "MM:SS" },
+    "acousticCloser": { "videoId": "youtube-id", "title": "...", "duration": "MM:SS" }
+  },
+  "porchTalk": {
+    "url": "https://youtube.com/...",
+    "episodeId": "PT-001",
+    "title": "...",
+    "description": "..."
+  },
+  "musicLinks": {
+    "spotify": "https://...",
+    "appleMusic": "https://...",
+    "youtube": "https://..."
+  },
+  "socialLinks": {
+    "instagram": "https://...",
+    "twitter": "https://...",
+    "facebook": "https://..."
+  },
+  "featured": true,
+  "publishDate": "2026-01-15"
+}
+```
+
+## Adding New Artists
+
+1. Open `src/data/data.json`
+2. Add new artist object to the `artists` array
+3. Include all required fields (see schema above)
+4. Save - changes reflect immediately in dev mode
+
+**No code changes needed!**
+
+## Routes
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home page with hero and featured content |
+| `/artists` | Browse all artists with tag filters |
+| `/artists/:id` | Individual artist page with Trinity Player |
+| `/comedy` | Comedy portal (Still Funny) |
+| `/porchfest` | Event calendar |
+| `/porch-talk` | YouTube episode browser |
+| `/search` | Advanced search with vibe tags |
+
+## YouTube Integration
+
+The app integrates with YouTube Data API for:
+- PorchTalk episode listing
+- Still session videos
+- Comedy sets
+
+API Key is stored in `PorchTalkPage.jsx` (should be moved to environment variables for production).
 
 ## Future Enhancements
-- Add more interactive elements
-- Implement additional pages for each feature
-- Add video/audio player for the podcast content
-- Include social media integration
+
+- [ ] Migrate to Supabase/Firebase for dynamic data
+- [ ] User authentication for artist submissions
+- [ ] Admin dashboard for content management
+- [ ] Advanced analytics
+- [ ] Social sharing functionality
+- [ ] Newsletter integration
+- [ ] Merchandise store
+
+## License
+
+ISC
+
+---
+
+**Built with ❤️ for the Kuhlshit.com community**

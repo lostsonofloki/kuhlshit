@@ -1,0 +1,204 @@
+/* Global CSS Variables - Dark Industrial Theme */
+:root {
+  /* Primary Colors */
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #1a1a1a;
+  --color-bg-tertiary: #242424;
+  --color-bg-card: #1e1e1e;
+
+  /* Text Colors */
+  --color-text-primary: #e8dcc4;
+  --color-text-secondary: #c9b896;
+  --color-text-muted: #8a7f6d;
+
+  /* Accent Colors */
+  --color-accent-primary: #d48c29;
+  --color-accent-secondary: #b5751e;
+  --color-accent-hover: #e09a3a;
+
+  /* Industrial Grays */
+  --color-gray-dark: #2a2a2a;
+  --color-gray-medium: #3a3a3a;
+  --color-gray-light: #4a4a4a;
+
+  /* Wood Tones */
+  --color-wood-dark: #3c3228;
+  --color-wood-medium: #4a3f35;
+  --color-wood-light: #5c4f42;
+
+  /* Shadows & Borders */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 4px 12px rgba(212, 140, 41, 0.3);
+
+  --border-color: rgba(212, 140, 41, 0.2);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+
+  /* Typography */
+  --font-family-heading: 'Permanent Marker', cursive, sans-serif;
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 50%, var(--color-wood-dark) 100%);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+/* Typography - Mobile First */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-secondary);
+}
+
+a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-family-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  padding: 0 var(--spacing-md);
+}
+
+.text-accent {
+  color: var(--color-accent-primary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-primary);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+  .main-content {
+    padding: var(--spacing-xl);
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+  h3 { font-size: 1.5rem; }
+
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,992 @@
+[
+  {
+    "id": "artist-001",
+    "name": "The Stifftones",
+    "location": "Columbus, MS",
+    "bio": "The Stifftones is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/the-stifftones.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/the-stifftones-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": true,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-002",
+    "name": "Fire Camino",
+    "location": "Columbus, MS",
+    "bio": "Fire Camino is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/fire-camino.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/fire-camino-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": true,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-003",
+    "name": "Katie Burkhardt",
+    "location": "Columbus, MS",
+    "bio": "Katie Burkhardt is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/katie-burkhardt.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/katie-burkhardt-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": true,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-004",
+    "name": "Elliot Devaughn",
+    "location": "Columbus, MS",
+    "bio": "Elliot Devaughn is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/elliot-devaughn.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/elliot-devaughn-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": true,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-005",
+    "name": "Phillip Savell",
+    "location": "Columbus, MS",
+    "bio": "Phillip Savell is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/phillip-savell.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/phillip-savell-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": true,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-006",
+    "name": "The Wright Moves",
+    "location": "Columbus, MS",
+    "bio": "The Wright Moves is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/the-wright-moves.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/the-wright-moves-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": true,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-007",
+    "name": "Honey Boy and Boots",
+    "location": "Columbus, MS",
+    "bio": "Honey Boy and Boots is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/honey-boy-and-boots.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/honey-boy-and-boots-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-008",
+    "name": "Hayden Hunter & The Yearly Trials",
+    "location": "Columbus, MS",
+    "bio": "Hayden Hunter & The Yearly Trials is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/hayden-hunter-the-yearly-trials.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/hayden-hunter-the-yearly-trials-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-009",
+    "name": "Camm Lewis",
+    "location": "Columbus, MS",
+    "bio": "Camm Lewis is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/camm-lewis.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/camm-lewis-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-010",
+    "name": "Taylor Hollingsworth",
+    "location": "Columbus, MS",
+    "bio": "Taylor Hollingsworth is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/taylor-hollingsworth.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/taylor-hollingsworth-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-011",
+    "name": "Will Stewart",
+    "location": "Columbus, MS",
+    "bio": "Will Stewart is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/will-stewart.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/will-stewart-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-012",
+    "name": "B.B. Palmer",
+    "location": "Columbus, MS",
+    "bio": "B.B. Palmer is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/b-b-palmer.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/b-b-palmer-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-013",
+    "name": "Shake It Like a Caveman",
+    "location": "Columbus, MS",
+    "bio": "Shake It Like a Caveman is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/shake-it-like-a-caveman.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/shake-it-like-a-caveman-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-014",
+    "name": "Gordon Licciardi",
+    "location": "Columbus, MS",
+    "bio": "Gordon Licciardi is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/gordon-licciardi.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/gordon-licciardi-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-015",
+    "name": "Ritch Henderson",
+    "location": "Columbus, MS",
+    "bio": "Ritch Henderson is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/ritch-henderson.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/ritch-henderson-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-016",
+    "name": "Ming Donkey",
+    "location": "Columbus, MS",
+    "bio": "Ming Donkey is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/ming-donkey.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/ming-donkey-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-017",
+    "name": "Jonny Hollis",
+    "location": "Columbus, MS",
+    "bio": "Jonny Hollis is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/jonny-hollis.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/jonny-hollis-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-018",
+    "name": "The Kites",
+    "location": "Columbus, MS",
+    "bio": "The Kites is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/the-kites.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/the-kites-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-019",
+    "name": "Haysop",
+    "location": "Columbus, MS",
+    "bio": "Haysop is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/haysop.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/haysop-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-020",
+    "name": "J.D. Spencer",
+    "location": "Columbus, MS",
+    "bio": "J.D. Spencer is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/j-d-spencer.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/j-d-spencer-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-021",
+    "name": "Tyler Tisdale",
+    "location": "Columbus, MS",
+    "bio": "Tyler Tisdale is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/tyler-tisdale.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/tyler-tisdale-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  },
+  {
+    "id": "artist-022",
+    "name": "Brad & Wes",
+    "location": "Columbus, MS",
+    "bio": "Brad & Wes is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
+    "imageUrl": "/resources/artists/brad-wes.jpg",
+    "thumbnailUrl": "/resources/artists/thumbs/brad-wes-thumb.jpg",
+    "vibeTags": [],
+    "still": {
+      "set": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "interview": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      },
+      "story": {
+        "videoId": "",
+        "title": "",
+        "duration": ""
+      }
+    },
+    "porchTalk": {
+      "url": "",
+      "episodeId": "",
+      "title": "",
+      "description": ""
+    },
+    "socialLinks": {
+      "instagram": "",
+      "website": "",
+      "twitter": "",
+      "facebook": ""
+    },
+    "musicLinks": {
+      "spotify": "",
+      "appleMusic": "",
+      "youtube": ""
+    },
+    "featured": false,
+    "publishDate": "2026-03-30"
+  }
+]

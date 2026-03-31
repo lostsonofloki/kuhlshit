@@ -116,10 +116,10 @@ function HomePage() {
               <Link key={artist.id} to={`/porchfest/artists/${artist.id}`} className="artist-card">
                 <div className="artist-card-image">
                   <img
-                    src={artist.imageUrl || '/resources/placeholder-artist.jpg'}
+                    src={artist.imageUrl || '/resources/placeholder-artist.svg'}
                     alt={artist.name}
                     onError={(e) => {
-                      e.target.src = '/resources/placeholder-artist.jpg'
+                      e.target.src = '/resources/placeholder-artist.svg'
                     }}
                   />
                   <div className="artist-card-overlay">

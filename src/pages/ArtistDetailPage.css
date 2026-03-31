@@ -1,0 +1,328 @@
+.artist-detail-page {
+  width: 100%;
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-muted);
+}
+
+/* Artist Header - Mobile First */
+.artist-header {
+  position: relative;
+  min-height: 40vh;
+  margin-bottom: var(--spacing-xl);
+}
+
+.artist-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.artist-header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.artist-header-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, var(--color-bg-primary) 100%);
+}
+
+.artist-header-content {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.artist-header-content h1 {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.artist-location {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Artist Content - Mobile First */
+.artist-content {
+  padding: 0 var(--spacing-md) var(--spacing-2xl);
+}
+
+.artist-bio {
+  margin-bottom: var(--spacing-xl);
+}
+
+.artist-bio h2 {
+  font-size: 1.25rem;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.artist-bio p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.still-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.porch-talk-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.porch-talk-section h2 {
+  font-size: 1.25rem;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.porch-talk-card {
+  background: var(--color-bg-card);
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.porch-talk-content h3 {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.porch-talk-content p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+.porch-talk-content .btn {
+  width: 100%;
+}
+
+.porch-talk-icon {
+  display: flex;
+  justify-content: center;
+  color: var(--color-accent-primary);
+}
+
+.music-links-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.music-links-section h2 {
+  font-size: 1.25rem;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.music-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.music-link {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg-tertiary);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
+}
+
+.music-link:hover {
+  background: var(--color-bg-secondary);
+  border-color: var(--color-accent-primary);
+}
+
+.music-link svg {
+  flex-shrink: 0;
+}
+
+.social-links-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.social-links-section h2 {
+  font-size: 1.25rem;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg-tertiary);
+  border-radius: 50%;
+  color: var(--color-accent-primary);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
+}
+
+.social-link:hover {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  transform: scale(1.1);
+}
+
+.related-artists {
+  margin-bottom: var(--spacing-xl);
+}
+
+.related-artists h2 {
+  font-size: 1.25rem;
+  color: var(--color-accent-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.related-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.related-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--border-radius-md);
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+}
+
+.related-card h4 {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.3;
+}
+
+.back-link-container {
+  text-align: center;
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.back-link {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  transition: all var(--transition-normal);
+}
+
+.back-link:hover {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .artist-header-content {
+    padding: var(--spacing-2xl);
+  }
+
+  .artist-header-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .artist-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl) var(--spacing-2xl);
+  }
+
+  .artist-bio h2,
+  .porch-talk-section h2,
+  .music-links-section h2,
+  .social-links-section h2,
+  .related-artists h2 {
+    font-size: 1.5rem;
+  }
+
+  .porch-talk-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .porch-talk-content {
+    flex: 1;
+  }
+
+  .porch-talk-content .btn {
+    width: auto;
+  }
+
+  .music-links {
+    flex-direction: row;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .artist-header {
+    min-height: 50vh;
+  }
+
+  .artist-header-content {
+    min-height: 50vh;
+  }
+
+  .artist-header-content h1 {
+    font-size: 3rem;
+  }
+
+  .related-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+}

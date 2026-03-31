@@ -1,139 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="Welcome to Kuhlshit.com - Your premier destination for some really kuhl shit!">
-    <title>Welcome to Kuhlshit.com - Updated</title>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kuhlshit.com - Your premier destination for some really kuhl shit" />
+    <title>Kuhlshit.com</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="resources/index.css">
-    <style>
-        /* Animation for the main heading */
-        header h1 {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.03);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        /* Hover effects for feature cards */
-        .feature-card {
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(76, 201, 240, 0.5);
-        }
-
-        /* Hover effect for the CTA button */
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255, 75, 43, 0.8);
-        }
-
-        /* Floating elements for visual interest */
-        .floating-element {
-            position: absolute;
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 10%;
-            left: 5%;
-            font-size: 4rem;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 20%;
-            right: 7%;
-            font-size: 3rem;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 15%;
-            left: 10%;
-            font-size: 5rem;
-            animation-delay: 4s;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0) rotate(0deg);
-            }
-            50% {
-                transform: translateY(-20px) rotate(10deg);
-            }
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Floating decorative elements -->
-        <div class="floating-element">❝</div>
-        <div class="floating-element">♫</div>
-        <div class="floating-element">❞</div>
-        
-        <header>
-            <h1>Welcome You to Kuhlshit.com</h1>
-            <p>Pull up a chair for Porch Talk, Closed on Sundays, Al's Spirits & Music, PorchFest, and plenty of other kuhl shit</p>
-            <img src="resources/Abs.jpg" alt="Kuhlshit Logo" style="max-width: 400px; height: auto; margin: 0 auto 20px; display: block;">
-            <p><a href="https://www.abepartridge.com/" target="_blank" style="color: #D48C29; text-decoration: none;">Artwork by <span style="color: #D48C29;">Abe Partridge</span></a></p>
-        </header>
-        <main>
-            <div class="features">
-                <div class="feature-card">
-                    <a href="porch-talk.html" class="feature-link">
-                        <h2>Porch Talk</h2>
-                        <img src="resources/porchtalk.jpg" alt="Porch Talk" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
-                        <p>Join us for engaging conversations and community discussions.</p>
-                    </a>
-                </div>
-                <div class="feature-card">
-                    <a href="closed-on-sundays.html" class="feature-link">
-                        <h2>Closed on Sundays</h2>
-                        <img src="resources/Closedonsundays.jpg" alt="Closed on Sundays" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
-                        <p>Our podcast/Youtube featuring musicians playing 3-4 song sets.</p>
-                    </a>
-                </div>
-                <div class="feature-card">
-                    <a href="https://maps.app.goo.gl/qMW6bnq8JXDDFCx26" target="_blank" class="feature-link">
-                        <h2>Al's Spirits and Music</h2>
-                        <img src="resources/als.jpg" alt="Al's Spirits and Music" style="width: 100%; height: auto; border-radius: 8px; margin-top: 10px;">
-                        <p>Experience the finest spirits paired with great music selections.</p>
-                    </a>
-                </div>
-            </div>
-            <div class="cta-section">
-                <button class="cta-button">Coming Soon</button>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2026 Kuhlshit.com. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
-"" 

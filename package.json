@@ -1,0 +1,41 @@
+{
+  "name": "kuhl-shit",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "Kuhlshit.com - Your premier destination for some really kuhl shit",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lostsonofloki/kuhlshit.github.io.git"
+  },
+  "keywords": [
+    "music",
+    "podcast",
+    "porchfest",
+    "interviews"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lostsonofloki/kuhlshit.github.io/issues"
+  },
+  "homepage": "https://github.com/lostsonofloki/kuhlshit.github.io#readme",
+  "dependencies": {
+    "playwright": "^1.58.2",
+    "playwright-extra": "^4.3.6",
+    "playwright-extra-plugin-stealth": "^0.0.1",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.0"
+  }
+}

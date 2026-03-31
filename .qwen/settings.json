@@ -12,7 +12,9 @@
       "Bash(findstr *)",
       "Bash(mkdir *)",
       "Bash(powershell *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   },
   "$version": 3

@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './ClosedOnSundays.css'
 
-const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || '';
-const PLAYLIST_ID = import.meta.env.VITE_YOUTUBE_PLAYLIST_ID || 'PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek';
+// Check for VITE_ prefix (Vite standard) or plain name (Vercel import)
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || import.meta.env.YOUTUBE_API_KEY || '';
+const PLAYLIST_ID = import.meta.env.VITE_YOUTUBE_PLAYLIST_ID || import.meta.env.YOUTUBE_PLAYLIST_ID || 'PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek';
 
 function ClosedOnSundaysPage() {
   const [episodes, setEpisodes] = useState([])

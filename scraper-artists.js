@@ -42,8 +42,13 @@ const porchFestArtists = [
 ];
 
 // YouTube playlist for Closed on Sundays
-const YOUTUBE_PLAYLIST_ID = 'PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek';
-const YOUTUBE_API_KEY = 'AIzaSyBzicLYfHpJf234Vb5rIf--lRKdQoO4YNs';
+const YOUTUBE_PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID || 'PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek';
+const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY || '';
+
+if (!YOUTUBE_API_KEY) {
+  console.error('❌ YOUTUBE_API_KEY not found. Please create a .env file with YOUTUBE_API_KEY=your_key_here');
+  process.exit(1);
+}
 
 async function fetchYouTubeArtists() {
   console.log('📺 Fetching artists from YouTube playlist...');

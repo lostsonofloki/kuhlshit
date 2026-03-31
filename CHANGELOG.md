@@ -1,0 +1,197 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [2.0.0] - 2026-03-31
+
+### 🎉 Major Features
+
+#### Artist Management
+- ✅ Added 22+ artist profiles with photos, bios, and social links
+- ✅ Created Featured Artists page (`/porchfest/artists`)
+- ✅ Implemented artist detail pages (`/porchfest/artists/:id`)
+- ✅ Added hourly rotating featured artists on homepage
+- ✅ Individual artist pages with:
+  - Full biography
+  - Social media links (Instagram, Facebook, Twitter/X, TikTok)
+  - Music streaming links (Spotify, Apple Music, YouTube, Bandcamp, SoundCloud)
+  - Closed on Sundays video performances
+  - Performance day information
+
+#### Artists Added
+**Friday Lineup:**
+- The Stifftones
+- Fire Camino
+- Katie Burkhardt
+- Elliot Devaughn
+- Phillip Savell
+- The Wright Moves
+
+**Saturday Lineup:**
+- Honey Boy and Boots
+- Hayden Hunter & The Yearly Trials
+- Camm Lewis
+- Taylor Hollingsworth
+- Will Stewart
+- B.B. Palmer
+- Shake It Like a Caveman
+- Gordon Licciardi
+- Ritch Henderson
+
+**Sunday Lineup:**
+- Ming Donkey
+- Jonny Hollis
+- The Kites
+- Haysop
+- J.D. Spencer
+- Tyler Tisdale
+- Brad & Wes
+
+#### Mobile-First Design
+- ✅ Implemented mobile-first responsive CSS
+- ✅ Added hamburger menu for mobile navigation
+- ✅ Animated slide-in mobile menu with staggered animations
+- ✅ Responsive grids for all content sections
+- ✅ Touch-friendly buttons and navigation
+
+#### Closed on Sundays Integration
+- ✅ YouTube playlist integration
+- ✅ Episode grid with thumbnails
+- ✅ Search functionality
+- ✅ Load more episodes functionality
+- ✅ All videos from the Closed on Sundays YouTube channel
+
+#### PorchFest 2026
+- ✅ Fixed event dates to April 17-19, 2026
+- ✅ Full lineup display by day (Friday, Saturday, Sunday)
+- ✅ Event location and time information
+- ✅ Artist count per day
+
+### 🔒 Security & Configuration
+
+#### API Key Management
+- ✅ Moved all API keys to `.env` file
+- ✅ Added `.env` to `.gitignore`
+- ✅ Created `.env.example` template
+- ✅ Updated all source files to use `import.meta.env.VITE_*`
+- ✅ Added validation for missing API keys
+
+#### Environment Variables
+```
+VITE_YOUTUBE_API_KEY=your_api_key_here
+VITE_YOUTUBE_PLAYLIST_ID=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek
+```
+
+### 🎨 Design Updates
+
+#### Branding
+- ✅ Updated "Al's Spirits" to "Al's Spirits & Music"
+- ✅ Removed "Pull up a chair for" from hero section
+- ✅ Removed "Artwork by Abe Partridge" from footer
+- ✅ Updated hero title to "Welcome You to Kuhlshit.com"
+
+#### Color Scheme
+- ✅ All pages use consistent dark industrial theme
+- ✅ Closed on Sundays page updated to match site colors
+- ✅ Gold accent color (#d48c29) throughout
+
+### 🛠️ Technical Improvements
+
+#### Routing
+- ✅ Added `vercel.json` for SPA routing on Vercel
+- ✅ Fixed 404 errors on client-side routes
+- ✅ All routes now work properly on production
+
+#### Build & Deployment
+- ✅ Vite build configuration
+- ✅ Automatic deployments to Vercel
+- ✅ Optimized bundle sizes
+
+#### Code Quality
+- ✅ Removed unused vibe filtering functionality
+- ✅ Cleaned up 12 individual artist scraper files
+- ✅ Consolidated to general scraper scripts
+- ✅ Removed all hardcoded API keys from source
+
+### 📁 File Structure
+
+#### New Files
+- `vercel.json` - Vercel configuration for SPA routing
+- `.env.example` - Environment variable template
+- `CHANGELOG.md` - This changelog
+- `public/_redirects` - Redirect rules for Vercel
+- `src/pages/FeaturedArtistsPage.jsx` - Featured artists page
+- `src/pages/ArtistDetailPage.jsx` - Individual artist pages
+- `src/pages/ClosedOnSundaysPage.jsx` - Closed on Sundays page
+- Multiple CSS files for new pages
+
+#### Removed Files
+- `src/pages/ComedyPage.jsx` - Removed comedy section
+- `src/components/VibeTag.jsx` - Removed vibe filtering
+- `src/components/VibeTag.css`
+- 12 individual artist scraper files
+
+### 📝 Content Updates
+
+#### Data
+- ✅ All artist data in `src/data/data.json`
+- ✅ No location references in artist bios (per request)
+- ✅ Clean, professional bios for all artists
+- ✅ Complete social media and streaming links
+
+#### Images
+- ✅ 20+ artist photos added to `public/resources/artists/`
+- ✅ SVG placeholder for missing photos
+- ✅ All images properly optimized
+
+### 🐛 Bug Fixes
+
+- ✅ Fixed PorchFest dates (April 17-19, not 16-18)
+- ✅ Fixed date display timezone issues
+- ✅ Fixed artist photo 404 errors
+- ✅ Fixed mobile menu not closing on navigation
+- ✅ Fixed YouTube API key exposure
+- ✅ Fixed client-side routing 404 on Vercel
+
+### 📦 Dependencies
+
+```json
+{
+  "playwright": "^1.58.2",
+  "playwright-extra": "^4.3.6",
+  "puppeteer-extra-plugin-stealth": "^2.11.2",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.20.0"
+}
+```
+
+### 🚀 Deployment
+
+- **Platform:** Vercel
+- **URL:** https://kuhlshit.vercel.app
+- **Auto-deploy:** Enabled on push to main branch
+
+---
+
+## [1.0.0] - Previous Version
+
+### Initial Release
+- Basic React application structure
+- Simple navigation
+- Minimal artist information
+
+---
+
+## Security Notice
+
+⚠️ **IMPORTANT:** Never commit `.env` file to GitHub. All API keys must remain in `.env` which is gitignored.
+
+To get started:
+1. Copy `.env.example` to `.env`
+2. Add your YouTube API key
+3. Run `npm run dev`
+
+---
+
+*Generated on 2026-03-31*

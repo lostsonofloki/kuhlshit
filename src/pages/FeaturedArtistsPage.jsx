@@ -71,10 +71,11 @@ function FeaturedArtistsPage() {
               {artist.imageUrl ? (
                 <img src={artist.imageUrl} alt={artist.name} onError={(e) => {
                   e.target.style.display = 'none'
-                  e.target.nextElementSibling?.classList.add('visible')
+                  const placeholder = e.target.nextElementSibling
+                  if (placeholder) placeholder.classList.add('visible')
                 }} />
               ) : null}
-              <div className="artist-placeholder">
+              <div className={`artist-placeholder ${!artist.imageUrl ? 'visible' : ''}`}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M9 18V5l12-2v13" />
                   <circle cx="6" cy="18" r="3" />

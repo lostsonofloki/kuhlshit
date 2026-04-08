@@ -23,15 +23,14 @@ function AnnouncementBar() {
       <div className="announcement-bar-content">
         <span className="announcement-text">
           <span className="announcement-main">
-            🎸 <strong className="full-text">PorchFest 2026 — Apr 17-19</strong>
-            <span className="mobile-text">PorchFest '26 — Apr 17-19</span>
+            🎸 <strong>PorchFest 2026 — Apr 17-19</strong>
+            <span className="hide-mobile"> Columbus, MS</span>
           </span>
-          <span className="location mobile-hide"> Columbus, MS</span>
           <span className="announcement-pricing">
             <span className="price-badge">$10/Day</span>
-            <span className="price-badge highlight full-text">$20 Weekend</span>
+            <span className="price-badge highlight hide-mobile">$20 Weekend</span>
           </span>
-          <span className="announcement-note mobile-hide">Tickets at the Door</span>
+          <span className="announcement-note hide-mobile">Tickets at the Door</span>
         </span>
         <button className="announcement-dismiss" onClick={handleDismiss} aria-label="Dismiss">
           ✕

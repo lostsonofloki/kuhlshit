@@ -129,7 +129,7 @@
       "bio": "Musician performing at PorchFest 2026.",
       "imageUrl": "/resources/artists/phillip-savell/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/phillip-savell/photo-1.jpg",
-      "genre": "Folk / Rock",
+      "genre": "Blues Rock",
       "socialLinks": {
         "instagram": "https://www.instagram.com/phillipsavell/",
         "facebook": "https://www.facebook.com/biglegphil/",
@@ -237,6 +237,31 @@
           "source": "Closed on Sundays"
         }
       ],
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "hunter-myers",
+      "name": "Hunter Myers",
+      "bio": "Hunter Myers is a singer/songwriter from NE Mississippi.",
+      "imageUrl": "/resources/artists/hunter-myers/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/hunter-myers/photo-1.jpg",
+      "genre": "Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/huntermyersmusic/",
+        "facebook": "https://www.facebook.com/hunter.myers.376",
+        "twitter": "",
+        "youtube": "",
+        "spotify": "https://open.spotify.com/artist/4VN01C4WjCXWGUr7eXwkJj",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/4VN01C4WjCXWGUr7eXwkJj",
+        "appleMusic": "",
+        "youtube": "https://www.youtube.com/watch?v=xmJDtLSbdgs&list=RDxmJDtLSbdgs&start_radio=1"
+      },
+      "videos": [],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -695,7 +720,7 @@
             "artists": [
               "Honey Boy and Boots",
               "Hayden Hunter & The Yearly Trials",
-              "Camm Lewis",
+              "Hunter Myers",
               "Taylor Hollingsworth",
               "Will Stewart",
               "B.B. Palmer",

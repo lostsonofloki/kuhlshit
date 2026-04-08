@@ -53,7 +53,10 @@ function HomePage() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-title">Welcome You to Kuhlshit.com</h1>
+          <div className="hero-title-wrapper">
+            <p className="hero-welcome">Welcome You to</p>
+            <h1 className="hero-title">KUHLSHIT.COM</h1>
+          </div>
           <p className="hero-subtitle">
             <span className="hero-highlight">Porch Talk</span> •
             <span className="hero-highlight"> Closed on Sundays</span> •

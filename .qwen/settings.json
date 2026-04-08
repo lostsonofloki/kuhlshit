@@ -14,7 +14,11 @@
       "Bash(powershell *)",
       "Bash(git add *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(select-string *)",
+      "Bash(rmdir *)",
+      "Bash(git checkout *)",
+      "Bash(taskkill *)"
     ]
   },
   "$version": 3

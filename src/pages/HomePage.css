@@ -20,20 +20,38 @@
   width: 100%;
 }
 
-.hero-title {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-md);
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+/* Hero Title - Split into two lines */
+.hero-title-wrapper {
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-welcome {
   font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin: 0 0 var(--spacing-xs) 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-family: var(--font-family-marker);
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
   color: var(--color-accent-primary);
   line-height: 1.1;
+  letter-spacing: normal;
+  margin: 0;
 }
 
 .hero-subtitle {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-lg);
   line-height: 1.6;
+  font-family: var(--font-family-heading);
+  font-weight: 500;
 }
 
 .hero-highlight {
@@ -45,8 +63,15 @@
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: var(--spacing-md);
   align-items: center;
+  width: 100%;
+}
+
+/* Mobile touch targets - minimum 44px height */
+.hero-buttons .btn {
+  min-height: 48px;
+  padding: var(--spacing-md) var(--spacing-xl);
 }
 
 .hero-bg {
@@ -418,6 +443,10 @@
     padding: var(--spacing-2xl) var(--spacing-xl);
   }
 
+  .hero-welcome {
+    font-size: 1.125rem;
+  }
+
   .hero-title {
     font-size: 3.5rem;
   }
@@ -457,6 +486,10 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .hero-welcome {
+    font-size: 1.25rem;
+  }
+
   .hero-title {
     font-size: 5rem;
   }

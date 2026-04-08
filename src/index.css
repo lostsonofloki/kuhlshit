@@ -39,8 +39,9 @@
   --border-radius-xl: 16px;
 
   /* Typography */
-  --font-family-heading: 'Permanent Marker', cursive, sans-serif;
-  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-marker: 'Permanent Marker', cursive;
+  --font-family-heading: 'Montserrat', sans-serif;
+  --font-family-body: 'Inter', sans-serif;
 
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -75,7 +76,9 @@ body {
   min-height: 100vh;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-fontsmoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* App Container */
@@ -83,6 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 .main-content {
@@ -91,18 +95,35 @@ body {
   padding: var(--spacing-md);
 }
 
+.content-wrapper {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 /* Typography - Mobile First */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--color-text-primary);
+  letter-spacing: -0.02em;
 }
 
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; }
 h3 { font-size: 1.25rem; }
 h4 { font-size: 1rem; }
+
+/* Permanent Marker ONLY for logo and hero main title */
+.logo-text,
+.hero-title {
+  font-family: var(--font-family-marker);
+  font-weight: 400;
+  letter-spacing: normal;
+}
 
 p {
   margin-bottom: var(--spacing-md);
@@ -189,11 +210,6 @@ button {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .main-content {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
-
   h1 { font-size: 3rem; }
   h2 { font-size: 2.25rem; }
 

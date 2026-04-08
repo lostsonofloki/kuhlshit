@@ -43,3 +43,4 @@ stifftones-debug.png
 
 # Misc
 archive/
+"*.html"  

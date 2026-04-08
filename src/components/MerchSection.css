@@ -90,6 +90,9 @@
 .merch-product-image {
   width: 100%;
   max-width: 400px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: var(--color-bg-card);
   border-radius: var(--border-radius-md);
   border: 2px solid rgba(212, 140, 41, 0.3);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);

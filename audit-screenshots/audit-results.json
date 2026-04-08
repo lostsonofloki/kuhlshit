@@ -1,0 +1,431 @@
+[
+  {
+    "page": "/",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\homepage-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 28,
+      "buttonCount": 4,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 6,
+      "heroVisible": true,
+      "announcementVisible": true,
+      "countdownVisible": true
+    }
+  },
+  {
+    "page": "/porchfest",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\porchfest-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 42,
+      "buttonCount": 2,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 3,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/porchfest/artists",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\porchfest-artists-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [
+        "http://localhost:3002/resources/artists/gordon-licciardi/photo-1.jpg",
+        "http://localhost:3002/resources/artists/the-kites/photo-1.jpg"
+      ],
+      "linkCount": 40,
+      "buttonCount": 6,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/closed-on-sundays",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\closed-on-sundays-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 14,
+      "buttonCount": 3,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 1,
+      "heroVisible": false,
+      "announcementVisible": false,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/porch-talk",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\porch-talk-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 14,
+      "buttonCount": 3,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 1,
+      "heroVisible": false,
+      "announcementVisible": false,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/artists",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\artists-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 39,
+      "buttonCount": 3,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/search",
+    "viewport": "iphone-14",
+    "screenshot": "audit-screenshots\\search-iphone-14.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 17,
+      "buttonCount": 3,
+      "bodyWidth": 390,
+      "viewportWidth": 390,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\homepage-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 28,
+      "buttonCount": 4,
+      "bodyWidth": 780,
+      "viewportWidth": 768,
+      "horizontalOverflow": true,
+      "h1Count": 1,
+      "h2Count": 6,
+      "heroVisible": true,
+      "announcementVisible": true,
+      "countdownVisible": true
+    }
+  },
+  {
+    "page": "/porchfest",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\porchfest-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 42,
+      "buttonCount": 2,
+      "bodyWidth": 780,
+      "viewportWidth": 768,
+      "horizontalOverflow": true,
+      "h1Count": 1,
+      "h2Count": 3,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/porchfest/artists",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\porchfest-artists-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [
+        "http://localhost:3002/resources/artists/gordon-licciardi/photo-1.jpg",
+        "http://localhost:3002/resources/artists/the-kites/photo-1.jpg"
+      ],
+      "linkCount": 40,
+      "buttonCount": 6,
+      "bodyWidth": 780,
+      "viewportWidth": 768,
+      "horizontalOverflow": true,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/closed-on-sundays",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\closed-on-sundays-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 14,
+      "buttonCount": 3,
+      "bodyWidth": 768,
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 1,
+      "heroVisible": false,
+      "announcementVisible": false,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/porch-talk",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\porch-talk-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 14,
+      "buttonCount": 3,
+      "bodyWidth": 768,
+      "viewportWidth": 768,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 1,
+      "heroVisible": false,
+      "announcementVisible": false,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/artists",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\artists-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 39,
+      "buttonCount": 3,
+      "bodyWidth": 780,
+      "viewportWidth": 768,
+      "horizontalOverflow": true,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/search",
+    "viewport": "tablet",
+    "screenshot": "audit-screenshots\\search-tablet.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 17,
+      "buttonCount": 3,
+      "bodyWidth": 780,
+      "viewportWidth": 768,
+      "horizontalOverflow": true,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\homepage-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 28,
+      "buttonCount": 4,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 6,
+      "heroVisible": true,
+      "announcementVisible": true,
+      "countdownVisible": true
+    }
+  },
+  {
+    "page": "/porchfest",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\porchfest-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 42,
+      "buttonCount": 2,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 3,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/porchfest/artists",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\porchfest-artists-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [
+        "http://localhost:3002/resources/artists/gordon-licciardi/photo-1.jpg",
+        "http://localhost:3002/resources/artists/the-kites/photo-1.jpg"
+      ],
+      "linkCount": 40,
+      "buttonCount": 6,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/closed-on-sundays",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\closed-on-sundays-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 14,
+      "buttonCount": 3,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 1,
+      "heroVisible": false,
+      "announcementVisible": false,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/porch-talk",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\porch-talk-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 14,
+      "buttonCount": 3,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 1,
+      "heroVisible": false,
+      "announcementVisible": false,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/artists",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\artists-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 39,
+      "buttonCount": 3,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  },
+  {
+    "page": "/search",
+    "viewport": "desktop",
+    "screenshot": "audit-screenshots\\search-desktop.png",
+    "jsErrors": [],
+    "failedRequests": [],
+    "metrics": {
+      "brokenImages": [],
+      "linkCount": 17,
+      "buttonCount": 3,
+      "bodyWidth": 1440,
+      "viewportWidth": 1440,
+      "horizontalOverflow": false,
+      "h1Count": 1,
+      "h2Count": 0,
+      "heroVisible": false,
+      "announcementVisible": true,
+      "countdownVisible": false
+    }
+  }
+]

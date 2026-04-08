@@ -2,7 +2,7 @@ import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync, readdirSync } from 'fs';
 import { join } from 'path';
 
-const BASE_URL = 'http://localhost:3002';
+const BASE_URL = 'https://www.kuhlshit.com';
 const OUTPUT_DIR = 'audit-screenshots';
 
 mkdirSync(OUTPUT_DIR, { recursive: true });

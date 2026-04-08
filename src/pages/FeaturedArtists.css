@@ -143,15 +143,20 @@
 }
 
 .artist-info h3 {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   color: var(--color-text-primary);
-  margin-bottom: var(--spacing-xs);
-  line-height: 1.2;
+  margin-bottom: 2px;
+  line-height: 1.25;
   font-weight: 600;
   text-align: center;
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
+  min-height: 1.5em;
+}
+
+.artist-info h3 br {
+  display: none;
 }
 
 .artist-day {

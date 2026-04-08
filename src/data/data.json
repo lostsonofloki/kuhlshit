@@ -723,7 +723,8 @@
           "city": "Columbus",
           "state": "MS",
           "venue": "Munson & Brothers",
-          "mapUrl": "https://maps.google.com/?q=301+2nd+Ave+N+Columbus+MS"
+          "mapUrl": "https://maps.google.com/?q=301+2nd+Ave+N+Columbus+MS",
+          "instagram": "https://www.instagram.com/munsonandbrothers/"
         },
         "description": "3-Day Festival featuring more than 20 bands & artists from across the country. Performing Folk, Americana & Rock. Live Music, Food, Beer.",
         "lineup": [

@@ -22,10 +22,12 @@ function AnnouncementBar() {
     <div className="announcement-bar">
       <div className="announcement-bar-content">
         <span className="announcement-text">
-          🎸 <strong>PorchFest 2026 — Apr 17-19</strong> Columbus, MS
+          <span className="announcement-main">
+            🎸 <strong>PorchFest 2026 — Apr 17-19</strong> Columbus, MS
+          </span>
           <span className="announcement-pricing">
             <span className="price-badge">$10/Day</span>
-            <span className="price-badge highlight">$20 Weekend Pass</span>
+            <span className="price-badge highlight">$20 Weekend</span>
           </span>
           <span className="announcement-note">Tickets at the Door</span>
         </span>

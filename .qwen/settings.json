@@ -19,7 +19,10 @@
       "Bash(rmdir *)",
       "Bash(git checkout *)",
       "Bash(taskkill *)",
-      "Bash(npx *)"
+      "Bash(npx *)",
+      "Bash(git *)",
+      "Bash(curl *)",
+      "Bash(type *)"
     ]
   },
   "$version": 3

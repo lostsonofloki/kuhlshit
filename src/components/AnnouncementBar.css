@@ -2,7 +2,7 @@
 .announcement-bar {
   background: linear-gradient(90deg, var(--color-bg-primary) 0%, var(--color-wood-dark) 100%);
   border-bottom: 1px solid var(--border-color);
-  padding: 10px 0;
+  padding: 8px 0;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -12,24 +12,29 @@
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 40px 0 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
   position: relative;
 }
 
 .announcement-text {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--color-text-primary);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   justify-content: center;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.3;
+}
+
+.announcement-main {
+  display: inline;
+  white-space: nowrap;
 }
 
 .announcement-text strong {
@@ -38,18 +43,18 @@
 
 .announcement-pricing {
   display: inline-flex;
-  gap: 6px;
+  gap: 4px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .price-badge {
   display: inline-block;
   background: rgba(212, 140, 41, 0.15);
   color: #d48c29;
-  padding: 2px 8px;
-  border-radius: 4px;
-  font-size: 0.75rem;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.7rem;
   font-weight: 700;
   white-space: nowrap;
 }
@@ -67,14 +72,14 @@
 
 .announcement-dismiss {
   position: absolute;
-  right: 12px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
   border: none;
   color: var(--color-text-muted);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 4px;
   line-height: 1;
   transition: color var(--transition-fast);
@@ -85,32 +90,27 @@
   color: var(--color-accent-primary);
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+/* Hide note on screens under 1024px */
+@media (max-width: 1023px) {
+  .announcement-note {
+    display: none;
+  }
+
   .announcement-bar {
-    padding: 8px 0;
+    padding: 6px 0;
   }
 
   .announcement-bar-content {
-    padding: 0 36px 0 12px;
+    padding: 0 32px 0 10px;
   }
 
   .announcement-text {
-    font-size: 0.75rem;
-    gap: 6px;
+    font-size: 0.7rem;
+    gap: 4px;
   }
 
   .price-badge {
-    font-size: 0.65rem;
-    padding: 1px 6px;
-  }
-
-  .announcement-note {
-    font-size: 0.65rem;
-    width: 100%;
-  }
-
-  .announcement-dismiss {
-    right: 8px;
+    font-size: 0.6rem;
+    padding: 1px 4px;
   }
 }

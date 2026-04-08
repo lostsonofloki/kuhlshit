@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/lostsonofloki/kuhlshit.github.io#readme",
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "playwright": "^1.58.2",
     "playwright-extra": "^4.3.6",
     "playwright-extra-plugin-stealth": "^0.0.1",

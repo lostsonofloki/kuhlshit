@@ -147,7 +147,7 @@ function PorchTalkPage() {
                 className="video-link"
               >
                 <div className="video-thumbnail">
-                  <img src={video.thumbnail} alt={video.title} />
+                  <img src={video.thumbnail} alt={video.title} loading="lazy" />
                   <div className="play-overlay">
                     <span className="play-icon">▶</span>
                   </div>

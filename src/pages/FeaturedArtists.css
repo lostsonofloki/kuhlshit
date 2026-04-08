@@ -98,6 +98,7 @@
 }
 
 .artist-image {
+  position: relative;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -112,6 +113,9 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-normal);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .artist-card:hover .artist-image img {
@@ -119,6 +123,9 @@
 }
 
 .artist-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -127,14 +134,24 @@
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-gray-dark) 100%);
   color: var(--color-accent-primary);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.artist-placeholder.visible {
+  opacity: 1;
 }
 
 .artist-info h3 {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-xs);
-  line-height: 1.3;
+  line-height: 1.2;
   font-weight: 600;
+  text-align: center;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .artist-day {

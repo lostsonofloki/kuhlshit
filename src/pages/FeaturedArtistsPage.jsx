@@ -69,16 +69,18 @@ function FeaturedArtistsPage() {
           <Link key={artist.id} to={`/porchfest/artists/${artist.id}`} className="artist-card">
             <div className="artist-image">
               {artist.imageUrl ? (
-                <img src={artist.imageUrl} alt={artist.name} />
-              ) : (
-                <div className="artist-placeholder">
-                  <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M9 18V5l12-2v13" />
-                    <circle cx="6" cy="18" r="3" />
-                    <circle cx="18" cy="16" r="3" />
-                  </svg>
-                </div>
-              )}
+                <img src={artist.imageUrl} alt={artist.name} onError={(e) => {
+                  e.target.style.display = 'none'
+                  e.target.nextElementSibling?.classList.add('visible')
+                }} />
+              ) : null}
+              <div className="artist-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M9 18V5l12-2v13" />
+                  <circle cx="6" cy="18" r="3" />
+                  <circle cx="18" cy="16" r="3" />
+                </svg>
+              </div>
             </div>
             <div className="artist-info">
               <h3>{artist.name}</h3>

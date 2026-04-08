@@ -4,7 +4,9 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\homepage-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6470h2v9248784710za200zd9248784710&_p=1775664268178&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=577846666.1775664269&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616986~115938465~115938469~116991817~117266401&sid=1775664268&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2F&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=3233"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 28,
@@ -24,10 +26,12 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\porchfest-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664272618&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1731562981.1775664273&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938469~116991816~118289195&sid=1775664272&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporchfest&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=468"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 42,
+      "linkCount": 45,
       "buttonCount": 2,
       "bodyWidth": 390,
       "viewportWidth": 390,
@@ -44,11 +48,12 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\porchfest-artists-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664276074&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=908823410.1775664276&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616986~115938465~115938468~116991816~117512543&sid=1775664276&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporchfest%2Fartists&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=504"
+    ],
     "metrics": {
       "brokenImages": [
-        "http://localhost:3002/resources/artists/gordon-licciardi/photo-1.jpg",
-        "http://localhost:3002/resources/artists/the-kites/photo-1.jpg"
+        "https://www.kuhlshit.com/resources/artists/hunter-myers/photo-1.jpg"
       ],
       "linkCount": 40,
       "buttonCount": 6,
@@ -67,18 +72,20 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\closed-on-sundays-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664279511&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=480298660.1775664280&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938465~115938469~116991816&sid=1775664279&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fclosed-on-sundays&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=441"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 14,
+      "linkCount": 87,
       "buttonCount": 3,
       "bodyWidth": 390,
       "viewportWidth": 390,
       "horizontalOverflow": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 0,
       "heroVisible": false,
-      "announcementVisible": false,
+      "announcementVisible": true,
       "countdownVisible": false
     }
   },
@@ -87,18 +94,20 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\porch-talk-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664283804&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1522114876.1775664284&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938465~115938468~116991816&sid=1775664284&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporch-talk&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=449"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 14,
-      "buttonCount": 3,
+      "linkCount": 208,
+      "buttonCount": 2,
       "bodyWidth": 390,
       "viewportWidth": 390,
       "horizontalOverflow": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 0,
       "heroVisible": false,
-      "announcementVisible": false,
+      "announcementVisible": true,
       "countdownVisible": false
     }
   },
@@ -107,7 +116,9 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\artists-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461h1v9248784710za200zd9248784710&_p=1775664292859&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=399044581.1775664293&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938468~116991816~117512543&sid=1775664293&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fartists&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=480"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 39,
@@ -127,7 +138,9 @@
     "viewport": "iphone-14",
     "screenshot": "audit-screenshots\\search-iphone-14.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664296347&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1046464707.1775664297&frm=0&pscdl=noapi&sr=390x844&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616985~115938465~115938469~116991816~117884344&sid=1775664296&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fsearch&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=460"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 17,
@@ -147,14 +160,16 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\homepage-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6470v9248784710za200zd9248784710&_p=1775664299545&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1526654013.1775664300&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616986~115938465~115938469~116991817~117512542~118131808~118289195&sid=1775664299&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2F&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=486"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 28,
       "buttonCount": 4,
-      "bodyWidth": 780,
+      "bodyWidth": 768,
       "viewportWidth": 768,
-      "horizontalOverflow": true,
+      "horizontalOverflow": false,
       "h1Count": 1,
       "h2Count": 6,
       "heroVisible": true,
@@ -167,14 +182,16 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\porchfest-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664304825&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=2071318524.1775664305&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616985~115938466~115938469~116991816&sid=1775664305&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporchfest&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=615"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 42,
+      "linkCount": 45,
       "buttonCount": 2,
-      "bodyWidth": 780,
+      "bodyWidth": 768,
       "viewportWidth": 768,
-      "horizontalOverflow": true,
+      "horizontalOverflow": false,
       "h1Count": 1,
       "h2Count": 3,
       "heroVisible": false,
@@ -187,17 +204,18 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\porchfest-artists-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6470v9248784710za200zd9248784710&_p=1775664308396&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1749588049.1775664309&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938468~116991817~117384405~118289195&sid=1775664308&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporchfest%2Fartists&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=482"
+    ],
     "metrics": {
       "brokenImages": [
-        "http://localhost:3002/resources/artists/gordon-licciardi/photo-1.jpg",
-        "http://localhost:3002/resources/artists/the-kites/photo-1.jpg"
+        "https://www.kuhlshit.com/resources/artists/hunter-myers/photo-1.jpg"
       ],
       "linkCount": 40,
       "buttonCount": 6,
-      "bodyWidth": 780,
+      "bodyWidth": 768,
       "viewportWidth": 768,
-      "horizontalOverflow": true,
+      "horizontalOverflow": false,
       "h1Count": 1,
       "h2Count": 0,
       "heroVisible": false,
@@ -210,18 +228,20 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\closed-on-sundays-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664311937&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=100880847.1775664312&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938465~115938468~116991816~117266401~118289195&sid=1775664312&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fclosed-on-sundays&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=450"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 14,
+      "linkCount": 87,
       "buttonCount": 3,
       "bodyWidth": 768,
       "viewportWidth": 768,
       "horizontalOverflow": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 0,
       "heroVisible": false,
-      "announcementVisible": false,
+      "announcementVisible": true,
       "countdownVisible": false
     }
   },
@@ -230,18 +250,20 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\porch-talk-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664316205&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1421142404.1775664317&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938469~116991817&sid=1775664316&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporch-talk&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=506"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 14,
-      "buttonCount": 3,
+      "linkCount": 208,
+      "buttonCount": 2,
       "bodyWidth": 768,
       "viewportWidth": 768,
       "horizontalOverflow": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 0,
       "heroVisible": false,
-      "announcementVisible": false,
+      "announcementVisible": true,
       "countdownVisible": false
     }
   },
@@ -250,14 +272,16 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\artists-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664324902&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=614677661.1775664325&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938465~115938469~116991816~117512542&sid=1775664325&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fartists&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=443"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 39,
       "buttonCount": 3,
-      "bodyWidth": 780,
+      "bodyWidth": 768,
       "viewportWidth": 768,
-      "horizontalOverflow": true,
+      "horizontalOverflow": false,
       "h1Count": 1,
       "h2Count": 0,
       "heroVisible": false,
@@ -270,14 +294,16 @@
     "viewport": "tablet",
     "screenshot": "audit-screenshots\\search-tablet.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461h1v9248784710za200zd9248784710&_p=1775664328486&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=602785796.1775664329&frm=0&pscdl=noapi&sr=768x1024&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616985~115938466~115938469~116991817~117266402&sid=1775664328&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fsearch&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=464"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 17,
       "buttonCount": 3,
-      "bodyWidth": 780,
+      "bodyWidth": 768,
       "viewportWidth": 768,
-      "horizontalOverflow": true,
+      "horizontalOverflow": false,
       "h1Count": 1,
       "h2Count": 0,
       "heroVisible": false,
@@ -290,7 +316,9 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\homepage-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664331814&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1596753382.1775664332&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938469~116991817&sid=1775664332&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2F&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=457"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 28,
@@ -310,10 +338,12 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\porchfest-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6470v9248784710za200zd9248784710&_p=1775664336644&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=913717587.1775664337&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938465~115938468~116991817~117266402&sid=1775664337&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporchfest&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=500"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 42,
+      "linkCount": 45,
       "buttonCount": 2,
       "bodyWidth": 1440,
       "viewportWidth": 1440,
@@ -330,11 +360,12 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\porchfest-artists-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461v9248784710za200zd9248784710&_p=1775664340539&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=818574971.1775664341&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938469~116991816&sid=1775664340&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporchfest%2Fartists&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=531"
+    ],
     "metrics": {
       "brokenImages": [
-        "http://localhost:3002/resources/artists/gordon-licciardi/photo-1.jpg",
-        "http://localhost:3002/resources/artists/the-kites/photo-1.jpg"
+        "https://www.kuhlshit.com/resources/artists/hunter-myers/photo-1.jpg"
       ],
       "linkCount": 40,
       "buttonCount": 6,
@@ -353,18 +384,20 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\closed-on-sundays-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6471h2v9248784710za200zd9248784710&_p=1775664344168&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1426944001.1775664345&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938465~115938469~116991816&sid=1775664344&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fclosed-on-sundays&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=514"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 14,
+      "linkCount": 87,
       "buttonCount": 3,
       "bodyWidth": 1440,
       "viewportWidth": 1440,
       "horizontalOverflow": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 0,
       "heroVisible": false,
-      "announcementVisible": false,
+      "announcementVisible": true,
       "countdownVisible": false
     }
   },
@@ -373,18 +406,20 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\porch-talk-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6461h1v9248784710za200zd9248784710&_p=1775664348709&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1586486891.1775664349&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115938466~115938468~116991816~117512542~118131810&sid=1775664349&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fporch-talk&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=452"
+    ],
     "metrics": {
       "brokenImages": [],
-      "linkCount": 14,
-      "buttonCount": 3,
+      "linkCount": 208,
+      "buttonCount": 2,
       "bodyWidth": 1440,
       "viewportWidth": 1440,
       "horizontalOverflow": false,
       "h1Count": 1,
-      "h2Count": 1,
+      "h2Count": 0,
       "heroVisible": false,
-      "announcementVisible": false,
+      "announcementVisible": true,
       "countdownVisible": false
     }
   },
@@ -393,7 +428,9 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\artists-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6470v9248784710za200zd9248784710&_p=1775664366005&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=1103793135.1775664366&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616985~115938465~115938469~116991817~117266401~117884344&sid=1775664366&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fartists&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=467"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 39,
@@ -413,7 +450,9 @@
     "viewport": "desktop",
     "screenshot": "audit-screenshots\\search-desktop.png",
     "jsErrors": [],
-    "failedRequests": [],
+    "failedRequests": [
+      "https://www.google-analytics.com/g/collect?v=2&tid=G-VJKFGV1YCV&gtm=45je6470v9248784710za200zd9248784710&_p=1775664369871&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=713357488.1775664370&frm=0&pscdl=noapi&sr=1440x900&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=0~115616986~115938466~115938469~116991817&sid=1775664370&sct=1&seg=0&dl=https%3A%2F%2Fwww.kuhlshit.com%2Fsearch&dt=Kuhlshit.com&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=490"
+    ],
     "metrics": {
       "brokenImages": [],
       "linkCount": 17,

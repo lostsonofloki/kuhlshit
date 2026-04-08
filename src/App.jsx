@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import AnnouncementBar from './components/AnnouncementBar'
 import HomePage from './pages/HomePage'
 import ClosedOnSundaysPage from './pages/ClosedOnSundaysPage'
 import PorchFestPage from './pages/PorchFestPage'
@@ -14,6 +15,7 @@ import './App.css'
 function App() {
   return (
     <div className="app">
+      <AnnouncementBar />
       <Header />
       <main className="main-content">
         <div className="content-wrapper">

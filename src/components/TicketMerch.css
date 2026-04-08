@@ -1,0 +1,159 @@
+/* ========== TICKET & MERCH ========== */
+.ticket-merch {
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.ticket-merch-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+.ticket-merch-title {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Pricing */
+.ticket-pricing {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.price-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.price-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 24px;
+  border-radius: var(--border-radius-md);
+  background: rgba(212, 140, 41, 0.08);
+  border: 1px solid rgba(212, 140, 41, 0.2);
+  min-width: 120px;
+}
+
+.price-option.featured {
+  background: rgba(212, 140, 41, 0.2);
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 15px rgba(212, 140, 41, 0.15);
+}
+
+.price-amount {
+  font-family: var(--font-family-marker);
+  font-size: 2.5rem;
+  color: #FFD700;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.price-type {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+.price-divider {
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.ticket-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Merch */
+.merch-preview {
+  text-align: center;
+}
+
+.merch-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+@media (min-width: 480px) {
+  .merch-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.merch-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.merch-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  border: 2px solid rgba(212, 140, 41, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.merch-image-wrapper:hover .merch-image {
+  transform: scale(1.02);
+}
+
+.merch-image-label {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.merch-caption {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.5;
+}
+
+.merch-cta-btn {
+  min-width: 200px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .ticket-merch {
+    padding: var(--spacing-2xl) var(--spacing-xl);
+  }
+
+  .ticket-merch-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: start;
+  }
+
+  .price-amount {
+    font-size: 3rem;
+  }
+
+  .merch-image {
+    max-width: 100%;
+  }
+}

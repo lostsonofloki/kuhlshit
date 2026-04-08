@@ -26,12 +26,12 @@ function FeaturedArtistsPage() {
             name: artistName,
             day: daySchedule.day,
             id: artistName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-            imageUrl: artistData?.imageUrl || null,
+            imageUrl: artistData?.imageUrl?.trim() || null,
             genre: artistData?.genre || null
           })
         })
       })
-      
+
       setArtists(allArtists)
     }
   }, [])
@@ -73,8 +73,9 @@ function FeaturedArtistsPage() {
               ) : (
                 <div className="artist-placeholder">
                   <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                    <circle cx="12" cy="7" r="4" />
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
                   </svg>
                 </div>
               )}

@@ -1,0 +1,127 @@
+/* ========== VIDEO ROTATOR ========== */
+.video-rotator {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.video-rotator-title {
+  font-family: var(--font-family-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.video-rotator-wrapper {
+  position: relative;
+  border: 2px solid rgba(212, 140, 41, 0.3);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 20px rgba(255, 145, 0, 0.1);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio */
+}
+
+.video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Navigation Arrows */
+.video-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(212, 140, 41, 0.3);
+  color: var(--color-accent-primary);
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all var(--transition-fast);
+  z-index: 10;
+  padding: 0;
+  line-height: 1;
+}
+
+.video-rotator-wrapper:hover .video-nav-btn {
+  opacity: 1;
+}
+
+.video-nav-btn:hover {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  box-shadow: 0 0 10px rgba(212, 140, 41, 0.5);
+}
+
+.video-nav-btn.prev {
+  left: 8px;
+}
+
+.video-nav-btn.next {
+  right: 8px;
+}
+
+/* Progress Dots */
+.video-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: var(--spacing-md);
+}
+
+.video-dot {
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-gray-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.video-dot:hover {
+  background: var(--color-gray-light);
+}
+
+.video-dot.active {
+  background: var(--color-accent-primary);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .video-rotator {
+    max-width: 560px;
+    padding: 0;
+  }
+
+  .video-nav-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.75rem;
+  }
+
+  .video-dot {
+    width: 40px;
+  }
+}

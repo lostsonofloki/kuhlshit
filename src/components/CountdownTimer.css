@@ -1,0 +1,97 @@
+/* ========== COUNTDOWN TIMER ========== */
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 20px;
+  padding: 12px 20px;
+  background: rgba(212, 140, 41, 0.1);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  max-width: 340px;
+}
+
+.countdown-label {
+  font-family: var(--font-family-heading);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.countdown-units {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+.countdown-value {
+  font-family: var(--font-family-marker);
+  font-size: 1.75rem;
+  color: #FFD700;
+  line-height: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-unit-label {
+  font-family: var(--font-family-heading);
+  font-size: 0.65rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 4px;
+}
+
+/* Live state */
+.countdown-timer.live {
+  background: rgba(212, 140, 41, 0.2);
+  border-color: var(--color-accent-primary);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.countdown-live-text {
+  font-family: var(--font-family-marker);
+  font-size: 1.5rem;
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(212, 140, 41, 0.5);
+}
+
+/* Ended state */
+.countdown-timer.ended {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--color-gray-light);
+}
+
+.countdown-ended-text {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(212, 140, 41, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(212, 140, 41, 0.5); }
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .countdown-timer {
+    padding: 14px 24px;
+    gap: 10px;
+  }
+
+  .countdown-value {
+    font-size: 2rem;
+  }
+
+  .countdown-live-text {
+    font-size: 1.75rem;
+  }
+}

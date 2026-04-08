@@ -22,7 +22,8 @@
       "Bash(npx *)",
       "Bash(git *)",
       "Bash(curl *)",
-      "Bash(type *)"
+      "Bash(type *)",
+      "Bash(npm *)"
     ]
   },
   "$version": 3

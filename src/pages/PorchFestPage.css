@@ -349,6 +349,33 @@
   width: 100%;
 }
 
+.venue-socials {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-bg-tertiary);
+  color: var(--color-accent-primary);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+  transform: scale(1.1);
+}
+
 .back-link-container {
   text-align: center;
   margin-top: var(--spacing-2xl);
@@ -433,6 +460,31 @@
 
   .event-actions .btn {
     width: auto;
+  }
+
+  .venue-socials {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-bg-tertiary);
+    color: var(--color-accent-primary);
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-fast);
+  }
+
+  .social-link:hover {
+    background: var(--color-accent-primary);
+    color: var(--color-bg-primary);
+    transform: scale(1.1);
   }
 }
 

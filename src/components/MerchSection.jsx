@@ -17,11 +17,9 @@ function MerchSection() {
         <div className="merch-products">
           <div className="merch-product">
             <img src="/resources/porchfest/tshirts.jpg" alt="PorchFest '26 T-Shirts" className="merch-product-image" />
-            <span className="merch-product-label">T-Shirts & More</span>
           </div>
           <div className="merch-product">
             <img src="/resources/porchfest/blackshirt.jpg" alt="PorchFest '26 Black Tee" className="merch-product-image" />
-            <span className="merch-product-label">Black Tee</span>
           </div>
         </div>
         <div className="merch-cta">

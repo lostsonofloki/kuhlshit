@@ -1,0 +1,125 @@
+/* ========== THE VIBE ========== */
+.the-vibe {
+  position: relative;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vibe-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.vibe-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.4;
+  filter: saturate(0.8) contrast(1.1);
+}
+
+.vibe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.7) 70%, var(--color-bg-primary) 100%);
+}
+
+.vibe-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 600px;
+}
+
+.vibe-title {
+  font-family: var(--font-family-marker);
+  font-size: 3rem;
+  color: #FFD700;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1;
+}
+
+.vibe-subtitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.vibe-desc {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: 0.05em;
+}
+
+.vibe-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.vibe-tag {
+  display: inline-block;
+  background: rgba(212, 140, 41, 0.2);
+  color: var(--color-accent-primary);
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(212, 140, 41, 0.3);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .the-vibe {
+    min-height: 300px;
+  }
+
+  .vibe-title {
+    font-size: 2.25rem;
+  }
+
+  .vibe-subtitle {
+    font-size: 1rem;
+  }
+
+  .vibe-desc {
+    font-size: 0.85rem;
+  }
+
+  .vibe-tag {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .the-vibe {
+    min-height: 500px;
+  }
+
+  .vibe-title {
+    font-size: 4rem;
+  }
+
+  .vibe-subtitle {
+    font-size: 1.5rem;
+  }
+}

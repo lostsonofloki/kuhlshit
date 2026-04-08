@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import CountdownTimer from '../components/CountdownTimer'
+import VideoRotator from '../components/VideoRotator'
+import TheVibe from '../components/TheVibe'
+import MerchSection from '../components/MerchSection'
 import './HomePage.css'
 
 function HomePage() {
@@ -62,9 +66,12 @@ function HomePage() {
             <span className="hero-highlight"> Closed on Sundays</span> •
             <span className="hero-highlight"> Al's Spirits & Music</span>
           </p>
+
+          <CountdownTimer />
+
           <div className="hero-buttons">
             <Link to="/porchfest/artists" className="btn btn-primary">
-              PorchFest Artists
+              See the Lineup
             </Link>
             <Link to="/closed-on-sundays" className="btn btn-secondary">
               Closed on Sundays
@@ -74,6 +81,13 @@ function HomePage() {
         <div className="hero-bg">
           <div className="hero-bg-overlay"></div>
         </div>
+
+        {/* Mascot - Skeleton Cat Sticker */}
+        <img
+          src="/resources/porchfest/mascot-cat.png"
+          alt="PorchFest Mascot"
+          className="hero-mascot"
+        />
       </section>
 
       {/* PorchFest Section */}
@@ -91,11 +105,30 @@ function HomePage() {
               </div>
               <div className="event-content">
                 <h3>{event.name}</h3>
+                {event.pricing && (
+                  <div className="event-pricing">
+                    <span className="price-badge-small">{event.pricing.dayPass}/Day</span>
+                    <span className="price-badge-small">{event.pricing.weekendPass} Weekend Pass</span>
+                    <span className="price-note">{event.pricing.note}</span>
+                  </div>
+                )}
                 <p className="event-location">{event.location.venue || event.location.city}, {event.location.state}</p>
+
+                {/* Schedule */}
+                {event.schedule && event.schedule.length > 0 && (
+                  <div className="event-schedule-home">
+                    {event.schedule.map((day, i) => (
+                      <span key={i} className="schedule-chip">
+                        {day.day}: {day.doors}–{day.endTime}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
                 <p className="event-description">{event.description}</p>
                 <div className="event-lineup">
                   <span className="lineup-label">Lineup:</span>
-                  {event.lineup.slice(0, 2).map((day, i) => (
+                  {event.lineup.map((day, i) => (
                     <span key={i} className="artist-name">{day.day}: {day.artists.length} bands</span>
                   ))}
                 </div>
@@ -103,6 +136,11 @@ function HomePage() {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Video Rotator */}
+      <section className="section video-section">
+        <VideoRotator />
       </section>
 
       {/* Featured Artists Section */}
@@ -170,6 +208,12 @@ function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* The Vibe - Full-width hero with PorchFest poster art */}
+      <TheVibe />
+
+      {/* Merch Section */}
+      <MerchSection />
     </div>
   )
 }

@@ -1,0 +1,116 @@
+/* ========== ANNOUNCEMENT BAR ========== */
+.announcement-bar {
+  background: linear-gradient(90deg, var(--color-bg-primary) 0%, var(--color-wood-dark) 100%);
+  border-bottom: 1px solid var(--border-color);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.announcement-bar-content {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.announcement-text {
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.announcement-text strong {
+  color: var(--color-accent-primary);
+}
+
+.announcement-pricing {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price-badge {
+  display: inline-block;
+  background: rgba(212, 140, 41, 0.15);
+  color: #d48c29;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.price-badge.highlight {
+  background: rgba(212, 140, 41, 0.3);
+  color: #FFD700;
+}
+
+.announcement-note {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.announcement-dismiss {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+  line-height: 1;
+  transition: color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.announcement-dismiss:hover {
+  color: var(--color-accent-primary);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .announcement-bar {
+    padding: 8px 0;
+  }
+
+  .announcement-bar-content {
+    padding: 0 36px 0 12px;
+  }
+
+  .announcement-text {
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
+  .price-badge {
+    font-size: 0.65rem;
+    padding: 1px 6px;
+  }
+
+  .announcement-note {
+    font-size: 0.65rem;
+    width: 100%;
+  }
+
+  .announcement-dismiss {
+    right: 8px;
+  }
+}

@@ -18,7 +18,8 @@
       "Bash(select-string *)",
       "Bash(rmdir *)",
       "Bash(git checkout *)",
-      "Bash(taskkill *)"
+      "Bash(taskkill *)",
+      "Bash(npx *)"
     ]
   },
   "$version": 3

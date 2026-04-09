@@ -112,61 +112,63 @@ function PorchTalkPage() {
       </div>
 
       <div className="search-section">
-        <div className="search-wrapper">
-          <svg className="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="11" cy="11" r="8" />
-            <path d="m21 21-4.35-4.35" />
-          </svg>
+        <form className="search-form" onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
             className="search-input"
-            placeholder="Search for episodes..."
+            placeholder="Search episodes..."
             value={searchQuery}
             onChange={handleSearch}
           />
+          <button type="submit" className="search-btn">Search</button>
           {searchQuery && (
-            <button className="clear-search" onClick={() => setSearchQuery('')}>
-              ✕
+            <button type="button" className="reset-btn" onClick={() => setSearchQuery('')}>
+              Show All
             </button>
           )}
-        </div>
+        </form>
       </div>
 
       <div className="results-count">
-        {filteredVideos.length} episode{filteredVideos.length !== 1 ? 's' : ''} found
+        {filteredVideos.length} of {videos.length} episode{videos.length !== 1 ? 's' : ''} shown
       </div>
 
-      {filteredVideos.length > 0 ? (
-        <div className="videos-grid">
+      {filteredVideos.length === 0 ? (
+        <div className="no-results">
+          <p>No episodes found</p>
+        </div>
+      ) : (
+        <div className="episodes-grid">
           {filteredVideos.map(video => (
-            <div key={video.id} className="video-card">
-              <a 
+            <div key={video.id} className="episode-card">
+              <a
                 href={`https://www.youtube.com/watch?v=${video.id}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="video-link"
+                className="episode-link"
               >
-                <div className="video-thumbnail">
+                <div className="episode-thumbnail">
                   <img src={video.thumbnail} alt={video.title} loading="lazy" />
-                  <div className="play-overlay">
-                    <span className="play-icon">▶</span>
-                  </div>
-                </div>
-                <div className="video-info">
-                  <h3>{video.title}</h3>
-                  <p className="video-description">
-                    {video.description.substring(0, 150)}
-                    {video.description.length > 150 ? '...' : ''}
-                  </p>
+                  <div className="play-overlay">▶</div>
                 </div>
               </a>
+              <div className="episode-content">
+                <h3>{video.title}</h3>
+                <p className="episode-description">
+                  {video.description.substring(0, 150)}
+                  {video.description.length > 150 ? '...' : ''}
+                </p>
+                <a
+                  href={`https://www.youtube.com/watch?v=${video.id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="watch-btn"
+                >
+                  Watch on YouTube →
+                </a>
+              </div>
             </div>
           ))}
-        </div>
-      ) : (
-        <div className="no-results">
-          <h3>No episodes found</h3>
-          <p>Try a different search term</p>
         </div>
       )}
 

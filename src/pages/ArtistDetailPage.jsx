@@ -9,15 +9,24 @@ function ArtistDetailPage() {
 
   useEffect(() => {
     // Find artist by ID or name slug
-    const foundArtist = data.artists.find(a => 
-      a.id === artistId || 
+    const foundArtist = data.artists.find(a =>
+      a.id === artistId ||
       a.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') === artistId
     )
-    
+
     if (foundArtist) {
       setArtist(foundArtist)
     }
   }, [artistId])
+
+  // Look up the artist's performance day(s) from the schedule
+  const getPerformanceDays = () => {
+    const porchfest = data.porchfests?.[0]
+    if (!porchfest?.lineup) return []
+    return porchfest.lineup
+      .filter(day => day.artists?.includes(artist.name))
+      .map(day => day.day)
+  }
 
   if (!artist) {
     return (
@@ -186,7 +195,7 @@ function ArtistDetailPage() {
                 <line x1="8" y1="2" x2="8" y2="6" />
                 <line x1="3" y1="10" x2="21" y2="10" />
               </svg>
-              <span>Performing on <strong>Friday</strong></span>
+              <span>Performing on <strong>{getPerformanceDays().length > 0 ? getPerformanceDays().join(', ') : 'TBD'}</strong></span>
             </div>
             <div className="performance-location">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

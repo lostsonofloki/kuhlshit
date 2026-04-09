@@ -767,11 +767,11 @@
   {
     "id": "artist-018",
     "name": "The Kites",
-    "location": "Columbus, MS",
-    "bio": "The Kites is a talented musician performing in the Columbus, MS area. Catch them live at local venues and events.",
-    "imageUrl": "/resources/artists/the-kites.jpg",
-    "thumbnailUrl": "/resources/artists/thumbs/the-kites-thumb.jpg",
-    "vibeTags": [],
+    "location": "Oxford, MS",
+    "bio": "THE KITES are an indie pop band from Oxford, MS. Inspired by jangle rock and modern pop, their energetic, catchy tunes will make you move and get stuck in your head.",
+    "imageUrl": "/resources/artists/the-kites/photo-1.jpg",
+    "thumbnailUrl": "/resources/artists/the-kites/photo-1.jpg",
+    "vibeTags": ["indie pop"],
     "still": {
       "set": {
         "videoId": "",
@@ -796,7 +796,7 @@
       "description": ""
     },
     "socialLinks": {
-      "instagram": "",
+      "instagram": "https://www.instagram.com/itsthekites",
       "website": "",
       "twitter": "",
       "facebook": ""

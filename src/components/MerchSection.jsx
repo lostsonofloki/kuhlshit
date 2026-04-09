@@ -22,7 +22,7 @@ function MerchSection() {
             <p className="merch-location">Available at the Merch Table — Beside the Stage</p>
             <div className="merch-cta">
               <Link to="/porchfest" className="btn btn-primary merch-btn">See the Lineup →</Link>
-              <span className="merch-note">Bring cash — merch available at the door</span>
+              <span className="merch-note">Cash, Venmo, CashApp, PayPal accepted</span>
             </div>
           </div>
         </div>

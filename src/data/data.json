@@ -155,7 +155,7 @@
       "bio": "Four friends trying to find their way through a whole lotta life. Performing at PorchFest 2026.",
       "imageUrl": "/resources/artists/the-wright-moves/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/the-wright-moves/photo-1.jpg",
-      "genre": "Folk / Rock",
+      "genre": "Rock",
       "socialLinks": {
         "instagram": "",
         "facebook": "https://www.facebook.com/thewrightmovesband/",
@@ -213,7 +213,7 @@
       "bio": "Band performing at PorchFest 2026.",
       "imageUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
-      "genre": "Folk / Rock",
+      "genre": "Southern Rock",
       "socialLinks": {
         "instagram": "",
         "facebook": "https://www.facebook.com/HHandtheYTs/",
@@ -262,39 +262,6 @@
         "youtube": "https://www.youtube.com/watch?v=xmJDtLSbdgs&list=RDxmJDtLSbdgs&start_radio=1"
       },
       "videos": [],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "camm-lewis",
-      "name": "Camm Lewis",
-      "bio": "Singer/songwriter performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/camm-lewis/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/camm-lewis/photo-1.jpg",
-      "genre": "Singer-Songwriter",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/camm_lewis_music/",
-        "facebook": "https://www.facebook.com/camm.lewis.2025",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UCcf5Oa2z-sn8nu_F2FlXR9Q",
-        "spotify": "https://open.spotify.com/artist/4sHoGXQfsvwJITr05DjXFH",
-        "appleMusic": "",
-        "website": ""
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/4sHoGXQfsvwJITr05DjXFH",
-        "appleMusic": "",
-        "youtube": "https://www.youtube.com/channel/UCcf5Oa2z-sn8nu_F2FlXR9Q"
-      },
-      "videos": [
-        {
-          "title": "Closed on Sundays - Camm Lewis",
-          "videoId": "MxslUrtO8Gk",
-          "thumbnail": "https://img.youtube.com/vi/MxslUrtO8Gk/maxresdefault.jpg",
-          "url": "https://youtu.be/MxslUrtO8Gk?si=MoNlsWP5GR3O3M3s",
-          "source": "Closed on Sundays"
-        }
-      ],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -430,7 +397,7 @@
       "bio": "Musician performing at PorchFest 2026.",
       "imageUrl": "/resources/artists/gordon-licciardi/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/gordon-licciardi/photo-1.jpg",
-      "genre": "Folk / Rock",
+      "genre": "Blues Rock",
       "socialLinks": {
         "instagram": "https://www.instagram.com/gordon_licciardi/",
         "facebook": "",
@@ -610,7 +577,7 @@
       "bio": "Marine Corps veteran and Berklee College of Music student. Fronts a 4-piece Red Clay Rock & Roll band. Has toured with Arlo McKinley, 49 Winchester, and Nolan Taylor. Writes raw, emotional songs about loss, love, redemption, and addiction. Music featured on a Billboard Bluegrass Chart #11 album. Performing at PorchFest 2026.",
       "imageUrl": "/resources/artists/ritch-henderson/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/ritch-henderson/photo-1.jpg",
-      "genre": "Folk / Rock",
+      "genre": "Country Rock",
       "socialLinks": {
         "instagram": "https://www.instagram.com/ritch_af/?hl=en",
         "facebook": "https://www.facebook.com/ritchhendersonmusic",

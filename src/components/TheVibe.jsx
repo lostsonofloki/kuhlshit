@@ -9,7 +9,7 @@ function TheVibe() {
       </div>
       <div className="vibe-content">
         <h2 className="vibe-title">PorchFest 26</h2>
-        <p className="vibe-subtitle">Three Days. Three Stages. All Porch.</p>
+        <p className="vibe-subtitle">Three Days. One Stage. All Porch.</p>
         <p className="vibe-desc">Folk • Rock • Blues • Americana • Good Vibes</p>
         <div className="vibe-details">
           <span className="vibe-tag">Apr 17-19</span>

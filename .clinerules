@@ -1,0 +1,9 @@
+# GIT REPOSITORY RULES - "DRAFT AND EXECUTE" PROTOCOL
+You are permitted to use Git, but you operate under a strict two-step protocol:
+
+STEP 1: DRAFTING
+When you finish a coding task, you may NOT automatically run `git commit`. 
+Instead, you must say: "Task complete. Would you like me to commit these changes?" and provide a proposed commit message for the user to review.
+
+STEP 2: EXECUTION
+You may ONLY execute `git add` and `git commit` if the user explicitly replies with "Yes", "Commit it", or gives direct permission to proceed.

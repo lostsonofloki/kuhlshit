@@ -24,7 +24,8 @@
       "Bash(curl *)",
       "Bash(type *)",
       "Bash(npm *)",
-      "Bash(echo *)"
+      "Bash(echo *)",
+      "Bash(move *)"
     ]
   },
   "$version": 3

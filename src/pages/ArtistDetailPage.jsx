@@ -21,9 +21,9 @@ function ArtistDetailPage() {
 
   // Look up the artist's performance day(s) from the schedule
   const getPerformanceDays = () => {
-    const porchfest = data.porchfests?.[0]
-    if (!porchfest?.lineup) return []
-    return porchfest.lineup
+    const event = data.porchfest?.events?.[0]
+    if (!event?.lineup) return []
+    return event.lineup
       .filter(day => day.artists?.includes(artist.name))
       .map(day => day.day)
   }

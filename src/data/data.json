@@ -471,15 +471,15 @@
     {
       "id": "the-kites",
       "name": "The Kites",
-      "bio": "Musician performing at PorchFest 2026.",
-      "imageUrl": "",
-      "thumbnailUrl": "",
-      "genre": "Folk / Rock",
+      "bio": "THE KITES are an indie pop band from Oxford, MS. Inspired by jangle rock and modern pop, their energetic, catchy tunes will make you move and get stuck in your head.",
+      "imageUrl": "/resources/artists/the-kites/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/the-kites/photo-1.jpg",
+      "genre": "indie pop",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/kylekite/",
+        "instagram": "https://www.instagram.com/itsthekites",
         "facebook": "",
-        "twitter": "https://x.com/kylekite",
-        "youtube": "https://youtu.be/5o8yU_maB6s?si=qU_skPVelfAOVH26",
+        "twitter": "",
+        "youtube": "",
         "spotify": "",
         "appleMusic": "",
         "website": ""
@@ -487,7 +487,7 @@
       "musicLinks": {
         "spotify": "",
         "appleMusic": "",
-        "youtube": "https://youtu.be/5o8yU_maB6s?si=qU_skPVelfAOVH26"
+        "youtube": ""
       },
       "videos": [],
       "featured": true,

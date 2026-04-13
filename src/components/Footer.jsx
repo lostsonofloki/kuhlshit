@@ -35,6 +35,9 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>&copy; {currentYear} Kuhlshit.com. All rights reserved.</p>
+          <p className="footer-dev-credit">
+            Built by <a href="https://linktr.ee/sonofloke" target="_blank" rel="noopener noreferrer">Josh Jenkins</a>
+          </p>
         </div>
       </div>
     </footer>

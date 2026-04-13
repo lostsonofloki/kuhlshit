@@ -25,7 +25,9 @@
       "Bash(type *)",
       "Bash(npm *)",
       "Bash(echo *)",
-      "Bash(move *)"
+      "Bash(move *)",
+      "Bash(ren *)",
+      "Bash(tasklist)"
     ]
   },
   "$version": 3

@@ -18,30 +18,34 @@ A modern React-based platform for discovering musicians, comedy acts, and commun
 kuhl-shit/
 ├── public/
 │   ├── resources/
-│   │   └── placeholder-artist.svg
-│   └── vite.svg
+│   │   ├── artists/             # Artist photos
+│   │   ├── Porchfest26.jpg
+│   │   └── LouDog.svg           # Easter egg image
 ├── src/
 │   ├── components/
-│   │   ├── Header.jsx          # Navigation header
-│   │   ├── Footer.jsx          # Site footer
-│   │   ├── ArtistCard.jsx      # Artist preview card
-│   │   ├── SearchBar.jsx       # Search input component
-│   │   ├── TrinityPlayer.jsx   # Video player for Still sessions
-│   │   └── VibeTag.jsx         # Tag display component
+│   │   ├── Header.jsx           # Navigation header
+│   │   ├── Footer.jsx           # Site footer with dev credit
+│   │   ├── ArtistCard.jsx       # Artist preview card
+│   │   ├── SearchBar.jsx        # Search input component
+│   │   ├── TrinityPlayer.jsx    # Video player for Still sessions
+│   │   ├── GigTracker.jsx       # Bandsintown live date widget
+│   │   └── LouieEasterEgg.jsx   # Hidden dalmatian Easter egg
 │   ├── pages/
-│   │   ├── HomePage.jsx        # Landing page with hero
-│   │   ├── ArtistsPage.jsx     # Artist listing with filters
+│   │   ├── HomePage.jsx         # Landing page with hero
+│   │   ├── ArtistsPage.jsx      # Artist listing with filters
 │   │   ├── ArtistDetailPage.jsx # Individual artist page
-│   │   ├── ComedyPage.jsx      # Comedy portal
-│   │   ├── PorchFestPage.jsx   # Event calendar
-│   │   ├── PorchTalkPage.jsx   # YouTube integration
-│   │   └── SearchPage.jsx      # Tag-first search engine
+│   │   ├── FeaturedArtistsPage.jsx # PorchFest featured artists
+│   │   ├── PorchFestPage.jsx    # Event calendar
+│   │   ├── PorchTalkPage.jsx    # YouTube integration
+│   │   ├── ClosedOnSundaysPage.jsx # YouTube playlist browser
+│   │   ├── SearchPage.jsx       # Tag-first search engine
+│   │   └── SpotCheckPage.jsx    # 🤫 Secret Easter egg page
 │   ├── data/
-│   │   └── data.json           # Centralized data store
-│   ├── App.jsx                 # Main app component
-│   ├── main.jsx                # Entry point
-│   ├── index.css               # Global styles
-│   └── App.css                 # App-specific styles
+│   │   └── data.json            # Centralized data store
+│   ├── App.jsx                  # Main app component
+│   ├── main.jsx                 # Entry point
+│   ├── index.css                # Global styles
+│   └── App.css                  # App-specific styles
 ├── index.html
 ├── package.json
 └── vite.config.js
@@ -165,11 +169,17 @@ npm run preview
 |-------|-------------|
 | `/` | Home page with hero and featured content |
 | `/artists` | Browse all artists with tag filters |
-| `/artists/:id` | Individual artist page with Trinity Player |
-| `/comedy` | Comedy portal (Still Funny) |
+| `/porchfest/artists` | Featured Artists for PorchFest |
+| `/porchfest/artists/:id` | Individual artist page with Trinity Player, Listen links, Live Dates |
 | `/porchfest` | Event calendar |
 | `/porch-talk` | YouTube episode browser |
+| `/closed-on-sundays` | YouTube playlist browser |
 | `/search` | Advanced search with vibe tags |
+| `/spotcheck` | 🤫 Secret Easter egg page |
+
+## Easter Eggs
+
+- **Louie the Dalmatian** — 1-in-500 chance to appear on any page load at a random edge. Click to reveal the secret page.
 
 ## YouTube Integration
 
@@ -197,3 +207,4 @@ ISC
 ---
 
 **Built with ❤️ for the Kuhlshit.com community**
+**Dev Credit: Built by [Josh Jenkins](https://linktr.ee/sonofloke)**

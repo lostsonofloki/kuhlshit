@@ -2,6 +2,55 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2026-04-13
+
+### 🎤 Tour Date Integration
+- ✅ Added Bandsintown live date widget to artist detail pages
+- ✅ `GigTracker` component with dynamic script injection
+- ✅ 1-in-500 random chance to show Louie Easter egg on any page
+- ✅ Secret page at `/spotcheck`
+- ✅ Widget uses dark theme with gold (#E08E36) accent colors
+- ✅ Hide empty tour dates automatically
+
+#### Artists With Tour Dates
+- The Stifftones
+- Taylor Hollingsworth
+- B.B. Palmer
+- Will Stewart
+- Shake It Like a Caveman
+- Hayden Hunter & The Yearly Trials
+- Haysop
+- Ritch Henderson
+- Katie Burkhardt
+
+### 🎵 Expanded Music Streaming Links
+- ✅ Added Amazon Music, Shazam, SoundCloud, Bandcamp to Listen section
+- ✅ Scraped Bandsintown profiles for accurate streaming links via Playwright
+- ✅ Updated music links for The Stifftones, Taylor Hollingsworth, Will Stewart, Shake It Like a Caveman, Haysop, and Ritch Henderson
+
+### 📝 Artist Bio Updates
+- ✅ The Stifftones — full story: hearse living, 200k miles, Shaun & Rachel Stief
+- ✅ Taylor Hollingsworth — full bio: "Yahola" album, Conor Oberst tours, Dead Fingers
+- ✅ Hayden Hunter & The Yearly Trials — Americana/alt-country bio
+- ✅ Katie Burkhardt — folk/alternative singer-songwriter bio
+- ✅ Haysop — Tuscaloosa band, Cornelius Chapel Records
+- ✅ Will Stewart — "Space Twang" from Birmingham
+- ✅ Shake It Like a Caveman — one-man band dance party bio
+
+### 👤 New Artist Profile
+- ✅ Brad & Wes (Rockabilly) — added to Sunday lineup with photo
+
+### 🎨 Design Updates
+- ✅ "Munson & Brothers" links now open Google Maps everywhere
+- ✅ Developer credit added to footer ("Built by Josh Jenkins")
+- ✅ Footer links to linktr.ee/sonofloke
+- ✅ Live Dates section styled to match site aesthetic
+
+### 🥚 Easter Egg
+- ✅ Louie the Dalmatian hidden on random edge of any page (1-in-500 chance)
+- ✅ Click Louie to reveal secret `/spotcheck` page
+- ✅ Re-rolls on every route change
+
 ## [2.0.0] - 2026-03-31
 
 ### 🎉 Major Features

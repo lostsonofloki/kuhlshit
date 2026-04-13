@@ -3,22 +3,27 @@
     {
       "id": "the-stifftones",
       "name": "The Stifftones",
-      "bio": "Folk/rock band known for energetic live performances and heartfelt songwriting. They blend traditional folk storytelling with modern rock sensibilities. Performing at PorchFest 2026!",
+      "bio": "What started as a Goonie adventure in 2019 has become the journey of a lifetime. Since 2021 The Stifftones have been traveling the US living in their 1996 Cadillac Hearse named Tania with their two dogs. Logging over 200,000 miles, they have performed hundreds of shows in almost as many towns. Shaun and Rachel Stief are a dynamic duo whose sound is a unique fusion of influences captivating audiences with their vocal harmonies and guitar weaves. Hailing from the heartland, their music embodies a mix of Midwest meets Bakersfield country, a dash of East Coast flair, and a healthy dose of good ol' Rock and Roll, all wrapped in magic. Hometown: Greenville, Illinois. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/the-stifftones/photo-1.webp",
       "thumbnailUrl": "/resources/artists/the-stifftones/photo-1.webp",
       "genre": "Folk / Rock",
       "socialLinks": {
         "instagram": "https://www.instagram.com/the_stifftones/",
-        "website": "https://thestifftones.godaddysites.com/",
+        "website": "https://www.thestifftones.com/",
         "twitter": "",
-        "facebook": "https://www.facebook.com/301134067163816",
-        "youtube": "https://www.youtube.com/channel/UCjGoalHYdr2upPUMYviykLA"
+        "facebook": "https://www.facebook.com/TheStifftonesmusic/"
       },
       "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": "https://www.youtube.com/channel/UCjGoalHYdr2upPUMYviykLA"
+        "spotify": "https://open.spotify.com/artist/61dEO1faJuwNOHf3BNFafK",
+        "appleMusic": "https://music.apple.com/artist/1499156598",
+        "youtube": "https://www.youtube.com/@thestifftones9440",
+        "amazonMusic": "https://music.amazon.com/artists/B07QYCM16K/the-stifftones",
+        "shazam": "https://www.shazam.com/artist/-/1499156598"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15507703-the-stifftones?came_from=703&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "The Stifftones",
       "videos": [
         {
           "title": "Closed on Sundays - The Stifftones",
@@ -68,7 +73,7 @@
     {
       "id": "katie-burkhardt",
       "name": "Katie Burkhardt",
-      "bio": "Habitual Yerba Mate Consumer. World champion car dancer. Country/Folk Music Artist.",
+      "bio": "Folk/alternative singer-songwriter from a small town in Kentucky, blending honest storytelling with haunting melodies and a voice that cuts right through the noise. Her songs carry the weight of lived experience—raw, relatable, and rooted in emotion. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/katie-burkhardt/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/katie-burkhardt/photo-1.jpg",
       "genre": "Country / Folk",
@@ -86,6 +91,10 @@
         "appleMusic": "https://music.apple.com/us/artist/katie-burkhardt/1472907423",
         "youtube": "https://music.youtube.com/channel/UC2L9uV1AbpflWp40-3nn2rg"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15604830-katie-burkhardt?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Katie Burkhardt",
       "videos": [],
       "featured": true,
       "publishDate": "2026-03-30"
@@ -195,6 +204,10 @@
         "appleMusic": "https://music.apple.com/us/artist/honeyboy-boots/552473437",
         "youtube": "https://music.youtube.com/channel/UCz2ThUPhY5KmbGA69Ayjbsw"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/3189382-honey-boy-and-boots-(drew-blackwell-and-courtney-kinzer)?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Honey Boy and Boots",
       "videos": [
         {
           "title": "Closed on Sundays - Honey Boy and Boots",
@@ -210,7 +223,7 @@
     {
       "id": "hayden-hunter-and-the-yearly-trials",
       "name": "Hayden Hunter & The Yearly Trials",
-      "bio": "Band performing at PorchFest 2026.",
+      "bio": "Hayden Hunter and the Yearly Trials blend heartfelt songwriting with rootsy, road-worn instrumentation — a sound shaped by long nights, longer drives, and the stories picked up along the way. Drawing on Americana, indie folk, and alt-country influences, their music balances raw vulnerability with grounded, unshakable grit. Led by singer-songwriter Hayden Hunter, the band delivers lyrics that dig deep and arrangements that hit home. From intimate acoustic ballads to full-band anthems, their songs explore love, loss, change, and the quiet moments in between. Hometown: Jackson, Mississippi. Genres: Southern Alternative Rock. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
       "genre": "Southern Rock",
@@ -228,6 +241,10 @@
         "appleMusic": "https://music.apple.com/au/artist/hayden-hunter-and-the-yearly-trials/1707059566",
         "youtube": "https://www.youtube.com/channel/UCtil9mOqoknnEJpl46HT67g"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15590520-hayden-hunter-and-the-yearly-trials?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Hayden Hunter and The Yearly Trials",
       "videos": [
         {
           "title": "Closed on Sundays - Hayden Hunter & The Yearly Trials",
@@ -268,7 +285,7 @@
     {
       "id": "taylor-hollingsworth",
       "name": "Taylor Hollingsworth",
-      "bio": "Fingerpicking songwriter with a unique blend of folk, rock, and blues. A true maverick of original music performing at PorchFest 2026.",
+      "bio": "Fingerpicking songwriter from Birmingham, AL, blending folk, rock, and blues into a style he calls \"folk n' roll.\" Back with his latest album \"Yahola,\" recorded at Dialback Sound in Water Valley, MS, Taylor stands apart as a true maverick of original music. His talent has earned him recognition from artists like Conor Oberst and Phoebe Bridgers, who covered one of his songs. Taylor has served as lead guitar player for Conor Oberst on worldwide tours and late-night TV appearances. Despite brushes with major labels, he walked away to maintain artistic freedom, prioritizing his family and his own vision. Founder of Dead Fingers alongside his wife, crafting tunes like \"Ring Around Saturn\" which hit nearly 3 million streams. His songs with The Blips earned \"Coolest Song in the World\" on Little Steven's Underground Garage. Whether playing intimate local bars, busking at farmers markets, or festival stages, Taylor's music tells stories that resonate deeply. Hometown: Birmingham, Alabama. Genres: Folk N Roll. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/taylor-hollingsworth/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/taylor-hollingsworth/photo-1.jpg",
       "genre": "Folk n' Roll",
@@ -286,6 +303,10 @@
         "appleMusic": "https://music.apple.com/us/artist/taylor-hollingsworth/95747439",
         "youtube": "https://www.youtube.com/channel/UCo81Eu-OSm-tA-lvvTPeY0Q"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/174916-taylor-hollingsworth"
+      },
+      "bandsintown_slug": "Taylor Hollingsworth",
       "videos": [
         {
           "title": "Closed on Sundays - Taylor Hollingsworth",
@@ -301,24 +322,27 @@
     {
       "id": "will-stewart",
       "name": "Will Stewart",
-      "bio": "Singer-songwriter performing at PorchFest 2026.",
+      "bio": "Singer-songwriter from Birmingham, AL, crafting a unique blend he calls \"Space Twang.\" Known for heartfelt songwriting and captivating live performances across the Southeast. Hometown: Birmingham, Alabama. Genres: Space Twang, Folk / Americana. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/will-stewart/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/will-stewart/photo-1.jpg",
       "genre": "Folk / Americana",
       "socialLinks": {
-        "instagram": "http://instagram.com/whstewart",
-        "facebook": "http://www.facebook.com/willstewartmusic/",
+        "instagram": "https://www.instagram.com/whstewart",
+        "facebook": "https://www.facebook.com/willstewartmusic/",
         "twitter": "https://twitter.com/willhstewart",
-        "youtube": "https://music.youtube.com/channel/UCN8wZQN8odEoE_phj3_MFOA",
-        "spotify": "https://open.spotify.com/artist/243xFvjyls79NvZx2efP5m?si=Cr1q0CVIRhGF5SY2THZaYA",
-        "appleMusic": "https://music.apple.com/us/artist/will-stewart/1479481748",
+        "youtube": "https://www.youtube.com/@willhstewart",
         "website": "https://www.willstewartmusic.com/"
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/243xFvjyls79NvZx2efP5m?si=Cr1q0CVIRhGF5SY2THZaYA",
-        "appleMusic": "https://music.apple.com/us/artist/will-stewart/1479481748",
-        "youtube": "https://music.youtube.com/channel/UCN8wZQN8odEoE_phj3_MFOA"
+        "spotify": "https://open.spotify.com/artist/243xFvjyls79NvZx2efP5m",
+        "appleMusic": "https://music.apple.com/artist/1091337903",
+        "youtube": "https://www.youtube.com/@willhstewart",
+        "shazam": "https://www.shazam.com/artist/-/1091337903?utm_source=bandsintown"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/1051383-will-stewart?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Will Stewart",
       "videos": [
         {
           "title": "Closed on Sundays - Will Stewart",
@@ -352,6 +376,10 @@
         "appleMusic": "",
         "youtube": "https://www.youtube.com/channel/UCtOpDoSWAKcu4SIM8OK0nRg"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/13092094?came_from=278&utm_medium=web&utm_source=settings_my_artist&utm_campaign=artist"
+      },
+      "bandsintown_slug": "BB Palmer",
       "videos": [
         {
           "title": "Closed on Sundays - B.B. Palmer",
@@ -367,26 +395,30 @@
     {
       "id": "shake-it-like-a-caveman",
       "name": "Shake It Like a Caveman",
-      "bio": "Electric neo-blues & amped-up disco grooves. A Sexy Trance Inducing Experience. Performing at PorchFest 2026.",
+      "bio": "No stranger to the highway — a one man band dance party, thrusting somewhere between poolside film scores and early American work songs. Simultaneously playing slide guitar, harmonica, kick drum, kick snare, hi hat, and vocals. Sonic and visual dynamite that makes you move that thang. Formed in Tennessee in 2005, Shake It Like a Caveman currently performs worldwide at festivals, club dates, radio and TV. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/shake-it-like-a-caveman/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/shake-it-like-a-caveman/photo-1.jpg",
       "genre": "Rock / Alternative",
       "socialLinks": {
         "instagram": "https://www.instagram.com/shakeitlikeacaveman",
-        "facebook": "https://www.facebook.com/ShakeItLikeaCaveman/",
+        "facebook": "https://www.facebook.com/shakeitlikeacaveman",
         "twitter": "",
-        "youtube": "https://www.youtube.com/c/ShakeitlikeaCaveman",
-        "spotify": "https://open.spotify.com/artist/1vOuuhguax4pjp8uj5NPKo",
-        "appleMusic": "https://music.apple.com/us/artist/shake-it-like-a-caveman/1607442290",
-        "website": "https://shakeitlikeacaveman.com/",
+        "youtube": "https://www.youtube.com/user/cavebone/featured",
+        "website": "https://www.shakeitlikeacaveman.com/",
         "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/"
       },
       "musicLinks": {
         "spotify": "https://open.spotify.com/artist/1vOuuhguax4pjp8uj5NPKo",
-        "appleMusic": "https://music.apple.com/us/artist/shake-it-like-a-caveman/1607442290",
-        "youtube": "https://www.youtube.com/c/ShakeitlikeaCaveman",
-        "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/"
+        "appleMusic": "https://music.apple.com/artist/611119768",
+        "youtube": "https://www.youtube.com/user/cavebone/featured",
+        "soundcloud": "https://soundcloud.com/shakeitlikeacaveman",
+        "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/",
+        "shazam": "https://www.shazam.com/artist/-/611119768?utm_source=bandsintown"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/176890-shake-it-like-a-caveman?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Shake It Like a Caveman",
       "videos": [],
       "featured": true,
       "publishDate": "2026-03-31"
@@ -504,26 +536,30 @@
     {
       "id": "haysop",
       "name": "Haysop",
-      "bio": "Tuscaloosa, Alabama band featuring Dan Walker on bass, Joseph Edwards on drums, and Brantley Platt on lead guitar. Recorded at Taylor Hollingsworth's home studio in Birmingham with singer-songwriter Janet Simpson and pedal steel guitarist Conor Rector. Performing at PorchFest 2026.",
+      "bio": "Band from Tuscaloosa, AL. Debut self-titled album released 11/14/25 on Cornelius Chapel Records. Performing at PorchFest 2026!",
       "imageUrl": "/resources/artists/haysop/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/haysop/photo-1.jpg",
       "genre": "Rock",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/haysopsongs/?hl=en",
+        "instagram": "https://www.instagram.com/haysopsongs",
         "facebook": "https://www.facebook.com/p/Haysop-61564609457906/",
         "twitter": "",
         "youtube": "",
         "spotify": "https://open.spotify.com/album/57D1XvSrbiukqQe1WuJqR4?si=tfl25e0_SvWcGYqWEytgXQ",
-        "appleMusic": "https://music.apple.com/us/album/haysop/1823147268?uo=4&app=itunes",
+        "appleMusic": "https://music.apple.com/us/album/haysop/1823147268",
         "website": "https://haysop.bandcamp.com/album/haysop"
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/album/57D1XvSrbiukqQe1WuJqR4?si=tfl25e0_SvWcGYqWEytgXQ",
-        "appleMusic": "https://music.apple.com/us/album/haysop/1823147268?uo=4&app=itunes",
+        "spotify": "https://open.spotify.com/artist/6R5juyTlbBV1mRoAyXRwGY",
+        "appleMusic": "https://music.apple.com/us/artist/haysop/1815433726",
         "youtube": "",
         "bandcamp": "https://haysop.bandcamp.com/album/haysop",
         "soundcloud": "https://soundcloud.com/haysop/02-haysop-let-down?utm_medium=api&utm_campaign=social_sharing&utm_source=id_283625"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15622828-haysop?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Haysop",
       "videos": [],
       "featured": true,
       "publishDate": "2026-03-30"
@@ -598,9 +634,14 @@
       },
       "musicLinks": {
         "spotify": "https://open.spotify.com/artist/5AalYW78DfRm49q0W0dpuT?si=daxI2ZwuRDWCZ7flDXk4LA",
-        "appleMusic": "https://music.apple.com/us/artist/ritch-henderson/1483529695",
-        "youtube": "https://music.youtube.com/channel/UCb_8SLH7ys51FA_O7bsVVtA"
+        "appleMusic": "https://music.apple.com/artist/1483529695",
+        "youtube": "https://www.youtube.com/@ritchhenderson",
+        "shazam": "https://www.shazam.com/artist/-/1483529695?utm_source=bandsintown"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/10835167-ritch-henderson?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Ritch Henderson",
       "videos": [
         {
           "title": "Closed on Sundays - Ritch Henderson (Performance 1)",

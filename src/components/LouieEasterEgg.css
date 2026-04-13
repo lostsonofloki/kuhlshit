@@ -1,0 +1,22 @@
+.louie-easter-egg {
+  position: fixed;
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.louie-easter-egg:hover {
+  transform: scale(1.1) !important;
+}
+
+.louie-img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.louie-easter-egg:hover .louie-img {
+  opacity: 1;
+}

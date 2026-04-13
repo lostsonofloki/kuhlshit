@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import AnnouncementBar from './components/AnnouncementBar'
+import LouieEasterEgg from './components/LouieEasterEgg'
 import HomePage from './pages/HomePage'
 import ClosedOnSundaysPage from './pages/ClosedOnSundaysPage'
 import PorchFestPage from './pages/PorchFestPage'
@@ -12,6 +13,7 @@ import SearchPage from './pages/SearchPage'
 import ArtistsPage from './pages/ArtistsPage'
 import FeaturedArtistsPage from './pages/FeaturedArtistsPage'
 import ArtistDetailPage from './pages/ArtistDetailPage'
+import SpotCheckPage from './pages/SpotCheckPage'
 import './App.css'
 
 function App() {
@@ -30,10 +32,12 @@ function App() {
             <Route path="/porchfest/artists/:artistId" element={<ArtistDetailPage />} />
             <Route path="/porch-talk" element={<PorchTalkPage />} />
             <Route path="/search" element={<SearchPage />} />
+            <Route path="/spotcheck" element={<SpotCheckPage />} />
           </Routes>
         </div>
       </main>
       <Footer />
+      <LouieEasterEgg />
       <Analytics />
       <SpeedInsights />
     </div>

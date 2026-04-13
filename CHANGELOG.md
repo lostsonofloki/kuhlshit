@@ -45,7 +45,7 @@ All notable changes to this project will be documented in this file.
 - Haysop
 - J.D. Spencer
 - Tyler Tisdale
-- Brad & Wes
+- Brad & Wes (Rockabilly) ![Brad and Wes](Brad and Wes.png)
 
 #### Mobile-First Design
 - ✅ Implemented mobile-first responsive CSS

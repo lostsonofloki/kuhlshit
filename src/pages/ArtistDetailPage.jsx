@@ -202,7 +202,7 @@ function ArtistDetailPage() {
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
-              <span>Munson & Brothers • Columbus, MS</span>
+              <a href="https://www.google.com/maps/place/Munson+and+Brothers+Trading+Post/@33.4944198,-88.4322622,16z/data=!4m6!3m5!1s0x8886eb05721234f7:0x28b28ed87d3c2534!8m2!3d33.496184!4d-88.4307709!16s%2Fg%2F11fj2fw9ny?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>Munson & Brothers • Columbus, MS</a>
             </div>
             <div className="performance-date">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

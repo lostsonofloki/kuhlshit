@@ -685,6 +685,39 @@
       "videos": [],
       "featured": true,
       "publishDate": "2026-04-12"
+    },
+    {
+      "id": "ham-bagby",
+      "name": "Ham Bagby",
+      "bio": "Alabama-based musician known for a blend of rock, country, and groovy R&B, characterized by guitar-heavy, humorous, and Southern-influenced songwriting. His music, including the album All Filler, mixes witty lyrics with classic rock influences. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/ham-bagby/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/ham-bagby/photo-1.jpg",
+      "genre": "",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/hambagby/",
+        "facebook": "https://www.facebook.com/ham.of.bagby",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/user/hambagbyyall",
+        "spotify": "https://open.spotify.com/artist/0k4yqJMbEaqnuuMu48loQP",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/0k4yqJMbEaqnuuMu48loQP",
+        "appleMusic": "https://music.apple.com/us/artist/ham-bagby/1540202858",
+        "youtube": "https://music.youtube.com/channel/UCzILplZhXL0jlOznriGlnkQ"
+      },
+      "videos": [
+        {
+          "title": "Closed on Sundays - Ham Bagby",
+          "videoId": "cAhwfo13KWY",
+          "thumbnail": "https://img.youtube.com/vi/cAhwfo13KWY/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=4",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-13"
     }
   ],
   "comedy": [
@@ -808,6 +841,7 @@
               "J.D. Spencer",
               "Tyler Tisdale",
               "Brad & Wes",
+              "Ham Bagby",
               "& More!"
             ]
           }

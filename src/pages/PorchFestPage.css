@@ -91,13 +91,16 @@
 
 .event-date-actions {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: var(--spacing-sm);
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 .event-calendar-btn {
   white-space: nowrap;
+  font-size: 0.8rem;
+  padding: 6px 12px;
 }
 
 .event-date-badge .month {
@@ -128,6 +131,8 @@
 
 .event-info {
   flex: 1;
+  min-width: 0;
+  width: 100%;
 }
 
 .event-info h2 {
@@ -177,8 +182,9 @@
 
 .schedule-item {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
   font-size: 0.8rem;
 }
 
@@ -190,6 +196,7 @@
 .schedule-time {
   color: var(--color-accent-primary);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 /* Day Schedule Time */
@@ -358,6 +365,17 @@
 
 .event-actions .btn {
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.event-date-actions .btn {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .map-fab {
@@ -449,8 +467,6 @@
   }
 
   .event-header {
-    flex-direction: row;
-    align-items: center;
     padding: var(--spacing-xl);
   }
 
@@ -460,7 +476,14 @@
   }
 
   .event-date-actions {
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .event-calendar-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
   }
 
   .event-date-badge .month {
@@ -484,8 +507,14 @@
   }
 
   .schedule-row {
-    flex-direction: row;
-    gap: 16px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
   }
 
   .event-body {
@@ -497,12 +526,7 @@
   }
 
   .event-actions {
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-
-  .event-actions .btn {
-    width: auto;
+    flex-direction: column;
   }
 
   .venue-socials {
@@ -553,5 +577,46 @@
 
   .event-info h2 {
     font-size: 1.75rem;
+  }
+}
+
+/* Wide desktop */
+@media (min-width: 1280px) {
+  .event-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .event-date-actions {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: auto;
+  }
+
+  .event-calendar-btn {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .event-actions {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .event-actions .btn {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .schedule-row {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .schedule-item {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
   }
 }

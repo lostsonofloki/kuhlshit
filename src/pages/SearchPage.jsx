@@ -134,7 +134,7 @@ function SearchPage() {
                         <div className="event-result-info">
                           <h4>{event.name}</h4>
                           <p className="event-location">{event.location.city}, {event.location.state}</p>
-                          <p className="event-description">{event.description}</p>
+                          <p className="search-event-description">{event.description}</p>
                         </div>
                       </Link>
                     ))}

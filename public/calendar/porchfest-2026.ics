@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Kuhlshit//PorchFest 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:porchfest-2026@kuhlshit.com
+DTSTAMP:20260415T000000Z
+DTSTART;VALUE=DATE:20260417
+DTEND;VALUE=DATE:20260420
+SUMMARY:PorchFest 2026
+DESCRIPTION:Live music, local vibes. Join us April 17-19 at Munson & Brothers in Columbus, MS.
+LOCATION:Munson & Brothers, 301 2nd Ave N, Columbus, MS 39701
+URL:https://kuhlshit.com/porchfest
+END:VEVENT
+END:VCALENDAR

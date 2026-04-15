@@ -101,10 +101,10 @@ function HomePage() {
           <CountdownTimer />
 
           <div className="hero-buttons">
-            <Link to="/porchfest/artists" className="btn btn-primary">
+            <Link to="/porchfest/artists" className="btn btn-primary hero-primary-cta">
               See the Lineup
             </Link>
-            <Link to="/closed-on-sundays" className="btn btn-secondary">
+            <Link to="/closed-on-sundays" className="btn btn-secondary hero-secondary-cta">
               Closed on Sundays
             </Link>
           </div>
@@ -141,13 +141,13 @@ function HomePage() {
                   href={buildCalendarUrl(event)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary home-calendar-btn"
+                  className="btn btn-primary home-calendar-btn home-calendar-btn--primary"
                 >
                   Add to Google Calendar
                 </a>
                 <a
                   href={APPLE_CALENDAR_URL}
-                  className="btn btn-secondary home-calendar-btn"
+                  className="btn btn-secondary home-calendar-btn home-calendar-btn--secondary"
                 >
                   Add to Apple Calendar
                 </a>

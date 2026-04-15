@@ -111,13 +111,13 @@ function PorchFestPage() {
                         href={buildCalendarUrl(event)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn btn-primary event-calendar-btn"
+                        className="btn btn-primary event-calendar-btn event-calendar-btn--primary"
                       >
                         Add to Google Calendar
                       </a>
                       <a
                         href={APPLE_CALENDAR_URL}
-                        className="btn btn-secondary event-calendar-btn"
+                        className="btn btn-secondary event-calendar-btn event-calendar-btn--secondary"
                       >
                         Add to Apple Calendar
                       </a>

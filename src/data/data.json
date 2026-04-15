@@ -103,8 +103,8 @@
       "id": "elliot-devaughn",
       "name": "Elliot Devaughn",
       "bio": "Singer-songwriter performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/elliot-devaughn/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/elliot-devaughn/photo-1.jpg",
+      "imageUrl": "/resources/artists/elliot-devaughn/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/elliot-devaughn/photo-1.webp",
       "genre": "Singer-Songwriter",
       "socialLinks": {
         "instagram": "https://www.instagram.com/elliott.devaughn",
@@ -424,31 +424,6 @@
       "publishDate": "2026-03-31"
     },
     {
-      "id": "gordon-licciardi",
-      "name": "Gordon Licciardi",
-      "bio": "Musician performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/gordon-licciardi/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/gordon-licciardi/photo-1.jpg",
-      "genre": "Blues Rock",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/gordon_licciardi/",
-        "facebook": "",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/watch?v=NqrVP-vsl54",
-        "spotify": "",
-        "appleMusic": "",
-        "website": ""
-      },
-      "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": "https://www.youtube.com/watch?v=NqrVP-vsl54"
-      },
-      "videos": [],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
       "id": "ming-donkey",
       "name": "Ming Donkey",
       "bio": "Mississippi-born interdisciplinary artist and musician. Blends rural and urban elements, intertwining past with present through installations and performances. MFA in Electronic Visualization. Has exhibited nationally and performed with acts ranging from Marty Stuart to Subhumans. Featured in Visit Mississippi Tourism campaign and publications like Juxtapoz. Performing at PorchFest 2026.",
@@ -665,8 +640,8 @@
       "id": "brad-and-wes",
       "name": "Brad & Wes",
       "bio": "Rockabilly duo performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/brad-wes/photo-1.png",
-      "thumbnailUrl": "/resources/artists/brad-wes/photo-1.png",
+      "imageUrl": "/resources/artists/brad-and-wes/photo-1.png",
+      "thumbnailUrl": "/resources/artists/brad-and-wes/photo-1.png",
       "genre": "Rockabilly",
       "socialLinks": {
         "instagram": "",
@@ -718,6 +693,101 @@
       ],
       "featured": true,
       "publishDate": "2026-04-13"
+    },
+    {
+      "id": "abe-partridge",
+      "name": "Abe Partridge",
+      "location": "Mobile, AL",
+      "bio": "Abe Partridge is a heralded singer-songwriter, visual artist, storyteller, and documentarian based in Mobile, Alabama. Since his 2018 debut Cotton Fields and Blood for Days, he has toured relentlessly across the U.S. and Europe, with performances at major festivals and iconic rooms including 30A Songwriters Festival, Laurel Cove, The Bluebird Cafe, Eddie's Attic, and Duke's. He has appeared on syndicated NPR programs including Mountain Stage and Woodsongs Old Time Radio Hour, and recently toured with Matthew Sweet, Drivin' N Cryin', and Dar Williams in support of Love in the Dark. Partridge also co-created the Alabama Astronaut podcast documenting previously unrecorded songs from holiness and serpent-handling churches in Appalachia. Beyond music, he is an acclaimed visual artist whose work has appeared in galleries and notable private collections, including art connected to Dr. Sleep, Tyler Childers, Charlie Parr, and the Red Clay Strays. He is currently preparing a 2026 album produced by Steve Shelley of Sonic Youth.",
+      "imageUrl": "/resources/artists/abe-partridge/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/abe-partridge/photo-1.jpg",
+      "genre": "Singer/Songwriter",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/abepartridge",
+        "facebook": "https://www.facebook.com/abepartridge",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/c/AbePartridge",
+        "spotify": "https://open.spotify.com/artist/1RQeZdPAK7c7QakzTfcA2q",
+        "appleMusic": "https://music.apple.com/us/artist/abe-partridge/1299986709",
+        "tiktok": "https://www.tiktok.com/@abepartridge",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/1RQeZdPAK7c7QakzTfcA2q",
+        "appleMusic": "https://music.apple.com/us/artist/abe-partridge/1299986709",
+        "youtube": "https://www.youtube.com/c/AbePartridge"
+      },
+      "videos": [
+        {
+          "title": "Closed on Sundays - Abe Partridge",
+          "videoId": "OTs6iy1TFbA",
+          "thumbnail": "https://img.youtube.com/vi/OTs6iy1TFbA/maxresdefault.jpg",
+          "url": "https://youtu.be/OTs6iy1TFbA?si=n2A5fq2HDx1vAZHQ",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-15"
+    },
+    {
+      "id": "john-keys",
+      "name": "John Keys",
+      "location": "Columbus, MS",
+      "bio": "John Keys is performing at PorchFest 2026 on Sunday.",
+      "imageUrl": "/resources/artists/john-keys/photo-1.png",
+      "thumbnailUrl": "/resources/artists/john-keys/photo-1.png",
+      "genre": "Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "",
+        "spotify": "",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": "https://youtu.be/NU-oWnR1wDE?si=FUEEL-OeJy4hJ2Uj"
+      },
+      "videos": [
+        {
+          "title": "John Keys - Live Video",
+          "videoId": "NU-oWnR1wDE",
+          "thumbnail": "https://img.youtube.com/vi/NU-oWnR1wDE/maxresdefault.jpg",
+          "url": "https://youtu.be/NU-oWnR1wDE?si=FUEEL-OeJy4hJ2Uj",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-15"
+    },
+    {
+      "id": "jacob-kynard",
+      "name": "Jacob Kynard",
+      "location": "Pine Hill, AL",
+      "bio": "Jacob Kynard (Pine Hill, AL) has spent a few years driving around playing songs in backyards, bars, churches, nursing homes, and vape stores. He's recording a debut album at Dial Back Sound in Water Valley, MS produced by Matt Patton (Drive-By Truckers) and featuring John Smith (Dexateens) on lead guitar.",
+      "imageUrl": "/resources/artists/jacob-kynard/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/jacob-kynard/photo-1.jpg",
+      "genre": "Americana",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/jacobkynard/",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ",
+        "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
+        "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
+        "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
+        "youtube": "https://music.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ"
+      },
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-04-15"
     }
   ],
   "comedy": [
@@ -811,6 +881,7 @@
             "artists": [
               "The Stifftones",
               "Fire Camino",
+              "Abe Partridge",
               "Katie Burkhardt",
               "Elliot Devaughn",
               "Phillip Savell",
@@ -827,7 +898,6 @@
               "Will Stewart",
               "B.B. Palmer",
               "Shake It Like a Caveman",
-              "Gordon Licciardi",
               "Ritch Henderson"
             ]
           },
@@ -841,7 +911,9 @@
               "J.D. Spencer",
               "Tyler Tisdale",
               "Brad & Wes",
-              "Ham Bagby"
+              "Ham Bagby",
+              "John Keys",
+              "Jacob Kynard"
             ]
           }
         ],

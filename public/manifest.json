@@ -1,0 +1,17 @@
+{
+  "name": "Kuhlshit",
+  "short_name": "Kuhlshit",
+  "description": "Live music, local vibes. PorchFest and artist discovery.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#E08E36",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

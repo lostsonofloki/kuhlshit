@@ -192,72 +192,83 @@ function PorchFestPage() {
                   <div className="event-body">
                     <p className="event-description">{event.description}</p>
 
-                    {/* Day-based Lineup */}
-                    <div className="event-lineup-section">
-                      <h3>Full Lineup</h3>
-                      <div className="lineup-by-day">
-                        {event.lineup.map((daySchedule, index) => (
-                          <div key={index} className="day-schedule">
-                            <h4 className="day-title">
-                              {daySchedule.day}
-                              {event.schedule && event.schedule[index] && (
-                                <span className="day-schedule-time">
-                                  {event.schedule[index].doors} —{" "}
-                                  {event.schedule[index].endTime}
-                                </span>
-                              )}
-                            </h4>
-                            <div className="artist-list">
-                              {daySchedule.artists.map(
-                                (artistEntry, artistIndex) => {
-                                  const artistName =
-                                    typeof artistEntry === "string"
-                                      ? artistEntry
-                                      : artistEntry?.name;
-                                  const slotStatus = getSlotStatus(
-                                    artistEntry,
-                                    daySchedule.day,
-                                    event,
-                                    now,
-                                  );
-                                  const artistData = artistMap[artistName];
-                                  if (artistData) {
-                                    return (
-                                      <Link
-                                        key={artistIndex}
-                                        to={`/porchfest/artists/${artistData.id}`}
-                                        className="artist-item artist-link"
-                                      >
-                                        <span className="artist-bullet">♪</span>
-                                        <span className="artist-name">
-                                          {artistName}
-                                        </span>
-                                        <ScheduleBadges status={slotStatus} />
-                                        {artistData.genre && (
-                                          <span className="artist-mini-genre">
-                                            {artistData.genre}
-                                          </span>
-                                        )}
-                                      </Link>
-                                    );
-                                  }
-                                  return (
-                                    <div
-                                      key={artistIndex}
-                                      className="artist-item"
-                                    >
-                                      <span className="artist-bullet">♪</span>
-                                      <span className="artist-name">
-                                        {artistName}
-                                      </span>
+                    {/* Grid-based artist discovery */}
+                    <div className="pf-discovery">
+                      <h3>Artist Discovery</h3>
+                      <div className="pf-discovery-grid">
+                        {event.lineup.flatMap((daySchedule) =>
+                          daySchedule.artists.map(
+                            (artistEntry, artistIndex) => {
+                              const artistName =
+                                typeof artistEntry === "string"
+                                  ? artistEntry
+                                  : artistEntry?.name;
+                              if (!artistName) return null;
+
+                              const artistData = artistMap[artistName];
+                              const artistId =
+                                artistData?.id ||
+                                artistName
+                                  .toLowerCase()
+                                  .replace(/[^a-z0-9]+/g, "-");
+                              const slotStatus = getSlotStatus(
+                                artistEntry,
+                                daySchedule.day,
+                                event,
+                                now,
+                              );
+
+                              return (
+                                <Link
+                                  key={`${daySchedule.day}-${artistId}-${artistIndex}`}
+                                  to={`/porchfest/artists/${artistId}`}
+                                  className="pf-discovery-card"
+                                >
+                                  <div className="pf-discovery-image">
+                                    {artistData?.imageUrl ? (
+                                      <img
+                                        src={artistData.imageUrl}
+                                        alt={artistName}
+                                        loading="lazy"
+                                      />
+                                    ) : (
+                                      <div className="pf-discovery-placeholder">
+                                        <svg
+                                          width="28"
+                                          height="28"
+                                          viewBox="0 0 24 24"
+                                          fill="none"
+                                          stroke="currentColor"
+                                          strokeWidth="1.5"
+                                        >
+                                          <path d="M9 18V5l12-2v13" />
+                                          <circle cx="6" cy="18" r="3" />
+                                          <circle cx="18" cy="16" r="3" />
+                                        </svg>
+                                      </div>
+                                    )}
+                                  </div>
+                                  <div className="pf-discovery-meta">
+                                    <div className="pf-discovery-title-row">
+                                      <h4>{artistName}</h4>
                                       <ScheduleBadges status={slotStatus} />
                                     </div>
-                                  );
-                                },
-                              )}
-                            </div>
-                          </div>
-                        ))}
+                                    <div className="pf-discovery-sub">
+                                      <span className="pf-day-pill">
+                                        {daySchedule.day}
+                                      </span>
+                                      {artistData?.genre ? (
+                                        <span className="pf-genre-pill">
+                                          {artistData.genre}
+                                        </span>
+                                      ) : null}
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            },
+                          ),
+                        )}
                       </div>
                     </div>
 

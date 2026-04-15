@@ -264,6 +264,110 @@
   margin-bottom: var(--spacing-lg);
 }
 
+/* PorchFest discovery grid */
+.pf-discovery {
+  margin-bottom: var(--spacing-lg);
+}
+
+.pf-discovery h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.pf-discovery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+}
+
+.pf-discovery-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-fast);
+}
+
+.pf-discovery-card:hover {
+  border-color: var(--color-accent-primary);
+  background: rgba(212, 140, 41, 0.08);
+}
+
+.pf-discovery-image {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+  background: var(--color-bg-tertiary);
+}
+
+.pf-discovery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pf-discovery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent-primary);
+}
+
+.pf-discovery-meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.pf-discovery-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.pf-discovery-title-row h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.pf-discovery-sub {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pf-day-pill,
+.pf-genre-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 2px 7px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+}
+
+.pf-day-pill {
+  color: var(--color-accent-primary);
+  background: rgba(212, 140, 41, 0.12);
+}
+
+.pf-genre-pill {
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
 .event-tags {
   display: flex;
   flex-wrap: wrap;
@@ -521,6 +625,11 @@
     padding: var(--spacing-xl);
   }
 
+  .pf-discovery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
   .lineup-by-day {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -577,6 +686,10 @@
 
   .event-info h2 {
     font-size: 1.75rem;
+  }
+
+  .pf-discovery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

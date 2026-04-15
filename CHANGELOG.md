@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.1] - 2026-04-15
+
+### 📱 Mobile UX and Layout Stabilization
+- ✅ Fixed PorchFest event header/action responsiveness across mobile/tablet/desktop breakpoints
+- ✅ Removed duplicate calendar CTAs in PorchFest event actions and kept top-level calendar controls
+- ✅ Corrected calendar button copy consistency (Google/Apple labels)
+- ✅ Fixed text truncation caused by cross-page `.event-description` style collision
+- ✅ Scoped header search button styles to prevent mobile icon/button regressions
+
+### 🔗 Share and Viral Hook
+- ✅ Added floating **Share Artist** button on artist detail pages
+- ✅ Implemented native Web Share API payload (`title`, `text`, current URL)
+- ✅ Added clipboard fallback + inline feedback toast when native share is unavailable
+
+### 🌍 Social Card Reliability
+- ✅ Hardened Open Graph/Twitter image metadata for Facebook crawler compatibility
+- ✅ Switched to canonical `www` image URLs and added secure/type/alt metadata fields
+- ✅ Added image URL cache-busting query parameter for faster social cache refresh
+
+### 🧭 PorchFest Information Density
+- ✅ Added and refined PorchFest artist discovery grid UX
+- ✅ Removed clashing duplicate lineup presentation from PorchFest detail card flow
+- ✅ Kept `/porchfest/artists` focused on real current data (removed premature category placeholders)
+
 ## [2.2.0] - 2026-04-15
 
 ### 🚀 PorchFest UX Improvements

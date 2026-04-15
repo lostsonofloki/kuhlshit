@@ -251,4 +251,4 @@ ISC
 ---
 
 **Built with ❤️ for the Kuhlshit.com community**
-**Dev Credit: Built by [Josh Jenkins](https://linktr.ee/sonofloke)**
+**Dev Credit: Built by [Josh Jenkins](https://linktr.ee/sonofloke)

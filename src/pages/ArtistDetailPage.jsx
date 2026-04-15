@@ -18,6 +18,7 @@ function ArtistDetailPage() {
   const { artistId } = useParams();
   const { data } = useCachedFestivalData();
   const [artist, setArtist] = useState(null);
+  const [shareFeedback, setShareFeedback] = useState("");
   const venueMapUrl = data.porchfest?.events?.[0]?.location?.mapUrl;
 
   useEffect(() => {
@@ -76,6 +77,35 @@ function ArtistDetailPage() {
     PORCHFEST_SEO_DEFAULT_PROPS.description;
   const shareImage =
     artist.imageUrl || artist.thumbnailUrl || PORCHFEST_SEO_DEFAULT_PROPS.image;
+
+  const handleShareArtist = async () => {
+    const shareTitle = `${artist.name} | PorchFest 2026`;
+    const shareText = `Check out ${artist.name} at PorchFest 2026!`;
+    const shareUrl = window.location.href;
+
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+        return;
+      }
+
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+        setShareFeedback("Link copied");
+        window.setTimeout(() => setShareFeedback(""), 1800);
+        return;
+      }
+    } catch {
+      // User canceled share or browser blocked clipboard; silent fallback below.
+    }
+
+    setShareFeedback("Copy this link: " + shareUrl);
+    window.setTimeout(() => setShareFeedback(""), 2800);
+  };
 
   return (
     <>
@@ -494,6 +524,20 @@ function ArtistDetailPage() {
             </Link>
           </div>
         </div>
+
+        <button
+          type="button"
+          className="artist-share-fab"
+          onClick={handleShareArtist}
+          aria-label={`Share ${artist.name} profile`}
+        >
+          Share Artist
+        </button>
+        {shareFeedback ? (
+          <div className="artist-share-toast" role="status" aria-live="polite">
+            {shareFeedback}
+          </div>
+        ) : null}
       </div>
     </>
   );

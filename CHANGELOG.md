@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] - 2026-04-15
+
+### 🚀 PorchFest UX Improvements
+- ✅ Added **Add to Calendar** actions for PorchFest events (PorchFest page + Home event card)
+- ✅ Added a mobile floating **Map** quick-action button after scroll
+- ✅ Improved PorchFest event visibility by keeping event cards available beyond event date filtering
+- ✅ Removed poster download action from PorchFest page for a cleaner flow
+
+### 🌐 Social Preview / SEO
+- ✅ Added baseline Open Graph + Twitter tags in `index.html` for PorchFest launch sharing
+- ✅ Added reusable `SEO` component for route-level metadata overrides
+- ✅ Wired SEO overrides into `PorchFestPage` and `ArtistDetailPage` so artist shares use artist-specific title/image/description
+- ✅ Added `seoDefaults` constants and `VITE_SITE_ORIGIN` support for absolute share URLs
+
+### 📶 Resilience / Offline Fallback
+- ✅ Added `useCachedFestivalData` hook to cache festival data in `localStorage`
+- ✅ Runtime data fetch now falls back to cached payload (or bundled data) on failure
+- ✅ Integrated cached data flow into `PorchFestPage` and `ArtistDetailPage`
+
+### 🎨 UI Polish and Content Cleanup
+- ✅ Fixed cross-page CSS class collision that broke Artist Detail social buttons
+- ✅ Standardized merch image card sizing with fixed aspect-ratio frames
+- ✅ Removed `& More!` lineup placeholder entry that generated unwanted `-more-` route slugs
+- ✅ Removed Facebook video rotator embeds causing "video unavailable / cannot be embedded" errors
+
 ## [2.1.0] - 2026-04-13
 
 ### 🎤 Tour Date Integration

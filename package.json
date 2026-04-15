@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "audit:mobile": "node scripts/playwright-site-audit.mjs"
+    "audit:mobile": "node scripts/playwright-site-audit.mjs",
+    "sync:artist-photos": "node scripts/sync-artist-photos.mjs"
   },
   "repository": {
     "type": "git",

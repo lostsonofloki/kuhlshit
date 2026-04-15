@@ -116,6 +116,50 @@ Output in `dist/` directory
 npm run preview
 ```
 
+### Lint
+
+```bash
+npm run lint
+npm run lint:fix
+```
+
+### Mobile route audit (Playwright)
+
+Runs a smoke check of all routes at a phone-sized viewport. Start the production preview first (e.g. `npm run preview`), then in another terminal:
+
+```bash
+set BASE_URL=http://localhost:4173
+npm run audit:mobile
+```
+
+On macOS/Linux: `BASE_URL=http://localhost:4173 npm run audit:mobile`
+
+### Vercel CLI (linked project)
+
+This repo is linked to the **kuhlshit** project on Vercel via `.vercel/project.json` (committed so teammates get the same link).
+
+```bash
+npx vercel        # deploy preview
+npx vercel --prod # production
+npx vercel env pull .env.local   # optional: sync env vars locally (do not commit secrets)
+```
+
+Use `--scope lostsonoflokis-projects` if your default Vercel account is not this team.
+
+### Environment variables (Vercel)
+
+YouTube and other **Vite** env vars use the `VITE_` prefix so they are available in the browser bundle.
+
+- **Local:** Copy `.env.example` to `.env` and fill in values.
+- **Vercel:** Set the same keys under **Project → Settings → Environment Variables** for **Production** (and **Preview** if playlist pages should work on preview deployments). Redeploy after changing variables so the build picks them up.
+
+| Variable | Purpose |
+| -------- | ------- |
+| `VITE_YOUTUBE_API_KEY` | YouTube Data API key (PorchTalk, Closed on Sundays) |
+| `VITE_YOUTUBE_PLAYLIST_ID` | Optional; defaults exist in code if unset |
+
+Restrict the key in [Google Cloud Credentials](https://console.cloud.google.com/apis/credentials) (HTTP referrers for your domain, API limited to YouTube Data API v3).
+
 ## Data Schema
 
 ### Artist Object

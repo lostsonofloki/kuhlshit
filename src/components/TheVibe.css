@@ -1,7 +1,7 @@
-/* ========== THE VIBE ========== */
+/* ========== THE VIBE (mobile-first) ========== */
 .the-vibe {
   position: relative;
-  min-height: 400px;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,8 +45,8 @@
 
 .vibe-title {
   font-family: var(--font-family-marker);
-  font-size: 3rem;
-  color: #FFD700;
+  font-size: 2.25rem;
+  color: #ffd700;
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
   margin-bottom: var(--spacing-sm);
   line-height: 1;
@@ -54,14 +54,14 @@
 
 .vibe-subtitle {
   font-family: var(--font-family-heading);
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-sm);
   font-weight: 500;
 }
 
 .vibe-desc {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-md);
   letter-spacing: 0.05em;
@@ -78,38 +78,36 @@
   display: inline-block;
   background: rgba(212, 140, 41, 0.2);
   color: var(--color-accent-primary);
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
   border: 1px solid rgba(212, 140, 41, 0.3);
 }
 
-/* Mobile */
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   .the-vibe {
-    min-height: 300px;
+    min-height: 400px;
   }
 
   .vibe-title {
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
 
   .vibe-subtitle {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .vibe-desc {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 
   .vibe-tag {
-    font-size: 0.7rem;
-    padding: 3px 10px;
+    font-size: 0.8rem;
+    padding: 4px 12px;
   }
 }
 
-/* Desktop */
 @media (min-width: 1024px) {
   .the-vibe {
     min-height: 500px;

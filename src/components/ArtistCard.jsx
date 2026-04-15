@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom'
+import ScheduleBadges from './ScheduleBadges'
 import './ArtistCard.css'
 
-function ArtistCard({ artist }) {
+function ArtistCard({ artist, scheduleStatus }) {
   const { id, name, location, thumbnailUrl } = artist
 
   return (
@@ -30,7 +31,10 @@ function ArtistCard({ artist }) {
       </div>
 
       <div className="artist-card-content">
-        <h3 className="artist-card-name">{name}</h3>
+        <h3 className="artist-card-name">
+          <span className="artist-card-name-text">{name}</span>
+          <ScheduleBadges status={scheduleStatus} />
+        </h3>
         <p className="artist-card-location">{location}</p>
       </div>
     </Link>

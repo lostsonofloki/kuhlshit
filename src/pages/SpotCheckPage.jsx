@@ -8,7 +8,7 @@ function SpotCheckPage() {
         YOU FOUND LOUIE. 🤫
       </h1>
       <p className="spotcheck-desc">
-        Wait... I thought dalmatians didn't exist? You've stumbled upon a glitch in the matrix.
+        Wait... I thought dalmatians didn&apos;t exist? You&apos;ve stumbled upon a glitch in the matrix.
       </p>
       <Link
         to="/"

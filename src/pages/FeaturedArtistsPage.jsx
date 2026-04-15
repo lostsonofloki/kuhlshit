@@ -1,9 +1,14 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import ScheduleBadges from '../components/ScheduleBadges'
+import { useFestivalClock } from '../hooks/useFestivalClock'
+import { getArtistSlotStatusFromData } from '../utils/porchfestScheduleStatus'
 import './FeaturedArtists.css'
 
 function FeaturedArtistsPage() {
+  const now = useFestivalClock()
+  const venueMapUrl = data.porchfest?.events?.[0]?.location?.mapUrl
   const [artists, setArtists] = useState([])
   const [selectedDay, setSelectedDay] = useState('all')
 
@@ -14,14 +19,16 @@ function FeaturedArtistsPage() {
       const allArtists = []
       
       event.lineup.forEach(daySchedule => {
-        daySchedule.artists.forEach(artistName => {
+        daySchedule.artists.forEach(entry => {
+          const artistName = typeof entry === 'string' ? entry : entry?.name
+          if (!artistName) return
           // Find matching artist in data for image/info
-          const artistData = data.artists.find(a => 
+          const artistData = data.artists.find(a =>
             a.name.toLowerCase() === artistName.toLowerCase() ||
             a.name.toLowerCase().includes(artistName.toLowerCase()) ||
             artistName.toLowerCase().includes(a.name.toLowerCase())
           )
-          
+
           allArtists.push({
             name: artistName,
             day: daySchedule.day,
@@ -47,7 +54,22 @@ function FeaturedArtistsPage() {
       <div className="page-header">
         <h1>PorchFest 2026 Artists</h1>
         <p>Meet the talented musicians performing at PorchFest 2026</p>
-        <p className="event-dates">April 17-19 • <a href="https://www.google.com/maps/place/Munson+and+Brothers+Trading+Post/@33.4944198,-88.4322622,16z/data=!4m6!3m5!1s0x8886eb05721234f7:0x28b28ed87d3c2534!8m2!3d33.496184!4d-88.4307709!16s%2Fg%2F11fj2fw9ny?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ color: '#d48c29', textDecoration: 'underline' }}>Munson & Brothers</a> • Columbus, MS</p>
+        <p className="event-dates">
+          April 17-19 •{' '}
+          {venueMapUrl ? (
+            <a
+              href={venueMapUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#d48c29', textDecoration: 'underline' }}
+            >
+              Munson & Brothers
+            </a>
+          ) : (
+            'Munson & Brothers'
+          )}{' '}
+          • Columbus, MS
+        </p>
       </div>
 
       {/* Day Filter */}
@@ -84,7 +106,10 @@ function FeaturedArtistsPage() {
               </div>
             </div>
             <div className="artist-info">
-              <h3>{artist.name}</h3>
+              <h3 className="featured-artist-title">
+                <span>{artist.name}</span>
+                <ScheduleBadges status={getArtistSlotStatusFromData(artist.name, data, now)} />
+              </h3>
               <span className="artist-day">{artist.day}</span>
             </div>
           </Link>

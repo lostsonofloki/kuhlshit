@@ -1,5 +1,14 @@
 /* Global CSS Variables - Dark Industrial Theme */
+/*
+ * Layout: mobile-first. Base rules target narrow viewports; use min-width to
+ * enhance for tablet (--bp-md) and desktop (--bp-lg). Avoid max-width-only
+ * “mobile overrides” for new styles.
+ */
 :root {
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+
   /* Primary Colors */
   --color-bg-primary: #121212;
   --color-bg-secondary: #1a1a1a;

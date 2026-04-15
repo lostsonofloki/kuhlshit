@@ -1,0 +1,45 @@
+.schedule-badges {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  font-family: var(--font-family-heading, 'Montserrat', sans-serif);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--badge-gold, #e08e36);
+}
+
+.schedule-badges__dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #dc2626;
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.85);
+  flex-shrink: 0;
+}
+
+.schedule-badges__dot--pulse {
+  animation: schedule-badge-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes schedule-badge-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+}
+
+.schedule-badges--next .schedule-badges__label {
+  padding: 0.15rem 0.45rem;
+  border: 1px solid rgba(224, 142, 54, 0.45);
+  background: rgba(224, 142, 54, 0.08);
+  border-radius: 2px;
+}

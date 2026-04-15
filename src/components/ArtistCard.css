@@ -83,9 +83,17 @@
 }
 
 .artist-card-name {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-xs);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.artist-card-name-text {
+  min-width: 0;
 }
 
 .artist-card-location {
@@ -110,8 +118,8 @@
   border: 1px solid var(--border-color);
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .artist-card-name {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
   }
 }

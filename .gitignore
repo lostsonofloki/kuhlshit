@@ -39,6 +39,9 @@ lerna-debug.log*
 *.png
 *.jpg
 *.webp
+!public/resources/artists/**/*.png
+!public/resources/artists/**/*.jpg
+!public/resources/artists/**/*.webp
 stifftones-debug.png
 
 # Misc

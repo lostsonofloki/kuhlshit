@@ -285,6 +285,17 @@
   gap: var(--spacing-xs);
 }
 
+.event-venue-link {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.event-venue-link:hover {
+  color: var(--color-accent-hover);
+}
+
 .event-description {
   font-size: 0.9rem;
   color: var(--color-text-secondary);

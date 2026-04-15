@@ -16,6 +16,19 @@ import ArtistDetailPage from './pages/ArtistDetailPage'
 import SpotCheckPage from './pages/SpotCheckPage'
 import './App.css'
 
+/** Vercel injects /_vercel/* scripts only on their platform; skip locally to avoid 404 console noise. */
+function VercelMetrics() {
+  if (typeof window === 'undefined') return null
+  const h = window.location.hostname
+  if (h === 'localhost' || h === '127.0.0.1') return null
+  return (
+    <>
+      <Analytics />
+      <SpeedInsights />
+    </>
+  )
+}
+
 function App() {
   return (
     <div className="app">
@@ -38,8 +51,7 @@ function App() {
       </main>
       <Footer />
       <LouieEasterEgg />
-      <Analytics />
-      <SpeedInsights />
+      <VercelMetrics />
     </div>
   )
 }

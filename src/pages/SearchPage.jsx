@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
 import ArtistCard from '../components/ArtistCard'
+import { useFestivalClock } from '../hooks/useFestivalClock'
+import { getArtistSlotStatusFromData } from '../utils/porchfestScheduleStatus'
 import './SearchPage.css'
 
 function SearchPage() {
+  const now = useFestivalClock()
   const [searchQuery, setSearchQuery] = useState('')
   const [results, setResults] = useState({
     artists: [],
@@ -24,7 +27,7 @@ function SearchPage() {
 
     const artistResults = data.artists.filter(artist => {
       const nameMatch = artist.name.toLowerCase().includes(searchLower)
-      const locationMatch = artist.location.toLowerCase().includes(searchLower)
+      const locationMatch = artist.location?.toLowerCase().includes(searchLower) ?? false
       const bioMatch = artist.bio?.toLowerCase().includes(searchLower)
       return nameMatch || locationMatch || bioMatch
     })
@@ -108,7 +111,11 @@ function SearchPage() {
                   <h3 className="category-title">Artists</h3>
                   <div className="artists-grid">
                     {results.artists.map(artist => (
-                      <ArtistCard key={artist.id} artist={artist} />
+                      <ArtistCard
+                        key={artist.id}
+                        artist={artist}
+                        scheduleStatus={getArtistSlotStatusFromData(artist.name, data, now)}
+                      />
                     ))}
                   </div>
                 </div>

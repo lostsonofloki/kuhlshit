@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-import data from '../data/data.json'
 import './PorchTalkPage.css'
 
 function PorchTalkPage() {
@@ -10,29 +9,12 @@ function PorchTalkPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [filteredVideos, setFilteredVideos] = useState([])
 
-  const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY || '';
+  const apiKey = import.meta.env.VITE_YOUTUBE_API_KEY || ''
   const playlistId = 'PLzKakvgn9O5RUCNYT1QL0LQ_D_T3WSqdu'
 
-  useEffect(() => {
-    fetchVideos()
-  }, [])
-
-  useEffect(() => {
-    if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase()
-      setFilteredVideos(
-        videos.filter(video =>
-          video.title.toLowerCase().includes(query) ||
-          video.description.toLowerCase().includes(query)
-        )
-      )
-    } else {
-      setFilteredVideos(videos)
-    }
-  }, [searchQuery, videos])
-
-  const fetchVideos = async () => {
+  const fetchVideos = useCallback(async () => {
     try {
+      setError(null)
       setLoading(true)
       let allItems = []
       let nextPageToken = null
@@ -63,8 +45,8 @@ function PorchTalkPage() {
         id: item.snippet.resourceId.videoId,
         title: item.snippet.title,
         description: item.snippet.description,
-        thumbnail: item.snippet.thumbnails.high?.url || 
-                   item.snippet.thumbnails.medium?.url || 
+        thumbnail: item.snippet.thumbnails.high?.url ||
+                   item.snippet.thumbnails.medium?.url ||
                    item.snippet.thumbnails.default?.url || '',
         publishedAt: item.snippet.publishedAt
       }))
@@ -76,7 +58,25 @@ function PorchTalkPage() {
       setError(err.message)
       setLoading(false)
     }
-  }
+  }, [apiKey, playlistId])
+
+  useEffect(() => {
+    fetchVideos()
+  }, [fetchVideos])
+
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase()
+      setFilteredVideos(
+        videos.filter(video =>
+          video.title.toLowerCase().includes(query) ||
+          video.description.toLowerCase().includes(query)
+        )
+      )
+    } else {
+      setFilteredVideos(videos)
+    }
+  }, [searchQuery, videos])
 
   const handleSearch = (e) => {
     setSearchQuery(e.target.value)

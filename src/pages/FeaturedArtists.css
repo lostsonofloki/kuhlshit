@@ -27,6 +27,15 @@
   margin-bottom: var(--spacing-xs);
 }
 
+.featured-artist-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin: 0;
+  font-size: inherit;
+}
+
 .event-dates {
   font-size: 1rem;
   color: var(--color-accent-primary);

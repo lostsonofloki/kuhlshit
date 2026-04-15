@@ -2,9 +2,13 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
 import TicketMerch from '../components/TicketMerch'
+import ScheduleBadges from '../components/ScheduleBadges'
+import { useFestivalClock } from '../hooks/useFestivalClock'
+import { getSlotStatus } from '../utils/porchfestScheduleStatus'
 import './PorchFestPage.css'
 
 function PorchFestPage() {
+  const now = useFestivalClock()
   const [events, setEvents] = useState([])
   const [artistMap, setArtistMap] = useState({})
 
@@ -83,7 +87,23 @@ function PorchFestPage() {
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
-                      {event.location.venue && <span>{event.location.venue} • </span>}
+                      {event.location.venue && (
+                        <>
+                          {event.location.mapUrl ? (
+                            <a
+                              href={event.location.mapUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="event-venue-link"
+                            >
+                              {event.location.venue}
+                            </a>
+                          ) : (
+                            <span>{event.location.venue}</span>
+                          )}
+                          <span> • </span>
+                        </>
+                      )}
                       {event.location.address}, {event.location.city}, {event.location.state}
                     </p>
                   </div>
@@ -105,7 +125,10 @@ function PorchFestPage() {
                             )}
                           </h4>
                           <div className="artist-list">
-                            {daySchedule.artists.map((artistName, artistIndex) => {
+                            {daySchedule.artists.map((artistEntry, artistIndex) => {
+                              const artistName =
+                                typeof artistEntry === 'string' ? artistEntry : artistEntry?.name
+                              const slotStatus = getSlotStatus(artistEntry, daySchedule.day, event, now)
                               const artistData = artistMap[artistName]
                               if (artistData) {
                                 return (
@@ -116,6 +139,7 @@ function PorchFestPage() {
                                   >
                                     <span className="artist-bullet">♪</span>
                                     <span className="artist-name">{artistName}</span>
+                                    <ScheduleBadges status={slotStatus} />
                                     {artistData.genre && (
                                       <span className="artist-mini-genre">{artistData.genre}</span>
                                     )}
@@ -126,6 +150,7 @@ function PorchFestPage() {
                                 <div key={artistIndex} className="artist-item">
                                   <span className="artist-bullet">♪</span>
                                   <span className="artist-name">{artistName}</span>
+                                  <ScheduleBadges status={slotStatus} />
                                 </div>
                               )
                             })}
@@ -151,7 +176,7 @@ function PorchFestPage() {
                     )}
                     {event.location.website && (
                       <a href={event.location.website} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
-                        Munson & Brothers
+                        Venue website
                       </a>
                     )}
                     {event.location.socialLinks && (

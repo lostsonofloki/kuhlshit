@@ -64,7 +64,7 @@ function HomePage() {
           <p className="hero-subtitle">
             <span className="hero-highlight">Porch Talk</span> •
             <span className="hero-highlight"> Closed on Sundays</span> •
-            <span className="hero-highlight"> Al's Spirits & Music</span>
+            <span className="hero-highlight"> Al&apos;s Spirits & Music</span>
           </p>
 
           <CountdownTimer />
@@ -112,7 +112,25 @@ function HomePage() {
                     <span className="price-note">{event.pricing.note}</span>
                   </div>
                 )}
-                <p className="event-location">{event.location.venue || event.location.city}, {event.location.state}</p>
+                <p className="event-location">
+                  {event.location.mapUrl && event.location.venue ? (
+                    <>
+                      <a
+                        href={event.location.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="event-venue-link"
+                      >
+                        {event.location.venue}
+                      </a>
+                      , {event.location.state}
+                    </>
+                  ) : (
+                    <>
+                      {event.location.venue || event.location.city}, {event.location.state}
+                    </>
+                  )}
+                </p>
 
                 {/* Schedule */}
                 {event.schedule && event.schedule.length > 0 && (

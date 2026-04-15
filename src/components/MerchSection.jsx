@@ -26,7 +26,7 @@ function MerchSection() {
         {/* Bottom Row: Centered Text & CTA */}
         <div className="merch-text-block">
           <h2 className="merch-title">Support the Porch</h2>
-          <p className="merch-subtitle">Official PorchFest '26 Gear</p>
+          <p className="merch-subtitle">Official PorchFest &apos;26 Gear</p>
           <p className="merch-location">Available at the Merch Table Beside the Stage</p>
           <p className="merch-payment">Cash, Venmo, CashApp, PayPal accepted</p>
           <div className="merch-cta">

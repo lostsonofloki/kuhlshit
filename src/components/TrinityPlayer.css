@@ -82,7 +82,7 @@
 
 .trinity-segments {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--spacing-md);
   padding: var(--spacing-lg);
   background: var(--color-bg-tertiary);
@@ -91,9 +91,10 @@
 
 .segment-btn {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: var(--spacing-sm);
+  justify-content: flex-start;
+  gap: var(--spacing-md);
   padding: var(--spacing-md);
   background: var(--color-bg-card);
   border: 1px solid var(--border-color);
@@ -115,7 +116,7 @@
 }
 
 .segment-icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .segment-label {
@@ -128,18 +129,19 @@
   opacity: 0.8;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .trinity-segments {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .segment-btn {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     justify-content: flex-start;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
 
   .segment-icon {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }

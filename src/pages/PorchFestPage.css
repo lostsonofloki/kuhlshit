@@ -226,6 +226,17 @@
   flex-shrink: 0;
 }
 
+.event-venue-link {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.event-venue-link:hover {
+  color: var(--color-accent-hover);
+}
+
 .event-days {
   margin-top: var(--spacing-sm);
 }
@@ -302,9 +313,14 @@
 .artist-item {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--spacing-sm);
   font-size: 0.875rem;
   color: var(--color-text-secondary);
+}
+
+.artist-item .schedule-badges {
+  margin-left: 0;
 }
 
 .artist-link {

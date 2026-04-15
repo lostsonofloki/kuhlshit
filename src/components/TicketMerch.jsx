@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import './TicketMerch.css'
+import { Link } from "react-router-dom";
+import "./TicketMerch.css";
 
 function TicketMerch() {
   return (
@@ -29,19 +29,23 @@ function TicketMerch() {
           <h2 className="ticket-merch-title">Official Merch</h2>
           <div className="merch-images">
             <div className="merch-image-wrapper">
-              <img
-                src="/resources/porchfest/tshirts.jpg"
-                alt="PorchFest '26 T-Shirts"
-                className="merch-image"
-              />
+              <div className="merch-image-frame">
+                <img
+                  src="/resources/porchfest/tshirts.jpg"
+                  alt="PorchFest '26 T-Shirts"
+                  className="merch-image"
+                />
+              </div>
               <span className="merch-image-label">T-Shirts & More</span>
             </div>
             <div className="merch-image-wrapper">
-              <img
-                src="/resources/porchfest/blackshirt.jpg"
-                alt="PorchFest '26 Black Tee"
-                className="merch-image"
-              />
+              <div className="merch-image-frame">
+                <img
+                  src="/resources/porchfest/blackshirt.jpg"
+                  alt="PorchFest '26 Black Tee"
+                  className="merch-image"
+                />
+              </div>
               <span className="merch-image-label">Black Tee</span>
             </div>
           </div>
@@ -54,7 +58,7 @@ function TicketMerch() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default TicketMerch
+export default TicketMerch;

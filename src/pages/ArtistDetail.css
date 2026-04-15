@@ -1,7 +1,11 @@
 .artist-detail-page {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-primary) 0%,
+    var(--color-bg-secondary) 100%
+  );
   color: var(--color-text-primary);
 }
 
@@ -35,7 +39,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-tertiary) 0%,
+    var(--color-bg-secondary) 100%
+  );
   overflow: hidden;
 }
 
@@ -62,7 +70,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
 }
 
 .artist-hero-content {
@@ -133,7 +145,7 @@
   gap: var(--spacing-sm);
 }
 
-.social-link {
+.artist-social-link {
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -146,20 +158,20 @@
   transition: all var(--transition-fast);
 }
 
-.social-link:hover {
+.artist-social-link:hover {
   border-color: var(--color-accent-primary);
   background: var(--color-bg-tertiary);
   color: var(--color-accent-primary);
   transform: translateX(5px);
 }
 
-.social-link svg {
+.artist-social-link svg {
   flex-shrink: 0;
   width: 24px;
   height: 24px;
 }
 
-.social-link span {
+.artist-social-link span {
   font-weight: 500;
 }
 
@@ -297,7 +309,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .social-link,
+  .artist-social-link,
   .music-link {
     flex-direction: row;
   }

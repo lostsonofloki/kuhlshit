@@ -9,6 +9,8 @@ import { useCachedFestivalData } from "../hooks/useCachedFestivalData";
 import { getSlotStatus } from "../utils/porchfestScheduleStatus";
 import "./PorchFestPage.css";
 
+const APPLE_CALENDAR_URL = "/calendar/porchfest-2026.ics";
+
 function toCalendarDate(value, addDays = 0) {
   const base = new Date(`${value}T00:00:00`);
   base.setDate(base.getDate() + addDays);
@@ -111,7 +113,13 @@ function PorchFestPage() {
                         rel="noopener noreferrer"
                         className="btn btn-primary event-calendar-btn"
                       >
-                        Add to Calendar
+                        Add to Google Calendar
+                      </a>
+                      <a
+                        href={APPLE_CALENDAR_URL}
+                        className="btn btn-secondary event-calendar-btn"
+                      >
+                        Add to Apple Calendar
                       </a>
                     </div>
                     <div className="event-info">
@@ -254,15 +262,6 @@ function PorchFestPage() {
                     </div>
 
                     <div className="event-actions">
-                      <a
-                        href={buildCalendarUrl(event)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-secondary"
-                      >
-                        Don&apos;t miss a beat. Add PorchFest 2026 to your
-                        calendar.
-                      </a>
                       <Link to="/porchfest/artists" className="btn btn-primary">
                         View All Artists →
                       </Link>

@@ -6,6 +6,8 @@ import TheVibe from "../components/TheVibe";
 import MerchSection from "../components/MerchSection";
 import "./HomePage.css";
 
+const APPLE_CALENDAR_URL = "/calendar/porchfest-2026.ics";
+
 function toCalendarDate(value, addDays = 0) {
   const base = new Date(`${value}T00:00:00`);
   base.setDate(base.getDate() + addDays);
@@ -141,7 +143,13 @@ function HomePage() {
                   rel="noopener noreferrer"
                   className="btn btn-primary home-calendar-btn"
                 >
-                  Add to Calendar
+                  Add to Google Calendar
+                </a>
+                <a
+                  href={APPLE_CALENDAR_URL}
+                  className="btn btn-secondary home-calendar-btn"
+                >
+                  Add to Apple Calendar
                 </a>
               </div>
               <div className="event-content">

@@ -197,7 +197,7 @@
   margin-bottom: var(--spacing-xs);
 }
 
-.event-description {
+.search-event-description {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
   line-height: 1.5;

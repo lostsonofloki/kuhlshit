@@ -1,0 +1,354 @@
+.myspace-theme {
+  background-color: #000000;
+  min-height: 100vh;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.myspace-theme a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+.myspace-theme .myspace-page {
+  padding: 0 8px 24px;
+}
+
+.myspace-theme .myspace-nav {
+  background-color: #003399;
+  color: #ffffff;
+  padding: 4px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.myspace-theme .myspace-nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.myspace-theme .myspace-logo-normal {
+  font-weight: normal;
+}
+
+.myspace-theme .myspace-logo-icon {
+  margin: 0 4px;
+  font-size: 14px;
+}
+
+.myspace-theme .myspace-logo-bold {
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.myspace-theme .myspace-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: right;
+  max-width: 68%;
+  overflow: visible;
+}
+
+.myspace-theme .myspace-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.myspace-theme .myspace-nav-link:hover {
+  text-decoration: underline;
+}
+
+.myspace-theme .myspace-nav-separator {
+  color: #ffffff;
+}
+
+.myspace-theme .myspace-return-link {
+  font-weight: bold;
+  padding-left: 2px;
+  white-space: nowrap;
+}
+
+.myspace-theme .myspace-return-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .myspace-theme .myspace-nav {
+    padding: 6px 14px;
+    align-items: flex-start;
+  }
+
+  .myspace-theme .myspace-nav-right {
+    font-size: 9px;
+    max-width: 72%;
+    row-gap: 2px;
+  }
+
+  .myspace-theme .myspace-nav-right > .myspace-nav-link,
+  .myspace-theme .myspace-nav-right > .myspace-nav-separator {
+    display: none;
+  }
+
+  .myspace-theme .myspace-nav-right > .myspace-return-wrap {
+    display: inline-flex;
+    margin-left: auto;
+  }
+}
+
+.myspace-theme .myspace-profile-container {
+  margin: 12px auto;
+  max-width: 800px;
+  background-color: #ffffff;
+  border: 1px solid #c0c0c0;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.myspace-theme .myspace-left-column {
+  width: 32%;
+}
+
+.myspace-theme .myspace-right-column {
+  width: 68%;
+}
+
+@media (max-width: 720px) {
+  .myspace-theme .myspace-profile-container {
+    flex-direction: column;
+  }
+
+  .myspace-theme .myspace-left-column,
+  .myspace-theme .myspace-right-column {
+    width: 100%;
+  }
+}
+
+.myspace-theme .myspace-owner-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #003399;
+  margin-bottom: 2px;
+}
+
+.myspace-theme .myspace-extended-network {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.myspace-theme .myspace-owner-photo-wrapper {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #c0c0c0;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.myspace-theme .myspace-owner-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.myspace-theme .myspace-status-box {
+  border: 1px solid #c0c0c0;
+  padding: 4px;
+  margin-bottom: 8px;
+  font-size: 10px;
+}
+
+.myspace-theme .myspace-status-line {
+  margin-bottom: 2px;
+}
+
+.myspace-theme .myspace-online-line {
+  color: #00ff00;
+}
+
+.myspace-theme .myspace-online-dot {
+  margin-right: 2px;
+}
+
+.myspace-theme .myspace-contact-box {
+  border: 1px solid #c0c0c0;
+  margin-top: 8px;
+}
+
+.myspace-theme .myspace-contact-header {
+  background-color: #e0e0e0;
+  padding: 3px 4px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.myspace-theme .myspace-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px 8px;
+  padding: 4px;
+}
+
+.myspace-theme .myspace-contact-link {
+  font-size: 10px;
+}
+
+.myspace-theme .myspace-player {
+  border: 1px solid #999999;
+  margin-bottom: 8px;
+  background-color: #e0e0e0;
+}
+
+.myspace-theme .myspace-player-header {
+  background-color: #d3d3d3;
+  padding: 3px 4px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.myspace-theme .myspace-player-body {
+  padding: 12px 4px;
+  text-align: center;
+}
+
+.myspace-theme .myspace-player-broken-icon {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.myspace-theme .myspace-player-broken-text {
+  font-size: 10px;
+  color: #990000;
+  margin-bottom: 4px;
+}
+
+.myspace-theme .myspace-player-error-text {
+  font-weight: normal;
+}
+
+.myspace-theme .myspace-player-error-buffering {
+  animation: myspace-blink 1s steps(2, start) infinite;
+}
+
+@keyframes myspace-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.myspace-theme .myspace-player-broken-link {
+  font-size: 10px;
+  color: #0000ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.myspace-theme .myspace-blurbs {
+  border: 1px solid #c0c0c0;
+  margin-bottom: 8px;
+}
+
+.myspace-theme .myspace-blurbs-header {
+  background-color: #6699cc;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 3px 4px;
+  font-size: 11px;
+}
+
+.myspace-theme .myspace-blurbs-section {
+  padding: 4px;
+}
+
+.myspace-theme .myspace-blurbs-title {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.myspace-theme .myspace-blurbs-section p {
+  margin: 0 0 4px;
+}
+
+.myspace-theme .myspace-friend-space {
+  border: 1px solid #c0c0c0;
+  padding: 4px;
+}
+
+.myspace-theme .myspace-friend-space-header {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.myspace-theme .myspace-friend-space-sub {
+  font-size: 10px;
+  margin-bottom: 6px;
+}
+
+.myspace-theme .myspace-top8-header {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.myspace-theme .myspace-top8-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.myspace-theme .myspace-friend-card {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px;
+}
+
+.myspace-theme .myspace-friend-card:hover .myspace-friend-name {
+  text-decoration: underline;
+}
+
+.myspace-theme .myspace-friend-photo-wrapper {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #999999;
+  margin: 0 auto 2px;
+  overflow: hidden;
+}
+
+.myspace-theme .myspace-friend-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: pixelated;
+}
+
+.myspace-theme .myspace-friend-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #cccccc;
+}
+
+.myspace-theme .myspace-friend-name {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.myspace-theme .myspace-fallback {
+  margin-top: 8px;
+  font-size: 10px;
+}
+

@@ -1,10 +1,20 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './Header.css'
 
-function Header() {
+function Header({ isMySpaceMode = false, setIsMySpaceMode = () => {} }) {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [logoClickCount, setLogoClickCount] = useState(0)
+  const navigate = useNavigate()
+  const Maps = navigate
+
+  useEffect(() => {
+    if (logoClickCount >= 5) {
+      setLogoClickCount(0)
+      Maps('/retro')
+    }
+  }, [logoClickCount, Maps])
 
   const navLinks = [
     { path: '/artists', label: 'Artists' },
@@ -21,12 +31,17 @@ function Header() {
     setIsMenuOpen(false)
   }
 
+  const handleLogoClick = () => {
+    closeMenu()
+    setLogoClickCount((prevCount) => prevCount + 1)
+  }
+
   return (
     <>
       <header className="header">
         <div className="header-container">
           {/* Left: Logo */}
-          <Link to="/" className="logo" onClick={closeMenu}>
+          <Link to="/" className="logo" onClick={handleLogoClick}>
             <span className="logo-text">Kuhlshit.com</span>
           </Link>
 

@@ -38,6 +38,13 @@ function buildCalendarUrl(event) {
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
 
+function getEventVisibilityEnd(event) {
+  const endDateValue = event?.endDate || event?.date;
+  if (!endDateValue) return null;
+  const endOfDay = new Date(`${endDateValue}T23:59:59`);
+  return Number.isNaN(endOfDay.getTime()) ? null : endOfDay;
+}
+
 function HomePage() {
   const [featuredArtists, setFeaturedArtists] = useState([]);
   const [upcomingEvents, setUpcomingEvents] = useState([]);
@@ -76,8 +83,12 @@ function HomePage() {
     }
 
     // Get upcoming events (sorted by date)
+    const now = new Date();
     const events = data.porchfest.events
-      .filter((event) => new Date(event.date) >= new Date())
+      .filter((event) => {
+        const visibilityEnd = getEventVisibilityEnd(event);
+        return visibilityEnd ? visibilityEnd >= now : false;
+      })
       .sort((a, b) => new Date(a.date) - new Date(b.date))
       .slice(0, 2);
     setUpcomingEvents(events);

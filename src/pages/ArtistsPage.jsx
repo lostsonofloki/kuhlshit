@@ -88,6 +88,7 @@ function ArtistsPage() {
                 <img
                   src={artist.imageUrl || '/resources/placeholder-artist.svg'}
                   alt={artist.name}
+                  className={artist.id === 'john-keys' ? 'artist-image-fit-contain' : ''}
                   onError={(e) => {
                     e.target.src = '/resources/placeholder-artist.svg'
                   }}

@@ -788,6 +788,41 @@
       "videos": [],
       "featured": true,
       "publishDate": "2026-04-15"
+    },
+    {
+      "id": "too-darn-loud",
+      "name": "Too Darn Loud",
+      "location": "Mississippi",
+      "bio": "Too Darn Loud is an oddball alt/rock duo from Mississippi featuring Isaac Hitt (Guitar & Noises) and Brandon Goehner (Percussion & Vocals). They are playing PorchFest 2026 on Saturday, with new releases \"Nothing To Do\" and \"Sophisticated 60s Sci-Fi\" streaming now.",
+      "imageUrl": "/resources/artists/too-darn-loud/photo-1.png",
+      "thumbnailUrl": "/resources/artists/too-darn-loud/photo-1.png",
+      "genre": "Oddball Alt/Rock",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/too_darn_loud/",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/@musictoodarnloud",
+        "spotify": "",
+        "appleMusic": "",
+        "website": "https://musictoodarnloud.weebly.com/"
+      },
+      "musicLinks": {
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": "https://www.youtube.com/watch?v=QrilTlJbrCU",
+        "bandcamp": "https://toodarnloud.bandcamp.com/"
+      },
+      "videos": [
+        {
+          "title": "Too Darn Loud - Sophisticated 60s Sci-Fi",
+          "videoId": "QrilTlJbrCU",
+          "thumbnail": "https://img.youtube.com/vi/QrilTlJbrCU/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=QrilTlJbrCU",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-17"
     }
   ],
   "comedy": [
@@ -891,6 +926,7 @@
           {
             "day": "Saturday",
             "artists": [
+              "Too Darn Loud",
               "Honey Boy and Boots",
               "Hayden Hunter & The Yearly Trials",
               "Hunter Myers",

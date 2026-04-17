@@ -12,11 +12,11 @@ Owners: Josh (Architecture/Dev), Alan (Business/Strategy)
 Goal: keep launch stable and responsive during event week.
 
 ### 30-Minute UI Strike Plan (Immediate Pass)
-- [ ] **10 min - CTA hierarchy pass:** keep one primary filled button style; make secondary actions outlined.
-- [ ] **8 min - Mobile readability pass:** increase contrast/weight for small labels, schedule times, and footer micro text.
-- [ ] **7 min - Spacing rhythm pass:** normalize section spacing to a consistent 16/24/32 pattern.
-- [ ] **5 min - QA sweep:** test key pages at mobile widths (~390 and ~430) for clipping/crowding/readability.
-- [ ] **Rule:** if any single tweak takes more than 10 minutes, park it for the next polish pass.
+- [x] **10 min - CTA hierarchy pass:** keep one primary filled button style; make secondary actions outlined.
+- [x] **8 min - Mobile readability pass:** increase contrast/weight for small labels, schedule times, and footer micro text.
+- [x] **7 min - Spacing rhythm pass:** normalize section spacing to a consistent 16/24/32 pattern.
+- [x] **5 min - QA sweep:** test key pages at mobile widths (~390 and ~430) for clipping/crowding/readability.
+- [x] **Rule:** if any single tweak takes more than 10 minutes, park it for the next polish pass.
 
 ### Next UI Polish Queue
 - [ ] Add sticky mobile utility bar (`Lineup` + `Map`) if it stays unobtrusive.

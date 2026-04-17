@@ -285,6 +285,64 @@
   color: var(--color-text-primary);
 }
 
+.pf-day-jump {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: var(--spacing-md);
+}
+
+.pf-day-jump-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 6px 10px;
+}
+
+.pf-day-jump-link:hover {
+  color: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.pf-day-jump-link.is-today {
+  color: #111;
+  background: var(--color-accent-primary);
+  border-color: var(--color-accent-primary);
+}
+
+.pf-lineup-by-day {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.pf-day-section {
+  scroll-margin-top: 96px;
+}
+
+.pf-day-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-sm);
+}
+
+.pf-day-section-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-accent-primary);
+}
+
+.pf-day-section-header span {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
 .pf-discovery-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -638,6 +696,10 @@
   .pf-discovery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--spacing-md);
+  }
+
+  .pf-day-jump-link {
+    font-size: 0.82rem;
   }
 
   .lineup-by-day {

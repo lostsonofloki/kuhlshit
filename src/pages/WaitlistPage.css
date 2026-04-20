@@ -1,0 +1,122 @@
+.waitlist-page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.waitlist-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  color: var(--color-text-primary);
+}
+
+.waitlist-eyebrow {
+  font-family: var(--font-family-heading);
+  color: var(--color-accent-primary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.waitlist-card h1 {
+  font-family: var(--font-family-marker, var(--font-family-heading));
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: 0 0 var(--spacing-md);
+}
+
+.waitlist-lede {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin: 0 0 var(--spacing-xl);
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.waitlist-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.waitlist-field > span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+}
+
+.waitlist-field input,
+.waitlist-field select,
+.waitlist-field textarea {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.14));
+  border-radius: 8px;
+  color: var(--color-text-primary);
+  padding: 10px 12px;
+  font: inherit;
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.waitlist-field input:focus,
+.waitlist-field select:focus,
+.waitlist-field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 3px rgba(212, 140, 41, 0.25);
+}
+
+.waitlist-field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.waitlist-submit {
+  align-self: stretch;
+  padding: 14px 22px;
+  font-size: 1rem;
+}
+
+.waitlist-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.waitlist-fineprint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.waitlist-error {
+  margin: 0;
+  color: #ff8b7a;
+  font-size: 0.9rem;
+}
+
+.waitlist-page--success .waitlist-card {
+  text-align: center;
+}
+
+.waitlist-success-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .waitlist-card h1 {
+    font-size: 2.5rem;
+  }
+}

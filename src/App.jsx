@@ -14,6 +14,8 @@ import ArtistsPage from './pages/ArtistsPage'
 import FeaturedArtistsPage from './pages/FeaturedArtistsPage'
 import ArtistDetailPage from './pages/ArtistDetailPage'
 import SpotCheckPage from './pages/SpotCheckPage'
+import VaultPage from './pages/VaultPage'
+import WaitlistPage from './pages/WaitlistPage'
 import './App.css'
 
 /** Vercel injects /_vercel/* scripts only on their platform; skip locally to avoid 404 console noise. */
@@ -46,6 +48,8 @@ function App() {
             <Route path="/porch-talk" element={<PorchTalkPage />} />
             <Route path="/search" element={<SearchPage />} />
             <Route path="/spotcheck" element={<SpotCheckPage />} />
+            <Route path="/vault" element={<VaultPage />} />
+            <Route path="/waitlist" element={<WaitlistPage />} />
           </Routes>
         </div>
       </main>

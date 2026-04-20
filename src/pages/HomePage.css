@@ -67,7 +67,7 @@
   gap: 12px;
   align-items: center;
   width: 100%;
-  max-width: 300px;
+  max-width: min(100%, 22rem);
   margin: 0 auto;
 }
 
@@ -83,6 +83,31 @@
 
 .hero-secondary-cta {
   opacity: 0.9;
+}
+
+.hero-tertiary-cta {
+  min-height: 44px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.hero-waitlist-note {
+  margin: var(--spacing-lg) auto 0;
+  max-width: 22rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+.hero-waitlist-note a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero-waitlist-note a:hover,
+.hero-waitlist-note a:focus-visible {
+  text-decoration: underline;
 }
 
 .hero-bg {
@@ -181,18 +206,156 @@
 }
 
 .artists-section,
-.closed-on-sundays-section,
-.cta-section {
+.cta-section,
+.showcase-section,
+.waitlist-inline-section,
+.vault-teaser-section {
   padding-top: var(--spacing-2xl);
   padding-bottom: var(--spacing-2xl);
 }
 
-.home-page .the-vibe {
-  margin-top: var(--spacing-2xl);
+.hero-pitch {
+  max-width: 36rem;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-.home-page .merch-section {
-  margin-top: var(--spacing-2xl);
+.hero-cta--waitlist {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-primary) 0%,
+    #ffb347 100%
+  );
+  color: var(--color-bg-primary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 6px 22px rgba(224, 142, 54, 0.35);
+}
+
+.hero-cta--waitlist:hover,
+.hero-cta--waitlist:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(224, 142, 54, 0.5);
+  color: var(--color-bg-primary);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus-visible {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+}
+
+.vault-teaser-card {
+  position: relative;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: var(--border-radius-lg);
+}
+
+.vault-teaser-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  margin-bottom: var(--spacing-sm);
+  background: rgba(212, 140, 41, 0.18);
+  color: var(--color-accent-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+
+.vault-teaser-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 var(--spacing-xs);
+}
+
+.vault-teaser-location {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 var(--spacing-md);
+}
+
+.vault-teaser-body {
+  color: var(--color-text-primary);
+  line-height: 1.55;
+  margin: 0 0 var(--spacing-lg);
+}
+
+.vault-teaser-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.showcase-section .section-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.showcase-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.showcase-card {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  border-radius: var(--border-radius-lg);
+  text-align: left;
+}
+
+.showcase-card h3 {
+  margin: 0 0 var(--spacing-sm);
+  font-size: 1.25rem;
+  color: var(--color-accent-primary);
+}
+
+.showcase-card p {
+  margin: 0 0 var(--spacing-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.showcase-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.waitlist-inline-section {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-2xl);
+}
+
+.waitlist-inline {
+  margin: 0 auto;
+  max-width: 32rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.waitlist-inline-link {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.waitlist-inline-link:hover,
+.waitlist-inline-link:focus-visible {
+  text-decoration: underline;
 }
 
 .section-header {
@@ -449,11 +612,6 @@
   align-items: center;
 }
 
-/* Closed on Sundays Section */
-.closed-on-sundays-section .cta-content p {
-  margin-bottom: var(--spacing-md);
-}
-
 /* Artists Section */
 .artists-section {
   padding: var(--spacing-2xl) 0;
@@ -575,18 +733,16 @@
   }
 
   .artists-section,
-  .closed-on-sundays-section,
-  .cta-section {
+  .cta-section,
+  .showcase-section {
     padding-top: var(--spacing-2xl);
     padding-bottom: var(--spacing-2xl);
   }
 
-  .home-page .the-vibe {
-    margin-top: var(--spacing-2xl);
-  }
-
-  .home-page .merch-section {
-    margin-top: var(--spacing-2xl);
+  .showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    align-items: stretch;
   }
 
   .event-date-actions {

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { PORCHFEST_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
+import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 
 function siteOrigin() {
   const fromEnv = import.meta.env.VITE_SITE_ORIGIN;
@@ -54,7 +54,7 @@ function applyPack({
 
 /**
  * Updates document title and OG/Twitter tags for the current route.
- * Restores `PORCHFEST_SEO_DEFAULT_PROPS` on unmount so other routes don’t keep stale artist metadata.
+ * Restores `GLOBAL_SEO_DEFAULT_PROPS` on unmount so other routes don’t keep stale per-page metadata.
  *
  * @param {object} props
  * @param {string} props.title
@@ -93,7 +93,7 @@ export default function SEO({
 
     return () => {
       const o = siteOrigin();
-      const d = PORCHFEST_SEO_DEFAULT_PROPS;
+      const d = GLOBAL_SEO_DEFAULT_PROPS;
       applyPack({
         title: d.title,
         description: d.description,

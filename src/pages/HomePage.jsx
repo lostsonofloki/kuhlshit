@@ -1,53 +1,20 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
-import CountdownTimer from "../components/CountdownTimer";
-import TheVibe from "../components/TheVibe";
-import MerchSection from "../components/MerchSection";
+import CreatorCategories from "../components/CreatorCategories";
 import "./HomePage.css";
 
-const APPLE_CALENDAR_URL = "/calendar/porchfest-2026.ics";
-
-function toCalendarDate(value, addDays = 0) {
-  const base = new Date(`${value}T00:00:00`);
-  base.setDate(base.getDate() + addDays);
-  const y = base.getFullYear();
-  const m = String(base.getMonth() + 1).padStart(2, "0");
-  const d = String(base.getDate()).padStart(2, "0");
-  return `${y}${m}${d}`;
-}
-
-function buildCalendarUrl(event) {
-  const title = event?.name || "PorchFest 2026";
-  const location = `${event?.location?.venue || "Munson & Brothers"}, ${event?.location?.address || "301 2nd Ave N"}, ${event?.location?.city || "Columbus"}, ${event?.location?.state || "MS"}`;
-  const details =
-    event?.description ||
-    "Live music, local vibes. Join us April 17-19 at Munson & Brothers in Columbus, MS.";
-  const start = toCalendarDate(event?.date || "2026-04-17");
-  const endExclusive = toCalendarDate(
-    event?.endDate || event?.date || "2026-04-19",
-    1,
-  );
-  const params = new URLSearchParams({
-    action: "TEMPLATE",
-    text: title,
-    dates: `${start}/${endExclusive}`,
-    details,
-    location,
-  });
-  return `https://calendar.google.com/calendar/render?${params.toString()}`;
-}
-
-function getEventVisibilityEnd(event) {
-  const endDateValue = event?.endDate || event?.date;
-  if (!endDateValue) return null;
-  const endOfDay = new Date(`${endDateValue}T23:59:59`);
-  return Number.isNaN(endOfDay.getTime()) ? null : endOfDay;
-}
+const CREATOR_SUBTITLE = [
+  "Musicians",
+  "Painters",
+  "Poets",
+  "Photographers",
+  "Filmmakers",
+];
 
 function HomePage() {
   const [featuredArtists, setFeaturedArtists] = useState([]);
-  const [upcomingEvents, setUpcomingEvents] = useState([]);
+  const [vaultEvent, setVaultEvent] = useState(null);
 
   useEffect(() => {
     // Get all artists with images
@@ -82,16 +49,11 @@ function HomePage() {
       setFeaturedArtists(featured);
     }
 
-    // Get upcoming events (sorted by date)
-    const now = new Date();
-    const events = data.porchfest.events
-      .filter((event) => {
-        const visibilityEnd = getEventVisibilityEnd(event);
-        return visibilityEnd ? visibilityEnd >= now : false;
-      })
-      .sort((a, b) => new Date(a.date) - new Date(b.date))
-      .slice(0, 2);
-    setUpcomingEvents(events);
+    // Pull the most recent PorchFest event from data to surface as a Vault teaser.
+    const recent = (data.porchfest?.events || [])
+      .slice()
+      .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
+    if (recent) setVaultEvent(recent);
   }, []);
 
   return (
@@ -100,135 +62,136 @@ function HomePage() {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-title-wrapper">
-            <p className="hero-welcome">Welcome You to</p>
+            <p className="hero-welcome">A home for creators</p>
             <h1 className="hero-title">KUHLSHIT.COM</h1>
           </div>
-          <p className="hero-subtitle">
-            <span className="hero-highlight">Porch Talk</span> •
-            <span className="hero-highlight"> Closed on Sundays</span> •
-            <span className="hero-highlight"> Al&apos;s Spirits & Music</span>
+          <p className="hero-subtitle hero-subtitle--rotator">
+            {CREATOR_SUBTITLE.map((word, idx) => (
+              <span key={word} className="hero-highlight">
+                {word}
+                {idx < CREATOR_SUBTITLE.length - 1 ? " • " : ""}
+              </span>
+            ))}
           </p>
 
-          <CountdownTimer />
+          <p className="hero-pitch">
+            A global stage for musicians, painters, and poets — built by
+            creators, for creators. Your own space on the web.
+          </p>
 
           <div className="hero-buttons">
-            <Link to="/porchfest/artists" className="btn btn-primary hero-primary-cta">
-              See the Lineup
+            <Link
+              to="/closed-on-sundays"
+              className="btn btn-primary hero-primary-cta"
+            >
+              Watch Closed on Sundays
             </Link>
-            <Link to="/closed-on-sundays" className="btn btn-secondary hero-secondary-cta">
-              Closed on Sundays
+            <Link
+              to="/porch-talk"
+              className="btn btn-secondary hero-secondary-cta"
+            >
+              PorchTalk
+            </Link>
+            <Link
+              to="/porchfest/artists"
+              className="btn btn-ghost hero-tertiary-cta"
+            >
+              Browse artists
             </Link>
           </div>
+          <p className="hero-waitlist-note">
+            Building a home for your work on the web?{" "}
+            <Link to="/waitlist">Join the creator waitlist</Link>.
+          </p>
         </div>
         <div className="hero-bg">
           <div className="hero-bg-overlay"></div>
         </div>
 
-        {/* Mascot - Skeleton Cat Sticker */}
+        {/* Mascot — carried over from the PorchFest identity */}
         <img
           src="/resources/porchfest/mascot-cat.png"
-          alt="PorchFest Mascot"
+          alt="Kuhlshit mascot"
           className="hero-mascot"
         />
       </section>
 
-      {/* PorchFest Section */}
-      <section className="section porchfest-section">
+      {/* Creator Categories — what the platform supports */}
+      <CreatorCategories />
+
+      {/* Closed on Sundays + PorchTalk — primary shows */}
+      <section className="section showcase-section">
         <div className="section-header">
-          <h2>PorchFest 2026</h2>
-          <Link to="/porchfest" className="view-all">
-            Full Lineup →
-          </Link>
+          <h2>Watch &amp; listen</h2>
         </div>
-        <div className="events-grid">
-          {upcomingEvents.map((event) => (
-            <div key={event.id} className="event-card">
-              <div className="event-date-actions">
-                <div className="event-date">
-                  <span className="month">Apr</span>
-                  <span className="day">17-19</span>
-                </div>
-                <a
-                  href={buildCalendarUrl(event)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary home-calendar-btn home-calendar-btn--primary"
-                >
-                  Add to Google Calendar
-                </a>
-                <a
-                  href={APPLE_CALENDAR_URL}
-                  className="btn btn-secondary home-calendar-btn home-calendar-btn--secondary"
-                >
-                  Add to Apple Calendar
-                </a>
-              </div>
-              <div className="event-content">
-                <h3>{event.name}</h3>
-                {event.pricing && (
-                  <div className="event-pricing">
-                    <span className="price-badge-small">
-                      {event.pricing.dayPass}/Day
-                    </span>
-                    <span className="price-badge-small">
-                      {event.pricing.weekendPass} Weekend Pass
-                    </span>
-                    <span className="price-note">{event.pricing.note}</span>
-                  </div>
-                )}
-                <p className="event-location">
-                  {event.location.mapUrl && event.location.venue ? (
-                    <>
-                      <a
-                        href={event.location.mapUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="event-venue-link"
-                      >
-                        {event.location.venue}
-                      </a>
-                      , {event.location.state}
-                    </>
-                  ) : (
-                    <>
-                      {event.location.venue || event.location.city},{" "}
-                      {event.location.state}
-                    </>
-                  )}
-                </p>
-
-                {/* Schedule */}
-                {event.schedule && event.schedule.length > 0 && (
-                  <div className="event-schedule-home">
-                    {event.schedule.map((day, i) => (
-                      <span key={i} className="schedule-chip">
-                        {day.day}: {day.doors}–{day.endTime}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                <p className="event-description">{event.description}</p>
-                <div className="event-lineup">
-                  <span className="lineup-label">Lineup:</span>
-                  {event.lineup.map((day, i) => (
-                    <span key={i} className="artist-name">
-                      {day.day}: {day.artists.length} bands
-                    </span>
-                  ))}
-                </div>
-              </div>
+        <div className="showcase-grid">
+          <div className="showcase-card">
+            <h3>Closed on Sundays</h3>
+            <p>
+              Live-style sets from the yard — three or four songs at a time,
+              straight to camera.
+            </p>
+            <div className="showcase-card-actions">
+              <Link to="/closed-on-sundays" className="btn btn-primary">
+                All episodes
+              </Link>
             </div>
-          ))}
+          </div>
+          <div className="showcase-card">
+            <h3>PorchTalk</h3>
+            <p>
+              Conversations with the artists behind the music — stories,
+              process, and what comes next.
+            </p>
+            <div className="showcase-card-actions">
+              <Link to="/porch-talk" className="btn btn-secondary">
+                Interviews &amp; more
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Featured Artists Section */}
+      {/* From the Vault — PorchFest proof-of-concept, archived */}
+      {vaultEvent ? (
+        <section className="section vault-teaser-section">
+          <div className="section-header">
+            <h2>From the Vault</h2>
+            <Link to="/vault" className="view-all">
+              Enter the Vault →
+            </Link>
+          </div>
+          <div className="vault-teaser-card">
+            <div className="vault-teaser-badge">Past Event</div>
+            <h3>{vaultEvent.name}</h3>
+            <p className="vault-teaser-location">
+              {vaultEvent.location?.venue
+                ? `${vaultEvent.location.venue} • ${vaultEvent.location.city}, ${vaultEvent.location.state}`
+                : "Columbus, MS"}
+            </p>
+            <p className="vault-teaser-body">
+              Our first field test. Three days, dozens of bands, one yard in
+              Columbus, MS — the spark that proved this platform belongs in the
+              wild. The lineup lives on for the artists who played it.
+            </p>
+            <div className="vault-teaser-actions">
+              <Link to="/porchfest" className="btn btn-secondary">
+                Revisit PorchFest 2026
+              </Link>
+              <Link to="/porchfest/artists" className="btn btn-ghost">
+                See the Artists
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {/* Artists — reframed as the global discovery hub */}
       <section className="section artists-section">
         <div className="section-header">
-          <h2>Featured Artists</h2>
+          <h2>Meet the Creators</h2>
           <Link to="/porchfest/artists" className="view-all">
-            View All Artists →
+            Browse All →
           </Link>
         </div>
         {featuredArtists.length > 0 ? (
@@ -267,45 +230,16 @@ function HomePage() {
         )}
       </section>
 
-      {/* Closed on Sundays Section */}
-      <section className="section closed-on-sundays-section">
-        <div className="section-header">
-          <h2>Closed on Sundays</h2>
-          <Link to="/closed-on-sundays" className="view-all">
-            All Episodes →
+      <section className="section waitlist-inline-section" aria-label="Creator waitlist">
+        <p className="waitlist-inline">
+          Musicians, painters, poets — if you want your own space here when we
+          open the doors,{" "}
+          <Link to="/waitlist" className="waitlist-inline-link">
+            add your name to the waitlist
           </Link>
-        </div>
-        <div className="cta-content">
-          <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
-          <div className="cta-buttons">
-            <Link to="/closed-on-sundays" className="btn btn-primary">
-              Watch Episodes
-            </Link>
-          </div>
-        </div>
+          .
+        </p>
       </section>
-
-      {/* CTA Section */}
-      <section className="section cta-section">
-        <div className="cta-content">
-          <h2>Explore More</h2>
-          <p>Check out PorchTalk episodes and more.</p>
-          <div className="cta-buttons">
-            <Link to="/porch-talk" className="btn btn-primary">
-              PorchTalk
-            </Link>
-            <Link to="/closed-on-sundays" className="btn btn-secondary">
-              Closed on Sundays
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* The Vibe - Full-width hero with PorchFest poster art */}
-      <TheVibe />
-
-      {/* Merch Section */}
-      <MerchSection />
     </div>
   );
 }

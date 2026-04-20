@@ -63,6 +63,55 @@
   color: #FFD700;
 }
 
+a.price-badge,
+a.price-badge:visited {
+  color: #d48c29;
+  text-decoration: none;
+}
+
+a.price-badge.highlight,
+a.price-badge.highlight:visited {
+  color: #FFD700;
+}
+
+a.price-badge:hover,
+a.price-badge:focus-visible {
+  background: rgba(212, 140, 41, 0.45);
+  color: #FFF1C7;
+}
+
+.announcement-link-strong {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.announcement-link-strong:hover,
+.announcement-link-strong:focus-visible {
+  text-decoration: underline;
+}
+
+.announcement-waitlist-link {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.announcement-waitlist-link:hover,
+.announcement-waitlist-link:focus-visible {
+  color: var(--color-text-primary);
+}
+
+.announcement-note a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+}
+
+.announcement-note a:hover,
+.announcement-note a:focus-visible {
+  text-decoration: underline;
+}
+
 .announcement-note {
   font-size: 0.7rem;
   color: var(--color-text-muted);

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- React Fast Refresh: run before any app module so $RefreshReg$ / DevTools hook exist.
+         Fixes "RefreshRuntime.getRefreshReg is not a function" when HMR preamble order races. -->
+    <script type="module">
+      import { injectIntoGlobalHook } from "/@react-refresh";
+      injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJKFGV1YCV"></script>
     <script>
@@ -18,21 +26,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Live music, local vibes. Join us April 17-19 at Munson & Brothers in Columbus, MS." />
-    <title>PorchFest 2026 | kuhlshit.com</title>
+    <meta name="description" content="A global platform for musicians, visual artists, and writers building their own homes on the internet." />
+    <title>Kuhlshit.com — A Home for Musicians, Painters, and Poets</title>
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="PorchFest 2026 | kuhlshit.com" />
-    <meta property="og:description" content="Live music, local vibes. Join us April 17-19 at Munson & Brothers in Columbus, MS." />
+    <meta property="og:title" content="Kuhlshit.com — A Home for Musicians, Painters, and Poets" />
+    <meta property="og:description" content="A global platform for musicians, visual artists, and writers building their own homes on the internet." />
     <meta property="og:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260415" />
     <meta property="og:image:secure_url" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260415" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="PorchFest 2026 official poster" />
-    <meta property="og:url" content="https://www.kuhlshit.com/porchfest" />
+    <meta property="og:image:alt" content="Kuhlshit.com — a home for musicians, painters, and poets" />
+    <meta property="og:url" content="https://www.kuhlshit.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="PorchFest 2026 | kuhlshit.com" />
-    <meta name="twitter:description" content="Live music, local vibes. Join us April 17-19 at Munson & Brothers in Columbus, MS." />
+    <meta name="twitter:title" content="Kuhlshit.com — A Home for Musicians, Painters, and Poets" />
+    <meta name="twitter:description" content="A global platform for musicians, visual artists, and writers building their own homes on the internet." />
     <meta name="twitter:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260415" />
-    <meta name="twitter:image:alt" content="PorchFest 2026 official poster" />
+    <meta name="twitter:image:alt" content="Kuhlshit.com — a home for musicians, painters, and poets" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">

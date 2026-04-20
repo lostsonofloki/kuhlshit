@@ -1,19 +1,21 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './AnnouncementBar.css'
+
+const STORAGE_KEY = 'kuhlshit-waitlist-bar-dismissed'
 
 function AnnouncementBar() {
   const [dismissed, setDismissed] = useState(false)
 
   useEffect(() => {
-    const dismissed = localStorage.getItem('pf2026-bar-dismissed')
-    if (dismissed === 'true') {
+    if (localStorage.getItem(STORAGE_KEY) === 'true') {
       setDismissed(true)
     }
   }, [])
 
   const handleDismiss = () => {
     setDismissed(true)
-    localStorage.setItem('pf2026-bar-dismissed', 'true')
+    localStorage.setItem(STORAGE_KEY, 'true')
   }
 
   if (dismissed) return null
@@ -23,14 +25,25 @@ function AnnouncementBar() {
       <div className="announcement-bar-content">
         <span className="announcement-text">
           <span className="announcement-main">
-            🎸 <strong>PorchFest 2026 — Apr 17-19</strong>
-            <span className="hide-mobile"> Columbus, MS</span>
+            <strong>New on the porch:</strong>{" "}
+            <Link to="/closed-on-sundays" className="announcement-link-strong">
+              Closed on Sundays
+            </Link>
+            {" and "}
+            <Link to="/porch-talk" className="announcement-link-strong">
+              PorchTalk
+            </Link>
+            .
           </span>
-          <span className="announcement-pricing">
-            <span className="price-badge">$10/Day</span>
-            <span className="price-badge highlight hide-mobile">$20 Weekend</span>
+          <span className="announcement-note hide-mobile">
+            Past fest weekends live in{" "}
+            <Link to="/vault">The Vault</Link>
+            . Creators:{" "}
+            <Link to="/waitlist" className="announcement-waitlist-link">
+              waitlist
+            </Link>
+            .
           </span>
-          <span className="announcement-note hide-mobile">Tickets at the Door</span>
         </span>
         <button className="announcement-dismiss" onClick={handleDismiss} aria-label="Dismiss">
           ✕

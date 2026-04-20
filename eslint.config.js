@@ -19,6 +19,12 @@ export default [
     },
   },
   {
+    files: ['vite.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     ...react.configs.flat.recommended,
   },

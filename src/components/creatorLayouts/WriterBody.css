@@ -1,0 +1,68 @@
+.writer-body {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  color: var(--color-text-primary);
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.writer-piece + .writer-piece {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+}
+
+.writer-piece-year {
+  margin: 0;
+  font-family: var(--font-family-heading);
+  color: var(--color-text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.writer-piece-title {
+  font-family: var(--font-family-heading, Georgia, serif);
+  font-size: 1.75rem;
+  line-height: 1.2;
+  margin: var(--spacing-xs) 0 var(--spacing-sm);
+  color: var(--color-text-primary);
+}
+
+.writer-piece-subtitle {
+  margin: 0 0 var(--spacing-lg);
+  color: var(--color-text-muted);
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.writer-piece-body p {
+  margin: 0 0 var(--spacing-md);
+}
+
+.writer-piece-body p:last-child {
+  margin-bottom: 0;
+}
+
+.writer-footer {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
+  text-align: center;
+  font-family: var(--font-family-body, system-ui, sans-serif);
+  font-size: 0.95rem;
+}
+
+.writer-footer p {
+  margin: 0 auto var(--spacing-md);
+  max-width: 28rem;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .writer-piece-title {
+    font-size: 2.25rem;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "Kuhlshit",
   "short_name": "Kuhlshit",
-  "description": "Live music, local vibes. PorchFest and artist discovery.",
+  "description": "A global platform for musicians, painters, and poets — build your own home on the internet.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

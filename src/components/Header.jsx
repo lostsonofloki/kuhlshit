@@ -2,25 +2,25 @@ import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import './Header.css'
 
-function Header({ isMySpaceMode = false, setIsMySpaceMode = () => {} }) {
+function Header() {
   const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [logoClickCount, setLogoClickCount] = useState(0)
   const navigate = useNavigate()
-  const Maps = navigate
 
   useEffect(() => {
     if (logoClickCount >= 5) {
       setLogoClickCount(0)
-      Maps('/retro')
+      navigate('/retro')
     }
-  }, [logoClickCount, Maps])
+  }, [logoClickCount, navigate])
 
   const navLinks = [
-    { path: '/artists', label: 'Artists' },
     { path: '/closed-on-sundays', label: 'Closed on Sundays' },
-    { path: '/porchfest', label: 'PorchFest' },
     { path: '/porch-talk', label: 'PorchTalk' },
+    { path: '/artists', label: 'Artists' },
+    { path: '/vault', label: 'The Vault' },
+    { path: '/waitlist', label: 'Waitlist' },
   ]
 
   const toggleMenu = () => {

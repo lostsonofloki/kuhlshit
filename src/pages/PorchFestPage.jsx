@@ -88,6 +88,16 @@ function PorchFestPage() {
       <div className="porchfest-page">
         <div className="page-header">
           <h1>PorchFest</h1>
+          <div className="porchfest-archive-banner" role="note">
+            <span className="porchfest-archive-badge">Archived</span>
+            <p>
+              PorchFest 2026 was our first field test. It lives on in{" "}
+              <Link to="/vault" className="porchfest-archive-link">
+                The Vault
+              </Link>
+              . See you next year.
+            </p>
+          </div>
         </div>
 
         {/* Official Poster */}

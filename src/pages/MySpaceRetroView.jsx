@@ -44,7 +44,6 @@ function shuffleArray(list) {
 
 export default function MySpaceRetroView({ artists = [] }) {
   const navigate = useNavigate()
-  const Maps = navigate
 
   const [profileOwner, setProfileOwner] = useState(null)
   const [top8Friends, setTop8Friends] = useState([])
@@ -100,7 +99,7 @@ export default function MySpaceRetroView({ artists = [] }) {
             <button
               type="button"
               className="myspace-nav-link myspace-return-link"
-              onClick={() => Maps('/')}
+              onClick={() => navigate('/')}
             >
               [ Return to 2026 ]
             </button>
@@ -218,7 +217,7 @@ export default function MySpaceRetroView({ artists = [] }) {
                     key={friend.id || friend.name}
                     type="button"
                     className="myspace-friend-card"
-                    onClick={() => Maps(`/porchfest/artists/${friend.id}`)}
+                    onClick={() => navigate(`/porchfest/artists/${friend.id}`)}
                   >
                     <div className="myspace-friend-photo-wrapper">
                       {friend.thumbnailUrl || friend.imageUrl ? (

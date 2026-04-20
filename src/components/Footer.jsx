@@ -18,8 +18,9 @@ function Footer() {
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
               <li><a href="/closed-on-sundays">Closed on Sundays</a></li>
-              <li><a href="/porchfest">PorchFest</a></li>
               <li><a href="/porch-talk">PorchTalk</a></li>
+              <li><a href="/vault">The Vault</a></li>
+              <li><a href="/waitlist">Waitlist</a></li>
             </ul>
           </div>
 

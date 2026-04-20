@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { trackEvent } from '../utils/analytics'
 import './LouieEasterEgg.css'
 
 export default function LouieEasterEgg() {
@@ -27,6 +28,7 @@ export default function LouieEasterEgg() {
       const randomPos = positions[Math.floor(Math.random() * positions.length)]
       setPositionStyle(randomPos)
       setIsVisible(true)
+      trackEvent('louie_spotted', { path: location.pathname, rarity })
     } else {
       setIsVisible(false)
     }
@@ -34,9 +36,14 @@ export default function LouieEasterEgg() {
 
   if (!isVisible) return null
 
+  const handleClick = () => {
+    trackEvent('louie_clicked', { path: location.pathname })
+    navigate('/spotcheck')
+  }
+
   return (
     <div
-      onClick={() => navigate('/spotcheck')}
+      onClick={handleClick}
       className="louie-easter-egg"
       style={positionStyle}
       title="Wait, is that a dalmatian?"

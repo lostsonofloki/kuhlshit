@@ -22,7 +22,7 @@ const ROOT = path.resolve(__dirname, '..')
 const PUBLIC_DIR = path.join(ROOT, 'public', 'resources')
 const STATE_FILE = path.join(ROOT, 'scripts', '.kuhl-opt.json')
 
-const SCHEMA_VERSION = 2
+const SCHEMA_VERSION = 3
 const MAX_WIDTH = 1400
 const RESPONSIVE_WIDTHS = [480, 960] // extra webp variants
 const JPEG_QUALITY = 78
@@ -114,10 +114,12 @@ async function optimizeOne(file, state) {
     .webp({ quality: WEBP_QUALITY, effort: 5 })
     .toBuffer()
 
-  // Generate responsive variants — skip any target >= source width.
+  // Generate responsive variants for every configured width.
+  // Keep withoutEnlargement=true so tiny sources are never upscaled.
+  // We still emit the file even if source is smaller so srcset never
+  // points to a missing URL (which would trigger 404 + fallback penalties).
   const variants = []
   for (const w of RESPONSIVE_WIDTHS) {
-    if (w >= targetWidth) continue
     const vBuf = await img
       .clone()
       .resize({ width: w, withoutEnlargement: true })

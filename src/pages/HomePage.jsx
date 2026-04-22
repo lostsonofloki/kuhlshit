@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import CreatorCategories from "../components/CreatorCategories";
+import SmartImage from "../components/SmartImage";
 import "./HomePage.css";
 
 const CREATOR_SUBTITLE = [
@@ -108,11 +109,15 @@ function HomePage() {
           <div className="hero-bg-overlay"></div>
         </div>
 
-        {/* Mascot — carried over from the PorchFest identity */}
-        <img
+        {/* Mascot — carried over from the PorchFest identity. LCP candidate. */}
+        <SmartImage
           src="/resources/porchfest/mascot-cat.png"
           alt="Kuhlshit mascot"
           className="hero-mascot"
+          width="280"
+          height="280"
+          loading="eager"
+          fetchPriority="high"
         />
       </section>
 
@@ -203,9 +208,11 @@ function HomePage() {
                 className="artist-card"
               >
                 <div className="artist-card-image">
-                  <img
+                  <SmartImage
                     src={artist.imageUrl || "/resources/placeholder-artist.svg"}
                     alt={artist.name}
+                    width="400"
+                    height="400"
                     onError={(e) => {
                       e.target.src = "/resources/placeholder-artist.svg";
                     }}

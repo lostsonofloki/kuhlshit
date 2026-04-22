@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJKFGV1YCV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-VJKFGV1YCV');
-    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="manifest" href="/manifest.json" />
@@ -23,22 +14,65 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Kuhlshit.com — A Home for Musicians, Painters, and Poets" />
     <meta property="og:description" content="A global platform for musicians, visual artists, and writers building their own homes on the internet." />
-    <meta property="og:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260415" />
-    <meta property="og:image:secure_url" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260415" />
+    <meta property="og:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260422" />
+    <meta property="og:image:secure_url" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260422" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:alt" content="Kuhlshit.com — a home for musicians, painters, and poets" />
     <meta property="og:url" content="https://www.kuhlshit.com/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Kuhlshit.com — A Home for Musicians, Painters, and Poets" />
     <meta name="twitter:description" content="A global platform for musicians, visual artists, and writers building their own homes on the internet." />
-    <meta name="twitter:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260415" />
-    <meta name="twitter:image:alt" content="Kuhlshit.com — a home for musicians, painters, and poets" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="twitter:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260422" />
+
+    <!-- Preload the above-the-fold mascot (LCP candidate) as webp -->
+    <link rel="preload" as="image" href="/resources/porchfest/mascot-cat.webp" fetchpriority="high" type="image/webp" />
+
+    <!--
+      Fonts: load non-render-blocking via the print-media swap trick.
+      Trimmed Montserrat weights from 5 -> 2 (600 for body headings, 700 for buttons).
+      Kept Permanent Marker because the hero logo/title use it.
+      Inter is loaded only if used elsewhere (removed 500/600 weights).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@600;700&family=Inter:wght@400&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@600;700&family=Inter:wght@400&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Montserrat:wght@600;700&family=Inter:wght@400&display=swap"
+      />
+    </noscript>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <!--
+      Google Analytics: moved to end of body and loaded on idle so it never
+      blocks the main thread during critical render path. The gtag API still
+      works because window.dataLayer is a plain array shim.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-VJKFGV1YCV');
+      (window.requestIdleCallback || function (cb) { setTimeout(cb, 2500); })(function () {
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VJKFGV1YCV';
+        document.head.appendChild(s);
+      });
+    </script>
   </body>
 </html>

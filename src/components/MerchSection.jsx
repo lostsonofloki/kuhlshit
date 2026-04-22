@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import SmartImage from './SmartImage'
 import './MerchSection.css'
 
 function MerchSection() {
@@ -8,17 +9,21 @@ function MerchSection() {
         {/* Top Row: Merch Images */}
         <div className="merch-image-row">
           <div className="merch-image-card">
-            <img
+            <SmartImage
               src="/resources/porchfest/tshirts.jpg"
               alt="White Skeleton Cat Tee"
               className="merch-image"
+              width="600"
+              height="600"
             />
           </div>
           <div className="merch-image-card">
-            <img
+            <SmartImage
               src="/resources/porchfest/black-tee.jpg"
               alt="Black Skeleton Cat Tee"
               className="merch-image"
+              width="600"
+              height="600"
             />
           </div>
         </div>

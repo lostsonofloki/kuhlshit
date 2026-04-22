@@ -7,7 +7,18 @@ function TheVibe() {
   return (
     <section className="the-vibe">
       <div className="vibe-bg">
-        <img src="/resources/porchfest/vibe.jpg" alt="PorchFest 2026 Vibe" className="vibe-bg-image" />
+        <picture>
+          <source srcSet="/resources/porchfest/vibe.webp" type="image/webp" />
+          <img
+            src="/resources/porchfest/vibe.jpg"
+            alt="PorchFest 2026 Vibe"
+            className="vibe-bg-image"
+            loading="lazy"
+            decoding="async"
+            width="1200"
+            height="800"
+          />
+        </picture>
         <div className="vibe-overlay"></div>
       </div>
       <div className="vibe-content">

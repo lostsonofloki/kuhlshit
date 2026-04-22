@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SmartImage from "./SmartImage";
 import "./TicketMerch.css";
 
 function TicketMerch() {
@@ -30,20 +31,24 @@ function TicketMerch() {
           <div className="merch-images">
             <div className="merch-image-wrapper">
               <div className="merch-image-frame">
-                <img
+                <SmartImage
                   src="/resources/porchfest/tshirts.jpg"
                   alt="PorchFest '26 T-Shirts"
                   className="merch-image"
+                  width="400"
+                  height="400"
                 />
               </div>
               <span className="merch-image-label">T-Shirts & More</span>
             </div>
             <div className="merch-image-wrapper">
               <div className="merch-image-frame">
-                <img
-                  src="/resources/porchfest/blackshirt.jpg"
+                <SmartImage
+                  src="/resources/porchfest/black-tee.jpg"
                   alt="PorchFest '26 Black Tee"
                   className="merch-image"
+                  width="400"
+                  height="400"
                 />
               </div>
               <span className="merch-image-label">Black Tee</span>

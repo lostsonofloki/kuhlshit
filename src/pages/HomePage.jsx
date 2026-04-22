@@ -116,6 +116,7 @@ function HomePage() {
           className="hero-mascot"
           width="280"
           height="280"
+          sizes="(max-width: 768px) 140px, 220px"
           loading="eager"
           fetchPriority="high"
         />
@@ -213,6 +214,7 @@ function HomePage() {
                     alt={artist.name}
                     width="400"
                     height="400"
+                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 320px"
                     onError={(e) => {
                       e.target.src = "/resources/placeholder-artist.svg";
                     }}

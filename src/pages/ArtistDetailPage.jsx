@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import GigTracker from "../components/GigTracker";
 import SEO from "../components/SEO";
+import SmartImage from "../components/SmartImage";
 import MusicianBody from "../components/creatorLayouts/MusicianBody";
 import VisualArtistBody from "../components/creatorLayouts/VisualArtistBody";
 import WriterBody from "../components/creatorLayouts/WriterBody";
@@ -151,12 +152,18 @@ function ArtistDetailPage() {
         <div className="artist-hero">
           <div className="artist-hero-bg">
             {artist.imageUrl ? (
-              <img
+              <SmartImage
                 src={artist.imageUrl}
                 alt={artist.name}
+                width="800"
+                height="800"
+                loading="eager"
+                fetchPriority="high"
                 onError={(e) => {
                   e.target.style.display = "none";
-                  e.target.nextElementSibling.style.display = "flex";
+                  const picture = e.target.closest("picture");
+                  const placeholder = (picture || e.target).nextElementSibling;
+                  if (placeholder) placeholder.style.display = "flex";
                 }}
               />
             ) : null}

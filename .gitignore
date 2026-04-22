@@ -39,9 +39,9 @@ lerna-debug.log*
 *.png
 *.jpg
 *.webp
-!public/resources/artists/**/*.png
-!public/resources/artists/**/*.jpg
-!public/resources/artists/**/*.webp
+!public/resources/**/*.png
+!public/resources/**/*.jpg
+!public/resources/**/*.webp
 stifftones-debug.png
 
 # Misc
@@ -51,3 +51,9 @@ archive/
 # Vercel CLI — commit project.json for shared link; ignore local cache
 .vercel/*
 !.vercel/project.json
+
+# Image-optimizer incremental state
+scripts/.kuhl-opt.json
+
+# Local scratch
+tmp/

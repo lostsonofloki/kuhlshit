@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
 import ScheduleBadges from '../components/ScheduleBadges'
+import SmartImage from '../components/SmartImage'
 import { useFestivalClock } from '../hooks/useFestivalClock'
 import { getArtistSlotStatusFromData } from '../utils/porchfestScheduleStatus'
 import './FeaturedArtists.css'
@@ -91,11 +92,18 @@ function FeaturedArtistsPage() {
           <Link key={artist.id} to={`/porchfest/artists/${artist.id}`} className="artist-card">
             <div className="artist-image">
               {artist.imageUrl ? (
-                <img src={artist.imageUrl} alt={artist.name} onError={(e) => {
-                  e.target.style.display = 'none'
-                  const placeholder = e.target.nextElementSibling
-                  if (placeholder) placeholder.classList.add('visible')
-                }} />
+                <SmartImage
+                  src={artist.imageUrl}
+                  alt={artist.name}
+                  width="400"
+                  height="400"
+                  onError={(e) => {
+                    e.target.style.display = 'none'
+                    const picture = e.target.closest('picture')
+                    const placeholder = (picture || e.target).nextElementSibling
+                    if (placeholder) placeholder.classList.add('visible')
+                  }}
+                />
               ) : null}
               <div className={`artist-placeholder ${!artist.imageUrl ? 'visible' : ''}`}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

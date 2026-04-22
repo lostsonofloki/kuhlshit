@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import TicketMerch from "../components/TicketMerch";
 import ScheduleBadges from "../components/ScheduleBadges";
 import SEO from "../components/SEO";
+import SmartImage from "../components/SmartImage";
 import { PORCHFEST_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import { useFestivalClock } from "../hooks/useFestivalClock";
 import { useCachedFestivalData } from "../hooks/useCachedFestivalData";
@@ -103,10 +104,12 @@ function PorchFestPage() {
         {/* Official Poster */}
         <div className="poster-section">
           <div className="poster-wrapper">
-            <img
+            <SmartImage
               src="/resources/porchfest/poster.jpg"
               alt="PorchFest 2026 Official Poster"
               className="poster-image"
+              width="1200"
+              height="1800"
             />
           </div>
         </div>
@@ -272,10 +275,11 @@ function PorchFestPage() {
                                         >
                                           <div className="pf-discovery-image">
                                             {artistData?.imageUrl ? (
-                                              <img
+                                              <SmartImage
                                                 src={artistData.imageUrl}
                                                 alt={artistName}
-                                                loading="lazy"
+                                                width="200"
+                                                height="200"
                                               />
                                             ) : (
                                               <div className="pf-discovery-placeholder">

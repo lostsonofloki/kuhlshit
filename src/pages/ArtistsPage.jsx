@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import SmartImage from '../components/SmartImage'
 import './ArtistsPage.css'
 
 function ArtistsPage() {
@@ -85,9 +86,11 @@ function ArtistsPage() {
               className="artist-card"
             >
               <div className="artist-card-image">
-                <img
+                <SmartImage
                   src={artist.imageUrl || '/resources/placeholder-artist.svg'}
                   alt={artist.name}
+                  width="400"
+                  height="400"
                   className={artist.id === 'john-keys' ? 'artist-image-fit-contain' : ''}
                   onError={(e) => {
                     e.target.src = '/resources/placeholder-artist.svg'

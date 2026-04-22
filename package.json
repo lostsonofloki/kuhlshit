@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "audit:mobile": "node scripts/playwright-site-audit.mjs",
-    "sync:artist-photos": "node scripts/sync-artist-photos.mjs"
+    "sync:artist-photos": "node scripts/sync-artist-photos.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "repository": {
     "type": "git",
@@ -32,10 +33,6 @@
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "playwright": "^1.58.2",
-    "playwright-extra": "^4.3.6",
-    "playwright-extra-plugin-stealth": "^0.0.1",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0"
@@ -48,6 +45,11 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
+    "playwright": "^1.58.2",
+    "playwright-extra": "^4.3.6",
+    "playwright-extra-plugin-stealth": "^0.0.1",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "sharp": "^0.34.5",
     "vite": "^5.0.0"
   }
 }

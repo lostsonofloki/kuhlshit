@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import ScheduleBadges from './ScheduleBadges'
+import SmartImage from './SmartImage'
 import './ArtistCard.css'
 
 function ArtistCard({ artist, scheduleStatus }) {
@@ -9,12 +10,16 @@ function ArtistCard({ artist, scheduleStatus }) {
     <Link to={`/artists/${id}`} className="artist-card">
       <div className="artist-card-image">
         {thumbnailUrl ? (
-          <img
+          <SmartImage
             src={thumbnailUrl}
             alt={name}
+            width="300"
+            height="300"
             onError={(e) => {
               e.target.style.display = 'none'
-              e.target.nextElementSibling?.classList.add('visible')
+              const picture = e.target.closest('picture')
+              const placeholder = (picture || e.target).nextElementSibling
+              placeholder?.classList.add('visible')
             }}
           />
         ) : null}

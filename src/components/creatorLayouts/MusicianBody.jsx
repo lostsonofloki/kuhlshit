@@ -21,7 +21,7 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
           artist.socialLinks.instagram ||
           artist.socialLinks.youtube ||
           artist.socialLinks.website) && (
-          <div className="artist-section">
+          <div className="artist-section artist-section--social">
             <h2>Connect</h2>
             <div className="social-links">
               {artist.socialLinks.website && (
@@ -117,7 +117,7 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
 
       {/* Videos */}
       {artist.videos && artist.videos.length > 0 && (
-        <div className="artist-section">
+        <div className="artist-section artist-section--videos">
           <h2>Videos</h2>
           <div className="videos-grid">
             {artist.videos.map((video, index) => (

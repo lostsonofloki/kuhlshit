@@ -157,6 +157,7 @@ function ArtistDetailPage() {
                 alt={artist.name}
                 width="800"
                 height="800"
+                sizes="(max-width: 768px) 100vw, 800px"
                 loading="eager"
                 fetchPriority="high"
                 onError={(e) => {

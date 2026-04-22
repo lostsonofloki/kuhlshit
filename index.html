@@ -24,8 +24,20 @@
     <meta name="twitter:description" content="A global platform for musicians, visual artists, and writers building their own homes on the internet." />
     <meta name="twitter:image" content="https://www.kuhlshit.com/resources/porchfest/poster.jpg?v=20260422" />
 
-    <!-- Preload the above-the-fold mascot (LCP candidate) as webp -->
-    <link rel="preload" as="image" href="/resources/porchfest/mascot-cat.webp" fetchpriority="high" type="image/webp" />
+    <!--
+      Preload the above-the-fold mascot (LCP candidate). Responsive preload
+      with imagesrcset/imagesizes so the browser fetches the smallest variant
+      that matches the actual rendered size (~140px mobile, ~220px desktop).
+    -->
+    <link
+      rel="preload"
+      as="image"
+      href="/resources/porchfest/mascot-cat@480.webp"
+      imagesrcset="/resources/porchfest/mascot-cat@480.webp 480w, /resources/porchfest/mascot-cat@960.webp 960w, /resources/porchfest/mascot-cat.webp 1400w"
+      imagesizes="(max-width: 768px) 140px, 220px"
+      fetchpriority="high"
+      type="image/webp"
+    />
 
     <!--
       Fonts: load non-render-blocking via the print-media swap trick.

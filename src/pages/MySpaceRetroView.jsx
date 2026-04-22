@@ -44,6 +44,7 @@ function shuffleArray(list) {
 
 export default function MySpaceRetroView({ artists = [] }) {
   const navigate = useNavigate()
+  const [artistsData, setArtistsData] = useState(artists)
 
   const [profileOwner, setProfileOwner] = useState(null)
   const [top8Friends, setTop8Friends] = useState([])
@@ -52,7 +53,7 @@ export default function MySpaceRetroView({ artists = [] }) {
   const [errorIndex, setErrorIndex] = useState(0)
 
   useEffect(() => {
-    if (!artists || artists.length === 0) {
+    if (!artistsData || artistsData.length === 0) {
       setProfileOwner(null)
       setTop8Friends([])
       setMood(MOODS[getRandomInt(0, MOODS.length - 1)])
@@ -60,14 +61,34 @@ export default function MySpaceRetroView({ artists = [] }) {
       return
     }
 
-    const ownerIndex = getRandomInt(0, artists.length - 1)
-    const owner = artists[ownerIndex]
-    const friendsPool = shuffleArray(artists.filter((a, idx) => idx !== ownerIndex))
+    const ownerIndex = getRandomInt(0, artistsData.length - 1)
+    const owner = artistsData[ownerIndex]
+    const friendsPool = shuffleArray(artistsData.filter((a, idx) => idx !== ownerIndex))
 
     setProfileOwner(owner)
     setTop8Friends(friendsPool.slice(0, 8))
     setMood(MOODS[getRandomInt(0, MOODS.length - 1)])
     setFriendCount(getRandomInt(100000, 999999))
+  }, [artistsData])
+
+  useEffect(() => {
+    if (artists && artists.length > 0) {
+      setArtistsData(artists)
+      return
+    }
+
+    let isMounted = true
+    import('../data/data.json')
+      .then((module) => {
+        if (isMounted) setArtistsData(module.default?.artists || [])
+      })
+      .catch(() => {
+        if (isMounted) setArtistsData([])
+      })
+
+    return () => {
+      isMounted = false
+    }
   }, [artists])
 
   useEffect(() => {

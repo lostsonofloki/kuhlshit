@@ -764,6 +764,41 @@
       "publishDate": "2026-04-15"
     },
     {
+      "id": "huey",
+      "name": "Huey",
+      "location": "Atlanta, GA",
+      "bio": "Huey (Atlanta, GA) writes Southern folk with jazz and indie edges—solo and with Huey & The Heaven-sent. Atwood Magazine has highlighted how she stretches what people expect from Southern music, especially around the band's second LP, How to Keep Things Alive. Her NPR Tiny Desk Contest entry \"Buy In\" drew national attention. Fellowships and residencies—including Slough Farm on Martha's Vineyard and Chalk Hill in Napa Valley—fed songs like Passerby and Chimes, while she works toward a psych-folk solo EP targeted for early 2027. Tour dates, merch, donate, and booking all live on huey-music.com.",
+      "imageUrl": "/resources/artists/huey/photo-1.png",
+      "thumbnailUrl": "/resources/artists/huey/photo-1.png",
+      "genre": "Singer-Songwriter / Americana",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/huey__music/",
+        "facebook": "https://www.facebook.com/hueymusicatl/",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/watch?v=j3HRiwnLXHM",
+        "spotify": "https://open.spotify.com/artist/7Lj2xax76vnMSLBuXGVYlL",
+        "appleMusic": "",
+        "website": "https://www.huey-music.com/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/7Lj2xax76vnMSLBuXGVYlL",
+        "appleMusic": "",
+        "youtube": "https://www.youtube.com/watch?v=j3HRiwnLXHM",
+        "bandcamp": "https://hueys.bandcamp.com/"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sunday",
+        "withArtistId": "jacob-kynard",
+        "withArtistName": "Jacob Kynard",
+        "when": "Sun May 3, 2026 · 3:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL"
+      },
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-04-29"
+    },
+    {
       "id": "jacob-kynard",
       "name": "Jacob Kynard",
       "location": "Pine Hill, AL",
@@ -784,6 +819,14 @@
         "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
         "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
         "youtube": "https://music.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sunday",
+        "withArtistId": "huey",
+        "withArtistName": "Huey",
+        "when": "Sun May 3, 2026 · 3:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL"
       },
       "videos": [],
       "featured": true,

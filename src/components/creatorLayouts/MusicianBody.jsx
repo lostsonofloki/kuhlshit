@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 /**
  * Musician content body — the original PorchFest artist-detail layout
  * (bio → connect → videos → listen → performance).
@@ -111,6 +113,32 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
                   <span>YouTube</span>
                 </a>
               )}
+            </div>
+          </div>
+        )}
+
+      {artist.featuredShow &&
+        artist.featuredShow.title &&
+        artist.featuredShow.when &&
+        artist.featuredShow.where && (
+          <div className="artist-section artist-section--featured-show">
+            {artist.featuredShow.eyebrow ? (
+              <p className="featured-show-eyebrow">{artist.featuredShow.eyebrow}</p>
+            ) : null}
+            <h2>{artist.featuredShow.title}</h2>
+            <p className="featured-show-billing">
+              A special duo set with{' '}
+              {artist.featuredShow.withArtistId && artist.featuredShow.withArtistName ? (
+                <Link to={`/porchfest/artists/${artist.featuredShow.withArtistId}`}>
+                  {artist.featuredShow.withArtistName}
+                </Link>
+              ) : (
+                artist.featuredShow.withArtistName || 'TBA'
+              )}
+            </p>
+            <div className="featured-show-meta">
+              <p className="featured-show-line">{artist.featuredShow.when}</p>
+              <p className="featured-show-line">{artist.featuredShow.where}</p>
             </div>
           </div>
         )}
@@ -294,74 +322,71 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
           </div>
         )}
 
-      {/* Performance (PorchFest archive) */}
-      <div className="artist-section">
-        <h2>PorchFest 2026</h2>
-        <div className="performance-info">
-          <div className="performance-day">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-              <line x1="16" y1="2" x2="16" y2="6" />
-              <line x1="8" y1="2" x2="8" y2="6" />
-              <line x1="3" y1="10" x2="21" y2="10" />
-            </svg>
-            <span>
-              Performed on{" "}
-              <strong>
-                {performanceDays.length > 0
-                  ? performanceDays.join(", ")
-                  : "TBD"}
-              </strong>
-            </span>
-          </div>
-          <div className="performance-location">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            {venueMapUrl ? (
-              <a
-                href={venueMapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="performance-venue-map-link"
+      {/* PorchFest slot — only when this artist appears on the fest lineup */}
+      {performanceDays.length > 0 ? (
+        <div className="artist-section">
+          <h2>PorchFest 2026</h2>
+          <div className="performance-info">
+            <div className="performance-day">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
               >
-                Munson & Brothers • Columbus, MS
-              </a>
-            ) : (
-              <span>Munson & Brothers • Columbus, MS</span>
-            )}
-          </div>
-          <div className="performance-date">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-            <span>April 17-19, 2026</span>
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              <span>
+                Performed on <strong>{performanceDays.join(", ")}</strong>
+              </span>
+            </div>
+            <div className="performance-location">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              {venueMapUrl ? (
+                <a
+                  href={venueMapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="performance-venue-map-link"
+                >
+                  Munson & Brothers • Columbus, MS
+                </a>
+              ) : (
+                <span>Munson & Brothers • Columbus, MS</span>
+              )}
+            </div>
+            <div className="performance-date">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>April 17-19, 2026</span>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </div>
   );
 }

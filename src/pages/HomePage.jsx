@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import CreatorCategories from "../components/CreatorCategories";
+import ClosedOnSundayLivePromo from "../components/ClosedOnSundayLivePromo";
 import SmartImage from "../components/SmartImage";
 import "./HomePage.css";
 
@@ -121,6 +122,8 @@ function HomePage() {
           fetchPriority="high"
         />
       </section>
+
+      <ClosedOnSundayLivePromo />
 
       {/* Creator Categories — what the platform supports */}
       <CreatorCategories />

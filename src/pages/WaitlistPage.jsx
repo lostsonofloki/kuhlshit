@@ -5,13 +5,59 @@ import { trackEvent } from "../utils/analytics";
 import "./WaitlistPage.css";
 
 const STORAGE_KEY = "kuhlshit-waitlist-signups";
-/**
- * Optional Google Form / Formspree / serverless endpoint.
- * Pointing this at a real URL (via `VITE_WAITLIST_ENDPOINT`) is enough to
- * start collecting signups without a backend; the local fallback below
- * keeps a draft log in `localStorage` so submissions never silently drop.
- */
+
+/** Custom POST URL (Formspree, your API, etc.). Takes precedence over Web3Forms. */
 const REMOTE_ENDPOINT = import.meta.env.VITE_WAITLIST_ENDPOINT;
+/** https://web3forms.com — one access key, multiple forms; good when Formspree is capped. */
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+
+function buildWaitlistEmailBody(entry) {
+  const lines = [
+    `Name / project: ${entry.name || "(not given)"}`,
+    `Email: ${entry.email}`,
+    entry.craft ? `Creates: ${entry.craft}` : null,
+    entry.link ? `Link: ${entry.link}` : null,
+    entry.message ? `Notes:\n${entry.message}` : null,
+    `Submitted at: ${entry.submittedAt}`,
+  ].filter(Boolean);
+  return lines.join("\n\n");
+}
+
+async function postWaitlistRemote(entry) {
+  if (REMOTE_ENDPOINT) {
+    try {
+      const response = await fetch(REMOTE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(entry),
+      });
+      return response.ok;
+    } catch {
+      return false;
+    }
+  }
+  if (WEB3FORMS_ACCESS_KEY) {
+    try {
+      const response = await fetch(WEB3FORMS_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "Kuhlshit creator waitlist",
+          name: entry.name || "Waitlist signup",
+          email: entry.email,
+          message: buildWaitlistEmailBody(entry),
+        }),
+      });
+      const data = await response.json().catch(() => ({}));
+      return response.ok && data.success === true;
+    } catch {
+      return false;
+    }
+  }
+  return false;
+}
 
 function saveLocally(entry) {
   try {
@@ -52,19 +98,7 @@ function WaitlistPage() {
       submittedAt: new Date().toISOString(),
     };
 
-    let remoteOk = false;
-    if (REMOTE_ENDPOINT) {
-      try {
-        const response = await fetch(REMOTE_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(entry),
-        });
-        remoteOk = response.ok;
-      } catch {
-        remoteOk = false;
-      }
-    }
+    const remoteOk = await postWaitlistRemote(entry);
 
     saveLocally({ ...entry, remoteOk });
     trackEvent("waitlist_submit", {

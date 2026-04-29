@@ -16,6 +16,7 @@ const ROUTES = [
   '/porchfest',
   '/porchfest/artists',
   '/porchfest/artists/the-stifftones',
+  '/porchfest/artists/huey',
   '/porch-talk',
   '/search',
   '/spotcheck',

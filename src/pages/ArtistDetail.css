@@ -189,6 +189,61 @@
   isolation: isolate;
 }
 
+.artist-section--featured-show {
+  background: var(--color-bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+}
+
+.featured-show-eyebrow {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-primary);
+}
+
+.artist-section--featured-show h2 {
+  margin-top: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.featured-show-billing {
+  margin: 0 0 var(--spacing-md);
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+.featured-show-billing a {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.featured-show-billing a:hover,
+.featured-show-billing a:focus-visible {
+  text-decoration: underline;
+}
+
+.featured-show-meta {
+  margin: 0;
+}
+
+.featured-show-line {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.featured-show-line:last-child {
+  margin-bottom: 0;
+}
+
 .artist-section--videos {
   position: relative;
   z-index: 1;

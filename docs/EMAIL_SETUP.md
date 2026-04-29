@@ -66,10 +66,14 @@ check the header for `SPF=pass` and `DKIM=pass`.
 
 Once mail is live, two lightweight follow-ups inside the repo become useful:
 
-1. Set `VITE_WAITLIST_ENDPOINT` in `.env` to a Formspree / serverless handler
-   that forwards to `waitlist@kuhlshit.com`. The waitlist page in
-   `src/pages/WaitlistPage.jsx` already reads this variable; it falls back
-   to `localStorage` when absent.
+1. Set **`VITE_WAITLIST_ENDPOINT`** in `.env` (or Vercel env) to a Formspree URL,
+   serverless handler, etc. that forwards to `waitlist@kuhlshit.com`, **or**
+   set **`VITE_WEB3FORMS_ACCESS_KEY`** from [Web3Forms](https://web3forms.com)
+   (free tier supports multiple forms with one key — handy when Formspree’s
+   free plan is limited to one form). The waitlist page in
+   `src/pages/WaitlistPage.jsx` tries the custom endpoint first, then Web3Forms;
+   it always mirrors a copy to the visitor’s `localStorage` when the network
+   path is missing or fails.
 2. Update `src/components/Footer.jsx` with a `mailto:hello@kuhlshit.com`
    link so the platform has a visible human contact.
 

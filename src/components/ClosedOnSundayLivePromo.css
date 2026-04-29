@@ -1,0 +1,145 @@
+.cos-live-promo {
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: linear-gradient(
+    165deg,
+    var(--color-bg-secondary) 0%,
+    var(--color-bg-tertiary) 55%,
+    var(--color-wood-dark) 100%
+  );
+  border-bottom: 1px solid rgba(212, 140, 41, 0.2);
+}
+
+.cos-live-promo-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .cos-live-promo-inner {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+  }
+}
+
+.cos-live-promo-media {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid var(--color-accent-primary);
+  box-shadow: var(--shadow-accent, 0 8px 24px rgba(0, 0, 0, 0.35));
+}
+
+@media (min-width: 768px) {
+  .cos-live-promo-media {
+    max-width: min(320px, 38vw);
+  }
+}
+
+.cos-live-promo-img,
+.cos-live-promo-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.cos-live-promo-copy {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .cos-live-promo-copy {
+    text-align: left;
+  }
+}
+
+.cos-live-promo-eyebrow {
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-family-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-primary);
+}
+
+.cos-live-promo-title {
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-family-marker);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  color: var(--color-accent-primary);
+  line-height: 1.15;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.cos-live-promo-artists {
+  margin: 0 0 var(--spacing-md);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.cos-live-promo-meta {
+  margin: 0 0 var(--spacing-lg);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}
+
+.cos-live-promo-venue {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.cos-live-promo-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: stretch;
+  width: 100%;
+  max-width: 22rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cos-live-promo-actions {
+    align-items: flex-start;
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.cos-live-promo-btn {
+  min-height: 48px;
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .cos-live-promo-btn {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+.btn-ghost.cos-live-promo-btn--ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-gray-light);
+}
+
+.btn-ghost.cos-live-promo-btn--ghost:hover {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+  transform: translateY(-1px);
+}

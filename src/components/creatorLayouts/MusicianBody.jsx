@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import AlsPackageStoreJingle from "../AlsPackageStoreJingle";
 
 /**
  * Musician content body — the original PorchFest artist-detail layout
@@ -16,6 +17,13 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
         <h2>About</h2>
         <p className="artist-bio">{artist.bio}</p>
       </div>
+
+      {artist.jingle?.audioUrl ? (
+        <AlsPackageStoreJingle
+          audioUrl={artist.jingle.audioUrl}
+          showProfileLink={false}
+        />
+      ) : null}
 
       {/* Social Links */}
       {artist.socialLinks &&

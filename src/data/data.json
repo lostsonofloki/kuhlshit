@@ -67,6 +67,9 @@
           "source": "YouTube"
         }
       ],
+      "jingle": {
+        "audioUrl": "/resources/promo/als-package-store-jingle.m4a"
+      },
       "featured": true,
       "publishDate": "2026-03-30"
     },

@@ -1,0 +1,58 @@
+.als-jingle {
+  width: 100%;
+  padding: var(--spacing-xl) var(--spacing-md);
+  background: linear-gradient(
+    165deg,
+    var(--color-bg-tertiary) 0%,
+    var(--color-bg-secondary) 100%
+  );
+  border-bottom: 1px solid rgba(212, 140, 41, 0.15);
+}
+
+.als-jingle-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.als-jingle-eyebrow {
+  margin: 0 0 var(--spacing-xs);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent-primary);
+}
+
+.als-jingle-title {
+  margin: 0 0 var(--spacing-sm);
+  font-family: var(--font-family-heading);
+  font-size: 1.35rem;
+  color: var(--color-text-primary);
+}
+
+.als-jingle-copy {
+  margin: 0 0 var(--spacing-md);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.als-jingle-audio {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto var(--spacing-lg);
+}
+
+.als-jingle-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  align-items: center;
+}
+
+.als-jingle-btn {
+  min-height: 44px;
+}

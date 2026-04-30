@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import SEO from "../components/SEO";
+import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import "./VaultPage.css";
 
 function formatDateRange(event) {
@@ -24,7 +25,7 @@ function VaultPage() {
       <SEO
         title="The Vault | kuhlshit.com"
         description="Archived events from kuhlshit.com — every show, every lineup, every proof of concept."
-        image="/resources/porchfest/poster.jpg"
+        image={GLOBAL_SEO_DEFAULT_PROPS.image}
         path="/vault"
       />
       <div className="vault-page">

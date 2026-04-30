@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import CreatorCategories from "../components/CreatorCategories";
 import ClosedOnSundayLivePromo from "../components/ClosedOnSundayLivePromo";
+import AlsPackageStoreJingle from "../components/AlsPackageStoreJingle";
 import SmartImage from "../components/SmartImage";
 import "./HomePage.css";
 
@@ -13,6 +14,9 @@ const CREATOR_SUBTITLE = [
   "Photographers",
   "Filmmakers",
 ];
+
+const FIRE_CAMINO_JINGLE_URL = data.artists.find((a) => a.id === "fire-camino")
+  ?.jingle?.audioUrl;
 
 function HomePage() {
   const [featuredArtists, setFeaturedArtists] = useState([]);
@@ -124,6 +128,10 @@ function HomePage() {
       </section>
 
       <ClosedOnSundayLivePromo />
+
+      {FIRE_CAMINO_JINGLE_URL ? (
+        <AlsPackageStoreJingle audioUrl={FIRE_CAMINO_JINGLE_URL} />
+      ) : null}
 
       {/* Creator Categories — what the platform supports */}
       <CreatorCategories />

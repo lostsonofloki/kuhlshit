@@ -4,12 +4,15 @@
  *
  * `SEO.jsx` restores these defaults on unmount so routes without their own
  * `<SEO>` (home, waitlist, vault) always fall back to the global story.
+ *
+ * Default share art: `public/resources/share/kuhlshit-og.png`. Bump `?v=` in
+ * `index.html` when replacing that file.
  */
 export const GLOBAL_SEO_DEFAULT_PROPS = {
   title: "Kuhlshit.com — A Home for Musicians, Painters, and Poets",
   description:
     "A global platform for musicians, visual artists, and writers building their own homes on the internet.",
-  image: "/resources/porchfest/poster.jpg",
+  image: "/resources/share/kuhlshit-og.png",
   path: "/",
 };
 

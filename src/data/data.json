@@ -100,6 +100,41 @@
       "publishDate": "2026-03-30"
     },
     {
+      "id": "kyla-diane",
+      "name": "Kyla Diane",
+      "location": "Birmingham, AL",
+      "bio": "Kyla Diane is a singer-songwriter from Birmingham, AL. Stream the Venus EP and follow the links below for more.",
+      "imageUrl": "/resources/artists/kyla-diane/photo-1.png",
+      "thumbnailUrl": "/resources/artists/kyla-diane/photo-1.png",
+      "cardImageFit": "contain",
+      "genre": "Singer-Songwriter / Soul",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/kyla.dunning/",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/watch?v=LP2Dud4D_DY",
+        "spotify": "https://open.spotify.com/album/11YHp5xECgJbSaLQeUmHpB",
+        "appleMusic": "https://music.apple.com/us/album/venus-ep/1828064856",
+        "website": "https://linktr.ee/kyladianemusic"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/album/11YHp5xECgJbSaLQeUmHpB",
+        "appleMusic": "https://music.apple.com/us/album/venus-ep/1828064856",
+        "youtube": "https://www.youtube.com/watch?v=LP2Dud4D_DY"
+      },
+      "videos": [
+        {
+          "title": "Venus (live)",
+          "videoId": "LP2Dud4D_DY",
+          "thumbnail": "https://img.youtube.com/vi/LP2Dud4D_DY/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=LP2Dud4D_DY",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-30"
+    },
+    {
       "id": "elliot-devaughn",
       "name": "Elliot Devaughn",
       "bio": "Singer-songwriter performing at PorchFest 2026.",
@@ -736,6 +771,7 @@
       "bio": "John Keys is performing at PorchFest 2026 on Sunday.",
       "imageUrl": "/resources/artists/john-keys/photo-1.png",
       "thumbnailUrl": "/resources/artists/john-keys/photo-1.png",
+      "cardImageFit": "contain",
       "genre": "Singer-Songwriter",
       "socialLinks": {
         "instagram": "https://www.instagram.com/missippkeys/",

@@ -29,6 +29,10 @@
   transition: transform var(--transition-slow);
 }
 
+.artist-card-image img.artist-image-fit-contain {
+  object-fit: contain;
+}
+
 .artist-placeholder {
   position: absolute;
   top: 0;

@@ -15,6 +15,9 @@ function ArtistCard({ artist, scheduleStatus }) {
             alt={name}
             width="300"
             height="300"
+            className={
+              artist.cardImageFit === 'contain' ? 'artist-image-fit-contain' : ''
+            }
             onError={(e) => {
               e.target.style.display = 'none'
               const picture = e.target.closest('picture')

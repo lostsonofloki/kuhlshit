@@ -97,6 +97,9 @@ function FeaturedArtistsPage() {
                   alt={artist.name}
                   width="400"
                   height="400"
+                  className={
+                    artist.cardImageFit === 'contain' ? 'artist-image-fit-contain' : ''
+                  }
                   onError={(e) => {
                     e.target.style.display = 'none'
                     const picture = e.target.closest('picture')

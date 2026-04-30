@@ -218,6 +218,11 @@ function HomePage() {
                     width="400"
                     height="400"
                     sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 320px"
+                    className={
+                      artist.cardImageFit === "contain"
+                        ? "artist-image-fit-contain"
+                        : ""
+                    }
                     onError={(e) => {
                       e.target.src = "/resources/placeholder-artist.svg";
                     }}

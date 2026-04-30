@@ -160,6 +160,11 @@ function ArtistDetailPage() {
                 sizes="(max-width: 768px) 100vw, 800px"
                 loading="eager"
                 fetchPriority="high"
+                className={
+                  artist.cardImageFit === "contain"
+                    ? "artist-hero-image-portrait"
+                    : ""
+                }
                 onError={(e) => {
                   e.target.style.display = "none";
                   const picture = e.target.closest("picture");

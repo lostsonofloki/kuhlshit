@@ -97,8 +97,18 @@
 }
 
 .cos-live-promo-venue {
+  display: inline-block;
+  margin-top: 2px;
   color: var(--color-text-primary);
   font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a.cos-live-promo-venue:hover,
+a.cos-live-promo-venue:focus-visible {
+  color: var(--color-accent-primary);
+  text-decoration: underline;
 }
 
 .cos-live-promo-actions {

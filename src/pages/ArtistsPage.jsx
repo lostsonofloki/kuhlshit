@@ -91,7 +91,9 @@ function ArtistsPage() {
                   alt={artist.name}
                   width="400"
                   height="400"
-                  className={artist.id === 'john-keys' ? 'artist-image-fit-contain' : ''}
+                  className={
+                    artist.cardImageFit === 'contain' ? 'artist-image-fit-contain' : ''
+                  }
                   onError={(e) => {
                     e.target.src = '/resources/placeholder-artist.svg'
                   }}

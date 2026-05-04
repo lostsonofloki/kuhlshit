@@ -23,6 +23,14 @@
   color: var(--color-text-secondary);
 }
 
+.page-header-archive {
+  max-width: 36rem;
+  margin: var(--spacing-md) auto 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
 .search-section {
   margin-bottom: var(--spacing-xl);
 }

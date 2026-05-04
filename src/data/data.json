@@ -1037,7 +1037,51 @@
         ],
         "imageUrl": "/resources/Porchfest26.jpg",
         "lineupImageUrl": "/resources/Porchfest26lineup.jpg",
+        "gallery": {
+          "title": "PorchFest 2026 on Film",
+          "credit": {
+            "name": "Barbi",
+            "instagramUrl": "https://www.instagram.com/barbiisamazing/",
+            "email": "barbi.moroz@gmail.com"
+          },
+          "photos": [
+            "/resources/vault/porchfest-2026-film/copy-of-000134350011.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350013.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350019.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350020.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350021-2.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350021.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350025.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350026.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350027.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350028.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350029.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350030.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350031.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350032.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350033.jpg",
+            "/resources/vault/porchfest-2026-film/copy-of-000134350034.jpg"
+          ]
+        },
         "infoUrl": ""
+      },
+      {
+        "id": "closed-on-sundays-2026-05-03",
+        "name": "Closed on Sunday: Huey & Jacob Kynard",
+        "date": "2026-05-03",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Porch Talk presented Closed on Sunday live with Huey and Jacob Kynard — Al's Spirits & Music, Reform, AL — Sunday, May 3, 2026 at 3:00 PM CT. The ongoing Closed on Sundays series (yard sets to camera) lives on YouTube.",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
+          "secondary": { "to": "/porchfest/artists/huey", "label": "Huey" },
+          "tertiary": { "to": "/porchfest/artists/jacob-kynard", "label": "Jacob Kynard" }
+        }
       }
     ]
   },
@@ -1046,6 +1090,6 @@
     "version": "2.0.0",
     "totalArtists": 0,
     "totalComedy": 1,
-    "totalEvents": 1
+    "totalEvents": 2
   }
 }

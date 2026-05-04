@@ -184,20 +184,48 @@ function HomePage() {
             <p className="vault-teaser-location">
               {vaultEvent.location?.venue
                 ? `${vaultEvent.location.venue} • ${vaultEvent.location.city}, ${vaultEvent.location.state}`
-                : "Columbus, MS"}
+                : [vaultEvent.location?.city, vaultEvent.location?.state]
+                    .filter(Boolean)
+                    .join(", ") || "Columbus, MS"}
             </p>
             <p className="vault-teaser-body">
-              Our first field test. Three days, dozens of bands, one yard in
-              Columbus, MS — the spark that proved this platform belongs in the
-              wild. The lineup lives on for the artists who played it.
+              {vaultEvent.description ||
+                "Our first field test. Three days, dozens of bands, one yard in Columbus, MS — the spark that proved this platform belongs in the wild. The lineup lives on for the artists who played it."}
             </p>
             <div className="vault-teaser-actions">
-              <Link to="/porchfest" className="btn btn-secondary">
-                Revisit PorchFest 2026
-              </Link>
-              <Link to="/porchfest/artists" className="btn btn-ghost">
-                See the Artists
-              </Link>
+              {vaultEvent.vaultLinks ? (
+                <>
+                  <Link
+                    to={vaultEvent.vaultLinks.primary.to}
+                    className="btn btn-secondary"
+                  >
+                    {vaultEvent.vaultLinks.primary.label}
+                  </Link>
+                  <Link
+                    to={vaultEvent.vaultLinks.secondary.to}
+                    className="btn btn-ghost"
+                  >
+                    {vaultEvent.vaultLinks.secondary.label}
+                  </Link>
+                  {vaultEvent.vaultLinks.tertiary ? (
+                    <Link
+                      to={vaultEvent.vaultLinks.tertiary.to}
+                      className="btn btn-ghost"
+                    >
+                      {vaultEvent.vaultLinks.tertiary.label}
+                    </Link>
+                  ) : null}
+                </>
+              ) : (
+                <>
+                  <Link to="/porchfest" className="btn btn-secondary">
+                    Revisit PorchFest 2026
+                  </Link>
+                  <Link to="/porchfest/artists" className="btn btn-ghost">
+                    See the Artists
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         </section>

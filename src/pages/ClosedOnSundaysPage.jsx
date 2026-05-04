@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import data from '../data/data.json'
 import './ClosedOnSundays.css'
+
+const ARCHIVED_LIVE = data.porchfest?.events?.find(
+  (e) => e.id === 'closed-on-sundays-2026-05-03'
+)
 
 // Check for VITE_ prefix (Vite standard) or plain name (Vercel import)
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || import.meta.env.YOUTUBE_API_KEY || '';
@@ -90,12 +95,18 @@ function ClosedOnSundaysPage() {
     setSearchQuery('')
   }
 
+  const archiveNote =
+    ARCHIVED_LIVE?.description != null ? (
+      <p className="page-header-archive">{ARCHIVED_LIVE.description}</p>
+    ) : null
+
   if (loading) {
     return (
       <div className="closed-on-sundays-page">
         <div className="page-header">
           <h1>Closed on Sundays</h1>
           <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
+          {archiveNote}
         </div>
         <div className="loading">
           <p>Loading episodes...</p>
@@ -110,6 +121,7 @@ function ClosedOnSundaysPage() {
         <div className="page-header">
           <h1>Closed on Sundays</h1>
           <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
+          {archiveNote}
         </div>
         <div className="error">
           <p>{error}</p>
@@ -123,6 +135,7 @@ function ClosedOnSundaysPage() {
       <div className="page-header">
         <h1>Closed on Sundays</h1>
         <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
+        {archiveNote}
       </div>
 
       <div className="search-section">

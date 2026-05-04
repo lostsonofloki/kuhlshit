@@ -56,9 +56,21 @@ function VaultPage() {
                   </div>
                   <h2>{event.name}</h2>
                   <p className="vault-event-location">
-                    {event.location?.venue
-                      ? `${event.location.venue} • ${event.location.city}, ${event.location.state}`
-                      : `${event.location?.city ?? ""}, ${event.location?.state ?? ""}`}
+                    {event.location?.mapUrl ? (
+                      <a
+                        href={event.location.mapUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {event.location?.venue
+                          ? `${event.location.venue} • ${event.location.city}, ${event.location.state}`
+                          : `${event.location?.city ?? ""}, ${event.location?.state ?? ""}`}
+                      </a>
+                    ) : event.location?.venue ? (
+                      `${event.location.venue} • ${event.location.city}, ${event.location.state}`
+                    ) : (
+                      `${event.location?.city ?? ""}, ${event.location?.state ?? ""}`
+                    )}
                   </p>
                   {event.description ? (
                     <p className="vault-event-description">
@@ -73,13 +85,86 @@ function VaultPage() {
                     ))}
                   </div>
                   <div className="vault-event-actions">
-                    <Link to="/porchfest" className="btn btn-secondary">
-                      Revisit the event page
-                    </Link>
-                    <Link to="/porchfest/artists" className="btn btn-ghost">
-                      Browse the lineup
-                    </Link>
+                    {event.vaultLinks ? (
+                      <>
+                        <Link
+                          to={event.vaultLinks.primary.to}
+                          className="btn btn-secondary"
+                        >
+                          {event.vaultLinks.primary.label}
+                        </Link>
+                        <Link
+                          to={event.vaultLinks.secondary.to}
+                          className="btn btn-ghost"
+                        >
+                          {event.vaultLinks.secondary.label}
+                        </Link>
+                        {event.vaultLinks.tertiary ? (
+                          <Link
+                            to={event.vaultLinks.tertiary.to}
+                            className="btn btn-ghost"
+                          >
+                            {event.vaultLinks.tertiary.label}
+                          </Link>
+                        ) : null}
+                      </>
+                    ) : (
+                      <>
+                        <Link to="/porchfest" className="btn btn-secondary">
+                          Revisit the event page
+                        </Link>
+                        <Link to="/porchfest/artists" className="btn btn-ghost">
+                          Browse the lineup
+                        </Link>
+                      </>
+                    )}
                   </div>
+                  {event.gallery?.photos?.length > 0 ? (
+                    <section className="vault-gallery" aria-label={event.gallery.title}>
+                      <div className="vault-gallery-header">
+                        <h3>{event.gallery.title || "Event Gallery"}</h3>
+                        <p className="vault-gallery-credit">
+                          Photos by{" "}
+                          <span>{event.gallery.credit?.name || "Unknown"}</span>
+                          {event.gallery.credit?.instagramUrl ? (
+                            <>
+                              {" "}
+                              •{" "}
+                              <a
+                                href={event.gallery.credit.instagramUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                Instagram
+                              </a>
+                            </>
+                          ) : null}
+                          {event.gallery.credit?.email ? (
+                            <>
+                              {" "}
+                              •{" "}
+                              <a href={`mailto:${event.gallery.credit.email}`}>
+                                {event.gallery.credit.email}
+                              </a>
+                            </>
+                          ) : null}
+                        </p>
+                      </div>
+                      <div className="vault-gallery-grid">
+                        {event.gallery.photos.map((photoUrl) => (
+                          <figure key={photoUrl} className="vault-gallery-item">
+                            <img
+                              src={photoUrl}
+                              alt={`${event.name} gallery photo`}
+                              className="vault-gallery-image"
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          </figure>
+                        ))}
+                      </div>
+                    </section>
+                  ) : null}
                 </div>
               </article>
             ))

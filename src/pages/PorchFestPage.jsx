@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import TicketMerch from "../components/TicketMerch";
 import ScheduleBadges from "../components/ScheduleBadges";
 import SEO from "../components/SEO";
+import JsonLd from "../components/JsonLd";
 import SmartImage from "../components/SmartImage";
 import { PORCHFEST_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import { useFestivalClock } from "../hooks/useFestivalClock";
 import { useCachedFestivalData } from "../hooks/useCachedFestivalData";
 import { getSlotStatus } from "../utils/porchfestScheduleStatus";
+import { buildPorchfestHubJsonLd } from "../utils/porchfestHubJsonLd";
 import "./PorchFestPage.css";
 
 const APPLE_CALENDAR_URL = "/calendar/porchfest-2026.ics";
@@ -71,6 +73,12 @@ function PorchFestPage() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const hubEvent =
+    (data?.porchfest?.events || []).find((e) => e.id === "pf-001") ?? null;
+  const porchfestHubJsonLd = hubEvent
+    ? buildPorchfestHubJsonLd(hubEvent)
+    : null;
+
   const firstMapUrl = events[0]?.location?.mapUrl;
   const todayWeekday = now.toLocaleDateString("en-US", { weekday: "long" });
   const handleMapFabClick = () => {
@@ -86,6 +94,9 @@ function PorchFestPage() {
   return (
     <>
       <SEO {...PORCHFEST_SEO_DEFAULT_PROPS} />
+      {porchfestHubJsonLd ? (
+        <JsonLd id="porchfest-hub-jsonld" data={porchfestHubJsonLd} />
+      ) : null}
       <div className="porchfest-page">
         <div className="page-header">
           <h1>PorchFest</h1>
@@ -110,6 +121,7 @@ function PorchFestPage() {
               className="poster-image"
               width="1200"
               height="1800"
+              enableZoom
             />
           </div>
         </div>

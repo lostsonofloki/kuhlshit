@@ -1,6 +1,25 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import { PORCH_TALK_SEO } from '../constants/seoDefaults'
 import './PorchTalkPage.css'
+
+const PORCH_TALK_INTRO = (
+  <div className="page-static-intro">
+    <p>
+      <strong>Porch Talk</strong> is the interview and performance series on Kuhlshit.com —
+      long-form conversations and porch sessions with musicians and creators. Episodes below load from
+      our YouTube playlist; search by guest, song, or topic.
+    </p>
+    <p className="page-static-intro-links">
+      <Link to="/porchfest">PorchFest (Columbus, MS)</Link>
+      {' · '}
+      <Link to="/closed-on-sundays">Closed on Sundays</Link>
+      {' · '}
+      <Link to="/">Home</Link>
+    </p>
+  </div>
+)
 
 function PorchTalkPage() {
   const [videos, setVideos] = useState([])
@@ -84,31 +103,50 @@ function PorchTalkPage() {
 
   if (loading) {
     return (
+      <>
+      <SEO {...PORCH_TALK_SEO} />
       <div className="porch-talk-page">
+        {PORCH_TALK_INTRO}
+        <div className="page-header">
+          <h1>Porch Talk</h1>
+          <p>Creator interviews, stories, and artist conversations</p>
+        </div>
         <div className="loading">
           <h2>Loading episodes...</h2>
         </div>
       </div>
+      </>
     )
   }
 
   if (error) {
     return (
+      <>
+      <SEO {...PORCH_TALK_SEO} />
       <div className="porch-talk-page">
+        {PORCH_TALK_INTRO}
+        <div className="page-header">
+          <h1>Porch Talk</h1>
+          <p>Creator interviews, stories, and artist conversations</p>
+        </div>
         <div className="error">
           <h2>Error Loading Episodes</h2>
           <p>{error}</p>
           <button onClick={fetchVideos} className="btn btn-primary">Try Again</button>
         </div>
       </div>
+      </>
     )
   }
 
   return (
+    <>
+    <SEO {...PORCH_TALK_SEO} />
     <div className="porch-talk-page">
+      {PORCH_TALK_INTRO}
       <div className="page-header">
-        <h1>PorchTalk</h1>
-        <p>Engaging conversations and community discussions</p>
+        <h1>Porch Talk</h1>
+        <p>Creator interviews, stories, and artist conversations</p>
       </div>
 
       <div className="search-section">
@@ -176,6 +214,7 @@ function PorchTalkPage() {
         <Link to="/" className="back-link">← Back to Home</Link>
       </div>
     </div>
+    </>
   )
 }
 

@@ -17,6 +17,35 @@
   font-size: 1.1rem;
 }
 
+.page-static-intro {
+  max-width: 42rem;
+  margin: 0 auto var(--spacing-lg);
+  padding: 0 var(--spacing-md);
+  text-align: center;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+.page-static-intro p {
+  margin: 0;
+}
+
+.page-static-intro-links {
+  margin-top: var(--spacing-sm);
+  font-size: 0.95rem;
+}
+
+.page-static-intro-links a {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-static-intro-links a:hover {
+  text-decoration: underline;
+}
+
 .loading, .error {
   text-align: center;
   padding: var(--spacing-2xl);

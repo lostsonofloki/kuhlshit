@@ -50,7 +50,7 @@
 .price-option.featured {
   background: rgba(212, 140, 41, 0.2);
   border-color: var(--color-accent-primary);
-  box-shadow: 0 0 15px rgba(212, 140, 41, 0.15);
+  box-shadow: var(--shadow-accent);
 }
 
 .price-amount {
@@ -58,7 +58,7 @@
   font-size: 2.5rem;
   color: #ffd700;
   line-height: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
 }
 
 .price-type {
@@ -109,11 +109,11 @@
 .merch-image-frame {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: var(--border-radius-md);
-  border: 2px solid rgba(212, 140, 41, 0.3);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
   overflow: hidden;
-  background: #111;
+  background: var(--color-bg-tertiary);
 }
 
 .merch-image {

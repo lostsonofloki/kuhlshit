@@ -1,0 +1,114 @@
+.image-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md, 1rem);
+  background: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+
+.image-lightbox-panel {
+  position: relative;
+  max-width: min(96vw, 1400px);
+  max-height: 92vh;
+  cursor: default;
+}
+
+.image-lightbox-img {
+  display: block;
+  max-width: min(96vw, 1400px);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.image-lightbox-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  z-index: 2;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(18, 18, 18, 0.92);
+  color: var(--color-text-primary, #e8dcc4);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.image-lightbox-close:hover,
+.image-lightbox-close:focus-visible {
+  background: var(--color-accent-primary, #d48c29);
+  color: #121212;
+  outline: none;
+}
+
+.image-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--border-radius-md, 8px);
+  background: rgba(18, 18, 18, 0.85);
+  color: var(--color-text-primary, #e8dcc4);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.image-lightbox-nav:hover,
+.image-lightbox-nav:focus-visible {
+  background: rgba(212, 140, 41, 0.25);
+  border-color: var(--color-accent-primary, #d48c29);
+  outline: none;
+}
+
+.image-lightbox-nav--prev {
+  left: 0;
+  transform: translate(-120%, -50%);
+}
+
+.image-lightbox-nav--next {
+  right: 0;
+  transform: translate(120%, -50%);
+}
+
+@media (max-width: 640px) {
+  .image-lightbox-nav--prev {
+    transform: translate(-0.35rem, -50%);
+  }
+
+  .image-lightbox-nav--next {
+    transform: translate(0.35rem, -50%);
+  }
+}

@@ -2,8 +2,8 @@
  * Baseline share tags for the global platform.
  * Kept in sync with the static `<head>` tags in `index.html` and `public/manifest.json`.
  *
- * `SEO.jsx` restores these defaults on unmount so routes without their own
- * `<SEO>` (home, waitlist, vault) always fall back to the global story.
+ * Route-level `<SEO />` overrides `DefaultSeoHelmet` in `App.jsx`; baseline tags
+ * stay aligned with this object when no route-specific `<SEO />` is mounted.
  *
  * Default share art: `public/resources/share/kuhlshit-og.png`. Bump `?v=` in
  * `index.html` when replacing that file.
@@ -11,16 +11,65 @@
 export const GLOBAL_SEO_DEFAULT_PROPS = {
   title: "Kuhlshit.com — A Home for Musicians, Painters, and Poets",
   description:
-    "A global platform for musicians, visual artists, and writers building their own homes on the internet.",
+    "Find musicians, painters, poets, and more on Kuhlshit.com — discover artists, Porch Talk interviews, Closed on Sundays yard sessions, PorchFest in Columbus MS, and The Vault.",
   image: "/resources/share/kuhlshit-og.png",
   path: "/",
 };
 
 /** Festival-specific tags used by `/porchfest` archive pages and artist detail fallbacks. */
 export const PORCHFEST_SEO_DEFAULT_PROPS = {
-  title: "PorchFest 2026 | kuhlshit.com",
+  title: "PorchFest 2026 | Columbus MS Music Festival | Kuhlshit.com",
   description:
-    "Live music, local vibes. The April 17-19 field test at Munson & Brothers in Columbus, MS — archived in The Vault.",
+    "Three-day live music festival April 17–19 at Munson & Brothers in Columbus, Mississippi — lineup, archive, and Vault photos on kuhlshit.com.",
   image: "/resources/porchfest/poster.jpg",
   path: "/porchfest",
+};
+
+/** Index pages beyond home — explicit titles avoid relying only on `DefaultSeoHelmet`. */
+export const ARTISTS_INDEX_SEO = {
+  title: "Creators | kuhlshit.com",
+  description:
+    "Browse musicians, visual artists, and writers building homes on the internet through kuhlshit.com.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/artists",
+};
+
+export const PORCHFEST_ARTISTS_INDEX_SEO = {
+  title: "PorchFest lineup | kuhlshit.com",
+  description:
+    "PorchFest artists, schedule context, and links to creator profiles — Munson & Brothers, Columbus MS.",
+  image: PORCHFEST_SEO_DEFAULT_PROPS.image,
+  path: "/porchfest/artists",
+};
+
+export const PORCH_TALK_SEO = {
+  title: "Porch Talk | Creator Interviews & Stories | Kuhlshit.com",
+  description:
+    "Porch Talk on Kuhlshit.com — creator interviews, performances, and stories from our YouTube playlist.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/porch-talk",
+};
+
+export const SEARCH_SEO = {
+  title: "Search creators & events | kuhlshit.com",
+  description:
+    "Search artists and archived events across kuhlshit.com.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/search",
+};
+
+export const CLOSED_ON_SUNDAYS_SEO = {
+  title: "Closed on Sundays | Live Yard Sets | Kuhlshit.com",
+  description:
+    "Closed on Sundays — live yard sets and session archives: musicians filmed outdoors on Kuhlshit.com. Browse episodes or jump to PorchFest.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/closed-on-sundays",
+};
+
+export const SPOTCHECK_SEO = {
+  title: "Spot Check | kuhlshit.com",
+  description:
+    "A small off-menu page on kuhlshit.com — you found the spot check.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/spotcheck",
 };

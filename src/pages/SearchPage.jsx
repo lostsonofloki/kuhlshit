@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import SEO from '../components/SEO'
+import { SEARCH_SEO } from '../constants/seoDefaults'
 import ArtistCard from '../components/ArtistCard'
 import { useFestivalClock } from '../hooks/useFestivalClock'
 import { getArtistSlotStatusFromData } from '../utils/porchfestScheduleStatus'
@@ -59,6 +61,8 @@ function SearchPage() {
   const totalResults = results.artists.length + results.events.length
 
   return (
+    <>
+    <SEO {...SEARCH_SEO} />
     <div className="search-page">
       <div className="page-header">
         <h1>Search</h1>
@@ -163,6 +167,7 @@ function SearchPage() {
         <Link to="/" className="back-link">← Back to Home</Link>
       </div>
     </div>
+    </>
   )
 }
 

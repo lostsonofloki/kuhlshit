@@ -57,3 +57,13 @@ scripts/.kuhl-opt.json
 
 # Local scratch
 tmp/
+
+# Lighthouse / PSI CLI dumps (not committed)
+/lighthouse*.json
+/psi*.json
+
+# Ad-hoc downloads / archives at repo root (not site assets)
+/Porchfest*.zip
+
+# Scratch media outside public/ (ship via public/resources/)
+/resources/

@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
+import { SPOTCHECK_SEO } from '../constants/seoDefaults'
 import './SpotCheckPage.css'
 
 function SpotCheckPage() {
   return (
+    <>
+    <SEO {...SPOTCHECK_SEO} />
     <div className="spotcheck-page">
       <h1 className="spotcheck-title">
         YOU FOUND LOUIE. 🤫
@@ -17,6 +21,7 @@ function SpotCheckPage() {
         Back to Reality
       </Link>
     </div>
+    </>
   )
 }
 

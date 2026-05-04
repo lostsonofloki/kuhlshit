@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import SEO from '../components/SEO'
+import { ARTISTS_INDEX_SEO } from '../constants/seoDefaults'
 import SmartImage from '../components/SmartImage'
 import './ArtistsPage.css'
 
@@ -41,6 +43,8 @@ function ArtistsPage() {
   }
 
   return (
+    <>
+    <SEO {...ARTISTS_INDEX_SEO} />
     <div className="artists-page">
       <div className="page-header">
         <h1>All Artists</h1>
@@ -129,6 +133,7 @@ function ArtistsPage() {
         <Link to="/" className="back-link">← Back to Home</Link>
       </div>
     </div>
+    </>
   )
 }
 

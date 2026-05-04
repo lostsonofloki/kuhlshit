@@ -38,6 +38,7 @@ function ClosedOnSundayLivePromo() {
             width="560"
             height="560"
             sizes="(max-width: 768px) 100vw, min(420px, 45vw)"
+            enableZoom
           />
         </div>
         <div className="cos-live-promo-copy">

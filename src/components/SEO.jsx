@@ -1,68 +1,20 @@
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
-
-function siteOrigin() {
-  const fromEnv = import.meta.env.VITE_SITE_ORIGIN;
-  if (fromEnv) return String(fromEnv).replace(/\/$/, "");
-  if (typeof window !== "undefined") return window.location.origin;
-  return "https://kuhlshit.com";
-}
-
-function toAbsoluteUrl(origin, pathOrUrl) {
-  if (!pathOrUrl) return "";
-  if (/^https?:\/\//i.test(pathOrUrl)) return pathOrUrl;
-  const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
-  return `${origin}${path}`;
-}
+import { getSiteOrigin, toAbsoluteUrl } from "../utils/siteOrigin";
 
 /**
- * @param {'property' | 'name'} attrName
- * @param {string} key
- * @param {string} content
- */
-function setOrCreateMeta(attrName, key, content) {
-  if (content == null || content === "") return;
-  const selector =
-    attrName === "property" ? `meta[property="${key}"]` : `meta[name="${key}"]`;
-  let el = document.head.querySelector(selector);
-  if (!el) {
-    el = document.createElement("meta");
-    el.setAttribute(attrName, key);
-    document.head.appendChild(el);
-  }
-  el.setAttribute("content", content);
-}
-
-function applyPack({
-  title,
-  description,
-  absoluteImage,
-  canonicalUrl,
-  twitterCard,
-}) {
-  if (title) document.title = title;
-  setOrCreateMeta("name", "description", description);
-  setOrCreateMeta("property", "og:title", title);
-  setOrCreateMeta("property", "og:description", description);
-  setOrCreateMeta("property", "og:image", absoluteImage);
-  setOrCreateMeta("property", "og:url", canonicalUrl);
-  setOrCreateMeta("name", "twitter:card", twitterCard);
-  setOrCreateMeta("name", "twitter:title", title);
-  setOrCreateMeta("name", "twitter:description", description);
-  setOrCreateMeta("name", "twitter:image", absoluteImage);
-}
-
-/**
- * Updates document title and OG/Twitter tags for the current route.
- * Restores `GLOBAL_SEO_DEFAULT_PROPS` on unmount so other routes don’t keep stale per-page metadata.
+ * Route-level title, description, Open Graph / Twitter. Canonical `<link>` comes from
+ * `CanonicalLink` in `App.jsx` (current URL). `DefaultSeoHelmet` supplies baseline tags
+ * when nested `<SEO>` does not override.
  *
  * @param {object} props
  * @param {string} props.title
  * @param {string} props.description
  * @param {string} [props.image] — absolute URL or site-root path (e.g. `/resources/...`)
- * @param {string} [props.path] — pathname for `og:url` (default when `canonicalUrl` omitted)
- * @param {string} [props.canonicalUrl] — full URL override for `og:url`
+ * @param {string} [props.path] — pathname for canonical + `og:url` when `canonicalUrl` omitted
+ * @param {string} [props.canonicalUrl] — full URL override for canonical + `og:url`
  * @param {string} [props.twitterCard]
+ * @param {string} [props.ogType] — defaults to `website`
  */
 export default function SEO({
   title,
@@ -71,38 +23,34 @@ export default function SEO({
   path,
   canonicalUrl,
   twitterCard = "summary_large_image",
+  ogType = "website",
 }) {
-  useEffect(() => {
-    const origin = siteOrigin();
-    const pathname =
-      path == null || path === ""
-        ? "/"
-        : path.startsWith("/")
-          ? path
-          : `/${path}`;
-    const url = canonicalUrl || `${origin}${pathname}`;
-    const absoluteImage = toAbsoluteUrl(origin, image);
+  const origin = getSiteOrigin();
+  const pathname =
+    path == null || path === ""
+      ? "/"
+      : path.startsWith("/")
+        ? path
+        : `/${path}`;
+  const url = canonicalUrl || `${origin}${pathname}`;
+  const resolvedImage = image ?? GLOBAL_SEO_DEFAULT_PROPS.image;
+  const absoluteImage = toAbsoluteUrl(origin, resolvedImage);
 
-    applyPack({
-      title,
-      description,
-      absoluteImage,
-      canonicalUrl: url,
-      twitterCard,
-    });
+  return (
+    <Helmet prioritizeSeoTags>
+      <title>{title}</title>
+      <meta name="description" content={description} />
 
-    return () => {
-      const o = siteOrigin();
-      const d = GLOBAL_SEO_DEFAULT_PROPS;
-      applyPack({
-        title: d.title,
-        description: d.description,
-        absoluteImage: toAbsoluteUrl(o, d.image),
-        canonicalUrl: `${o}${d.path}`,
-        twitterCard: "summary_large_image",
-      });
-    };
-  }, [title, description, image, path, canonicalUrl, twitterCard]);
+      <meta property="og:type" content={ogType} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      {absoluteImage ? <meta property="og:image" content={absoluteImage} /> : null}
+      <meta property="og:url" content={url} />
 
-  return null;
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {absoluteImage ? <meta name="twitter:image" content={absoluteImage} /> : null}
+    </Helmet>
+  );
 }

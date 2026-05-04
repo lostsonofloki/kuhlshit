@@ -36,10 +36,11 @@
   --color-wood-light: #5c4f42;
 
   /* Shadows & Borders */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
-  --shadow-accent: 0 4px 12px rgba(212, 140, 41, 0.3);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.28);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.38);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.42);
+  /* Softer accent glow for premium, less “neon” cards CTAs */
+  --shadow-accent: 0 3px 10px rgba(212, 140, 41, 0.22);
 
   --border-color: rgba(212, 140, 41, 0.2);
   --border-radius-sm: 4px;
@@ -126,7 +127,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; }
 h3 { font-size: 1.25rem; }
-h4 { font-size: 1rem; }
+h4 { font-size: 1rem; font-weight: 600; }
 
 /* Permanent Marker ONLY for logo and hero main title */
 .logo-text,

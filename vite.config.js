@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 const devPort = Number(process.env.PORT) || 3000
 
+// SPA: no prerender/vite-plugin-ssr here — crawlers see shell HTML; head tags come from react-helmet-async at runtime.
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -30,6 +31,10 @@ export default defineConfig({
     // Default is 4kb — keep inlining small assets so fewer tiny requests hit the wire.
     assetsInlineLimit: 4096,
     rollupOptions: {
+      // Sitemap later: (1) vite-plugin-sitemap + routes list in config, or (2) a small
+      // `scripts/generate-sitemap.mjs` run post-build that reads `dist/index.html` routes
+      // from a shared manifest of paths (/, /porchfest, /porchfest/artists, plus artist ids
+      // from `src/data/data.json`). Serve `/sitemap.xml` from `public/` or Vercel rewrite.
       output: {
         // Split vendors out of the main entry so the app code is small and
         // highly cacheable. React + Router almost never change, so they can

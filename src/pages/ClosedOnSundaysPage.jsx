@@ -1,10 +1,31 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import SEO from '../components/SEO'
+import { CLOSED_ON_SUNDAYS_SEO } from '../constants/seoDefaults'
 import './ClosedOnSundays.css'
 
 const ARCHIVED_LIVE = data.porchfest?.events?.find(
   (e) => e.id === 'closed-on-sundays-2026-05-03'
+)
+
+const CLOSED_ON_SUNDAYS_INTRO = (
+  <div className="page-static-intro">
+    <p>
+      <strong>Closed on Sundays</strong> is our live yard session series on Kuhlshit.com: musicians play
+      short sets straight to camera—often three or four songs—from outdoor yard and porch setups tied to
+      the same scene as{' '}
+      <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>. Episodes live on YouTube; this page
+      lists every installment so you can search and jump in anywhere.
+    </p>
+    <p className="page-static-intro-links">
+      <Link to="/porch-talk">Porch Talk interviews</Link>
+      {' · '}
+      <Link to="/porchfest">PorchFest</Link>
+      {' · '}
+      <Link to="/">Home</Link>
+    </p>
+  </div>
 )
 
 // Check for VITE_ prefix (Vite standard) or plain name (Vercel import)
@@ -102,39 +123,50 @@ function ClosedOnSundaysPage() {
 
   if (loading) {
     return (
+      <>
+      <SEO {...CLOSED_ON_SUNDAYS_SEO} />
       <div className="closed-on-sundays-page">
+        {CLOSED_ON_SUNDAYS_INTRO}
         <div className="page-header">
           <h1>Closed on Sundays</h1>
-          <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
+          <p>Live yard sessions — short sets to camera</p>
           {archiveNote}
         </div>
         <div className="loading">
           <p>Loading episodes...</p>
         </div>
       </div>
+      </>
     )
   }
 
   if (error) {
     return (
+      <>
+      <SEO {...CLOSED_ON_SUNDAYS_SEO} />
       <div className="closed-on-sundays-page">
+        {CLOSED_ON_SUNDAYS_INTRO}
         <div className="page-header">
           <h1>Closed on Sundays</h1>
-          <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
+          <p>Live yard sessions — short sets to camera</p>
           {archiveNote}
         </div>
         <div className="error">
           <p>{error}</p>
         </div>
       </div>
+      </>
     )
   }
 
   return (
+    <>
+    <SEO {...CLOSED_ON_SUNDAYS_SEO} />
     <div className="closed-on-sundays-page">
+      {CLOSED_ON_SUNDAYS_INTRO}
       <div className="page-header">
         <h1>Closed on Sundays</h1>
-        <p>Podcast/YouTube featuring musicians playing 3-4 song sets</p>
+        <p>Live yard sessions — short sets to camera</p>
         {archiveNote}
       </div>
 
@@ -204,6 +236,7 @@ function ClosedOnSundaysPage() {
         <Link to="/" className="back-link">← Back to Home</Link>
       </div>
     </div>
+    </>
   )
 }
 

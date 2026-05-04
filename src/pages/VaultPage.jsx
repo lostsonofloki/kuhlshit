@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import SEO from "../components/SEO";
+import ImageLightbox from "../components/ImageLightbox";
+import SmartImage from "../components/SmartImage";
+import { getSmartImageLightboxSrc } from "../utils/getSmartImageLightboxSrc";
 import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import "./VaultPage.css";
 
@@ -15,10 +19,69 @@ function formatDateRange(event) {
   return `${fmt(start)} – ${fmt(end)}, ${year}`;
 }
 
+/** Full-quality zoom on /vault only for Barbi’s film gallery (see data `gallery.credit.name`). */
+function isBarbiVaultGallery(event) {
+  const name = event?.gallery?.credit?.name;
+  return typeof name === "string" && name.trim().toLowerCase() === "barbi";
+}
+
+function VaultGalleryGrid({ event, onOpen, lightboxEnabled }) {
+  const photos = event.gallery.photos;
+  const resolveSrc = (u) =>
+    typeof u === "string" ? u : u?.src ?? "";
+  const zoomUrls = lightboxEnabled
+    ? photos.map((u) => getSmartImageLightboxSrc(resolveSrc(u)))
+    : [];
+
+  return (
+    <div className="vault-gallery-grid">
+      {photos.map((photoUrl, photoIndex) => (
+        <figure
+          key={`${event.id}-${photoUrl}-${photoIndex}`}
+          className="vault-gallery-item"
+        >
+          {lightboxEnabled ? (
+            <button
+              type="button"
+              className="vault-gallery-trigger"
+              aria-label={`Open larger view: ${event.name} photo ${photoIndex + 1}`}
+              onClick={() =>
+                onOpen({
+                  urls: zoomUrls,
+                  index: photoIndex,
+                  alt: `${event.name} gallery photo`,
+                })
+              }
+            >
+              <SmartImage
+                src={resolveSrc(photoUrl)}
+                alt={`${event.name} gallery photo`}
+                className="vault-gallery-image"
+                sizes="(max-width: 767px) 50vw, (max-width: 1199px) 33vw, 25vw"
+              />
+            </button>
+          ) : (
+            <div className="vault-gallery-thumb">
+              <SmartImage
+                src={resolveSrc(photoUrl)}
+                alt={`${event.name} gallery photo`}
+                className="vault-gallery-image"
+                sizes="(max-width: 767px) 50vw, (max-width: 1199px) 33vw, 25vw"
+              />
+            </div>
+          )}
+        </figure>
+      ))}
+    </div>
+  );
+}
+
 function VaultPage() {
   const events = (data.porchfest?.events || [])
     .slice()
     .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const [lightbox, setLightbox] = useState(null);
 
   return (
     <>
@@ -150,19 +213,11 @@ function VaultPage() {
                           ) : null}
                         </p>
                       </div>
-                      <div className="vault-gallery-grid">
-                        {event.gallery.photos.map((photoUrl) => (
-                          <figure key={photoUrl} className="vault-gallery-item">
-                            <img
-                              src={photoUrl}
-                              alt={`${event.name} gallery photo`}
-                              className="vault-gallery-image"
-                              loading="lazy"
-                              decoding="async"
-                            />
-                          </figure>
-                        ))}
-                      </div>
+                      <VaultGalleryGrid
+                        event={event}
+                        onOpen={setLightbox}
+                        lightboxEnabled={isBarbiVaultGallery(event)}
+                      />
                     </section>
                   ) : null}
                 </div>
@@ -170,6 +225,17 @@ function VaultPage() {
             ))
           )}
         </section>
+
+        <ImageLightbox
+          open={lightbox != null}
+          onClose={() => setLightbox(null)}
+          urls={lightbox?.urls}
+          index={lightbox?.index ?? 0}
+          onIndexChange={(i) =>
+            setLightbox((s) => (s ? { ...s, index: i } : s))
+          }
+          alt={lightbox?.alt ?? ""}
+        />
 
         <section className="vault-footer-cta">
           <h3>Want your show in here someday?</h3>

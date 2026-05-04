@@ -10,9 +10,9 @@ export default function LouieEasterEgg() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    // The "Dalmatians don't exist" modifier. 1 in 500 chance.
-    // NOTE: Change 500 to 1 if you want to test it right now.
-    const rarity = 500
+    // The "Dalmatians don't exist" modifier. 1 in 200 chance.
+    // NOTE: Change 200 to 1 if you want to test it right now.
+    const rarity = 200
     const roll = Math.floor(Math.random() * rarity)
 
     if (roll === 0) {

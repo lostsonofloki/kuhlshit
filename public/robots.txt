@@ -1,0 +1,7 @@
+# In Search Console use full URL: https://www.kuhlshit.com/sitemap.xml
+# (or path "sitemap.xml" if the form asks for a path under your URL-prefix property)
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.kuhlshit.com/sitemap.xml

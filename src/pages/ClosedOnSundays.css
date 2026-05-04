@@ -23,6 +23,34 @@
   color: var(--color-text-secondary);
 }
 
+.page-static-intro {
+  max-width: 42rem;
+  margin: 0 auto var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+.page-static-intro p {
+  margin: 0;
+}
+
+.page-static-intro-links {
+  margin-top: var(--spacing-sm);
+  font-size: 0.95rem;
+}
+
+.page-static-intro-links a {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page-static-intro-links a:hover {
+  text-decoration: underline;
+}
+
 .page-header-archive {
   max-width: 36rem;
   margin: var(--spacing-md) auto 0;

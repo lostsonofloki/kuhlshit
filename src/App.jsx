@@ -2,13 +2,15 @@ import { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
+import CanonicalLink from './components/CanonicalLink'
+import DefaultSeoHelmet from './components/DefaultSeoHelmet'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import AnnouncementBar from './components/AnnouncementBar'
 import LouieEasterEgg from './components/LouieEasterEgg'
 import './App.css'
+import HomePage from './pages/HomePage'
 
-const HomePage = lazy(() => import('./pages/HomePage'))
 const ClosedOnSundaysPage = lazy(() => import('./pages/ClosedOnSundaysPage'))
 const PorchFestPage = lazy(() => import('./pages/PorchFestPage'))
 const PorchTalkPage = lazy(() => import('./pages/PorchTalkPage'))
@@ -36,6 +38,8 @@ function VercelMetrics() {
 function App() {
   return (
     <div className="app">
+      <CanonicalLink />
+      <DefaultSeoHelmet />
       <AnnouncementBar />
       <Header />
       <main className="main-content">

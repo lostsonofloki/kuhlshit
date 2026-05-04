@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import GigTracker from "../components/GigTracker";
+import JsonLd from "../components/JsonLd";
 import SEO from "../components/SEO";
 import SmartImage from "../components/SmartImage";
 import MusicianBody from "../components/creatorLayouts/MusicianBody";
@@ -12,6 +13,11 @@ import {
 } from "../constants/seoDefaults";
 import { useCachedFestivalData } from "../hooks/useCachedFestivalData";
 import { normalizeLineupEntry } from "../utils/porchfestScheduleStatus";
+import {
+  artistInFestivalLineup,
+  buildArtistJsonLd,
+} from "../utils/artistJsonLd";
+import { getSiteOrigin, toAbsoluteUrl } from "../utils/siteOrigin";
 import { trackEvent } from "../utils/analytics";
 import "./ArtistDetail.css";
 
@@ -20,6 +26,21 @@ function truncateMetaDescription(text, max = 155) {
   const t = text.trim().replace(/\s+/g, " ");
   if (t.length <= max) return t;
   return `${t.slice(0, max - 1).trim()}…`;
+}
+
+function buildArtistMetaDescription(artist) {
+  const parts = [artist.name];
+  if (artist.genre) parts.push(artist.genre);
+  if (artist.location) parts.push(artist.location);
+  const lead = parts.join(" · ");
+  const rawBio =
+    artist.bio && String(artist.bio).trim()
+      ? String(artist.bio).trim().replace(/\s+/g, " ")
+      : "";
+  const body = rawBio
+    ? `${lead}. ${rawBio}`
+    : `${lead}. Artist profile on kuhlshit.com — live performance archive and links.`;
+  return truncateMetaDescription(body);
 }
 
 function resolveCreatorType(artist) {
@@ -45,6 +66,37 @@ function ArtistDetailPage() {
     );
     setArtist(foundArtist || null);
   }, [artistId, data]);
+
+  const festivalEvent = data.porchfest?.events?.[0] ?? null;
+  const origin = getSiteOrigin();
+
+  const lineupMatch = useMemo(() => {
+    if (!artist || !festivalEvent) return false;
+    return artistInFestivalLineup(artist, festivalEvent);
+  }, [artist, festivalEvent]);
+
+  const jsonLd = useMemo(() => {
+    if (!artist) return null;
+    const ct = resolveCreatorType(artist);
+    const profilePath = `/porchfest/artists/${artist.id}`;
+    const canonicalUrl = `${origin}${profilePath}`;
+    const img =
+      artist.imageUrl ||
+      artist.thumbnailUrl ||
+      PORCHFEST_SEO_DEFAULT_PROPS.image;
+    const absoluteHeroImage = toAbsoluteUrl(
+      origin,
+      img || PORCHFEST_SEO_DEFAULT_PROPS.image,
+    );
+    return buildArtistJsonLd({
+      artist,
+      creatorType: ct,
+      canonicalUrl,
+      absoluteImage: absoluteHeroImage,
+      festivalEvent,
+      includeEvent: Boolean(lineupMatch && festivalEvent),
+    });
+  }, [artist, origin, festivalEvent, lineupMatch]);
 
   const getPerformanceDays = () => {
     const event = data.porchfest?.events?.[0];
@@ -83,10 +135,11 @@ function ArtistDetailPage() {
 
   const creatorType = resolveCreatorType(artist);
   const shareDescription =
-    truncateMetaDescription(artist.bio) ||
+    buildArtistMetaDescription(artist) ||
     PORCHFEST_SEO_DEFAULT_PROPS.description;
   const shareImage =
     artist.imageUrl || artist.thumbnailUrl || PORCHFEST_SEO_DEFAULT_PROPS.image;
+  const profilePath = `/porchfest/artists/${artist.id}`;
 
   const handleShareArtist = async () => {
     const shareTitle = `${artist.name} | kuhlshit.com`;
@@ -143,8 +196,10 @@ function ArtistDetailPage() {
         title={`${artist.name} | kuhlshit.com`}
         description={shareDescription}
         image={shareImage}
-        path={`/porchfest/artists/${artist.id}`}
+        path={profilePath}
+        ogType="profile"
       />
+      {jsonLd ? <JsonLd id="jsonld-artist" data={jsonLd} /> : null}
       <div
         className={`artist-detail-page artist-detail-page--${creatorType}`}
       >
@@ -160,6 +215,7 @@ function ArtistDetailPage() {
                 sizes="(max-width: 768px) 100vw, 800px"
                 loading="eager"
                 fetchPriority="high"
+                enableZoom
                 className={
                   artist.cardImageFit === "contain"
                     ? "artist-hero-image-portrait"

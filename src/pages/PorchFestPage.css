@@ -322,7 +322,9 @@
 }
 
 .pf-discovery h3 {
+  font-family: var(--font-family-heading);
   font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: var(--spacing-sm);
   color: var(--color-text-primary);
 }
@@ -397,16 +399,34 @@
   gap: var(--spacing-sm);
   padding: var(--spacing-sm);
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-lg);
   background: rgba(255, 255, 255, 0.03);
   text-decoration: none;
   color: inherit;
-  transition: all var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
 }
 
-.pf-discovery-card:hover {
-  border-color: var(--color-accent-primary);
-  background: rgba(212, 140, 41, 0.08);
+.pf-discovery-card:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+.pf-discovery-card:active {
+  transform: scale(0.99);
+}
+
+@media (hover: hover) {
+  .pf-discovery-card:hover {
+    border-color: var(--color-accent-primary);
+    background: rgba(212, 140, 41, 0.08);
+    box-shadow: var(--shadow-accent);
+  }
 }
 
 .pf-discovery-image {

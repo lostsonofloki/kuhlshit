@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
+import SEO from "../components/SEO";
+import SiteWideJsonLd from "../components/SiteWideJsonLd";
+import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import CreatorCategories from "../components/CreatorCategories";
 import ClosedOnSundayLivePromo from "../components/ClosedOnSundayLivePromo";
 import AlsPackageStoreJingle from "../components/AlsPackageStoreJingle";
@@ -63,13 +66,20 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="home-page">
+    <>
+      <SEO {...GLOBAL_SEO_DEFAULT_PROPS} />
+      <SiteWideJsonLd />
+      <div className="home-page">
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
           <div className="hero-title-wrapper">
-            <p className="hero-welcome">A home for creators</p>
-            <h1 className="hero-title">KUHLSHIT.COM</h1>
+            <p className="hero-welcome">
+              <span className="hero-brand-mark">Kuhl Shit</span>
+              <span className="hero-welcome-sep"> — </span>
+              <span className="hero-welcome-tagline">a home for creators</span>
+            </p>
+            <h1 className="hero-title">Kuhlshit.com</h1>
           </div>
           <p className="hero-subtitle hero-subtitle--rotator">
             {CREATOR_SUBTITLE.map((word, idx) => (
@@ -294,6 +304,7 @@ function HomePage() {
         </p>
       </section>
     </div>
+    </>
   );
 }
 

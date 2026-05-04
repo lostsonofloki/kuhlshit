@@ -2,14 +2,16 @@
 
 Living strategy and execution doc for product, pricing, and rollout decisions.
 
-Last updated: 2026-04-16
+Last updated: 2026-05-04
 Owners: Josh (Architecture/Dev), Alan (Business/Strategy)
 
 ---
 
-## 1) NOW - PORCHFEST LOCKDOWN
+## 1) NOW - POST-PORCHFEST
 
-Goal: keep launch stable and responsive during event week.
+Goal: ship a credible public site (Vault, accurate event story, solid routes) while laying **Supabase foundation without rushing billing**.
+
+PorchFest week is complete; the old lockdown rules are lifted for **structural backend work**, but still prefer **small, reversible steps** (adapter + JSON fallback, feature flags).
 
 ### 30-Minute UI Strike Plan (Immediate Pass)
 - [x] **10 min - CTA hierarchy pass:** keep one primary filled button style; make secondary actions outlined.
@@ -26,37 +28,52 @@ Goal: keep launch stable and responsive during event week.
 - [ ] Run final typography consistency pass (display headings + clean body/meta hierarchy).
 
 ### Non-Negotiables
-- Freeze major structural changes until PorchFest wrap.
-- Only ship critical bug fixes, content updates, and lineup/data corrections.
 - Protect mobile performance and route reliability.
+- Prefer migration slices + parity checks over big-bang rewrites.
+- Billing/paid launch stays **parked** until explicitly scheduled (no forced “Day 12 provider lock”).
 
 ### Active Checklist
-- [ ] Run day-of social preview verification for primary URLs (Facebook/Twitter cards).
-- [ ] Run quick mobile smoke checks on Home, PorchFest, Artist Detail, Search.
-- [ ] Keep artist data clean and complete (image, links, lineup assignments).
-- [ ] Log any incident + fallback used during event days.
+- [ ] Run social preview spot-checks for primary URLs when shipping visible content changes.
+- [ ] Periodic mobile smoke checks on Home, PorchFest, Artist Detail, Search, Vault.
+- [ ] Keep artist + Vault data clean (images, links, lineup, archive entries).
+- [ ] Log incidents + any JSON/DB fallback used during migration experiments.
 
 ### Owners / Deadlines
-- Josh: technical QA + bug triage (daily during PorchFest).
-- Alan: comms + partner/artist coordination (daily during PorchFest).
+- Josh: backend migration slices, QA, rollback readiness.
+- Alan: comms + partner/artist coordination as needed.
 
 ---
 
-## 2) NEXT - POST-PORCHFEST 14-DAY SPRINT
+## 2) NEXT - POST-PORCHFEST 14-DAY SPRINT (REVISED)
 
-Goal: migrate safely from static JSON to a scalable backend without breaking UX.
+Goal: migrate safely from static JSON to a scalable backend **without breaking UX**. Timeline below is still useful as a **sequence**, not a single uninterrupted calendar block.
 
-### Sprint Plan
-- **Days 1-2:** lock JSON -> Supabase schema and frontend data contract.
-- **Days 3-5:** build import/seed script using real PorchFest JSON data, then run parity checks on key pages.
-- **Days 6-8:** scaffold auth/account model + feature flags.
+### Phase A — Foundation (do first)
+- Lock JSON → Supabase schema and frontend data contract (versioned SQL migrations only).
+- Import/seed from real site JSON; parity checks on key pages.
+- Adapter layer: env toggle + JSON fallback; shadow/compare before flipping reads.
+
+### Phase B — Ship value without payments
+- Feature flags; optional auth scaffold **only** if a slice needs accounts (no Stripe requirement).
+- Custom domains / analytics / PDF press kit: follow **`ROADMAP.md` CURRENT FOCUS** and backlog scores—**do not** gate foundation work on billing.
+
+### Phase C — When you choose monetization
+- Lock billing provider; wire webhooks; align Professional tier scope with `## 3) PRODUCT`.
+
+### Original day-by-day sketch (reference)
+- **Days 1-2:** schema + contract.
+- **Days 3-5:** seed + parity.
+- **Days 6-8:** auth/account model + feature flags (if needed).
 - **Days 9-11:** prototype custom domains (CNAME + SSL + verification).
-- **Days 12-13:** ship analytics MVP + PDF press kit MVP.
-- **Day 14:** private beta with 3-5 creators.
+- **Days 12-13:** analytics MVP + PDF press kit MVP *(depends on product priority; not blocked on billing until you sell)*.
+- **Day 14:** private beta with creators *(optional timing)*.
 
 ### Pre-Sprint Blockers (Must Resolve First)
-- [ ] Lock billing provider before Day 12 (default recommendation: Stripe; choose Paddle if international VAT handling becomes immediate priority).
-- [ ] Confirm migration test set uses live PorchFest records, not synthetic-only data.
+- [ ] Confirm migration test set uses **live** site records, not synthetic-only data.
+- [ ] ~~Lock billing provider before Day 12~~ **Deferred** until Professional tier work is scheduled.
+
+### Optional Later Blockers (when starting paid features)
+- [ ] Lock billing provider (Stripe vs Paddle) before shipping subscription webhooks.
 
 ### Launch Gates
 - [ ] JSON and DB responses match for all core routes.
@@ -114,7 +131,7 @@ Build a clean, fast, artist-first profile engine for musicians, painters, poets,
 - Private contract work for custom enterprise/high-tier requests.
 
 ### Decisions Pending
-- [ ] Billing provider lock (target before Day 12 paid-feature build starts).
+- [ ] Billing provider lock (only when paid tier implementation begins).
 - [ ] Annual discount amount and trial policy
 - [ ] Refund and cancellation policy wording
 
@@ -155,7 +172,7 @@ Score formula: `Impact * Confidence / Effort`
 | Professional analytics dashboard | 4 | 3 | 3 | 4.0 | next |
 | Artist self-service editor | 5 | 5 | 3 | 3.0 | active |
 | Discovery by vibe/subculture | 4 | 4 | 3 | 3.0 | parked |
-| Media archive ("The Vault") | 4 | 4 | 2 | 2.0 | parked |
+| Media archive ("The Vault") | 4 | 4 | 2 | 2.0 | in-progress |
 
 ---
 

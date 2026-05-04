@@ -37,6 +37,7 @@ function TicketMerch() {
                   className="merch-image"
                   width="400"
                   height="400"
+                  enableZoom
                 />
               </div>
               <span className="merch-image-label">T-Shirts & More</span>
@@ -49,6 +50,7 @@ function TicketMerch() {
                   className="merch-image"
                   width="400"
                   height="400"
+                  enableZoom
                 />
               </div>
               <span className="merch-image-label">Black Tee</span>

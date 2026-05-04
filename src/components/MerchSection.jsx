@@ -15,6 +15,7 @@ function MerchSection() {
               className="merch-image"
               width="600"
               height="600"
+              enableZoom
             />
           </div>
           <div className="merch-image-card">
@@ -24,6 +25,7 @@ function MerchSection() {
               className="merch-image"
               width="600"
               height="600"
+              enableZoom
             />
           </div>
         </div>

@@ -1,4 +1,6 @@
-import { forwardRef } from 'react'
+import { forwardRef, useCallback, useMemo, useState } from 'react'
+import ImageLightbox from './ImageLightbox'
+import { getSmartImageLightboxSrc } from '../utils/getSmartImageLightboxSrc'
 
 /**
  * <SmartImage> renders a <picture> with a .webp source (+ responsive srcset)
@@ -15,6 +17,9 @@ import { forwardRef } from 'react'
  * (e.g. "(max-width:640px) 160px, 320px" for a small thumbnail grid).
  *
  * Defaults: loading="lazy", decoding="async" (override for LCP images).
+ *
+ * `enableZoom`: click (or Enter/Space when focused) opens a lightbox with the
+ * full-quality asset — see getSmartImageLightboxSrc.
  */
 const RASTER_RE = /\.(jpe?g|png)(\?.*)?$/i
 const VARIANT_WIDTHS = [480, 960]
@@ -27,10 +32,15 @@ const SmartImage = forwardRef(function SmartImage(
     decoding = 'async',
     fetchPriority,
     sizes,
+    enableZoom = false,
     ...rest
   },
   ref,
 ) {
+  const [zoomOpen, setZoomOpen] = useState(false)
+  const closeZoom = useCallback(() => setZoomOpen(false), [])
+  const lightboxSrc = useMemo(() => getSmartImageLightboxSrc(src), [src])
+
   if (!src) return null
 
   const isLocalRaster =
@@ -46,29 +56,67 @@ const SmartImage = forwardRef(function SmartImage(
     ref,
   }
 
-  if (!isLocalRaster) {
-    return <img {...commonImgProps} />
+  const inner =
+    !isLocalRaster ? (
+      <img {...commonImgProps} />
+    ) : (
+      (() => {
+        const basePath = src.replace(RASTER_RE, '')
+        const query = src.match(RASTER_RE)?.[2] || ''
+        const fullWebp = `${basePath}.webp${query}`
+
+        const srcSetParts = VARIANT_WIDTHS.map(
+          (w) => `${basePath}@${w}.webp${query} ${w}w`,
+        )
+        srcSetParts.push(`${fullWebp} 1400w`)
+        const srcSet = srcSetParts.join(', ')
+
+        const resolvedSizes =
+          sizes || '(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 320px'
+
+        return (
+          <picture>
+            <source srcSet={srcSet} sizes={resolvedSizes} type="image/webp" />
+            <img {...commonImgProps} />
+          </picture>
+        )
+      })()
+    )
+
+  const activateZoom = () => {
+    if (lightboxSrc) setZoomOpen(true)
   }
 
-  const basePath = src.replace(RASTER_RE, '')
-  const query = (src.match(RASTER_RE)?.[2]) || ''
-  const fullWebp = `${basePath}.webp${query}`
+  const onHostKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      activateZoom()
+    }
+  }
 
-  // srcset: small + medium + full, each with their rendered width in px.
-  // "1400w" is the upper cap from MAX_WIDTH in the optimizer.
-  const srcSetParts = VARIANT_WIDTHS.map((w) => `${basePath}@${w}.webp${query} ${w}w`)
-  srcSetParts.push(`${fullWebp} 1400w`)
-  const srcSet = srcSetParts.join(', ')
-
-  // Default sizes: matches the common "card in a grid" case. Callers can
-  // override with a tighter hint.
-  const resolvedSizes = sizes || '(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 320px'
+  if (!enableZoom) {
+    return inner
+  }
 
   return (
-    <picture>
-      <source srcSet={srcSet} sizes={resolvedSizes} type="image/webp" />
-      <img {...commonImgProps} />
-    </picture>
+    <>
+      <div
+        className="smart-image-zoom-host"
+        role="button"
+        tabIndex={0}
+        aria-label={alt ? `View larger: ${alt}` : 'View larger image'}
+        onClick={activateZoom}
+        onKeyDown={onHostKeyDown}
+      >
+        {inner}
+      </div>
+      <ImageLightbox
+        open={zoomOpen}
+        onClose={closeZoom}
+        src={lightboxSrc || src}
+        alt={alt}
+      />
+    </>
   )
 })
 

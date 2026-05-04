@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SmartImage from "../SmartImage";
 import "./VisualArtistBody.css";
 
 /**
@@ -27,7 +28,12 @@ export default function VisualArtistBody({ artist }) {
         <div className="visual-gallery">
           {gallery.map((piece, i) => (
             <figure key={i} className="visual-gallery-item">
-              <img src={piece.src} alt={piece.alt || artist.name} />
+              <SmartImage
+                src={piece.src}
+                alt={piece.alt || artist.name}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                enableZoom
+              />
               {piece.caption ? (
                 <figcaption>{piece.caption}</figcaption>
               ) : null}

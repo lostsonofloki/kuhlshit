@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file.
 
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project aims to follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html) for user-facing releases. Release lines below reflect what shipped on the site; for changes not yet cut as a release, see **[Unreleased]** or `git log`. The `version` field in `package.json` may lag that narrative (it is not auto-bumped on every deploy).
+
+## [Unreleased]
+
+### Added
+
+- **SEO & indexing:** `react-helmet-async` with `DefaultSeoHelmet`, `CanonicalLink`, route-level `SEO` upgrades; `SiteWideJsonLd` + artist/hub JSON-LD (`artistJsonLd`, `porchfestHubJsonLd`); post-build **`scripts/generate-sitemap.mjs`** → `dist/sitemap.xml`; **`public/robots.txt`** with sitemap hint; tuned titles/descriptions for home, PorchFest (Columbus MS), Porch Talk, Closed on Sundays; static intro copy + internal links on video hubs.
+- **Performance:** static **`HomePage`** import (no lazy chunk on `/`) for a shorter critical path to hero/LCP.
+- **Vault — PorchFest 2026 on film:** per-event gallery on the Vault page (`event.gallery` in `data.json`) with photo grid, lazy-loaded images, and photographer credit (name, Instagram, email).
+- **Vault — Barbi film galleries:** click-to-zoom lightbox for galleries credited to Barbi only (`ImageLightbox`, `getSmartImageLightboxSrc`).
+- **Vault archive — Closed on Sunday live (May 3, 2026):** archived vault card for the Huey & Jacob Kynard set at Al’s Spirits & Music with description and map link.
+- **Vault links — tertiary CTA:** optional `vaultLinks.tertiary` for archived events, rendered on the Vault and on the home vault teaser so three actions (e.g. series + two artist profiles) fit one card.
+
+### Changed
+
+- **Design polish:** softer global shadows (`index.css`), hero glow toned down; artist / featured / merch / TicketMerch / discovery cards share radius, borders, hover-focus-active affordances (`@media (hover: hover)`); home artist cards less stacked glow.
+- **Lou Dog easter egg:** spawn rarity set to **1 in 200**.
+- **Vault gallery presentation:** film stills use `object-fit: contain` so full-frame 35mm-style shots are not cropped in the grid.
+- **Tooling (repo maintenance):** image optimization script (`scripts/optimize-images.mjs`), Playwright site audit helper, and related scraper/sync utilities added or extended alongside audit/screenshot workflows.
+
+## [2.2.2] - 2026-04-29
+
+### 🎵 Fire Camino — Al’s Package Store jingle
+- ✅ Added **AlsPackageStoreJingle** with hosted m4a at `/resources/promo/als-package-store-jingle.m4a`
+- ✅ Optional `jingle.audioUrl` on Fire Camino in `data.json`; player on **home** (after Closed on Sunday promo) and **Fire Camino** artist profile
+- ✅ Copy credits **Al’s Spirits & Music in Reform, AL**; links to Google Maps and Fire Camino profile (profile page hides redundant profile CTA)
+- ✅ `<audio controls preload="none">` with `audio/mp4` source (no autoplay)
+
+### 🗺️ Al’s Spirits (shared link)
+- ✅ New `src/constants/alsSpirits.js` exporting **Al’s Spirits & Music** Google Maps URL
+- ✅ **ClosedOnSundayLivePromo** imports the constant instead of duplicating the URL
+
+### 🖼️ Default social / Open Graph image
+- ✅ Site-wide default `og:image` / `twitter:image` set to **`/resources/share/kuhlshit-og.png`** (Porch Talk artwork) in `index.html` and `GLOBAL_SEO_DEFAULT_PROPS`
+- ✅ **`og:image:type`** updated for PNG; cache-buster on share URLs
+- ✅ **Vault** page SEO image now follows `GLOBAL_SEO_DEFAULT_PROPS.image` so it stays in sync
+
+### 🖼️ Artist cards & hero polish
+- ✅ **`cardImageFit: "contain"`** in data for poster-style art (Kyla Diane, John Keys) on home, artists, featured PorchFest grid, search cards, and hero `object-position` where applicable
+- ✅ **Artist detail** hero **genre** styling: accent text instead of full-width solid orange pill (long genres like “Singer-Songwriter / Soul” read cleaner)
+- ✅ **Kyla Diane** bio trimmed to verifiable copy; live video title neutralized (“Venus (live)”)
+
+### 🎟️ Earlier on main (same release window)
+- ✅ **Huey & Jacob** time-gated homepage promo for Al’s Spirits gig; related profile / schedule data
+- ✅ **Creator waitlist** via Web3Forms (`VITE_WEB3FORMS_ACCESS_KEY`) and waitlist page wiring
+
 ## [2.2.1] - 2026-04-15
 
 ### 📱 Mobile UX and Layout Stabilization
@@ -292,4 +338,4 @@ To get started:
 
 ---
 
-*Generated on 2026-03-31*
+*Changelog last updated 2026-05-04*

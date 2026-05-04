@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
+import SEO from '../components/SEO'
+import { PORCHFEST_ARTISTS_INDEX_SEO } from '../constants/seoDefaults'
 import ScheduleBadges from '../components/ScheduleBadges'
 import SmartImage from '../components/SmartImage'
 import { useFestivalClock } from '../hooks/useFestivalClock'
@@ -51,6 +53,8 @@ function FeaturedArtistsPage() {
   const days = ['all', 'Friday', 'Saturday', 'Sunday']
 
   return (
+    <>
+    <SEO {...PORCHFEST_ARTISTS_INDEX_SEO} />
     <div className="featured-artists-page">
       <div className="page-header">
         <h1>PorchFest 2026 Artists</h1>
@@ -138,6 +142,7 @@ function FeaturedArtistsPage() {
         <Link to="/porchfest" className="back-link">← Back to PorchFest</Link>
       </div>
     </div>
+    </>
   )
 }
 

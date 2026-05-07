@@ -18,9 +18,9 @@ export const GLOBAL_SEO_DEFAULT_PROPS = {
 
 /** Festival-specific tags used by `/porchfest` archive pages and artist detail fallbacks. */
 export const PORCHFEST_SEO_DEFAULT_PROPS = {
-  title: "PorchFest 2026 | Columbus MS Music Festival | Kuhlshit.com",
+  title: "PorchFest 2026 (archived) | kuhlshit.com",
   description:
-    "Three-day live music festival April 17–19 at Munson & Brothers in Columbus, Mississippi — lineup, archive, and Vault photos on kuhlshit.com.",
+    "PorchFest 2026 in Columbus, MS has concluded. Browse the archived lineup and schedule, visit The Vault for history and media, and follow Closed on Sundays and PorchTalk for ongoing content.",
   image: "/resources/porchfest/poster.jpg",
   path: "/porchfest",
 };

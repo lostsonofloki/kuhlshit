@@ -100,14 +100,26 @@ function PorchFestPage() {
       <div className="porchfest-page">
         <div className="page-header">
           <h1>PorchFest</h1>
+          <p className="page-header-subtitle">
+            April 17–19, 2026 · Columbus, MS — archived hub
+          </p>
           <div className="porchfest-archive-banner" role="note">
-            <span className="porchfest-archive-badge">Archived</span>
+            <span className="porchfest-archive-badge">Post-event</span>
             <p>
-              PorchFest 2026 was our first field test. It lives on in{" "}
+              The festival weekend is over. The lineup and schedule below stay
+              as a reference. Ongoing:{" "}
+              <Link to="/closed-on-sundays" className="porchfest-archive-link">
+                Closed on Sundays
+              </Link>
+              {" · "}
+              <Link to="/porch-talk" className="porchfest-archive-link">
+                PorchTalk
+              </Link>
+              . History and media:{" "}
               <Link to="/vault" className="porchfest-archive-link">
                 The Vault
               </Link>
-              . See you next year.
+              .
             </p>
           </div>
         </div>
@@ -225,7 +237,7 @@ function PorchFestPage() {
 
                     {/* Grid-based artist discovery grouped by day */}
                     <div className="pf-discovery">
-                      <h3>Artist Discovery</h3>
+                      <h3>Lineup archive (2026)</h3>
                       {event.lineup?.length > 0 ? (
                         <>
                           <div className="pf-day-jump" aria-label="Jump to day">

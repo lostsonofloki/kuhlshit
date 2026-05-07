@@ -21,6 +21,24 @@ const CREATOR_SUBTITLE = [
 const FIRE_CAMINO_JINGLE_URL = data.artists.find((a) => a.id === "fire-camino")
   ?.jingle?.audioUrl;
 
+/** PorchFest hub event for Vault teaser — not every `porchfest.events` row is a PorchFest festival. */
+function selectVaultTeaserEvent(events) {
+  if (!events?.length) return null;
+  const byId = events.find((e) => e.id === "pf-001");
+  if (byId) return byId;
+  const byName = events.find((e) =>
+    /porchfest/i.test(e.name || "")
+  );
+  if (byName) return byName;
+  const bySlug = events.find(
+    (e) => e.slug && /porchfest/i.test(String(e.slug))
+  );
+  if (bySlug) return bySlug;
+  return [...events].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  )[0];
+}
+
 function HomePage() {
   const [featuredArtists, setFeaturedArtists] = useState([]);
   const [vaultEvent, setVaultEvent] = useState(null);
@@ -58,11 +76,9 @@ function HomePage() {
       setFeaturedArtists(featured);
     }
 
-    // Pull the most recent PorchFest event from data to surface as a Vault teaser.
-    const recent = (data.porchfest?.events || [])
-      .slice()
-      .sort((a, b) => new Date(b.date) - new Date(a.date))[0];
-    if (recent) setVaultEvent(recent);
+    // Vault teaser: prefer the main PorchFest festival (pf-001), not other dated hub items.
+    const teaser = selectVaultTeaserEvent(data.porchfest?.events);
+    if (teaser) setVaultEvent(teaser);
   }, []);
 
   return (
@@ -109,10 +125,10 @@ function HomePage() {
               PorchTalk
             </Link>
             <Link
-              to="/porchfest/artists"
+              to="/porchfest"
               className="btn btn-ghost hero-tertiary-cta"
             >
-              Browse artists
+              PorchFest archive
             </Link>
           </div>
           <p className="hero-waitlist-note">

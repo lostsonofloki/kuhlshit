@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import SEO from "../components/SEO";
 import ImageLightbox from "../components/ImageLightbox";
-import SmartImage from "../components/SmartImage";
-import { getSmartImageLightboxSrc } from "../utils/getSmartImageLightboxSrc";
 import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import "./VaultPage.css";
 
@@ -30,7 +28,7 @@ function VaultGalleryGrid({ event, onOpen, lightboxEnabled }) {
   const resolveSrc = (u) =>
     typeof u === "string" ? u : u?.src ?? "";
   const zoomUrls = lightboxEnabled
-    ? photos.map((u) => getSmartImageLightboxSrc(resolveSrc(u)))
+    ? photos.map((u) => resolveSrc(u))
     : [];
 
   return (
@@ -53,20 +51,22 @@ function VaultGalleryGrid({ event, onOpen, lightboxEnabled }) {
                 })
               }
             >
-              <SmartImage
+              <img
                 src={resolveSrc(photoUrl)}
                 alt={`${event.name} gallery photo`}
                 className="vault-gallery-image"
-                sizes="(max-width: 767px) 50vw, (max-width: 1199px) 33vw, 25vw"
+                loading="lazy"
+                decoding="async"
               />
             </button>
           ) : (
             <div className="vault-gallery-thumb">
-              <SmartImage
+              <img
                 src={resolveSrc(photoUrl)}
                 alt={`${event.name} gallery photo`}
                 className="vault-gallery-image"
-                sizes="(max-width: 767px) 50vw, (max-width: 1199px) 33vw, 25vw"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           )}

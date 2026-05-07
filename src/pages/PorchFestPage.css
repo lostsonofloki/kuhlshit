@@ -38,16 +38,24 @@
   font-size: 0.9rem;
 }
 
+.page-header-subtitle {
+  margin: 0 0 var(--spacing-md);
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 .porchfest-archive-banner {
   max-width: 40rem;
   margin: var(--spacing-md) auto 0;
-  padding: var(--spacing-sm) var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-md);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--spacing-sm);
   background: rgba(212, 140, 41, 0.12);
   border: 1px solid rgba(212, 140, 41, 0.3);
-  border-radius: 999px;
+  border-radius: var(--border-radius-lg);
   text-align: left;
 }
 

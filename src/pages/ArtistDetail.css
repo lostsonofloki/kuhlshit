@@ -104,7 +104,7 @@
   font-size: 2.5rem;
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-sm);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.65);
   font-family: var(--font-family-heading);
 }
 
@@ -145,7 +145,7 @@
   color: var(--color-accent-primary);
   margin-bottom: var(--spacing-md);
   font-family: var(--font-family-heading);
-  border-bottom: 2px solid var(--border-color);
+  border-bottom: 1px solid var(--border-hairline);
   padding-bottom: var(--spacing-sm);
 }
 
@@ -170,9 +170,10 @@
   gap: var(--spacing-md);
   padding: 12px 14px;
   min-height: 44px;
-  background: var(--color-bg-card);
+  background: var(--surface-card);
   border-radius: var(--border-radius-md);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: all var(--transition-fast);
@@ -206,10 +207,11 @@
 }
 
 .artist-section--featured-show {
-  background: var(--color-bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-md);
+  background: var(--surface-card);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
   padding: var(--spacing-lg);
+  box-shadow: var(--shadow-card);
 }
 
 .featured-show-eyebrow {
@@ -263,7 +265,7 @@
 .featured-show-calendar {
   margin-top: var(--spacing-md);
   padding-top: var(--spacing-md);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-hairline);
 }
 
 @media (max-width: 639px) {
@@ -294,9 +296,10 @@
 }
 
 .video-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-md);
+  background: var(--surface-card);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -359,9 +362,10 @@
   align-items: center;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
-  background: var(--color-bg-card);
+  background: var(--surface-card);
   border-radius: var(--border-radius-md);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
   color: var(--color-text-primary);
   text-decoration: none;
   transition: all var(--transition-fast);
@@ -386,10 +390,11 @@
 
 /* Performance Info */
 .performance-info {
-  background: var(--color-bg-card);
-  border-radius: var(--border-radius-lg);
+  background: var(--surface-card);
+  border-radius: var(--radius-card);
   padding: var(--spacing-lg);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
 }
 
 .performance-day,
@@ -399,7 +404,7 @@
   align-items: center;
   gap: var(--spacing-md);
   padding: var(--spacing-md) 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-hairline);
   font-size: 1rem;
   color: var(--color-text-secondary);
 }
@@ -439,7 +444,7 @@
 .back-link-container {
   text-align: center;
   padding-top: var(--spacing-xl);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-hairline);
 }
 
 .back-link {
@@ -464,13 +469,13 @@
   bottom: 20px;
   z-index: 1200;
   border-radius: 999px;
-  border: 1px solid rgba(212, 140, 41, 0.8);
+  border: 1px solid var(--border-accent-soft);
   background: rgba(18, 18, 18, 0.95);
   color: var(--color-accent-primary);
   padding: 10px 16px;
   font-size: 0.9rem;
   font-weight: 700;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--shadow-md);
   transition:
     transform var(--transition-fast),
     background var(--transition-fast),
@@ -491,7 +496,7 @@
   z-index: 1201;
   background: rgba(18, 18, 18, 0.95);
   color: var(--color-text-primary);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-hairline);
   border-radius: 999px;
   padding: 8px 14px;
   font-size: 0.8rem;

@@ -15,10 +15,12 @@
 }
 
 .vault-header h1 {
-  font-family: var(--font-family-marker, var(--font-family-heading));
+  font-family: var(--font-family-heading);
   font-size: 2rem;
+  font-weight: 800;
   line-height: 1.15;
   margin: 0 0 var(--spacing-md);
+  letter-spacing: -0.02em;
 }
 
 .vault-subtitle {
@@ -36,9 +38,10 @@
 }
 
 .vault-event-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
-  border-radius: var(--border-radius-lg);
+  background: var(--surface-card);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   padding: var(--spacing-xl);
 }
 
@@ -148,11 +151,11 @@
   margin: 0;
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-sm);
   transform: translateY(0);
   transition: transform 180ms ease, box-shadow 180ms ease;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-raised);
 }
 
 .vault-gallery-trigger {
@@ -179,9 +182,11 @@
   cursor: default;
 }
 
-.vault-gallery-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+@media (hover: hover) {
+  .vault-gallery-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
 }
 
 .vault-gallery-image {
@@ -197,8 +202,8 @@
   padding: var(--spacing-xl);
   text-align: center;
   background: rgba(212, 140, 41, 0.08);
-  border: 1px solid rgba(212, 140, 41, 0.25);
-  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-accent-soft);
+  border-radius: var(--radius-card);
 }
 
 .vault-footer-cta h3 {

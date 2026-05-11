@@ -20,17 +20,17 @@
 .als-jingle-card {
   position: relative;
   margin-top: clamp(1rem, 3vw, 1.35rem);
-  border-radius: 18px;
+  border-radius: var(--border-radius-xl);
   background: linear-gradient(
     165deg,
     rgba(28, 26, 24, 0.94) 0%,
     rgba(20, 18, 17, 0.98) 55%,
     rgba(14, 13, 12, 0.99) 100%
   );
-  border: 1px solid rgba(138, 127, 109, 0.35);
+  border: var(--card-border);
   box-shadow:
-    0 0 0 1px rgba(0, 0, 0, 0.45) inset,
-    0 20px 48px rgba(0, 0, 0, 0.38);
+    0 0 0 1px rgba(0, 0, 0, 0.38) inset,
+    var(--shadow-md);
   overflow: hidden;
 }
 
@@ -103,9 +103,9 @@
   margin: 0 auto 1.25rem;
   padding: 0.75rem 1rem 0.85rem;
   max-width: 100%;
-  border-radius: 14px;
+  border-radius: var(--radius-card);
   background: rgba(0, 0, 0, 0.38);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--border-hairline);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   color-scheme: dark;
 }
@@ -147,7 +147,9 @@
   color: rgba(232, 220, 200, 0.9);
 }
 
-.als-jingle .btn-secondary:hover {
-  border-color: rgba(212, 140, 41, 0.55);
-  color: var(--color-accent-primary);
+@media (hover: hover) {
+  .als-jingle .btn-secondary:hover {
+    border-color: rgba(212, 140, 41, 0.55);
+    color: var(--color-accent-primary);
+  }
 }

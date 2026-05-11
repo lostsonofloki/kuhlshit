@@ -75,12 +75,12 @@
   border-radius: 2px;
   transition: all var(--transition-normal);
   transform-origin: center;
-  box-shadow: 0 0 4px rgba(212, 140, 41, 0.5);
+  box-shadow: none;
 }
 
 .hamburger-btn:hover .hamburger-line {
   height: 3px;
-  box-shadow: 0 0 8px rgba(212, 140, 41, 0.8);
+  box-shadow: 0 0 4px rgba(212, 140, 41, 0.35);
 }
 
 .hamburger-btn.active .hamburger-line:nth-child(1) {

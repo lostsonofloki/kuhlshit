@@ -8,6 +8,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- **Megan Lea — Closed on Sunday (Aug 2, 2026):** artist profile data, promo image, homepage **ClosedOnSundayLivePromo** (schedule-driven), optional **`featuredShow.calendar`** with **`calendar.detailLine`** for Google Calendar / `.ics` copy via **AddToCalendarRow**; **MusicianBody** featured-show billing + calendar on profile.
+- **Site search:** **HeaderSiteSearch** dropdown in the header (artists + PorchFest events); shared **`src/lib/siteSearch.js`**. **`/search`** redirects to **`/`**; **`/search`** removed from sitemap and Playwright/audit page lists.
+- **Listening lounge (home):** **`home-listening-lounge`** wraps the COS promo + **AlsPackageStoreJingle** with a shared tiered background; promo/jingle **card** layouts (when/where `dl`, player shell, pill CTAs).
+- **GigTracker** on artist detail for **`upcomingShows`** (with **Bandsintown** when **`bandsintown_slug`** is set).
+- **`scripts/scrape-meganlea-bandzoogle.mjs`** and **`npm run scrape:meganlea-site`** for Bandzoogle URL discovery.
 - **SEO & indexing:** `react-helmet-async` with `DefaultSeoHelmet`, `CanonicalLink`, route-level `SEO` upgrades; `SiteWideJsonLd` + artist/hub JSON-LD (`artistJsonLd`, `porchfestHubJsonLd`); post-build **`scripts/generate-sitemap.mjs`** → `dist/sitemap.xml`; **`public/robots.txt`** with sitemap hint; tuned titles/descriptions for home, PorchFest (Columbus MS), Porch Talk, Closed on Sundays; static intro copy + internal links on video hubs.
 - **Performance:** static **`HomePage`** import (no lazy chunk on `/`) for a shorter critical path to hero/LCP.
 - **Vault — PorchFest 2026 on film:** per-event gallery on the Vault page (`event.gallery` in `data.json`) with photo grid, lazy-loaded images, and photographer credit (name, Instagram, email).
@@ -17,7 +22,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
-- **Design polish:** softer global shadows (`index.css`), hero glow toned down; artist / featured / merch / TicketMerch / discovery cards share radius, borders, hover-focus-active affordances (`@media (hover: hover)`); home artist cards less stacked glow.
+- **Sitewide visual system (overhaul pass):** semantic tokens in **`index.css`** (`--surface-*`, `--surface-band`, `--border-hairline`, `--border-default`, `--card-border`, `--shadow-card`, `--shadow-lift`, toned **`--shadow-accent`**, **`--section-y-*`**, **`--content-max`**). Global **`src/styles/buttons.css`** (all routes). Shared card framing for **ArtistCard**, **MerchSection**, **TicketMerch**; route CSS rollouts (home + promos + **CreatorCategories**, artist detail + **PorchFest**, artists/featured, Closed on Sundays, Porch Talk, Vault, Waitlist). **`.text-eyebrow` / `.text-meta`** (plus **`.ui-eyebrow` / `.ui-meta`**), tighter default **h1–h4** scale; **Permanent Marker** reserved for logo + hero title (e.g. merch block title → Montserrat). **Deferred:** sticky mobile Lineup+Map bar on PorchFest.
+- **Closed on Sundays positioning:** site copy reframed as **listening-room** performances (not “yard session”); **`ClosedOnSundaysPage`**, **`seoDefaults`**, **`index.html`**, PorchFest archive descriptions, and home showcase blurb updated accordingly.
+- **Removed** dedicated **`SearchPage`** (search lives in the header).
 - **Lou Dog easter egg:** spawn rarity set to **1 in 200**.
 - **Vault gallery presentation:** film stills use `object-fit: contain` so full-frame 35mm-style shots are not cropped in the grid.
 - **Tooling (repo maintenance):** image optimization script (`scripts/optimize-images.mjs`), Playwright site audit helper, and related scraper/sync utilities added or extended alongside audit/screenshot workflows.

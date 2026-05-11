@@ -22,10 +22,11 @@
 /* Pricing */
 .ticket-pricing {
   text-align: center;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--surface-card);
   padding: var(--spacing-xl);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
 }
 
 .price-options {
@@ -43,22 +44,23 @@
   padding: 16px 24px;
   border-radius: var(--border-radius-md);
   background: rgba(212, 140, 41, 0.08);
-  border: 1px solid rgba(212, 140, 41, 0.2);
+  border: var(--card-border);
   min-width: 120px;
 }
 
 .price-option.featured {
-  background: rgba(212, 140, 41, 0.2);
-  border-color: var(--color-accent-primary);
-  box-shadow: var(--shadow-accent);
+  background: rgba(212, 140, 41, 0.16);
+  border-color: var(--border-accent-soft);
+  box-shadow: var(--shadow-card);
 }
 
 .price-amount {
-  font-family: var(--font-family-marker);
+  font-family: var(--font-family-heading);
   font-size: 2.5rem;
-  color: #ffd700;
+  font-weight: 800;
+  color: #e8c84a;
   line-height: 1;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  letter-spacing: -0.02em;
 }
 
 .price-type {
@@ -109,11 +111,11 @@
 .merch-image-frame {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-card);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
-  background: var(--color-bg-tertiary);
+  background: var(--surface-inset);
 }
 
 .merch-image {
@@ -124,8 +126,10 @@
   transition: transform 0.3s ease;
 }
 
-.merch-image-wrapper:hover .merch-image {
-  transform: scale(1.02);
+@media (hover: hover) {
+  .merch-image-wrapper:hover .merch-image {
+    transform: scale(1.02);
+  }
 }
 
 .merch-image-label {

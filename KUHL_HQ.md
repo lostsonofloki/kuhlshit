@@ -2,7 +2,7 @@
 
 Living strategy and execution doc for product, pricing, and rollout decisions.
 
-Last updated: 2026-05-04
+Last updated: 2026-05-11
 Owners: Josh (Architecture/Dev), Alan (Business/Strategy)
 
 ---
@@ -22,10 +22,10 @@ PorchFest week is complete; the old lockdown rules are lifted for **structural b
 
 ### Next UI Polish Queue
 - [ ] Add sticky mobile utility bar (`Lineup` + `Map`) if it stays unobtrusive.
-- [ ] Reduce heavy glow intensity slightly for a cleaner premium look.
-- [ ] Standardize image framing (radius/border/shadow) across artist and merch cards.
-- [ ] Add subtle tap/hover affordance on artist cards.
-- [ ] Run final typography consistency pass (display headings + clean body/meta hierarchy).
+- [x] Reduce heavy glow intensity slightly for a cleaner premium look. *(global shadow tokens + route CSS pass, 2026-05)*
+- [x] Standardize image framing (radius/border/shadow) across artist and merch cards. *(`--radius-card`, `--border-hairline`, `--shadow-card`, shared patterns)*
+- [x] Add subtle tap/hover affordance on artist cards. *(`@media (hover: hover)` on cards + discovery)*
+- [x] Run final typography consistency pass (display headings + clean body/meta hierarchy). *(`h1–h4` scale, `.ui-eyebrow` / `.ui-meta` / `.text-eyebrow` / `.text-meta`, Marker limited to logo + hero; merch / Vault / Waitlist headings use Montserrat)*
 
 ### Non-Negotiables
 - Protect mobile performance and route reliability.
@@ -34,7 +34,7 @@ PorchFest week is complete; the old lockdown rules are lifted for **structural b
 
 ### Active Checklist
 - [ ] Run social preview spot-checks for primary URLs when shipping visible content changes.
-- [ ] Periodic mobile smoke checks on Home, PorchFest, Artist Detail, Search, Vault.
+- [ ] Periodic mobile smoke checks on Home, PorchFest, Artist Detail, header search, Vault, Closed on Sundays, Porch Talk.
 - [ ] Keep artist + Vault data clean (images, links, lineup, archive entries).
 - [ ] Log incidents + any JSON/DB fallback used during migration experiments.
 

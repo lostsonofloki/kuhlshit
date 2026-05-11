@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import './index.css'
+import './styles/buttons.css'
 
 // eslint-disable-next-line react-refresh/only-export-components
 const MySpaceRetroView = lazy(() => import('./pages/MySpaceRetroView'))

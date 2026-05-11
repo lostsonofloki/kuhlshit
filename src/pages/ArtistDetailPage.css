@@ -97,10 +97,11 @@
 }
 
 .porch-talk-card {
-  background: var(--color-bg-card);
-  border-radius: var(--border-radius-lg);
+  background: var(--surface-card);
+  border-radius: var(--radius-card);
   padding: var(--spacing-lg);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
@@ -150,11 +151,12 @@
   align-items: center;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
-  background: var(--color-bg-tertiary);
+  background: var(--surface-card);
   border-radius: var(--border-radius-md);
   color: var(--color-text-primary);
   transition: all var(--transition-fast);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
 }
 
 .music-link:hover {
@@ -187,11 +189,11 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: var(--color-bg-tertiary);
+  background: var(--surface-inset);
   border-radius: 50%;
   color: var(--color-accent-primary);
   transition: all var(--transition-fast);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
 }
 
 .social-link:hover {
@@ -227,9 +229,10 @@
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: var(--border-radius-md);
+  border-radius: var(--radius-card);
   margin-bottom: var(--spacing-sm);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
 }
 
 .related-card h4 {
@@ -241,7 +244,7 @@
 .back-link-container {
   text-align: center;
   padding-top: var(--spacing-xl);
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid var(--border-hairline);
 }
 
 .back-link {

@@ -100,10 +100,12 @@
   font-size: 0.9rem;
 }
 
-.search-btn:hover,
-.reset-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-accent);
+@media (hover: hover) {
+  .search-btn:hover,
+  .reset-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
 }
 
 .results-count {
@@ -127,16 +129,19 @@
 }
 
 .episode-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--border-radius-lg);
+  background: var(--surface-card);
+  border-radius: var(--radius-card);
   overflow: hidden;
   transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-  border: 1px solid var(--border-color);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
 }
 
-.episode-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .episode-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .episode-link {
@@ -158,8 +163,10 @@
   transition: transform var(--transition-normal);
 }
 
-.episode-card:hover .episode-thumbnail img {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .episode-card:hover .episode-thumbnail img {
+    transform: scale(1.05);
+  }
 }
 
 .play-overlay {
@@ -178,8 +185,10 @@
   transition: opacity var(--transition-normal);
 }
 
-.episode-card:hover .play-overlay {
-  opacity: 1;
+@media (hover: hover) {
+  .episode-card:hover .play-overlay {
+    opacity: 1;
+  }
 }
 
 .episode-content {

@@ -5,9 +5,10 @@
 }
 
 .waitlist-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.08));
-  border-radius: var(--border-radius-lg);
+  background: var(--surface-card);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   padding: var(--spacing-xl);
   color: var(--color-text-primary);
 }
@@ -22,10 +23,12 @@
 }
 
 .waitlist-card h1 {
-  font-family: var(--font-family-marker, var(--font-family-heading));
+  font-family: var(--font-family-heading);
   font-size: 2rem;
+  font-weight: 800;
   line-height: 1.15;
   margin: 0 0 var(--spacing-md);
+  letter-spacing: -0.02em;
 }
 
 .waitlist-lede {
@@ -57,7 +60,7 @@
 .waitlist-field select,
 .waitlist-field textarea {
   background: rgba(0, 0, 0, 0.35);
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.14));
+  border: 1px solid var(--border-hairline);
   border-radius: 8px;
   color: var(--color-text-primary);
   padding: 10px 12px;
@@ -71,7 +74,7 @@
 .waitlist-field textarea:focus {
   outline: none;
   border-color: var(--color-accent-primary);
-  box-shadow: 0 0 0 3px rgba(212, 140, 41, 0.25);
+  box-shadow: 0 0 0 2px rgba(212, 140, 41, 0.18);
 }
 
 .waitlist-field textarea {

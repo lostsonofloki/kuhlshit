@@ -16,9 +16,9 @@
 
 .poster-image {
   width: 100%;
-  border-radius: var(--border-radius-lg);
-  border: 2px solid rgba(212, 140, 41, 0.3);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border-radius: var(--radius-card);
+  border: var(--card-border);
+  box-shadow: var(--shadow-lift);
 }
 
 .page-header {
@@ -53,9 +53,10 @@
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-sm);
-  background: rgba(212, 140, 41, 0.12);
-  border: 1px solid rgba(212, 140, 41, 0.3);
-  border-radius: var(--border-radius-lg);
+  background: rgba(212, 140, 41, 0.1);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
   text-align: left;
 }
 
@@ -99,16 +100,19 @@
 }
 
 .event-detail-card {
-  background: var(--color-bg-card);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid var(--border-color);
+  background: var(--surface-card);
+  border-radius: var(--radius-card);
+  border: var(--card-border);
+  box-shadow: var(--shadow-card);
   overflow: hidden;
   transition: all var(--transition-normal);
 }
 
-.event-detail-card:hover {
-  border-color: var(--color-accent-primary);
-  box-shadow: var(--shadow-accent);
+@media (hover: hover) {
+  .event-detail-card:hover {
+    border-color: var(--border-accent-soft);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .event-header {
@@ -118,10 +122,10 @@
   padding: var(--spacing-lg);
   background: linear-gradient(
     135deg,
-    var(--color-bg-tertiary) 0%,
-    var(--color-bg-secondary) 100%
+    var(--surface-inset) 0%,
+    var(--surface-band) 100%
   );
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-hairline);
 }
 
 .event-date-badge {
@@ -406,9 +410,9 @@
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-sm);
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-card);
+  background: var(--surface-raised);
   text-decoration: none;
   color: inherit;
   transition:
@@ -431,9 +435,9 @@
 
 @media (hover: hover) {
   .pf-discovery-card:hover {
-    border-color: var(--color-accent-primary);
-    background: rgba(212, 140, 41, 0.08);
-    box-shadow: var(--shadow-accent);
+    border-color: var(--border-accent-soft);
+    background: var(--surface-inset);
+    box-shadow: var(--shadow-card);
   }
 }
 
@@ -442,9 +446,9 @@
   height: 52px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--border-hairline);
   flex-shrink: 0;
-  background: var(--color-bg-tertiary);
+  background: var(--surface-inset);
 }
 
 .pf-discovery-image img {
@@ -628,13 +632,13 @@
   width: 52px;
   height: 52px;
   border-radius: 999px;
-  border: 1px solid rgba(212, 140, 41, 0.7);
+  border: 1px solid var(--border-accent-soft);
   background: rgba(18, 18, 18, 0.95);
   color: var(--color-accent-primary);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  box-shadow: var(--shadow-md);
   cursor: pointer;
   transition:
     transform var(--transition-fast),

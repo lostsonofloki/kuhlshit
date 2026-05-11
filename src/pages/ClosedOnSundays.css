@@ -59,6 +59,14 @@
   color: var(--color-text-muted);
 }
 
+.page-header-archive-list .page-header-archive {
+  margin-top: var(--spacing-sm);
+}
+
+.page-header-archive-list .page-header-archive:first-child {
+  margin-top: var(--spacing-md);
+}
+
 .search-section {
   margin-bottom: var(--spacing-xl);
 }

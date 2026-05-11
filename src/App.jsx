@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import CanonicalLink from './components/CanonicalLink'
@@ -14,7 +14,6 @@ import HomePage from './pages/HomePage'
 const ClosedOnSundaysPage = lazy(() => import('./pages/ClosedOnSundaysPage'))
 const PorchFestPage = lazy(() => import('./pages/PorchFestPage'))
 const PorchTalkPage = lazy(() => import('./pages/PorchTalkPage'))
-const SearchPage = lazy(() => import('./pages/SearchPage'))
 const ArtistsPage = lazy(() => import('./pages/ArtistsPage'))
 const FeaturedArtistsPage = lazy(() => import('./pages/FeaturedArtistsPage'))
 const ArtistDetailPage = lazy(() => import('./pages/ArtistDetailPage'))
@@ -53,7 +52,7 @@ function App() {
               <Route path="/porchfest/artists" element={<FeaturedArtistsPage />} />
               <Route path="/porchfest/artists/:artistId" element={<ArtistDetailPage />} />
               <Route path="/porch-talk" element={<PorchTalkPage />} />
-              <Route path="/search" element={<SearchPage />} />
+              <Route path="/search" element={<Navigate to="/" replace />} />
               <Route path="/spotcheck" element={<SpotCheckPage />} />
               <Route path="/vault" element={<VaultPage />} />
               <Route path="/waitlist" element={<WaitlistPage />} />

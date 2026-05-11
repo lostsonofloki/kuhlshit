@@ -890,3 +890,33 @@
     margin: 0 auto;
   }
 }
+
+/* Listening lounge — Closed on Sunday promo + Al’s jingle as one tier */
+.home-listening-lounge {
+  position: relative;
+  padding: clamp(1.75rem, 5vw, 2.75rem) max(var(--spacing-md), env(safe-area-inset-right))
+    clamp(2rem, 5vw, 3rem) max(var(--spacing-md), env(safe-area-inset-left));
+  background:
+    radial-gradient(ellipse 100% 70% at 50% -15%, rgba(212, 140, 41, 0.1), transparent 50%),
+    linear-gradient(180deg, #0c0a09 0%, #12100e 35%, #161311 100%);
+}
+
+.home-listening-lounge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    -12deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 255, 255, 0.012) 3px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+}
+
+.home-listening-lounge > * {
+  position: relative;
+  z-index: 1;
+}

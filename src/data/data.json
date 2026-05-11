@@ -140,10 +140,11 @@
     {
       "id": "elliot-devaughn",
       "name": "Elliot Devaughn",
-      "bio": "Singer-songwriter performing at PorchFest 2026.",
+      "location": "Northeast Mississippi",
+      "bio": "Singer-songwriter and musician Elliott Devaughn was born and currently resides in Northeast Mississippi. Growing up surrounded by various types of music, she found herself particularly drawn to indie folk rock.\n\nA chance encounter with Mississippi musician Jimbo Mathus inspired her to take progressive guitar lessons from him. This mentorship opened up more performing opportunities and led to a recording session at Zebra Ranch. Elliott credits Jimbo's guidance as a significant factor in her growth as an artist and continues to collaborate with him on her new songs.\n\nIn addition to her guitar training, Elliott is experimenting with other instruments, including synthesizers and drum machines. Most recently, she has taken up bass guitar to enhance her rhythm skills and become a more well-rounded multi-instrumentalist, ready to shine at upcoming music events.\n\nElliott's sound, a captivating blend of indie folk rock, is heavily influenced by iconic bands such as Sonic Youth, The Velvet Underground, and The Strokes. Elements of Stevie Nicks, Joni Mitchell, and Fiona Apple resonate in Elliott's clear, airy voice. As a passionate Mississippi musician, she strives to discover more diverse sounds to enrich her ever-growing and unique tone.\n\nAt the beginning of 2025, Elliott fully immersed herself in her music career. In April 2025, her song \"Fell in Love Too Fast\" won first place at the University of North Alabama's songwriter competition. She is actively booking music events and is planning to record more songs later in the year. Performing at PorchFest 2026.",
       "imageUrl": "/resources/artists/elliot-devaughn/photo-1.webp",
       "thumbnailUrl": "/resources/artists/elliot-devaughn/photo-1.webp",
-      "genre": "Singer-Songwriter",
+      "genre": "Singer-Songwriter / Indie Folk Rock",
       "socialLinks": {
         "instagram": "https://www.instagram.com/elliott.devaughn",
         "facebook": "https://www.facebook.com/profile.php?id=61574213221544&mibextid=wwXIfr&rdid=qZXjYKTDfCc5ayBB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1HZEW1uZLC%2F%3Fmibextid%3DwwXIfr",
@@ -158,6 +159,87 @@
         "appleMusic": "",
         "youtube": "https://www.youtube.com/@elliottdevaughn"
       },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-05-07",
+          "when": "Thu May 7, 2026 · 6:00 PM – 8:00 PM CT",
+          "title": "Porters' on Main",
+          "where": "530 W Main St, Tupelo, MS",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=530+W+Main+St,+Tupelo,+MS"
+        },
+        {
+          "sortDate": "2026-05-09",
+          "when": "Sat May 9, 2026 · 6:00 PM – 8:30 PM CT",
+          "title": "Simon's",
+          "where": "201 N Main St, Bolivar, TN",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=201+N+Main+St,+Bolivar,+TN"
+        },
+        {
+          "sortDate": "2026-05-10",
+          "when": "Sun May 10, 2026 · 10:30 AM – 1:30 PM CT",
+          "title": "The Gin",
+          "where": "4187 W Main St, Tupelo, MS",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=4187+W+Main+St,+Tupelo,+MS"
+        },
+        {
+          "sortDate": "2026-05-20",
+          "when": "Wed May 20, 2026 · 6:00 PM – 9:00 PM CT",
+          "title": "The Sanctuary on 25th",
+          "where": "1710 25th Ave, Tuscaloosa, AL 35401",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=1710+25th+Ave,+Tuscaloosa,+AL+35401"
+        },
+        {
+          "sortDate": "2026-05-22",
+          "when": "Fri May 22, 2026 · 7:00 PM – 10:00 PM CT",
+          "title": "Jefferson St. Tap Room",
+          "where": "120 E Jefferson St, Ripley, MS",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=120+E+Jefferson+St,+Ripley,+MS"
+        },
+        {
+          "sortDate": "2026-05-23",
+          "when": "Sat May 23, 2026 · 7:00 PM – 10:00 PM CT",
+          "title": "The Spotted Cow",
+          "where": "127 S Fulton St, Iuka, MS",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=127+S+Fulton+St,+Iuka,+MS"
+        },
+        {
+          "sortDate": "2026-05-29",
+          "when": "Fri May 29, 2026 · Time TBA · CT",
+          "title": "Russell Barbecue",
+          "where": "301 Raleigh Ave, Sheffield, AL",
+          "supporting": "Solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=301+Raleigh+Ave,+Sheffield,+AL"
+        },
+        {
+          "sortDate": "2026-06-17",
+          "when": "Wed Jun 17, 2026 · 7:00 PM CT",
+          "title": "End of All Music",
+          "where": "3011 N State St, Jackson, MS",
+          "supporting": "Emily June + Ali Forrest's Great Big Adventure Tour w/ Sad Bath + Elliott Devaughn — solo acoustic set",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=3011+N+State+St,+Jackson,+MS"
+        },
+        {
+          "sortDate": "2026-06-20",
+          "when": "Sat Jun 20, 2026 · 7:00 PM CT",
+          "title": "Spencer Thomas living room show",
+          "where": "Oxford, MS",
+          "supporting": "House show with Spencer Thomas — solo acoustic set. Tickets and info: https://www.spencerthomassongs.com"
+        },
+        {
+          "sortDate": "2026-06-26",
+          "when": "Fri Jun 26, 2026 · 6:00 PM CT",
+          "title": "Helen Keller Festival — Music in the Park",
+          "where": "Spring Park, Tuscumbia, AL (Spring Park Road)",
+          "supporting": "Solo set — park music starts at 5:00 PM. More info: https://helenkellerfestival.com",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Spring+Park+Road,+Tuscumbia,+AL"
+        }
+      ],
       "videos": [
         {
           "title": "Closed on Sundays - Elliott Devaughn",
@@ -192,7 +274,15 @@
         "youtube": "https://youtu.be/L-yAestLP8Y?si=u-4mSYhjJ7FSInod",
         "soundcloud": "https://soundcloud.com/phillip-savell"
       },
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Phillip Savell",
+          "videoId": "L-yAestLP8Y",
+          "thumbnail": "https://img.youtube.com/vi/L-yAestLP8Y/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=L-yAestLP8Y&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=6",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -872,6 +962,95 @@
       "publishDate": "2026-04-15"
     },
     {
+      "id": "megan-lea",
+      "name": "Megan Lea",
+      "location": "Alabama",
+      "bio": "Megan Lea is committed to staying true. Born in Selma, Alabama and raised on a rural route, the importance of family, work ethic, and plenty of room for imagination were planted from the get-go. After years of sharing her original music on festival stages, in dive bars, and living rooms throughout the Southeast, those roots have grown into a sound all her own. These days, Megan lives a multifaceted life in many different roles; including Mama, ICU RN, Aunt, wife, bandmate, writer, and solo performing artist. The common thread among all of these is a self-aware sincerity and a burning curiosity for life that won't quit.\n\nMegan's writing has been described as authentic, raw, soulful, and introspective, reminiscent of poetic storytellers like John Prine or Emmylou Harris. Her stage performances incorporate sincerity of connection with a raucous edge, especially when performing with her husband Brad, guitarist Andy Branton, and bassist Billy Rigdon as The Dirty Mirrors. Megan's textured vocal style, reminiscent of a Car Wheels Lucinda Williams with the simplicity of a Nebraska Springsteen adds an authenticity that turns listeners into believers.\n\n\"Whether we connect on the road, in the backyard, on the creek, onstage, or online, I'm grateful to share my world with you.\" —Megan Lea",
+      "imageUrl": "/resources/artists/megan-lea/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/megan-lea/photo-1.webp",
+      "genre": "Singer-Songwriter / Americana",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/m3ganl3a/",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "",
+        "spotify": "",
+        "appleMusic": "",
+        "website": "https://meganleawrites.com/",
+        "tiktok": "https://www.tiktok.com/@m3ganl3a"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/album/0RTvwMEsiz8DwChu54AA6F",
+        "appleMusic": "https://music.apple.com/us/artist/megan-lea/1705035170",
+        "youtube": ""
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sunday",
+        "billingLine": "Solo set for Closed on Sunday at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Aug 2, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-08-02",
+          "allDayEndExclusive": "2026-08-03",
+          "title": "Closed on Sunday — Megan Lea",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "megan-lea-closed-on-sunday-2026-08-02",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-05-08",
+          "when": "Fri, May 8, 2026 · 6:00 PM CT",
+          "title": "AGCMH Songwriter Festival",
+          "where": "Alabama Gulf Coast Music Hall · Foley, AL",
+          "supporting": "With Jenna McClelland and Sadie McLayne",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Alabama%20Gulf%20Coast%20Music%20Hall,%20Foley,%20AL"
+        },
+        {
+          "sortDate": "2026-05-28",
+          "when": "Thu, May 28, 2026 · 6:00 PM CT",
+          "title": "Megan Lea — solo",
+          "where": "The Wine Bunker · Alabaster, AL",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Wine+Bunker,+Alabaster,+AL"
+        },
+        {
+          "sortDate": "2026-05-29",
+          "when": "Fri, May 29, 2026 · 11:00 PM CT",
+          "title": "Megan Lea — solo",
+          "where": "Folk Alliance showcase · Owensboro, KY",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Folk%20Alliance,%20Showcase,%20Owensboro,%20KY"
+        },
+        {
+          "sortDate": "2026-06-13",
+          "when": "Sat, Jun 13, 2026 · 1:00 PM CT",
+          "title": "Megan Lea — solo",
+          "where": "Montgomery Whitewater · Montgomery, AL",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Montgomery+Whitewater,+Montgomery,+AL"
+        },
+        {
+          "sortDate": "2026-08-02",
+          "when": "Sun, Aug 2, 2026 · time TBA · CT",
+          "title": "Closed on Sunday — Megan Lea (solo taping)",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Megan Lea — YouTube",
+          "videoId": "f9wsvsMwjl4",
+          "thumbnail": "https://img.youtube.com/vi/f9wsvsMwjl4/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=f9wsvsMwjl4&t=23s",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-05-11"
+    },
+    {
       "id": "too-darn-loud",
       "name": "Too Darn Loud",
       "location": "Mississippi",
@@ -1075,21 +1254,38 @@
           "state": "AL",
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         },
-        "description": "Porch Talk presented Closed on Sunday live with Huey and Jacob Kynard — Al's Spirits & Music, Reform, AL — Sunday, May 3, 2026 at 3:00 PM CT. The ongoing Closed on Sundays series (yard sets to camera) lives on YouTube.",
+        "description": "Porch Talk presented Closed on Sunday live with Huey and Jacob Kynard — Al's Spirits & Music, Reform, AL — Sunday, May 3, 2026 at 3:00 PM CT. The ongoing Closed on Sundays series (listening-room sets to camera) lives on YouTube.",
         "lineup": [],
         "vaultLinks": {
           "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
           "secondary": { "to": "/porchfest/artists/huey", "label": "Huey" },
           "tertiary": { "to": "/porchfest/artists/jacob-kynard", "label": "Jacob Kynard" }
         }
+      },
+      {
+        "id": "closed-on-sundays-2026-08-02",
+        "name": "Closed on Sunday: Megan Lea",
+        "date": "2026-08-02",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Porch Talk presents Closed on Sunday with Megan Lea — solo set at Al's Spirits & Music, Reform, AL — Sunday, August 2, 2026 (time TBA, CT). Filmed for the ongoing Closed on Sundays series on YouTube.",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
+          "secondary": { "to": "/porchfest/artists/megan-lea", "label": "Megan Lea" }
+        }
       }
     ]
   },
   "metadata": {
-    "lastUpdated": "2026-03-30",
+    "lastUpdated": "2026-05-11",
     "version": "2.0.0",
     "totalArtists": 0,
     "totalComedy": 1,
-    "totalEvents": 2
+    "totalEvents": 3
   }
 }

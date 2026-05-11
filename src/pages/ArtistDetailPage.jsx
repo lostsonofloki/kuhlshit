@@ -274,7 +274,10 @@ function ArtistDetailPage() {
         {/* Shared: gig tracker only makes sense for musicians */}
         {creatorType === "musician" ? (
           <div className="artist-content artist-content--tail">
-            <GigTracker artistSlug={artist.bandsintown_slug} />
+            <GigTracker
+              artistSlug={artist.bandsintown_slug}
+              upcomingShows={artist.upcomingShows}
+            />
           </div>
         ) : null}
 

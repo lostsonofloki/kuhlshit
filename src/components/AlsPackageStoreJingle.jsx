@@ -13,44 +13,48 @@ export default function AlsPackageStoreJingle({
   if (!audioUrl) return null;
 
   return (
-    <section
-      className="als-jingle"
-      aria-labelledby="als-jingle-heading"
-    >
-      <div className="als-jingle-inner">
-        <p className="als-jingle-eyebrow">Al&apos;s Spirits &amp; Music</p>
-        <h2 id="als-jingle-heading" className="als-jingle-title">
-          Package Store jingle
-        </h2>
-        <p className="als-jingle-copy">
-          Fire Camino wrote this for Al&apos;s Spirits &amp; Music in Reform,
-          AL.
-        </p>
-        <audio
-          className="als-jingle-audio"
-          controls
-          preload="none"
-          aria-label="Al's Spirits and Music jingle by Fire Camino"
-        >
-          <source src={audioUrl} type="audio/mp4" />
-        </audio>
-        <div className="als-jingle-actions">
-          <a
-            href={ALS_SPIRITS_MAPS_URL}
-            className="btn btn-secondary als-jingle-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Al&apos;s on Maps
-          </a>
-          {showProfileLink ? (
-            <Link
-              to="/porchfest/artists/fire-camino"
-              className="btn btn-primary als-jingle-btn"
-            >
-              Fire Camino profile
-            </Link>
-          ) : null}
+    <section className="als-jingle" aria-labelledby="als-jingle-heading">
+      <div className="als-jingle-shell">
+        <div className="als-jingle-card">
+          <div className="als-jingle-inner">
+            <p className="als-jingle-kicker">Same room · Reform, AL</p>
+            <p className="als-jingle-eyebrow">Al&apos;s Spirits &amp; Music</p>
+            <h2 id="als-jingle-heading" className="als-jingle-title">
+              Package store jingle
+            </h2>
+            <p className="als-jingle-copy">
+              Fire Camino wrote it for the shop — a short blast of Reform pride.
+            </p>
+            <div className="als-jingle-player-shell">
+              <span className="als-jingle-player-label">Play</span>
+              <audio
+                className="als-jingle-audio"
+                controls
+                preload="none"
+                aria-label="Al's Spirits and Music jingle by Fire Camino"
+              >
+                <source src={audioUrl} type="audio/mp4" />
+              </audio>
+            </div>
+            <div className="als-jingle-actions">
+              <a
+                href={ALS_SPIRITS_MAPS_URL}
+                className="btn btn-secondary als-jingle-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Al&apos;s on Maps
+              </a>
+              {showProfileLink ? (
+                <Link
+                  to="/porchfest/artists/fire-camino"
+                  className="btn btn-primary als-jingle-btn"
+                >
+                  Fire Camino profile
+                </Link>
+              ) : null}
+            </div>
+          </div>
         </div>
       </div>
     </section>

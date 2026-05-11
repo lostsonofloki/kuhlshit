@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AlsPackageStoreJingle from "../AlsPackageStoreJingle";
+import AddToCalendarRow from "../AddToCalendarRow";
 
 /**
  * Musician content body — the original PorchFest artist-detail layout
@@ -30,7 +31,8 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
         (artist.socialLinks.facebook ||
           artist.socialLinks.instagram ||
           artist.socialLinks.youtube ||
-          artist.socialLinks.website) && (
+          artist.socialLinks.website ||
+          artist.socialLinks.tiktok) && (
           <div className="artist-section artist-section--social">
             <h2>Connect</h2>
             <div className="social-links">
@@ -103,6 +105,25 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
                   <span>Instagram</span>
                 </a>
               )}
+              {artist.socialLinks.tiktok && (
+                <a
+                  href={artist.socialLinks.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="artist-social-link"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
+                  </svg>
+                  <span>TikTok</span>
+                </a>
+              )}
               {artist.socialLinks.youtube && (
                 <a
                   href={artist.socialLinks.youtube}
@@ -135,19 +156,35 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
             ) : null}
             <h2>{artist.featuredShow.title}</h2>
             <p className="featured-show-billing">
-              A special duo set with{' '}
-              {artist.featuredShow.withArtistId && artist.featuredShow.withArtistName ? (
-                <Link to={`/porchfest/artists/${artist.featuredShow.withArtistId}`}>
-                  {artist.featuredShow.withArtistName}
-                </Link>
+              {artist.featuredShow.billingLine ? (
+                artist.featuredShow.billingLine
               ) : (
-                artist.featuredShow.withArtistName || 'TBA'
+                <>
+                  A special duo set with{' '}
+                  {artist.featuredShow.withArtistId && artist.featuredShow.withArtistName ? (
+                    <Link to={`/porchfest/artists/${artist.featuredShow.withArtistId}`}>
+                      {artist.featuredShow.withArtistName}
+                    </Link>
+                  ) : (
+                    artist.featuredShow.withArtistName || 'TBA'
+                  )}
+                </>
               )}
             </p>
             <div className="featured-show-meta">
               <p className="featured-show-line">{artist.featuredShow.when}</p>
               <p className="featured-show-line">{artist.featuredShow.where}</p>
             </div>
+            {artist.featuredShow.calendar &&
+            artist.featuredShow.calendar.allDayStart &&
+            artist.featuredShow.calendar.allDayEndExclusive &&
+            artist.featuredShow.calendar.title ? (
+              <AddToCalendarRow
+                calendar={artist.featuredShow.calendar}
+                profilePath={`/porchfest/artists/${artist.id}`}
+                className="featured-show-calendar"
+              />
+            ) : null}
           </div>
         )}
 

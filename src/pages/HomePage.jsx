@@ -153,11 +153,12 @@ function HomePage() {
         />
       </section>
 
-      <ClosedOnSundayLivePromo />
-
-      {FIRE_CAMINO_JINGLE_URL ? (
-        <AlsPackageStoreJingle audioUrl={FIRE_CAMINO_JINGLE_URL} />
-      ) : null}
+      <div className="home-listening-lounge">
+        <ClosedOnSundayLivePromo />
+        {FIRE_CAMINO_JINGLE_URL ? (
+          <AlsPackageStoreJingle audioUrl={FIRE_CAMINO_JINGLE_URL} />
+        ) : null}
+      </div>
 
       {/* Creator Categories — what the platform supports */}
       <CreatorCategories />
@@ -171,7 +172,7 @@ function HomePage() {
           <div className="showcase-card">
             <h3>Closed on Sundays</h3>
             <p>
-              Live-style sets from the yard — three or four songs at a time,
+              Listening-room style performances — three or four songs at a time,
               straight to camera.
             </p>
             <div className="showcase-card-actions">

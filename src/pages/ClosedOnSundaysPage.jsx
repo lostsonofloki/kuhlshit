@@ -5,15 +5,21 @@ import SEO from '../components/SEO'
 import { CLOSED_ON_SUNDAYS_SEO } from '../constants/seoDefaults'
 import './ClosedOnSundays.css'
 
-const ARCHIVED_LIVE = data.porchfest?.events?.find(
-  (e) => e.id === 'closed-on-sundays-2026-05-03'
-)
+const ARCHIVED_LIVE_EVENTS = (data.porchfest?.events || [])
+  .filter(
+    (e) =>
+      typeof e.id === 'string' &&
+      e.id.startsWith('closed-on-sundays-') &&
+      typeof e.date === 'string' &&
+      e.date.length > 0,
+  )
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
 
 const CLOSED_ON_SUNDAYS_INTRO = (
   <div className="page-static-intro">
     <p>
-      <strong>Closed on Sundays</strong> is our live yard session series on Kuhlshit.com: musicians play
-      short sets straight to camera—often three or four songs—from outdoor yard and porch setups tied to
+      <strong>Closed on Sundays</strong> is our listening-room performance series on Kuhlshit.com: artists play
+      short sets straight to camera—often three or four songs—with a quiet, room-focused energy tied to
       the same scene as{' '}
       <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>. Episodes live on YouTube; this page
       lists every installment so you can search and jump in anywhere.
@@ -117,8 +123,14 @@ function ClosedOnSundaysPage() {
   }
 
   const archiveNote =
-    ARCHIVED_LIVE?.description != null ? (
-      <p className="page-header-archive">{ARCHIVED_LIVE.description}</p>
+    ARCHIVED_LIVE_EVENTS.length > 0 ? (
+      <div className="page-header-archive-list">
+        {ARCHIVED_LIVE_EVENTS.filter((e) => e.description).map((e) => (
+          <p key={e.id} className="page-header-archive">
+            {e.description}
+          </p>
+        ))}
+      </div>
     ) : null
 
   if (loading) {
@@ -129,7 +141,7 @@ function ClosedOnSundaysPage() {
         {CLOSED_ON_SUNDAYS_INTRO}
         <div className="page-header">
           <h1>Closed on Sundays</h1>
-          <p>Live yard sessions — short sets to camera</p>
+          <p>Listening-room performances — short sets to camera</p>
           {archiveNote}
         </div>
         <div className="loading">
@@ -148,7 +160,7 @@ function ClosedOnSundaysPage() {
         {CLOSED_ON_SUNDAYS_INTRO}
         <div className="page-header">
           <h1>Closed on Sundays</h1>
-          <p>Live yard sessions — short sets to camera</p>
+          <p>Listening-room performances — short sets to camera</p>
           {archiveNote}
         </div>
         <div className="error">
@@ -166,7 +178,7 @@ function ClosedOnSundaysPage() {
       {CLOSED_ON_SUNDAYS_INTRO}
       <div className="page-header">
         <h1>Closed on Sundays</h1>
-        <p>Live yard sessions — short sets to camera</p>
+        <p>Listening-room performances — short sets to camera</p>
         {archiveNote}
       </div>
 

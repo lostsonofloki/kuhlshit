@@ -15,6 +15,43 @@ Priorities until the data layer and public site are clearly ahead of “backend 
 
 ---
 
+## Artist bios: placeholder → real copy (one-by-one)
+
+**Goal:** Replace thin or tagline-only PorchFest blurbs in [`src/data/data.json`](src/data/data.json) with proper EPK-style bios (voice, place, releases, links to story). Tackle **one artist per pass**; check off here or in git when done.
+
+**A — Tagline ends with `Performing at PorchFest 2026.`** (period)
+
+- [ ] `the-wright-moves` — The Wright Moves
+- [ ] `bb-palmer` — B.B. Palmer
+- [ ] `ming-donkey` — Ming Donkey
+- [ ] `jonny-hollis` — Jonny Hollis
+- [ ] `j-d-spencer` — J.D. Spencer
+- [ ] `tyler-tisdale` — Tyler Tisdale
+- [ ] `ritch-henderson` — Ritch Henderson
+- [ ] `elliot-devaughn` — Elliot Devaughn *(long bio already; optional: drop or rewrite trailing “Performing at PorchFest 2026.” line only)*
+
+**B — Tagline ends with `Performing at PorchFest 2026!`** (exclamation)
+
+- [ ] `the-stifftones` — The Stifftones
+- [ ] `katie-burkhardt` — Katie Burkhardt
+- [ ] `hayden-hunter-and-the-yearly-trials` — Hayden Hunter & The Yearly Trials
+- [ ] `taylor-hollingsworth` — Taylor Hollingsworth
+- [ ] `will-stewart` — Will Stewart
+- [ ] `shake-it-like-a-caveman` — Shake It Like a Caveman
+- [ ] `haysop` — Haysop
+- [ ] `ham-bagby` — Ham Bagby
+
+**C — Other one-liner / minimal PorchFest mentions**
+
+- [ ] `phillip-savell` — Phillip Savell (`Musician performing at PorchFest 2026.`)
+- [ ] `brad-and-wes` — Brad & Wes (`Rockabilly duo performing at PorchFest 2026.`)
+- [ ] `john-keys` — John Keys (short Sunday line)
+- [ ] `too-darn-loud` — Too Darn Loud *(has more copy; still tighten if desired)*
+
+**Not in this list:** Artists with bespoke bios only (e.g. Fire Camino, Honey Boy and Boots, Hunter Myers, Kyla Diane, Abe Partridge, Huey, Jacob Kynard, Megan Lea, etc.) — add a row here if you decide they need a refresh too.
+
+---
+
 ## PHASE 1: THE PORCHFEST GAUNTLET (Apr 2026) — complete
 
 - [done] PWA/Mobile Polish: Full-screen mode, address bar removal.

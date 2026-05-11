@@ -1,0 +1,105 @@
+.add-to-calendar-row {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.add-to-calendar-row-label {
+  display: block;
+  font-family: var(--font-family-heading);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(232, 220, 200, 0.55);
+  margin-bottom: 0.35rem;
+}
+
+.add-to-calendar-row-links {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  font-family: var(--font-family-body);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.add-to-calendar-sep {
+  color: rgba(232, 220, 200, 0.35);
+  user-select: none;
+}
+
+.add-to-calendar-link {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: inherit;
+  color: rgba(201, 184, 150, 0.92);
+  text-decoration: underline;
+  text-decoration-color: rgba(212, 140, 41, 0.45);
+  text-underline-offset: 3px;
+  cursor: pointer;
+  text-align: left;
+}
+
+a.add-to-calendar-link:hover,
+a.add-to-calendar-link:focus-visible,
+button.add-to-calendar-link:hover,
+button.add-to-calendar-link:focus-visible {
+  color: var(--color-accent-primary);
+  text-decoration-color: var(--color-accent-primary);
+}
+
+button.add-to-calendar-link:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Narrow phones: stack links with comfortable tap targets */
+@media (max-width: 639px) {
+  .add-to-calendar-row-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .add-to-calendar-sep {
+    display: none;
+  }
+
+  .add-to-calendar-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  a.add-to-calendar-link:hover,
+  a.add-to-calendar-link:focus-visible,
+  button.add-to-calendar-link:hover,
+  button.add-to-calendar-link:focus-visible {
+    text-decoration: none;
+    border-color: rgba(212, 140, 41, 0.45);
+    background: rgba(212, 140, 41, 0.1);
+    color: var(--color-accent-primary);
+  }
+
+  a.add-to-calendar-link:active,
+  button.add-to-calendar-link:active {
+    background: rgba(255, 255, 255, 0.08);
+  }
+}

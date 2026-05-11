@@ -14,7 +14,6 @@ const pages = [
   { path: '/closed-on-sundays', name: 'closed-on-sundays' },
   { path: '/porch-talk', name: 'porch-talk' },
   { path: '/artists', name: 'artists' },
-  { path: '/search', name: 'search' },
 ];
 
 const viewports = [

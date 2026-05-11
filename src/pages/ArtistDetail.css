@@ -260,6 +260,24 @@
   margin-bottom: 0;
 }
 
+.featured-show-calendar {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 639px) {
+  .featured-show-calendar {
+    text-align: center;
+  }
+
+  .featured-show-calendar .add-to-calendar-row-links {
+    max-width: 22rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .artist-section--videos {
   position: relative;
   z-index: 1;

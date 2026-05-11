@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import HeaderSiteSearch from './HeaderSiteSearch'
 import './Header.css'
 
 function Header() {
@@ -62,12 +63,7 @@ function Header() {
 
           {/* Right: Search + Hamburger */}
           <div className="header-controls">
-            <Link to="/search" className="header-search-btn" onClick={closeMenu}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <circle cx="11" cy="11" r="8" />
-                <path d="m21 21-4.35-4.35" />
-              </svg>
-            </Link>
+            <HeaderSiteSearch onNavigate={closeMenu} />
 
             <button
               className={`hamburger-btn ${isMenuOpen ? 'active' : ''}`}

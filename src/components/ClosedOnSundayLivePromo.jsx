@@ -68,7 +68,10 @@ function ClosedOnSundayLivePromo() {
       : null
 
   const eyebrowDate = nextEvent?.date ? formatCosHubDateShort(nextEvent.date) : ''
-  const artistLine = featuredArtist?.name || nextEvent?.name?.replace(/^Closed on Sunday:\s*/i, '') || 'TBA'
+  const artistLine =
+    featuredArtist?.name ||
+    nextEvent?.name?.replace(/^Closed on Sundays?:\s*/i, '') ||
+    'TBA'
   const imgAlt = nextEvent?.name
     ? `${nextEvent.name} — Closed on Sundays at Al's Spirits & Music, Reform, AL. Promotional image.`
     : 'Closed on Sundays — promotional image.'
@@ -99,7 +102,7 @@ function ClosedOnSundayLivePromo() {
                 Next session{eyebrowDate ? ` · ${eyebrowDate}` : ''}
               </p>
               <h2 id="cos-live-promo-heading" className="cos-live-promo-title">
-                Closed on Sunday
+                Closed on Sundays
               </h2>
               <p className="cos-live-promo-artists">{artistLine}</p>
               <p className="cos-live-promo-tagline">Listening room · filmed to camera</p>

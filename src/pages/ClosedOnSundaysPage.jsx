@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import data from '../data/data.json'
 import SEO from '../components/SEO'
 import { CLOSED_ON_SUNDAYS_SEO } from '../constants/seoDefaults'
+import AddToCalendarRow from '../components/AddToCalendarRow'
 import {
   formatCosHubDateShort,
   getPastClosedOnSundayHubEventsSorted,
@@ -12,7 +13,7 @@ import './ClosedOnSundays.css'
 
 function cosSessionShortTitle(name) {
   if (typeof name !== 'string') return 'Session'
-  return name.replace(/^Closed on Sunday:\s*/i, '').trim() || name
+  return name.replace(/^Closed on Sundays?:\s*/i, '').trim() || name
 }
 
 function PastCosSessionsArchive() {
@@ -72,28 +73,43 @@ function UpcomingCosShowsSection() {
         Central Time unless noted. If you&apos;re coming out in person: bring a chair.
       </p>
       <ul className="cos-upcoming-list">
-        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName }) => (
-          <li key={e.id} className="cos-upcoming-item">
-            <div className="cos-upcoming-item-main">
-              <p className="cos-upcoming-date">{dateLabel}</p>
-              <h3 className="cos-upcoming-title">
-                {profileTo && artistName ? (
-                  <Link to={profileTo} className="cos-upcoming-title-link">
-                    {artistName}
-                  </Link>
-                ) : (
-                  title
-                )}
-              </h3>
-              {whenExtra ? <p className="cos-upcoming-when">{whenExtra}</p> : null}
-            </div>
-            {profileTo ? (
-              <Link to={profileTo} className="btn btn-secondary cos-upcoming-cta">
-                {artistName ? `${artistName} profile` : 'Artist profile'}
-              </Link>
-            ) : null}
-          </li>
-        ))}
+        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, hubCalendar }) => {
+          const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · time TBA · CT`
+          const customDetails = [calLine, typeof e.description === 'string' && e.description.trim()]
+            .filter(Boolean)
+            .join('\n\n')
+          return (
+            <li key={e.id} className="cos-upcoming-item">
+              <div className="cos-upcoming-item-main">
+                <p className="cos-upcoming-date">{dateLabel}</p>
+                <h3 className="cos-upcoming-title">
+                  {profileTo && artistName ? (
+                    <Link to={profileTo} className="cos-upcoming-title-link">
+                      {artistName}
+                    </Link>
+                  ) : (
+                    title
+                  )}
+                </h3>
+                {whenExtra ? <p className="cos-upcoming-when">{whenExtra}</p> : null}
+                {hubCalendar ? (
+                  <AddToCalendarRow
+                    calendar={hubCalendar}
+                    profilePath={profileTo || ''}
+                    customDetails={customDetails}
+                    labelText="Add to calendar"
+                    className="cos-upcoming-add-cal add-to-calendar-row--compact"
+                  />
+                ) : null}
+              </div>
+              {profileTo ? (
+                <Link to={profileTo} className="btn btn-secondary cos-upcoming-cta">
+                  {artistName ? `${artistName} profile` : 'Artist profile'}
+                </Link>
+              ) : null}
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

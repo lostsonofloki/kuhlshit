@@ -92,3 +92,9 @@
 .als-upcoming-strip__schedule-link:hover {
   text-decoration: underline;
 }
+
+.als-upcoming-strip__calendar {
+  flex: 1 1 100%;
+  width: 100%;
+  margin-top: 0.35rem;
+}

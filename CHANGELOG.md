@@ -8,13 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- **Jodie Ross — Closed on Sunday (Jun 28, 2026):** artist entry and hub row **`closed-on-sundays-2026-06-28`** in **`data.json`**, headshots under **`public/resources/artists/jodie-ross/`**; **`scripts/scrape-jodie-ross-music.mjs`** (Playwright) for **jodierossmusic.com** (writes **`tmp/jodie-ross-music.json`** when run — `tmp/` gitignored).
-- **Janet Simpson — Closed on Sunday (Jul 19, 2026):** artist entry and hub row **`closed-on-sundays-2026-07-19`**, assets **`public/resources/artists/janet-simpson/`**; **Listen** supports optional **`musicLinks.tidal`** and **`musicLinks.pandora`** on **MusicianBody** (no squatted personal-site domain in data).
+- **Jodie Ross — Closed on Sundays (Jun 28, 2026):** artist entry and hub row **`closed-on-sundays-2026-06-28`** in **`data.json`**, headshots under **`public/resources/artists/jodie-ross/`**; **`scripts/scrape-jodie-ross-music.mjs`** (Playwright) for **jodierossmusic.com** (writes **`tmp/jodie-ross-music.json`** when run — `tmp/` gitignored).
+- **Janet Simpson — Closed on Sundays (Jul 19, 2026):** artist entry and hub row **`closed-on-sundays-2026-07-19`**, assets **`public/resources/artists/janet-simpson/`**; **Listen** supports optional **`musicLinks.tidal`** and **`musicLinks.pandora`** on **MusicianBody** (no squatted personal-site domain in data).
 - **`.cursor/rules/artist-photos-source.mdc`:** project rule — source headshots live in **`Artist/`** before **`public/resources/artists/<slug>/`** + **`optimize-images.mjs`**.
 - **Home — Upcoming Closed on Sundays:** slim **UpcomingAtAlsStrip** under the COS promo in the listening lounge (max 3 hub dates, **Full schedule →** `/closed-on-sundays`); shared **`getUpcomingCosHubRowsForDisplay`** in **`closedOnSundayHubEvents.js`** with the hub page upcoming list.
 - **Closed on Sundays — homepage + hub page:** homepage **ClosedOnSundayLivePromo** highlights the **next** upcoming `closed-on-sundays-*` hub row (Chicago date) with artist image, when/where, calendar row, and profile link; **`/closed-on-sundays`** lists **Upcoming shows** (sorted soonest first) above the YouTube archive search.
-- **Goodloe Chilcutt — Closed on Sunday (Jun 14, 2026):** artist profile in **`data.json`** (`featuredShow` + calendar, **`upcomingShows`** with **`sortDate`**), **`porchfest.events`** row **`closed-on-sundays-2026-06-14`**, headshot at **`public/resources/artists/goodloe-chilcutt/photo-1.png`** (from **`Artist/Goodloe Chilcut.png`**); **MusicianBody** shows **`socialLinks.twitter`** as **X** in Connect.
-- **Megan Lea — Closed on Sunday (Aug 2, 2026):** artist profile data, promo image, homepage **ClosedOnSundayLivePromo** (schedule-driven), optional **`featuredShow.calendar`** with **`calendar.detailLine`** for Google Calendar / `.ics` copy via **AddToCalendarRow**; **MusicianBody** featured-show billing + calendar on profile.
+- **Goodloe Chilcutt — Closed on Sundays (Jun 14, 2026):** artist profile in **`data.json`** (`featuredShow` + calendar, **`upcomingShows`** with **`sortDate`**), **`porchfest.events`** row **`closed-on-sundays-2026-06-14`**, headshot at **`public/resources/artists/goodloe-chilcutt/photo-1.png`** (from **`Artist/Goodloe Chilcut.png`**); **MusicianBody** shows **`socialLinks.twitter`** as **X** in Connect.
+- **Megan Lea — Closed on Sundays (Aug 2, 2026):** artist profile data, promo image, homepage **ClosedOnSundayLivePromo** (schedule-driven), optional **`featuredShow.calendar`** with **`calendar.detailLine`** for Google Calendar / `.ics` copy via **AddToCalendarRow**; **MusicianBody** featured-show billing + calendar on profile.
 - **Site search:** **HeaderSiteSearch** dropdown in the header (artists + PorchFest events); shared **`src/lib/siteSearch.js`**. **`/search`** redirects to **`/`**; **`/search`** removed from sitemap and Playwright/audit page lists.
 - **Listening lounge (home):** **`home-listening-lounge`** wraps the COS promo + **AlsPackageStoreJingle** with a shared tiered background; promo/jingle **card** layouts (when/where `dl`, player shell, pill CTAs).
 - **GigTracker** on artist detail for **`upcomingShows`** (with **Bandsintown** when **`bandsintown_slug`** is set).
@@ -23,7 +23,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **Performance:** static **`HomePage`** import (no lazy chunk on `/`) for a shorter critical path to hero/LCP.
 - **Vault — PorchFest 2026 on film:** per-event gallery on the Vault page (`event.gallery` in `data.json`) with photo grid, lazy-loaded images, and photographer credit (name, Instagram, email).
 - **Vault — Barbi film galleries:** click-to-zoom lightbox for galleries credited to Barbi only (`ImageLightbox`, `getSmartImageLightboxSrc`).
-- **Vault archive — Closed on Sunday live (May 3, 2026):** archived vault card for the Huey & Jacob Kynard set at Al’s Spirits & Music with description and map link.
+- **Vault archive — Closed on Sundays live (May 3, 2026):** archived vault card for the Huey & Jacob Kynard set at Al’s Spirits & Music with description and map link.
 - **Vault links — tertiary CTA:** optional `vaultLinks.tertiary` for archived events, rendered on the Vault and on the home vault teaser so three actions (e.g. series + two artist profiles) fit one card.
 
 ### Changed
@@ -43,7 +43,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### 🎵 Fire Camino — Al’s Package Store jingle
 - ✅ Added **AlsPackageStoreJingle** with hosted m4a at `/resources/promo/als-package-store-jingle.m4a`
-- ✅ Optional `jingle.audioUrl` on Fire Camino in `data.json`; player on **home** (after Closed on Sunday promo) and **Fire Camino** artist profile
+- ✅ Optional `jingle.audioUrl` on Fire Camino in `data.json`; player on **home** (after Closed on Sundays promo) and **Fire Camino** artist profile
 - ✅ Copy credits **Al’s Spirits & Music in Reform, AL**; links to Google Maps and Fire Camino profile (profile page hides redundant profile CTA)
 - ✅ `<audio controls preload="none">` with `audio/mp4` source (no autoplay)
 

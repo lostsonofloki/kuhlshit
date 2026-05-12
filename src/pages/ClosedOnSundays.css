@@ -450,6 +450,10 @@
   color: var(--color-text-secondary);
 }
 
+.cos-upcoming-add-cal {
+  margin-top: var(--spacing-sm);
+}
+
 .cos-upcoming-desc {
   margin: 0;
   font-size: 0.85rem;

@@ -1,4 +1,6 @@
 import { useEffect, useMemo } from 'react'
+import AddToCalendarRow from './AddToCalendarRow'
+import { resolveCalendarForUpcomingShow } from '../lib/upcomingShowCalendar'
 import './GigTracker.css'
 
 function sortedShows(list) {
@@ -13,7 +15,13 @@ function sortedShows(list) {
   })
 }
 
-function GigTracker({ artistSlug, upcomingShows }) {
+function GigTracker({
+  artistSlug,
+  upcomingShows,
+  artistName = '',
+  artistId = '',
+  profilePath = '',
+}) {
   const shows = useMemo(() => sortedShows(upcomingShows), [upcomingShows])
   const hasManual = shows.length > 0
   const hasBit = Boolean(artistSlug)
@@ -42,6 +50,18 @@ function GigTracker({ artistSlug, upcomingShows }) {
         <ul className="gig-tracker-manual-list" aria-label="Upcoming performances">
           {shows.map((show, i) => {
             const venueLine = show.venueLine || show.where
+            const cal = resolveCalendarForUpcomingShow(show, {
+              artistName,
+              artistId,
+            })
+            const customDetails = cal
+              ? [show.when, show.title, venueLine, show.supporting, show.notes]
+                  .filter((x) => typeof x === 'string' && x.trim())
+                  .join('\n\n')
+              : ''
+            const isCosTaping = /closed on sundays/i.test(
+              `${String(show.title || '')} ${String(show.notes || '')}`,
+            )
             return (
               <li
                 key={`${show.sortDate || i}-${show.title || ''}`}
@@ -68,6 +88,16 @@ function GigTracker({ artistSlug, upcomingShows }) {
                 ) : null}
                 {show.notes && !show.supporting ? (
                   <div className="gig-tracker-manual-supporting">{show.notes}</div>
+                ) : null}
+                {cal ? (
+                  <AddToCalendarRow
+                    calendar={cal}
+                    profilePath={profilePath || ''}
+                    includeSeriesHub={Boolean(isCosTaping)}
+                    customDetails={customDetails}
+                    labelText="Add to calendar"
+                    className="add-to-calendar-row--gig-embed"
+                  />
                 ) : null}
               </li>
             )

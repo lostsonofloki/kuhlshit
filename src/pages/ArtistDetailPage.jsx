@@ -294,6 +294,9 @@ function ArtistDetailPage() {
             <GigTracker
               artistSlug={artist.bandsintown_slug}
               upcomingShows={artist.upcomingShows}
+              artistName={artist.name}
+              artistId={artist.id}
+              profilePath={profilePath}
             />
           </div>
         ) : null}

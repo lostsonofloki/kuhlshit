@@ -8,41 +8,50 @@ import {
 import './AddToCalendarRow.css'
 
 /**
- * @param {{
- *   calendar: {
- *     allDayStart: string,
- *     allDayEndExclusive: string,
- *     title: string,
- *     location?: string,
- *     fileSlug?: string,
- *     detailLine?: string,
- *   },
- *   profilePath?: string,
- *   seriesPath?: string,
- *   className?: string,
- * }} props
+ * @param {object} props
+ * @param {{ allDayStart: string, allDayEndExclusive: string, title: string, location?: string, fileSlug?: string, detailLine?: string }} props.calendar
+ * @param {string} [props.profilePath]
+ * @param {string} [props.seriesPath]
+ * @param {string} [props.className]
+ * @param {string} [props.customDetails] When set, replaces default Closed-on-Sundays boilerplate as first paragraph.
+ * @param {boolean} [props.includeSeriesHub]
+ * @param {string} [props.labelText]
  */
 function AddToCalendarRow({
   calendar,
   profilePath = '',
   seriesPath = '/closed-on-sundays',
   className = '',
+  customDetails = '',
+  includeSeriesHub = true,
+  labelText = 'Save the date',
 }) {
   const origin = getSiteOrigin()
   const details = useMemo(() => {
+    const custom = typeof customDetails === 'string' ? customDetails.trim() : ''
+    if (custom) {
+      const bits = [custom]
+      if (profilePath) {
+        bits.push(`Artist profile: ${toAbsoluteUrl(origin, profilePath)}`)
+      }
+      if (includeSeriesHub && seriesPath) {
+        bits.push(`Closed on Sundays (YouTube series hub): ${toAbsoluteUrl(origin, seriesPath)}`)
+      }
+      return bits.join('\n\n')
+    }
     const bits = [
-      'Porch Talk presents Closed on Sunday — time TBA (Central Time).',
+      'Porch Talk presents Closed on Sundays — time TBA (Central Time).',
       calendar.detailLine?.trim() ||
         'Solo set at the listed venue (time TBA, Central Time).',
     ]
     if (profilePath) {
       bits.push(`Artist profile: ${toAbsoluteUrl(origin, profilePath)}`)
     }
-    if (seriesPath) {
+    if (includeSeriesHub && seriesPath) {
       bits.push(`Closed on Sundays (YouTube series hub): ${toAbsoluteUrl(origin, seriesPath)}`)
     }
     return bits.join('\n\n')
-  }, [origin, profilePath, seriesPath, calendar.detailLine])
+  }, [origin, profilePath, seriesPath, calendar.detailLine, customDetails, includeSeriesHub])
 
   const googleHref = useMemo(
     () =>
@@ -57,7 +66,11 @@ function AddToCalendarRow({
   )
 
   const onDownloadApple = useCallback(() => {
-    const uid = `closed-on-sunday-${calendar.allDayStart}@kuhlshit.com`
+    const uidRaw = String(calendar.fileSlug || `closed-on-sunday-${calendar.allDayStart}`)
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, '-')
+      .replace(/^-|-$/g, '') || 'event'
+    const uid = `${uidRaw}@kuhlshit.com`
     const slug =
       calendar.fileSlug ||
       String(calendar.title || 'event')
@@ -76,8 +89,8 @@ function AddToCalendarRow({
   }, [calendar, details])
 
   return (
-    <div className={`add-to-calendar-row ${className}`.trim()} role="group" aria-label="Save the date">
-      <span className="add-to-calendar-row-label">Save the date</span>
+    <div className={`add-to-calendar-row ${className}`.trim()} role="group" aria-label={labelText}>
+      <span className="add-to-calendar-row-label">{labelText}</span>
       <p className="add-to-calendar-row-links">
         <a
           href={googleHref}

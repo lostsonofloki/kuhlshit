@@ -116,3 +116,9 @@ div.gig-tracker-manual-venue {
   margin-top: 0.35rem;
   opacity: 0.9;
 }
+
+.add-to-calendar-row--gig-embed {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}

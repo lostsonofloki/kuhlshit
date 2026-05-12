@@ -103,3 +103,12 @@ button.add-to-calendar-link:focus-visible {
     background: rgba(255, 255, 255, 0.08);
   }
 }
+
+.add-to-calendar-row--compact .add-to-calendar-row-label {
+  font-size: 0.625rem;
+  margin-bottom: 0.25rem;
+}
+
+.add-to-calendar-row--compact .add-to-calendar-row-links {
+  font-size: 0.75rem;
+}

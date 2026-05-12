@@ -6,6 +6,7 @@ import SiteWideJsonLd from "../components/SiteWideJsonLd";
 import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
 import CreatorCategories from "../components/CreatorCategories";
 import ClosedOnSundayLivePromo from "../components/ClosedOnSundayLivePromo";
+import UpcomingAtAlsStrip from "../components/UpcomingAtAlsStrip";
 import AlsPackageStoreJingle from "../components/AlsPackageStoreJingle";
 import SmartImage from "../components/SmartImage";
 import "./HomePage.css";
@@ -155,6 +156,7 @@ function HomePage() {
 
       <div className="home-listening-lounge">
         <ClosedOnSundayLivePromo />
+        <UpcomingAtAlsStrip />
         {FIRE_CAMINO_JINGLE_URL ? (
           <AlsPackageStoreJingle audioUrl={FIRE_CAMINO_JINGLE_URL} />
         ) : null}
@@ -172,8 +174,7 @@ function HomePage() {
           <div className="showcase-card">
             <h3>Closed on Sundays</h3>
             <p>
-              Listening-room style performances — three or four songs at a time,
-              straight to camera.
+              Listening-room performances — short sets to camera. (Tell people to bring a chair.)
             </p>
             <div className="showcase-card-actions">
               <Link to="/closed-on-sundays" className="btn btn-primary">

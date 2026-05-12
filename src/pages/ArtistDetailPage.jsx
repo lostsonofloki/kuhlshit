@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useLocation, useParams } from "react-router-dom";
 import GigTracker from "../components/GigTracker";
 import JsonLd from "../components/JsonLd";
 import SEO from "../components/SEO";
@@ -53,6 +53,7 @@ function resolveCreatorType(artist) {
 
 function ArtistDetailPage() {
   const { artistId } = useParams();
+  const location = useLocation();
   const { data } = useCachedFestivalData();
   const [artist, setArtist] = useState(null);
   const [shareFeedback, setShareFeedback] = useState("");
@@ -78,7 +79,10 @@ function ArtistDetailPage() {
   const jsonLd = useMemo(() => {
     if (!artist) return null;
     const ct = resolveCreatorType(artist);
-    const profilePath = `/porchfest/artists/${artist.id}`;
+    const onCreatorPath = location.pathname.startsWith("/artists/");
+    const profilePath = onCreatorPath
+      ? `/artists/${artist.id}`
+      : `/porchfest/artists/${artist.id}`;
     const canonicalUrl = `${origin}${profilePath}`;
     const img =
       artist.imageUrl ||
@@ -96,7 +100,7 @@ function ArtistDetailPage() {
       festivalEvent,
       includeEvent: Boolean(lineupMatch && festivalEvent),
     });
-  }, [artist, origin, festivalEvent, lineupMatch]);
+  }, [artist, origin, festivalEvent, lineupMatch, location.pathname]);
 
   const getPerformanceDays = () => {
     const event = data.porchfest?.events?.[0];
@@ -119,18 +123,25 @@ function ArtistDetailPage() {
           title="Artist not found | kuhlshit.com"
           description={GLOBAL_SEO_DEFAULT_PROPS.description}
           image={GLOBAL_SEO_DEFAULT_PROPS.image}
-          path="/porchfest/artists"
+          path={location.pathname.startsWith("/artists/") ? "/artists" : "/porchfest/artists"}
         />
         <div className="artist-detail-page">
           <div className="loading">
             <h2>Artist not found</h2>
-            <Link to="/porchfest/artists" className="btn btn-primary">
-              ← Back to Artists
+            <Link to="/artists" className="btn btn-primary">
+              ← Back to creators
             </Link>
           </div>
         </div>
       </>
     );
+  }
+
+  if (
+    location.pathname.startsWith("/porchfest/artists/") &&
+    !lineupMatch
+  ) {
+    return <Navigate to={`/artists/${artist.id}`} replace />;
   }
 
   const creatorType = resolveCreatorType(artist);
@@ -139,7 +150,12 @@ function ArtistDetailPage() {
     PORCHFEST_SEO_DEFAULT_PROPS.description;
   const shareImage =
     artist.imageUrl || artist.thumbnailUrl || PORCHFEST_SEO_DEFAULT_PROPS.image;
-  const profilePath = `/porchfest/artists/${artist.id}`;
+  const profilePath = location.pathname.startsWith("/artists/")
+    ? `/artists/${artist.id}`
+    : `/porchfest/artists/${artist.id}`;
+  const artistsListPath = profilePath.startsWith("/artists/")
+    ? "/artists"
+    : "/porchfest/artists";
 
   const handleShareArtist = async () => {
     const shareTitle = `${artist.name} | kuhlshit.com`;
@@ -268,6 +284,7 @@ function ArtistDetailPage() {
             artist={artist}
             venueMapUrl={venueMapUrl}
             performanceDays={performanceDays}
+            profilePath={profilePath}
           />
         )}
 
@@ -284,7 +301,7 @@ function ArtistDetailPage() {
         {/* Shared: back link */}
         <div className="artist-content artist-content--tail">
           <div className="back-link-container">
-            <Link to="/porchfest/artists" className="back-link">
+            <Link to={artistsListPath} className="back-link">
               ← Back to Artists
             </Link>
           </div>

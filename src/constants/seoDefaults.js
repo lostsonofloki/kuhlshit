@@ -11,7 +11,7 @@
 export const GLOBAL_SEO_DEFAULT_PROPS = {
   title: "Kuhlshit.com — A Home for Musicians, Painters, and Poets",
   description:
-    "Find musicians, painters, poets, and more on Kuhlshit.com — discover artists, Porch Talk interviews, Closed on Sundays (listening-room sets to camera), PorchFest in Columbus MS, and The Vault.",
+    "Find musicians, painters, poets, and more on Kuhlshit.com — discover artists, Porch Talk interviews, Closed on Sundays (listening-room performances, short sets to camera — bring a chair in the room), PorchFest in Columbus MS, and The Vault.",
   image: "/resources/share/kuhlshit-og.png",
   path: "/",
 };
@@ -53,7 +53,7 @@ export const PORCH_TALK_SEO = {
 export const CLOSED_ON_SUNDAYS_SEO = {
   title: "Closed on Sundays | Listening-room performances | Kuhlshit.com",
   description:
-    "Closed on Sundays — listening-room style performances filmed to camera on Kuhlshit.com. Browse the YouTube playlist archive or jump to PorchFest.",
+    "Closed on Sundays — listening-room performances: short sets to camera on Kuhlshit.com and YouTube. In person at Al's: bring a chair. Browse the playlist archive or jump to PorchFest.",
   image: GLOBAL_SEO_DEFAULT_PROPS.image,
   path: "/closed-on-sundays",
 };

@@ -1,0 +1,94 @@
+.als-upcoming-strip {
+  max-width: var(--content-max, 72rem);
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border: 1px solid var(--border-hairline, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-md, 10px);
+  background: var(--surface-elevated, rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow-card, 0 1px 0 rgba(255, 255, 255, 0.04) inset);
+}
+
+.als-upcoming-strip__heading {
+  font-family: var(--font-family-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.als-upcoming-strip__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.als-upcoming-strip__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.35rem 0.65rem;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--color-text-secondary);
+}
+
+.als-upcoming-strip__date {
+  flex: 0 0 auto;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.als-upcoming-strip__title-wrap {
+  flex: 1 1 12rem;
+  min-width: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+}
+
+.als-upcoming-strip__title-link {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--color-accent-primary) 55%, transparent);
+  text-underline-offset: 0.15em;
+}
+
+.als-upcoming-strip__title-link:hover,
+.als-upcoming-strip__title-link:focus-visible {
+  color: var(--color-accent-hover);
+  text-decoration-color: var(--color-accent-hover);
+}
+
+.als-upcoming-strip__title-link:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.als-upcoming-strip__when {
+  font-size: 0.8rem;
+}
+
+.als-upcoming-strip__footer {
+  margin: var(--spacing-sm) 0 0;
+  padding: 0;
+}
+
+.als-upcoming-strip__schedule-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+  text-decoration: none;
+}
+
+.als-upcoming-strip__schedule-link:hover {
+  text-decoration: underline;
+}

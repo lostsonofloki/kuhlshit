@@ -1,0 +1,13 @@
+---
+description: Artist headshots live in Artist/ — check there before public/resources
+alwaysApply: true
+---
+
+# Artist photo source of truth
+
+- **Drop folder:** All artist headshots and promo stills the user provides live under the repo’s **`Artist/`** directory (repo root: `Artist/` — on this machine that is `C:\Projects\KuhlShit\Artist`).
+- **When adding or updating a musician (or any creator with a hero photo):**  
+  1. **Look in `Artist/` first** for the new file (names vary; match by artist name, extension `.jpg` / `.png` / `.webp`, etc.).  
+  2. Copy or convert into **`public/resources/artists/<slug>/photo-1.<jpg|png>`** (or the project’s established naming), then run **`node scripts/optimize-images.mjs`** so `photo-1.webp` and `@480` / `@960` variants exist.  
+  3. Point **`imageUrl` / `thumbnailUrl`** in `src/data/data.json` at the optimized **webp** paths under `/resources/artists/...`.
+- **Do not** assume the user already placed the file only under `public/resources/` or skip `Artist/` without checking — the user consistently drops originals in **`Artist/`**.

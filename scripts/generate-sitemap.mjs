@@ -9,6 +9,23 @@ import { readFileSync, writeFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
+function lineupEntryName(entry) {
+  if (typeof entry === "string") return entry.trim();
+  return String(entry?.name || "").trim();
+}
+
+/** Same rules as `artistInFestivalLineup` in `artistJsonLd.js` (for Node sitemap build). */
+function artistOnMainFestLineup(artist, event) {
+  if (!event?.lineup?.length || !artist?.name) return false;
+  const target = artist.name.trim().toLowerCase();
+  for (const block of event.lineup) {
+    for (const entry of block.artists || []) {
+      if (lineupEntryName(entry).toLowerCase() === target) return true;
+    }
+  }
+  return false;
+}
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const data = JSON.parse(
@@ -39,11 +56,17 @@ function esc(s) {
     .replace(/"/g, "&quot;");
 }
 
-const artistUrls = (data.artists || []).map((a) => ({
-  loc: `/porchfest/artists/${a.id}`,
-  changefreq: "monthly",
-  priority: "0.65",
-}));
+const mainFest = data.porchfest?.events?.[0] ?? null;
+const artistUrls = (data.artists || []).map((a) => {
+  const onPorchfestLineup = mainFest && artistOnMainFestLineup(a, mainFest);
+  return {
+    loc: onPorchfestLineup
+      ? `/porchfest/artists/${a.id}`
+      : `/artists/${a.id}`,
+    changefreq: "monthly",
+    priority: "0.65",
+  };
+});
 
 const urls = [...staticPaths, ...artistUrls];
 

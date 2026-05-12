@@ -1032,7 +1032,7 @@
         {
           "sortDate": "2026-08-02",
           "when": "Sun, Aug 2, 2026 · time TBA · CT",
-          "title": "Closed on Sunday — Megan Lea (solo taping)",
+          "title": "Closed on Sunday — Megan Lea",
           "where": "Al's Spirits & Music · Reform, AL",
           "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
@@ -1044,6 +1044,176 @@
           "videoId": "f9wsvsMwjl4",
           "thumbnail": "https://img.youtube.com/vi/f9wsvsMwjl4/maxresdefault.jpg",
           "url": "https://www.youtube.com/watch?v=f9wsvsMwjl4&t=23s",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-05-11"
+    },
+    {
+      "id": "goodloe-chilcutt",
+      "name": "Goodloe Chilcutt",
+      "location": "Alabama",
+      "bio": "Goodloe Chilcutt writes and performs music rooted in faith and storytelling — from hymn-inspired originals to family-friendly songs. His releases span streaming platforms.",
+      "imageUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
+      "genre": "Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "",
+        "facebook": "https://www.facebook.com/goodloe.chilcutt/",
+        "twitter": "https://x.com/rogerchilcutt",
+        "youtube": "https://www.youtube.com/channel/UC_ByYtjEI3iNp957oiA--Aw",
+        "spotify": "",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/2999U7Fz4gUkjDlwUrrrjj",
+        "appleMusic": "https://music.apple.com/us/artist/goodloe-chilcutt/1580233483",
+        "youtube": "https://www.youtube.com/channel/UC_ByYtjEI3iNp957oiA--Aw"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sunday",
+        "billingLine": "Solo set for Closed on Sunday at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jun 14, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-06-14",
+          "allDayEndExclusive": "2026-06-15",
+          "title": "Closed on Sunday — Goodloe Chilcutt",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "goodloe-chilcutt-closed-on-sunday-2026-06-14",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-06-14",
+          "when": "Sun Jun 14, 2026 · time TBA · CT",
+          "title": "Closed on Sunday — Goodloe Chilcutt",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-05-12"
+    },
+    {
+      "id": "jodie-ross",
+      "name": "Jodie Ross",
+      "location": "Louisville, Mississippi",
+      "bio": "Jodie Ross is a Mississippi singer-songwriter from Louisville, shaped by southern gospel, Motown, classic rock, and country — with inspiration from Stevie Nicks, Melissa Etheridge, and Dolly Parton. Recognition includes a 2024 Josie Music Award nomination (Song of the Year), 2021 Mississippi Songwriter of the Year (People's Choice), and 2019 Mississippi Music Foundation Best Original Song of the Year. A former board-certified music therapist, she writes with empathy and grit; singles including \"My Favorite Memory\" are out now on streaming. Her official site is jodierossmusic.com.",
+      "imageUrl": "/resources/artists/jodie-ross/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/jodie-ross/photo-1.webp",
+      "genre": "Country / Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/jodierossmusic/",
+        "facebook": "https://www.facebook.com/jodierossmusic/",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UChBL-bdKbwEDxkrh9M0KhoQ",
+        "spotify": "https://open.spotify.com/artist/0LzzK2Tns8GPnjHZF63wMP",
+        "appleMusic": "https://music.apple.com/us/artist/jodie-ross/1531218641",
+        "website": "https://www.jodierossmusic.com/",
+        "tiktok": "https://www.tiktok.com/@jodierossmusic"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/0LzzK2Tns8GPnjHZF63wMP",
+        "appleMusic": "https://music.apple.com/us/artist/jodie-ross/1531218641",
+        "youtube": "https://www.youtube.com/channel/UChBL-bdKbwEDxkrh9M0KhoQ"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sunday",
+        "billingLine": "Solo set for Closed on Sunday at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jun 28, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-06-28",
+          "allDayEndExclusive": "2026-06-29",
+          "title": "Closed on Sunday — Jodie Ross",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "jodie-ross-closed-on-sunday-2026-06-28",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-06-28",
+          "when": "Sun Jun 28, 2026 · time TBA · CT",
+          "title": "Closed on Sunday — Jodie Ross",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-05-11"
+    },
+    {
+      "id": "janet-simpson",
+      "name": "Janet Simpson",
+      "location": "Birmingham, Alabama",
+      "bio": "Janet Simpson is a Birmingham-bred singer, guitarist, and keyboardist — a deep listener and collaborator across Wooden Wand (World War IV), Delicate Cutters, Teen Getaway, and Timber, her duo with Will Stewart (who also anchors her solo band).\n\nHer solo debut Safe Distance (2021) set a high bar; Can I See You Tonight?, out September 19, 2025 via Cornelius Chapel, widens a wry, haunted alt-country lens with Jody Nelson, David Somerall, and Shawn Avery. The album was tracked at Cypress Moon Studios on the Tennessee River, where Brad Timko captured the room's Muscle Shoals lineage.\n\nHer songs trade in longing, place, and the space between people.",
+      "imageUrl": "/resources/artists/janet-simpson/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/janet-simpson/photo-1.webp",
+      "genre": "Alt-Country / Folk Rock",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/janetsimpsonmusic/",
+        "facebook": "https://www.facebook.com/p/Janet-Simpson-100035399516702/",
+        "twitter": "",
+        "youtube": "",
+        "spotify": "",
+        "appleMusic": "",
+        "website": "",
+        "tiktok": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/1SKWqv865jvZcRXurnGN2Q",
+        "appleMusic": "https://music.apple.com/us/artist/janet-simpson/1545025020",
+        "youtube": "https://www.youtube.com/channel/UCmKyeroV5fjcEKLwwWyC1KA",
+        "amazonMusic": "https://music.amazon.com/artists/B000Q3AZCO/janet-simpson",
+        "bandcamp": "https://janetsimpson.bandcamp.com/album/can-i-see-you-tonight",
+        "tidal": "https://tidal.com/artist/5956944",
+        "pandora": "https://www.pandora.com/artist/janet-simpson/tonight/tonight/TRm7ZZPxqwl4XXq"
+      },
+      "links": {
+        "youtubeMusic": "https://music.youtube.com/channel/UCmKyeroV5fjcEKLwwWyC1KA"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sunday",
+        "billingLine": "Solo set for Closed on Sunday at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jul 19, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-07-19",
+          "allDayEndExclusive": "2026-07-20",
+          "title": "Closed on Sunday — Janet Simpson",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "janet-simpson-closed-on-sunday-2026-07-19",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-07-19",
+          "when": "Sun Jul 19, 2026 · time TBA · CT",
+          "title": "Closed on Sunday — Janet Simpson",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Janet Simpson — Tonight",
+          "videoId": "cUjX86uPOoQ",
+          "thumbnail": "https://img.youtube.com/vi/cUjX86uPOoQ/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=cUjX86uPOoQ",
           "source": "YouTube"
         }
       ],
@@ -1254,11 +1424,11 @@
           "state": "AL",
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         },
-        "description": "Porch Talk presented Closed on Sunday live with Huey and Jacob Kynard — Al's Spirits & Music, Reform, AL — Sunday, May 3, 2026 at 3:00 PM CT. The ongoing Closed on Sundays series (listening-room sets to camera) lives on YouTube.",
+        "description": "First field test: Huey & Jacob, live in the room.",
         "lineup": [],
         "vaultLinks": {
           "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/porchfest/artists/huey", "label": "Huey" },
+          "secondary": { "to": "/artists/huey", "label": "Huey" },
           "tertiary": { "to": "/porchfest/artists/jacob-kynard", "label": "Jacob Kynard" }
         }
       },
@@ -1272,11 +1442,62 @@
           "state": "AL",
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         },
-        "description": "Porch Talk presents Closed on Sunday with Megan Lea — solo set at Al's Spirits & Music, Reform, AL — Sunday, August 2, 2026 (time TBA, CT). Filmed for the ongoing Closed on Sundays series on YouTube.",
+        "description": "Megan’s solo set for the channel (time TBA).",
         "lineup": [],
         "vaultLinks": {
           "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/porchfest/artists/megan-lea", "label": "Megan Lea" }
+          "secondary": { "to": "/artists/megan-lea", "label": "Megan Lea" }
+        }
+      },
+      {
+        "id": "closed-on-sundays-2026-06-14",
+        "name": "Closed on Sunday: Goodloe Chilcutt",
+        "date": "2026-06-14",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Goodloe’s solo originals; faith-forward catalogue (time TBA).",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
+          "secondary": { "to": "/artists/goodloe-chilcutt", "label": "Goodloe Chilcutt" }
+        }
+      },
+      {
+        "id": "closed-on-sundays-2026-06-28",
+        "name": "Closed on Sunday: Jodie Ross",
+        "date": "2026-06-28",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Jodie’s solo set — country & songwriter roots (time TBA).",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
+          "secondary": { "to": "/artists/jodie-ross", "label": "Jodie Ross" }
+        }
+      },
+      {
+        "id": "closed-on-sundays-2026-07-19",
+        "name": "Closed on Sunday: Janet Simpson",
+        "date": "2026-07-19",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Janet’s solo set — Birmingham songwriter roots (time TBA).",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
+          "secondary": { "to": "/artists/janet-simpson", "label": "Janet Simpson" }
         }
       }
     ]
@@ -1286,6 +1507,6 @@
     "version": "2.0.0",
     "totalArtists": 0,
     "totalComedy": 1,
-    "totalEvents": 3
+    "totalEvents": 6
   }
 }

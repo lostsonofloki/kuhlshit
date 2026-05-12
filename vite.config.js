@@ -15,6 +15,8 @@ export default defineConfig({
     open: true,
     // Omit hmr.port so it always follows the real dev server port (CLI `--port` overrides config).
     // If the page is opened on a different forwarded port, set VITE_HMR_CLIENT_PORT to match.
+    // If WebSocket HMR still fails locally, disable IDE extensions that patch the Vite client
+    // (e.g. Console Ninja) or see https://vite.dev/config/server-options.html#server-hmr
     hmr: {
       protocol: 'ws',
       ...(process.env.VITE_HMR_CLIENT_PORT

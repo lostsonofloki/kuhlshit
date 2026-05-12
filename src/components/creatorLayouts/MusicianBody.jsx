@@ -10,13 +10,27 @@ import AddToCalendarRow from "../AddToCalendarRow";
  * `musician` or unset; the visual-artist and writer layouts are sibling
  * components so each creator type can morph independently.
  */
-export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
+export default function MusicianBody({
+  artist,
+  venueMapUrl,
+  performanceDays,
+  profilePath: profilePathProp,
+}) {
+  const profilePath =
+    typeof profilePathProp === "string" && profilePathProp
+      ? profilePathProp
+      : `/porchfest/artists/${artist.id}`;
+  const artistProfileBase = profilePath.startsWith("/artists/")
+    ? "/artists"
+    : "/porchfest/artists";
   return (
     <div className="artist-content">
       {/* Bio */}
       <div className="artist-section">
         <h2>About</h2>
-        <p className="artist-bio">{artist.bio}</p>
+        <p className="artist-bio" style={{ whiteSpace: "pre-line" }}>
+          {artist.bio}
+        </p>
       </div>
 
       {artist.jingle?.audioUrl ? (
@@ -31,6 +45,7 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
         (artist.socialLinks.facebook ||
           artist.socialLinks.instagram ||
           artist.socialLinks.youtube ||
+          artist.socialLinks.twitter ||
           artist.socialLinks.website ||
           artist.socialLinks.tiktok) && (
           <div className="artist-section artist-section--social">
@@ -124,6 +139,25 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
                   <span>TikTok</span>
                 </a>
               )}
+              {artist.socialLinks.twitter && (
+                <a
+                  href={artist.socialLinks.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="artist-social-link"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  <span>X</span>
+                </a>
+              )}
               {artist.socialLinks.youtube && (
                 <a
                   href={artist.socialLinks.youtube}
@@ -162,7 +196,9 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
                 <>
                   A special duo set with{' '}
                   {artist.featuredShow.withArtistId && artist.featuredShow.withArtistName ? (
-                    <Link to={`/porchfest/artists/${artist.featuredShow.withArtistId}`}>
+                    <Link
+                      to={`${artistProfileBase}/${artist.featuredShow.withArtistId}`}
+                    >
                       {artist.featuredShow.withArtistName}
                     </Link>
                   ) : (
@@ -181,7 +217,7 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
             artist.featuredShow.calendar.title ? (
               <AddToCalendarRow
                 calendar={artist.featuredShow.calendar}
-                profilePath={`/porchfest/artists/${artist.id}`}
+                profilePath={profilePath}
                 className="featured-show-calendar"
               />
             ) : null}
@@ -233,7 +269,9 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
           artist.musicLinks.amazonMusic ||
           artist.musicLinks.shazam ||
           artist.musicLinks.soundcloud ||
-          artist.musicLinks.bandcamp) && (
+          artist.musicLinks.bandcamp ||
+          artist.musicLinks.tidal ||
+          artist.musicLinks.pandora) && (
           <div className="artist-section">
             <h2>Listen</h2>
             <div className="music-links">
@@ -361,6 +399,32 @@ export default function MusicianBody({ artist, venueMapUrl, performanceDays }) {
                     <path d="M0 18.75l7.437-13.5H24l-7.438 13.5z" />
                   </svg>
                   <span>Bandcamp</span>
+                </a>
+              )}
+              {artist.musicLinks.tidal && (
+                <a
+                  href={artist.musicLinks.tidal}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="music-link"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <path d="M14 3h2v18h-2V3zm-4 4h2v14H10V7zm-4 3h2v11H6V10zm-4 2h2v9H2v-9z" />
+                  </svg>
+                  <span>Tidal</span>
+                </a>
+              )}
+              {artist.musicLinks.pandora && (
+                <a
+                  href={artist.musicLinks.pandora}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="music-link"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+                  </svg>
+                  <span>Pandora</span>
                 </a>
               )}
             </div>

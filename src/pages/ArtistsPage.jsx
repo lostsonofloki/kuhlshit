@@ -86,7 +86,7 @@ function ArtistsPage() {
           {filteredArtists.map(artist => (
             <Link
               key={artist.id}
-              to={`/porchfest/artists/${artist.id}`}
+              to={`/artists/${artist.id}`}
               className="artist-card"
             >
               <div className="artist-card-image">

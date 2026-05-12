@@ -47,6 +47,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/artists" element={<ArtistsPage />} />
+              <Route path="/artists/:artistId" element={<ArtistDetailPage />} />
               <Route path="/closed-on-sundays" element={<ClosedOnSundaysPage />} />
               <Route path="/porchfest" element={<PorchFestPage />} />
               <Route path="/porchfest/artists" element={<FeaturedArtistsPage />} />

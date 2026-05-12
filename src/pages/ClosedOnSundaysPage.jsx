@@ -1,28 +1,112 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
 import SEO from '../components/SEO'
 import { CLOSED_ON_SUNDAYS_SEO } from '../constants/seoDefaults'
+import {
+  formatCosHubDateShort,
+  getPastClosedOnSundayHubEventsSorted,
+  getUpcomingCosHubRowsForDisplay,
+} from '../lib/closedOnSundayHubEvents'
 import './ClosedOnSundays.css'
 
-const ARCHIVED_LIVE_EVENTS = (data.porchfest?.events || [])
-  .filter(
-    (e) =>
-      typeof e.id === 'string' &&
-      e.id.startsWith('closed-on-sundays-') &&
-      typeof e.date === 'string' &&
-      e.date.length > 0,
+function cosSessionShortTitle(name) {
+  if (typeof name !== 'string') return 'Session'
+  return name.replace(/^Closed on Sunday:\s*/i, '').trim() || name
+}
+
+function PastCosSessionsArchive() {
+  const past = useMemo(
+    () => getPastClosedOnSundayHubEventsSorted(data.porchfest?.events || [], new Date()),
+    [],
   )
-  .sort((a, b) => new Date(b.date) - new Date(a.date))
+
+  if (past.length === 0) return null
+
+  return (
+    <div className="page-header-archive-list" aria-label="Past sessions at Al's">
+      <p className="page-header-archive-intro">
+        Past shoots at Al&apos;s for this series (newest first). Upcoming dates are in the list below.
+      </p>
+      <ul className="page-header-archive-items">
+        {past.map((e) => {
+          const to = e.vaultLinks?.secondary?.to
+          const label = cosSessionShortTitle(e.name)
+          return (
+            <li key={e.id} className="page-header-archive-item">
+              <span className="page-header-archive-date">{formatCosHubDateShort(e.date)}</span>
+              <span className="page-header-archive-sep"> — </span>
+              {to ? (
+                <Link to={to} className="page-header-archive-link">
+                  {label}
+                </Link>
+              ) : (
+                <span>{label}</span>
+              )}
+            </li>
+          )
+        })}
+      </ul>
+    </div>
+  )
+}
+
+function UpcomingCosShowsSection() {
+  const rows = useMemo(
+    () =>
+      getUpcomingCosHubRowsForDisplay(data.porchfest?.events || [], data.artists || [], {
+        now: new Date(),
+      }),
+    [],
+  )
+
+  if (rows.length === 0) return null
+
+  return (
+    <section className="cos-upcoming-section" aria-labelledby="cos-upcoming-heading">
+      <h2 id="cos-upcoming-heading" className="cos-upcoming-heading">
+        Upcoming shows
+      </h2>
+      <p className="cos-upcoming-lead">
+        Listening-room sets at Al&apos;s Spirits &amp; Music (Reform, AL), filmed for this series. Dates are
+        Central Time unless noted. If you&apos;re coming out in person: bring a chair.
+      </p>
+      <ul className="cos-upcoming-list">
+        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName }) => (
+          <li key={e.id} className="cos-upcoming-item">
+            <div className="cos-upcoming-item-main">
+              <p className="cos-upcoming-date">{dateLabel}</p>
+              <h3 className="cos-upcoming-title">
+                {profileTo && artistName ? (
+                  <Link to={profileTo} className="cos-upcoming-title-link">
+                    {artistName}
+                  </Link>
+                ) : (
+                  title
+                )}
+              </h3>
+              {whenExtra ? <p className="cos-upcoming-when">{whenExtra}</p> : null}
+            </div>
+            {profileTo ? (
+              <Link to={profileTo} className="btn btn-secondary cos-upcoming-cta">
+                {artistName ? `${artistName} profile` : 'Artist profile'}
+              </Link>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
 
 const CLOSED_ON_SUNDAYS_INTRO = (
   <div className="page-static-intro">
     <p>
-      <strong>Closed on Sundays</strong> is our listening-room performance series on Kuhlshit.com: artists play
-      short sets straight to camera—often three or four songs—with a quiet, room-focused energy tied to
-      the same scene as{' '}
-      <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>. Episodes live on YouTube; this page
-      lists every installment so you can search and jump in anywhere.
+      <strong>Closed on Sundays</strong> — listening-room performances: short sets to camera for our YouTube
+      series, with the same room-focused spirit as{' '}
+      <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>. Episodes live on YouTube; upcoming dates
+      at Al&apos;s are listed below, then the full archive you can search. In person at Al&apos;s it&apos;s a
+      small listening lounge—<strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
       <Link to="/porch-talk">Porch Talk interviews</Link>
@@ -122,16 +206,7 @@ function ClosedOnSundaysPage() {
     setSearchQuery('')
   }
 
-  const archiveNote =
-    ARCHIVED_LIVE_EVENTS.length > 0 ? (
-      <div className="page-header-archive-list">
-        {ARCHIVED_LIVE_EVENTS.filter((e) => e.description).map((e) => (
-          <p key={e.id} className="page-header-archive">
-            {e.description}
-          </p>
-        ))}
-      </div>
-    ) : null
+  const pastSessionsBlock = <PastCosSessionsArchive />
 
   if (loading) {
     return (
@@ -141,9 +216,12 @@ function ClosedOnSundaysPage() {
         {CLOSED_ON_SUNDAYS_INTRO}
         <div className="page-header">
           <h1>Closed on Sundays</h1>
-          <p>Listening-room performances — short sets to camera</p>
-          {archiveNote}
+          <p className="page-header-tagline">
+            Listening-room performances — short sets to camera. (Tell people to bring a chair.)
+          </p>
+          {pastSessionsBlock}
         </div>
+        <UpcomingCosShowsSection />
         <div className="loading">
           <p>Loading episodes...</p>
         </div>
@@ -160,9 +238,12 @@ function ClosedOnSundaysPage() {
         {CLOSED_ON_SUNDAYS_INTRO}
         <div className="page-header">
           <h1>Closed on Sundays</h1>
-          <p>Listening-room performances — short sets to camera</p>
-          {archiveNote}
+          <p className="page-header-tagline">
+            Listening-room performances — short sets to camera. (Tell people to bring a chair.)
+          </p>
+          {pastSessionsBlock}
         </div>
+        <UpcomingCosShowsSection />
         <div className="error">
           <p>{error}</p>
         </div>
@@ -178,9 +259,13 @@ function ClosedOnSundaysPage() {
       {CLOSED_ON_SUNDAYS_INTRO}
       <div className="page-header">
         <h1>Closed on Sundays</h1>
-        <p>Listening-room performances — short sets to camera</p>
-        {archiveNote}
+        <p className="page-header-tagline">
+          Listening-room performances — short sets to camera. (Tell people to bring a chair.)
+        </p>
+        {pastSessionsBlock}
       </div>
+
+      <UpcomingCosShowsSection />
 
       <div className="search-section">
         <form className="search-form" onSubmit={handleSearch}>

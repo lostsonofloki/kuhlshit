@@ -189,6 +189,11 @@
   padding-bottom: var(--spacing-2xl);
 }
 
+.waitlist-inline-section {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-2xl);
+}
+
 .hero-pitch {
   max-width: 36rem;
   margin: 0 auto var(--spacing-lg);
@@ -230,6 +235,16 @@
   border: var(--card-border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+@media (hover: hover) {
+  .vault-teaser-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .vault-teaser-badge {
@@ -284,6 +299,16 @@
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
   text-align: left;
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+@media (hover: hover) {
+  .showcase-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
 }
 
 .showcase-card h3 {
@@ -303,11 +328,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
-}
-
-.waitlist-inline-section {
-  padding-top: var(--spacing-lg);
-  padding-bottom: var(--spacing-2xl);
 }
 
 .waitlist-inline {
@@ -593,11 +613,6 @@
   align-items: center;
 }
 
-/* Artists Section */
-.artists-section {
-  padding: var(--spacing-2xl) 0;
-}
-
 .artists-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -852,6 +867,9 @@
 /* Listening lounge — Closed on Sunday promo + Al’s jingle as one tier */
 .home-listening-lounge {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
   padding: var(--section-y) max(var(--spacing-md), env(safe-area-inset-right))
     var(--section-y) max(var(--spacing-md), env(safe-area-inset-left));
   background:

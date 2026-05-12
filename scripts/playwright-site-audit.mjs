@@ -18,6 +18,7 @@ const ROUTES = [
   '/porchfest/artists/the-stifftones',
   '/porchfest/artists/huey',
   '/porchfest/artists/kyla-diane',
+  '/artists/megan-lea',
   '/porch-talk',
   '/spotcheck',
 ]

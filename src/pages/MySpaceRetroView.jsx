@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import data from '../data/data.json'
 import './MySpaceRetroView.css'
 
 const MOODS = ['Artistic', 'Hyped', 'Sleep-deprived', 'Tour-brain', 'Lo-fi', 'DIY legend']
@@ -76,19 +77,7 @@ export default function MySpaceRetroView({ artists = [] }) {
       setArtistsData(artists)
       return
     }
-
-    let isMounted = true
-    import('../data/data.json')
-      .then((module) => {
-        if (isMounted) setArtistsData(module.default?.artists || [])
-      })
-      .catch(() => {
-        if (isMounted) setArtistsData([])
-      })
-
-    return () => {
-      isMounted = false
-    }
+    setArtistsData(data.artists || [])
   }, [artists])
 
   useEffect(() => {

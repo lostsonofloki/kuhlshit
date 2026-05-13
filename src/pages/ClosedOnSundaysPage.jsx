@@ -17,9 +17,15 @@ function cosSessionShortTitle(name) {
 }
 
 function PastCosSessionsArchive() {
+  const [nowTick, setNowTick] = useState(() => Date.now())
+  useEffect(() => {
+    const id = window.setInterval(() => setNowTick(Date.now()), 60_000)
+    return () => window.clearInterval(id)
+  }, [])
+
   const past = useMemo(
-    () => getPastClosedOnSundayHubEventsSorted(data.porchfest?.events || [], new Date()),
-    [],
+    () => getPastClosedOnSundayHubEventsSorted(data.porchfest?.events || [], new Date(nowTick)),
+    [nowTick],
   )
 
   if (past.length === 0) return null
@@ -53,12 +59,18 @@ function PastCosSessionsArchive() {
 }
 
 function UpcomingCosShowsSection() {
+  const [nowTick, setNowTick] = useState(() => Date.now())
+  useEffect(() => {
+    const id = window.setInterval(() => setNowTick(Date.now()), 60_000)
+    return () => window.clearInterval(id)
+  }, [])
+
   const rows = useMemo(
     () =>
       getUpcomingCosHubRowsForDisplay(data.porchfest?.events || [], data.artists || [], {
-        now: new Date(),
+        now: new Date(nowTick),
       }),
-    [],
+    [nowTick],
   )
 
   if (rows.length === 0) return null
@@ -74,7 +86,7 @@ function UpcomingCosShowsSection() {
       </p>
       <ul className="cos-upcoming-list">
         {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, hubCalendar }) => {
-          const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · time TBA · CT`
+          const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · 3:00 PM CT`
           const customDetails = [calLine, typeof e.description === 'string' && e.description.trim()]
             .filter(Boolean)
             .join('\n\n')
@@ -152,10 +164,11 @@ function ClosedOnSundaysPage() {
   useEffect(() => {
     if (searchQuery.trim()) {
       const query = searchQuery.toLowerCase()
-      const filtered = episodes.filter(ep =>
-        ep.title.toLowerCase().includes(query) ||
-        ep.description.toLowerCase().includes(query)
-      )
+      const filtered = episodes.filter((ep) => {
+        const title = typeof ep.title === 'string' ? ep.title : ''
+        const desc = typeof ep.description === 'string' ? ep.description : ''
+        return title.toLowerCase().includes(query) || desc.toLowerCase().includes(query)
+      })
       setFilteredEpisodes(filtered)
     } else {
       setFilteredEpisodes(episodes)
@@ -193,8 +206,8 @@ function ClosedOnSundaysPage() {
 
         return {
           id: videoId,
-          title: video.title,
-          description: video.description,
+          title: typeof video.title === 'string' ? video.title : '',
+          description: typeof video.description === 'string' ? video.description : '',
           thumbnail: thumbnails.high?.url || thumbnails.medium?.url || thumbnails.default?.url || '',
           videoId: videoId,
           publishedAt: video.publishedAt
@@ -312,7 +325,10 @@ function ClosedOnSundaysPage() {
         </div>
       ) : (
         <div className="episodes-grid">
-          {filteredEpisodes.map(episode => (
+          {filteredEpisodes.map(episode => {
+            const epTitle = typeof episode.title === 'string' ? episode.title : ''
+            const epDesc = typeof episode.description === 'string' ? episode.description : ''
+            return (
             <div key={episode.id} className="episode-card">
               <a
                 href={`https://www.youtube.com/watch?v=${episode.videoId}`}
@@ -321,15 +337,15 @@ function ClosedOnSundaysPage() {
                 className="episode-link"
               >
                 <div className="episode-thumbnail">
-                  <img src={episode.thumbnail} alt={episode.title} />
+                  <img src={episode.thumbnail} alt={epTitle} />
                   <div className="play-overlay">▶</div>
                 </div>
               </a>
               <div className="episode-content">
-                <h3>{episode.title}</h3>
+                <h3>{epTitle}</h3>
                 <p className="episode-description">
-                  {episode.description.substring(0, 150)}
-                  {episode.description.length > 150 ? '...' : ''}
+                  {epDesc.substring(0, 150)}
+                  {epDesc.length > 150 ? '...' : ''}
                 </p>
                 <a
                   href={`https://www.youtube.com/watch?v=${episode.videoId}`}
@@ -341,7 +357,8 @@ function ClosedOnSundaysPage() {
                 </a>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
       )}
 

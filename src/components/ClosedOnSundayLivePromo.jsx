@@ -13,7 +13,6 @@ import data from '../data/data.json'
 import './ClosedOnSundayLivePromo.css'
 
 function promoHeroImageSrc(artist) {
-  if (artist?.id === 'megan-lea') return '/resources/promo/megan-lea-closed-on-sunday.webp'
   return artist?.imageUrl || artist?.thumbnailUrl || ''
 }
 
@@ -50,14 +49,14 @@ function ClosedOnSundayLivePromo() {
   }
 
   const heroSrc = promoHeroImageSrc(featuredArtist)
-  const profilePath = nextEvent?.vaultLinks?.secondary?.to || '/artists/megan-lea'
+  const profilePath = nextEvent?.vaultLinks?.secondary?.to ?? "";
   const profileLabel = featuredArtist?.name
     ? `${featuredArtist.name} profile`
-    : 'Artist profile'
+    : "Artist profile";
 
   const whenLine =
     featuredArtist?.featuredShow?.when ||
-    (nextEvent?.date ? `${formatCosHubDateShort(nextEvent.date)} · time TBA · CT` : '')
+    (nextEvent?.date ? `${formatCosHubDateShort(nextEvent.date)} · 3:00 PM CT` : '')
   const whereLine =
     featuredArtist?.featuredShow?.where || "Al's Spirits & Music · Reform, AL"
 
@@ -123,9 +122,11 @@ function ClosedOnSundayLivePromo() {
                 </div>
               </dl>
               <div className="cos-live-promo-actions">
-                <Link to={profilePath} className="btn btn-primary cos-live-promo-btn">
-                  {profileLabel}
-                </Link>
+                {profilePath ? (
+                  <Link to={profilePath} className="btn btn-primary cos-live-promo-btn">
+                    {profileLabel}
+                  </Link>
+                ) : null}
                 <Link to="/closed-on-sundays" className="btn btn-secondary cos-live-promo-btn">
                   Series &amp; upcoming
                 </Link>

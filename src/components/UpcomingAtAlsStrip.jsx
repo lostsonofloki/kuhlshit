@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AddToCalendarRow from './AddToCalendarRow'
 import data from '../data/data.json'
@@ -11,13 +11,19 @@ import './UpcomingAtAlsStrip.css'
 const HEADING_ID = 'home-upcoming-als-heading'
 
 function UpcomingAtAlsStrip() {
+  const [nowTick, setNowTick] = useState(() => Date.now())
+  useEffect(() => {
+    const id = window.setInterval(() => setNowTick(Date.now()), 60_000)
+    return () => window.clearInterval(id)
+  }, [])
+
   const rows = useMemo(
     () =>
       getUpcomingCosHubRowsForDisplay(data.porchfest?.events || [], data.artists || [], {
         limit: 3,
-        now: new Date(),
+        now: new Date(nowTick),
       }),
-    [],
+    [nowTick],
   )
 
   if (rows.length === 0) return null
@@ -38,7 +44,7 @@ function UpcomingAtAlsStrip() {
             ) : (
               <span className="als-upcoming-strip__title">{primary}</span>
             )
-          const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · time TBA · CT`
+          const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · 3:00 PM CT`
           const customDetails = [calLine, typeof e.description === 'string' && e.description.trim()]
             .filter(Boolean)
             .join('\n\n')

@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import SEO from "../components/SEO";
 import ImageLightbox from "../components/ImageLightbox";
 import { GLOBAL_SEO_DEFAULT_PROPS } from "../constants/seoDefaults";
+import { getChicagoDateKey } from "../lib/closedOnSundayHubEvents";
 import "./VaultPage.css";
+
+/** Last calendar day of the event (YYYY-MM-DD), for comparing to “today”. */
+function getEventEndYmd(event) {
+  if (event?.endDate && /^\d{4}-\d{2}-\d{2}$/.test(String(event.endDate)))
+    return String(event.endDate);
+  if (event?.date && /^\d{4}-\d{2}-\d{2}$/.test(String(event.date)))
+    return String(event.date);
+  return "";
+}
+
+/** True once the event’s last day is strictly before today (America/Chicago). */
+function isPastVaultEvent(event, now = new Date()) {
+  const end = getEventEndYmd(event);
+  if (!end) return false;
+  const today = getChicagoDateKey(now);
+  if (!today) return false;
+  return end < today;
+}
 
 function formatDateRange(event) {
   if (!event?.date) return "";
@@ -77,9 +96,16 @@ function VaultGalleryGrid({ event, onOpen, lightboxEnabled }) {
 }
 
 function VaultPage() {
-  const events = (data.porchfest?.events || [])
-    .slice()
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  const { archivedEvents, hasEventsButNonePast } = useMemo(() => {
+    const raw = data.porchfest?.events || [];
+    const past = raw
+      .filter((e) => isPastVaultEvent(e))
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+    return {
+      archivedEvents: past,
+      hasEventsButNonePast: raw.length > 0 && past.length === 0,
+    };
+  }, []);
 
   const [lightbox, setLightbox] = useState(null);
 
@@ -103,12 +129,14 @@ function VaultPage() {
         </header>
 
         <section className="vault-events">
-          {events.length === 0 ? (
+          {archivedEvents.length === 0 ? (
             <p className="vault-empty">
-              No events archived yet. Check back after the next field test.
+              {hasEventsButNonePast
+                ? "Nothing in the Vault yet for completed runs — every event on file is still upcoming (or its dates could not be read as a past end date). Once the last day of a run has passed, it appears here automatically."
+                : "No event rows are loaded yet. When we add field tests to the schedule, finished runs will show up here after their last day."}
             </p>
           ) : (
-            events.map((event) => (
+            archivedEvents.map((event) => (
               <article key={event.id} className="vault-event-card">
                 <div className="vault-event-body">
                   <div className="vault-event-meta">

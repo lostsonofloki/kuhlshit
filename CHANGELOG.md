@@ -188,7 +188,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Katie Burkhardt
 - Elliot Devaughn
 - Phillip Savell
-- The Wright Moves
+- The Moves
 
 **Saturday Lineup:**
 - Honey Boy and Boots

@@ -43,18 +43,43 @@ function selectVaultTeaserEvent(events) {
   )[0];
 }
 
+/** Fallback CTA when `vaultLinks` is absent — label from event name/date, not a hard-coded year. */
+function revisitPorchFestLabel(event) {
+  if (!event) return "Revisit PorchFest";
+  const fromName = String(event.name || "").match(/(20\d{2})/);
+  if (fromName) return `Revisit PorchFest ${fromName[1]}`;
+  const d = event.date;
+  if (d && /^\d{4}-\d{2}-\d{2}$/.test(String(d)))
+    return `Revisit PorchFest ${String(d).slice(0, 4)}`;
+  if (/porchfest/i.test(String(event.name || ""))) return `Revisit ${event.name}`;
+  return "Revisit PorchFest";
+}
+
 function HomePage() {
   const [rotateIndex, setRotateIndex] = useState(0);
   const [vaultEvent, setVaultEvent] = useState(null);
+  /** Bumps when the local clock hour changes so the hourly shuffle can refresh. */
+  const [hourSeed, setHourSeed] = useState(() => new Date().getHours());
 
-  /** Full roster from `data.artists`, order shuffled once per hour (stable for all visitors that hour). */
+  useEffect(() => {
+    const tick = () => {
+      const h = new Date().getHours();
+      setHourSeed((prev) => (prev !== h ? h : prev));
+    };
+    const id = window.setInterval(tick, 60_000);
+    return () => window.clearInterval(id);
+  }, []);
+
+  /**
+   * Full roster from `data.artists`, order shuffled with a seed derived from the viewer’s
+   * local clock hour (checked every minute). Order stays stable until the hour changes.
+   */
   const shuffledArtists = useMemo(() => {
     const allArtists = [...data.artists];
     if (!allArtists.length) return [];
 
-    const seed = new Date().getHours();
     const seededRandom = (index) => {
-      const x = Math.sin(seed * 1000 + index) * 10000;
+      const x = Math.sin(hourSeed * 1000 + index) * 10000;
       return x - Math.floor(x);
     };
 
@@ -66,7 +91,11 @@ function HomePage() {
       shuffled[j] = temp;
     }
     return shuffled;
-  }, []);
+  }, [hourSeed]);
+
+  useEffect(() => {
+    setRotateIndex(0);
+  }, [hourSeed]);
 
   const featuredArtists = useMemo(() => {
     if (!shuffledArtists.length) return [];
@@ -81,7 +110,7 @@ function HomePage() {
       setRotateIndex((i) => (i + 1) % shuffledArtists.length);
     }, MEET_CREATORS_ROTATE_MS);
     return () => window.clearInterval(id);
-  }, [shuffledArtists.length]);
+  }, [shuffledArtists.length, hourSeed]);
 
   useEffect(() => {
     // Vault teaser: prefer the main PorchFest festival (pf-001), not other dated hub items.
@@ -254,7 +283,7 @@ function HomePage() {
               ) : (
                 <>
                   <Link to="/porchfest" className="btn btn-secondary">
-                    Revisit PorchFest 2026
+                    {revisitPorchFestLabel(vaultEvent)}
                   </Link>
                   <Link to="/porchfest/artists" className="btn btn-ghost">
                     See the Artists

@@ -40,9 +40,9 @@ function AddToCalendarRow({
       return bits.join('\n\n')
     }
     const bits = [
-      'Porch Talk presents Closed on Sundays — time TBA (Central Time).',
+      'Porch Talk presents Closed on Sundays — 3:00 PM Central Time.',
       calendar.detailLine?.trim() ||
-        'Solo set at the listed venue (time TBA, Central Time).',
+        'Solo set at the listed venue (3:00 PM Central Time).',
     ]
     if (profilePath) {
       bits.push(`Artist profile: ${toAbsoluteUrl(origin, profilePath)}`)

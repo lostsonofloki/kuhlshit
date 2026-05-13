@@ -18,7 +18,7 @@ function Header() {
 
   const navLinks = [
     { path: '/closed-on-sundays', label: 'Closed on Sundays' },
-    { path: '/porch-talk', label: 'PorchTalk' },
+    { path: '/porch-talk', label: 'Porch Talk' },
     { path: '/artists', label: 'Artists' },
     { path: '/vault', label: 'The Vault' },
     { path: '/waitlist', label: 'Waitlist' },

@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Link, Navigate, useLocation, useParams } from "react-router-dom";
 import GigTracker from "../components/GigTracker";
 import JsonLd from "../components/JsonLd";
@@ -19,6 +19,7 @@ import {
 } from "../utils/artistJsonLd";
 import { getSiteOrigin, toAbsoluteUrl } from "../utils/siteOrigin";
 import { trackEvent } from "../utils/analytics";
+import bundledFestivalData from "../data/data.json";
 import "./ArtistDetail.css";
 
 function truncateMetaDescription(text, max = 155) {
@@ -51,22 +52,31 @@ function resolveCreatorType(artist) {
   return "musician";
 }
 
+function findArtistByRouteId(artists, artistId) {
+  if (!artistId || !Array.isArray(artists)) return null;
+  const slug = typeof artistId === "string" ? artistId.toLowerCase() : "";
+  return (
+    artists.find((a) => {
+      if (a.id === artistId) return true;
+      if (typeof a.name !== "string") return false;
+      return a.name.toLowerCase().replace(/[^a-z0-9]+/g, "-") === slug;
+    }) || null
+  );
+}
+
 function ArtistDetailPage() {
   const { artistId } = useParams();
   const location = useLocation();
   const { data } = useCachedFestivalData();
-  const [artist, setArtist] = useState(null);
   const [shareFeedback, setShareFeedback] = useState("");
   const venueMapUrl = data.porchfest?.events?.[0]?.location?.mapUrl;
 
-  useEffect(() => {
-    const foundArtist = (data?.artists || []).find(
-      (a) =>
-        a.id === artistId ||
-        a.name.toLowerCase().replace(/[^a-z0-9]+/g, "-") === artistId,
-    );
-    setArtist(foundArtist || null);
-  }, [artistId, data]);
+  const artist = useMemo(() => {
+    const fromRuntime = findArtistByRouteId(data?.artists, artistId);
+    if (fromRuntime) return fromRuntime;
+    if (data?.artists === bundledFestivalData?.artists) return null;
+    return findArtistByRouteId(bundledFestivalData?.artists, artistId);
+  }, [artistId, data?.artists]);
 
   const festivalEvent = data.porchfest?.events?.[0] ?? null;
   const origin = getSiteOrigin();

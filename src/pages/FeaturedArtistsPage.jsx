@@ -57,8 +57,11 @@ function FeaturedArtistsPage() {
     <SEO {...PORCHFEST_ARTISTS_INDEX_SEO} />
     <div className="featured-artists-page">
       <div className="page-header">
-        <h1>PorchFest 2026 Artists</h1>
-        <p>Meet the talented musicians performing at PorchFest 2026</p>
+        <h1>Artists who performed at PorchFest 2026</h1>
+        <p>
+          The April 17–19 weekend in Columbus, MS is in the books — everyone who held a porch slot that
+          weekend, same names you will see in archived bios.
+        </p>
         <p className="event-dates">
           April 17-19 •{' '}
           {venueMapUrl ? (

@@ -20,7 +20,7 @@ export const GLOBAL_SEO_DEFAULT_PROPS = {
 export const PORCHFEST_SEO_DEFAULT_PROPS = {
   title: "PorchFest 2026 (archived) | kuhlshit.com",
   description:
-    "PorchFest 2026 in Columbus, MS has concluded. Browse the archived lineup and schedule, visit The Vault for history and media, and follow Closed on Sundays and PorchTalk for ongoing content.",
+    "PorchFest 2026 in Columbus, MS has concluded. Browse the archived lineup and schedule, visit The Vault for history and media, and follow Closed on Sundays and Porch Talk for ongoing content.",
   image: "/resources/porchfest/poster.jpg",
   path: "/porchfest",
 };

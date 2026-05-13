@@ -21,7 +21,7 @@ Priorities until the data layer and public site are clearly ahead of “backend 
 
 **A — Tagline ends with `Performing at PorchFest 2026.`** (period)
 
-- [ ] `the-wright-moves` — The Wright Moves
+- [ ] `the-wright-moves` — The Moves (formerly The Wright Moves)
 - [ ] `bb-palmer` — B.B. Palmer
 - [ ] `ming-donkey` — Ming Donkey
 - [ ] `jonny-hollis` — Jonny Hollis

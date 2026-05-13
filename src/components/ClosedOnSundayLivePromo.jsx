@@ -6,8 +6,8 @@ import {
   formatCosHubDateShort,
   getNextClosedOnSundayHubEvent,
 } from '../lib/closedOnSundayHubEvents'
-import { ALS_SPIRITS_MAPS_URL } from '../constants/alsSpirits'
 import SmartImage from './SmartImage'
+import FeaturedShowWhereLine from './FeaturedShowWhereLine'
 import AddToCalendarRow from './AddToCalendarRow'
 import data from '../data/data.json'
 import './ClosedOnSundayLivePromo.css'
@@ -113,16 +113,13 @@ function ClosedOnSundayLivePromo() {
                 </div>
                 <div className="cos-live-promo-detail">
                   <dt>Where</dt>
-                  <dd>
-                    <a
-                      href={nextEvent?.location?.mapUrl || ALS_SPIRITS_MAPS_URL}
-                      className="cos-live-promo-venue"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Al&apos;s Spirits &amp; Music · Reform, AL
-                    </a>
-                  </dd>
+                  <FeaturedShowWhereLine
+                    where={whereLine}
+                    hrefOverride={nextEvent?.location?.mapUrl}
+                    as="dd"
+                    className=""
+                    linkClassName="cos-live-promo-venue"
+                  />
                 </div>
               </dl>
               <div className="cos-live-promo-actions">

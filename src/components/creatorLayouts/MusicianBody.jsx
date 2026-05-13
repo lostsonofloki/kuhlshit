@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AlsPackageStoreJingle from "../AlsPackageStoreJingle";
 import AddToCalendarRow from "../AddToCalendarRow";
+import FeaturedShowWhereLine from "../FeaturedShowWhereLine";
 
 /**
  * Musician content body — the original PorchFest artist-detail layout
@@ -209,7 +210,7 @@ export default function MusicianBody({
             </p>
             <div className="featured-show-meta">
               <p className="featured-show-line">{artist.featuredShow.when}</p>
-              <p className="featured-show-line">{artist.featuredShow.where}</p>
+              <FeaturedShowWhereLine where={artist.featuredShow.where} />
             </div>
             {artist.featuredShow.calendar &&
             artist.featuredShow.calendar.allDayStart &&

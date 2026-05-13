@@ -1,9 +1,11 @@
 import { chromium } from 'playwright';
 import { mkdirSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { dirname, join } from 'path';
+import { fileURLToPath } from 'url';
 
 const BASE_URL = 'https://www.kuhlshit.com';
-const OUTPUT_DIR = 'audit';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const OUTPUT_DIR = join(__dirname, 'audit-output');
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
 
@@ -119,6 +121,6 @@ const viewports = [
     console.log(`   Broken imgs: ${pf.metrics.brokenImages.length}`);
   }
 
-  console.log('\n📸 Screenshots: ./audit/');
+  console.log(`\n📸 Screenshots: ${OUTPUT_DIR}/`);
   console.log('========================================\n');
 })();

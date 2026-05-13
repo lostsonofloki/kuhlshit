@@ -1,0 +1,615 @@
+================================================================================
+KUHLSHIT.COM — SITE & REPOSITORY DOSSIER (PLAIN-TEXT REFERENCE)
+================================================================================
+Encoding: UTF-8
+Generated from repository source inspection (paths cited in parentheses).
+Audience: analysts, LLM context, Colab notebooks — factual, technical, no prose hype.
+Domain / brand: kuhlshit.com (canonical URLs in code default to https://www.kuhlshit.com).
+
+--------------------------------------------------------------------------------
+0. QUANTITATIVE SNAPSHOT (FROM REPO AT TIME OF AUTHORING)
+--------------------------------------------------------------------------------
+  - package.json name: "kuhl-shit", version field: "2.0.0" (package.json) — note
+    CHANGELOG states version in package.json may lag release narrative.
+  - src/data/data.json: 32 entries in top-level "artists" array; 6 entries in
+    porchfest.events (verified via Node read of JSON).
+  - data.json metadata block (informational only): lastUpdated "2026-05-11",
+    version "2.0.0", totalArtists 0, totalComedy 1, totalEvents 6 — the
+    totalArtists count does not match actual artists.length; treat counts as
+    maintained manually and potentially stale (src/data/data.json).
+
+--------------------------------------------------------------------------------
+1. PRODUCT POSITIONING (AS EXPRESSED IN SHIPPED COPY & README)
+--------------------------------------------------------------------------------
+1.1 Core pitch
+  - Self-described as a platform for discovering musicians, comedy acts, and
+    community events, with a "dark-mode-only" industrial aesthetic inspired by
+    Al's Spirits & Music (README.md).
+  - index.html and seoDefaults frame the site as a home for musicians, painters,
+    poets — Porch Talk, Closed on Sundays, PorchFest (Columbus MS), The Vault
+    (index.html, src/constants/seoDefaults.js, public/manifest.json).
+
+1.2 Named product surfaces (user-facing series)
+  A) Closed on Sundays
+     - Listening-room performances: short sets to camera; filmed for YouTube;
+       in-person framing at Al's Spirits & Music (Reform, AL) with "bring a
+       chair" copy (ClosedOnSundaysPage.jsx, seoDefaults, HomePage.jsx).
+     - Hub schedule rows live as first-class objects inside porchfest.events
+       with ids prefixed closed-on-sundays-YYYY-MM-DD (see section 7).
+
+  B) Porch Talk
+     - Interview / performance series; episodes loaded from a YouTube
+       playlist via YouTube Data API v3 (PorchTalkPage.jsx).
+
+  C) PorchFest
+     - Primary festival record in data: PorchFest 2026, Munson & Brothers,
+       Columbus MS, Apr 17–19 2026 — site copy treats the page as an archived
+       post-event hub (PorchFestPage.jsx, data.json event id pf-001).
+
+  D) The Vault
+     - Archive of porchfest.events rendered newest-first with optional photo
+       galleries and vaultLinks CTAs (VaultPage.jsx).
+
+  E) Creators / Artists
+     - Global directory at /artists; PorchFest lineup index at
+       /porchfest/artists; per-creator profiles at both /artists/:id and
+       /porchfest/artists/:id with redirect rules (ArtistDetailPage.jsx,
+       App.jsx).
+
+  F) Creator waitlist
+     - Lead capture for future "Creator Studio" (WaitlistPage.jsx); optional
+       remote POST to Web3Forms or custom endpoint (section 11).
+
+1.3 Easter eggs & hidden routes
+  - Louie dalmatian: random appearance on route change with probability 1/200;
+    click navigates to /spotcheck (LouieEasterEgg.jsx).
+  - Logo click counter: five consecutive clicks on header logo navigate to
+    /retro (Header.jsx) — route defined outside App shell (main.jsx).
+
+--------------------------------------------------------------------------------
+2. INFORMATION ARCHITECTURE & NAVIGATION
+--------------------------------------------------------------------------------
+2.1 Global chrome (every page under App)
+  - CanonicalLink + DefaultSeoHelmet + AnnouncementBar + Header + main + Footer +
+    LouieEasterEgg + Vercel Analytics/Speed Insights wrapper (App.jsx).
+  - AnnouncementBar: dismissible (localStorage key kuhlshit-waitlist-bar-
+    dismissed); promotes Closed on Sundays, PorchTalk, Vault (AnnouncementBar.jsx).
+
+2.2 Primary header navigation (Header.jsx)
+  Order: Closed on Sundays → PorchTalk → Artists → The Vault → Waitlist.
+  Header also mounts HeaderSiteSearch (dropdown search) — implementation in
+  src/components/HeaderSiteSearch.jsx (referenced from Header.jsx; not fully
+    excerpted in this dossier beyond existence).
+
+2.3 Footer quick links (Footer.jsx)
+  - Anchor hrefs: /closed-on-sundays, /porch-talk, /vault, /waitlist.
+  - Connect: Instagram porch_talk101, Facebook porchtalk101, YouTube @porchtalk_101
+    (full URLs in Footer.jsx).
+
+2.4 Home page IA highlights (HomePage.jsx)
+  - Hero CTAs: /closed-on-sundays, /porch-talk, /porchfest (archive).
+  - "Listening lounge" block: ClosedOnSundayLivePromo, UpcomingAtAlsStrip (max
+    3 hub dates), AlsPackageStoreJingle when Fire Camino has jingle.audioUrl.
+  - CreatorCategories section; Watch & listen showcase; Vault teaser driven by
+    porchfest.events (prefers id pf-001); Meet the Creators links to
+    /porchfest/artists/:id for featured cards; inline waitlist CTA.
+
+--------------------------------------------------------------------------------
+3. URL MAP — ALL REACT ROUTER PATHS (EXPLICIT)
+--------------------------------------------------------------------------------
+Routes are split across src/main.jsx (outer shell) and src/App.jsx (site app).
+
+3.1 Paths defined in src/main.jsx
+  Path              | Element / behavior
+  ------------------|----------------------------------------------------------
+  /retro            | Lazy MySpaceRetroView (easter egg / retro experience)
+  /*                | App (catch-all under BrowserRouter)
+
+3.2 Paths defined in src/App.jsx (inside App's Routes)
+  Path                        | Element              | Notes
+  ---------------------------|----------------------|----------------------------------
+  /                           | HomePage             | Eager import (not lazy)
+  /artists                    | ArtistsPage          | Lazy
+  /artists/:artistId          | ArtistDetailPage     | Lazy; canonical creator URL
+  /closed-on-sundays          | ClosedOnSundaysPage  | Lazy; YouTube archive + hub UI
+  /porchfest                  | PorchFestPage        | Lazy; festival archive UI
+  /porchfest/artists          | FeaturedArtistsPage  | Lazy; lineup-driven grid
+  /porchfest/artists/:artistId| ArtistDetailPage     | Lazy; redirects to /artists/:id
+                              |                      | when artist not on festival lineup
+  /porch-talk                 | PorchTalkPage        | Lazy; YouTube playlist
+  /search                     | Navigate to "/"      | replace; legacy route removed
+  /spotcheck                  | SpotCheckPage        | Lazy; Louie target
+  /vault                      | VaultPage            | Lazy
+  /waitlist                   | WaitlistPage         | Lazy
+
+3.3 Effective public URL families (including dynamic segments)
+  - /
+  - /retro
+  - /artists
+  - /artists/<slug-or-id>
+  - /closed-on-sundays
+  - /porchfest
+  - /porchfest/artists
+  - /porchfest/artists/<slug-or-id>
+  - /porch-talk
+  - /search  (immediate client redirect to /)
+  - /spotcheck
+  - /vault
+  - /waitlist
+
+3.4 Sitemap coverage vs routes (scripts/generate-sitemap.mjs)
+  Included static paths: /, /artists, /closed-on-sundays, /porchfest,
+  /porchfest/artists, /porch-talk, /vault, /waitlist, /spotcheck.
+  Excluded: /search (redirect), /retro (not listed in sitemap script).
+  Dynamic: one URL per artist — either /porchfest/artists/<id> if artist appears
+  on main festival lineup (events[0] in JSON array order) else /artists/<id>.
+  Note: sitemap uses data.porchfest?.events?.[0] as "mainFest"; must match the
+  intended pf-001 row ordering in data.json.
+
+3.5 Server / hosting rewrites (vercel.json)
+  - Single-page application fallback: source "/(.*)" destination "/index.html"
+    (vercel.json). All deep links rely on this for client-side routing.
+
+--------------------------------------------------------------------------------
+4. PAGE-BY-PAGE BEHAVIOR (REPO-GROUNDED)
+--------------------------------------------------------------------------------
+4.1 HomePage (src/pages/HomePage.jsx, HomePage.css)
+  - SEO: spreads GLOBAL_SEO_DEFAULT_PROPS into SEO component; SiteWideJsonLd.
+  - Featured artists: hourly seeded shuffle among artists with imageUrl; shows 3.
+  - Vault teaser: selectVaultTeaserEvent prefers porchfest event id pf-001, else
+    name/slug matching /porchfest/i, else newest by date.
+  - Links mix React Router Link and internal paths as documented above.
+
+4.2 ArtistsPage (src/pages/ArtistsPage.jsx)
+  - Lists all data.artists; client filter by name, location, genre via search form.
+  - SEO: ARTISTS_INDEX_SEO from seoDefaults.
+
+4.3 FeaturedArtistsPage (src/pages/FeaturedArtistsPage.jsx)
+  - Builds roster from porchfest.events[0].lineup blocks; attempts to match names
+    to data.artists for imagery/genre; day filter UI; ScheduleBadges / slot status
+    via porchfestScheduleStatus utilities.
+
+4.4 ArtistDetailPage (src/pages/ArtistDetailPage.jsx)
+  - Resolves artist by id param OR slugified name match.
+  - If URL is /porchfest/artists/:id but artist not in festival lineup →
+    Navigate to /artists/:id (replace).
+  - Creator layout: MusicianBody (default), VisualArtistBody, WriterBody based on
+    creatorType normalization (musician default; visual/painter/photographer →
+    visual; writer/poet → writer).
+  - JSON-LD: buildArtistJsonLd (src/utils/artistJsonLd.js) with optional Event
+    subgraph when lineup match and festivalEvent present.
+  - GigTracker at bottom for musicians only; passes bandsintown_slug as
+    artistSlug, upcomingShows, profilePath.
+  - Share FAB: Web Share API or clipboard; trackEvent for analytics.
+
+4.5 PorchFestPage (src/pages/PorchFestPage.jsx)
+  - Uses useCachedFestivalData + useFestivalClock; sorts events ascending by date.
+  - Highlights hub event id pf-001 for JSON-LD via buildPorchfestHubJsonLd.
+  - Archive banner copy points to Closed on Sundays, PorchTalk, Vault.
+  - Calendar: Google Calendar URL builder + static APPLE_CALENDAR_URL
+    /calendar/porchfest-2026.ics (public asset path referenced in page).
+  - Poster SmartImage; schedule / lineup UI continues in remainder of file.
+
+4.6 ClosedOnSundaysPage (src/pages/ClosedOnSundaysPage.jsx)
+  - Static intro with internal links; SEO CLOSED_ON_SUNDAYS_SEO.
+  - UpcomingCosShowsSection: getUpcomingCosHubRowsForDisplay from
+    closedOnSundayHubEvents.js; AddToCalendarRow per row.
+  - PastCosSessionsArchive: getPastClosedOnSundayHubEventsSorted.
+  - YouTube: playlistItems API pagination; env VITE_YOUTUBE_API_KEY or legacy
+    YOUTUBE_API_KEY; playlist id from VITE_YOUTUBE_PLAYLIST_ID or default string
+    in source (see file for exact default id).
+  - Client-side search across fetched episode titles/descriptions.
+
+4.7 PorchTalkPage (src/pages/PorchTalkPage.jsx)
+  - Similar YouTube playlist ingestion; apiKey from VITE_YOUTUBE_API_KEY only
+    (empty string fallback); playlistId hardcoded in component to a specific
+    playlist id string (PorchTalkPage.jsx).
+  - Search filters title/description.
+
+4.8 VaultPage (src/pages/VaultPage.jsx)
+  - Sorts porchfest.events descending by date for archive cards.
+  - Optional event.gallery with photos array and credit (name, instagramUrl,
+    email). ImageLightbox zoom only when gallery credit name case-insensitively
+    equals "barbi" (isBarbiVaultGallery).
+
+4.9 WaitlistPage (src/pages/WaitlistPage.jsx)
+  - Form fields: name, email (required), craft, link, message.
+  - Submission: optional VITE_WAITLIST_ENDPOINT JSON POST; else optional
+    VITE_WEB3FORMS_ACCESS_KEY POST to https://api.web3forms.com/submit; if neither
+    configured, remoteOk is false but UX still succeeds and logs to localStorage
+    key kuhlshit-waitlist-signups (last 50 entries).
+  - trackEvent waitlist_submit with source query param support (?source=).
+
+4.10 SpotCheckPage (src/pages/SpotCheckPage.jsx)
+  - Secret / novelty page (referenced by LouieEasterEgg); not further detailed here.
+
+4.11 MySpaceRetroView (src/pages/MySpaceRetroView.jsx)
+  - Loaded at /retro; nostalgic UI (full content not enumerated in this dossier).
+
+--------------------------------------------------------------------------------
+5. CONTENT MODEL — src/data/data.json
+--------------------------------------------------------------------------------
+5.1 Top-level keys observed
+  - "artists": array of creator profiles (primary content).
+  - "porchfest": { "events": [ ... ] } — BOTH the main multi-day festival AND
+    ancillary dated series rows (Closed on Sundays shoots) share this array.
+  - "metadata": informational counters and lastUpdated (may be inconsistent).
+
+5.2 Artist objects — recurring fields (not every artist has every field)
+  Identifiers & copy:
+    - id (string slug), name, bio, location (optional), genre (optional)
+    - imageUrl, thumbnailUrl (paths under /resources/...); cardImageFit optional
+      (e.g. "contain" for SmartImage)
+    - publishDate (ISO-like date string), featured (boolean)
+    - creatorType (optional; drives layout on detail page)
+
+  Links:
+    - socialLinks: facebook, instagram, twitter (rendered as X in UI where
+      applicable per CHANGELOG), youtube, spotify, appleMusic, website, tiktok
+      (MusicianBody.jsx enumerates supported keys in Connect section).
+    - musicLinks: spotify, appleMusic, youtube — CHANGELOG notes tidal and
+      pandora supported for Listen row on MusicianBody.
+    - links: e.g. bandsintown URL; separate bandsintown_slug string feeds widget
+      (GigTracker.jsx).
+
+  Media & promos:
+    - videos[]: { title, videoId, thumbnail, url, source }
+    - jingle.audioUrl optional (Fire Camino / AlsPackageStoreJingle)
+
+  Live performances:
+    - upcomingShows[]: sortDate (YYYY-MM-DD), when, title, where, supporting,
+      notes, mapUrl, optional nested calendar object for explicit all-day ICS
+      (see upcomingShowCalendar.js).
+
+  Featured one-off show block:
+    - featuredShow: eyebrow, title, billingLine, when, where, withArtistId,
+      withArtistName, calendar { allDayStart, allDayEndExclusive, title, location,
+      fileSlug, detailLine }, etc. (MusicianBody.jsx gates rendering on required
+      fields).
+
+  Legacy / optional JSON keys (present in some rows, not wired in MusicianBody):
+    - README.md documents still { electricSet, interview, acousticCloser } and
+      porchTalk objects; grep shows still/porchTalk still appear in data.json for
+      at least one artist but MusicianBody.jsx contains no references to still or
+      porchTalk — treat as legacy or future-use fields unless another component
+      consumes them.
+
+5.3 porchfest.events[] — two families of rows
+  A) Main festival — example in repo: id "pf-001", name "PorchFest 2026",
+     date/endDate, displayDate, pricing, schedule[], location { address, city,
+     state, venue, mapUrl, website, socialLinks }, description, lineup[] (per-day
+     artist strings or objects), imageUrl, lineupImageUrl, gallery { title,
+     credit, photos[] }, infoUrl, vaultLinks optional.
+
+  B) Closed on Sundays hub rows — ids like closed-on-sundays-2026-05-03,
+     ISO date, location (Al's), description, lineup often empty array, vaultLinks
+     { primary, secondary, tertiary optional } with React Router paths and labels.
+
+  Discrimination logic (src/lib/closedOnSundayHubEvents.js):
+    - isClosedOnSundayHubEvent: id starts with "closed-on-sundays-" AND date is
+      strict YYYY-MM-DD.
+
+5.4 Chicago timezone for hub scheduling
+  - getChicagoDateKey and formatCosHubDateShort use America/Chicago for comparing
+    hub dates to "today" and for display (closedOnSundayHubEvents.js).
+
+--------------------------------------------------------------------------------
+6. SUPPORTING LIBRARIES (PROSE SUMMARIES)
+--------------------------------------------------------------------------------
+6.1 closedOnSundayHubEvents.js (src/lib/closedOnSundayHubEvents.js)
+  - Filters and sorts Closed on Sundays hub events from porchfest.events.
+  - Provides next/upcoming/past lists; formats short date labels in Chicago TZ.
+  - artistIdFromCreatorProfilePath parses /porchfest/artists/x or /artists/x.
+  - getCosHubEventCalendar merges hub row with artist.featuredShow.calendar when
+    dates align; otherwise synthesizes all-day calendar metadata for Add To
+    Calendar rows.
+
+6.2 upcomingShowCalendar.js (src/lib/upcomingShowCalendar.js)
+  - resolveCalendarForUpcomingShow: prefers explicit show.calendar all-day block;
+    else if sortDate is YYYY-MM-DD and when line lacks wall-clock times,
+    synthesizes all-day event to avoid misclassifying timed gigs.
+  - addOneDayYmd: date arithmetic for exclusive end dates (ICS/Google all-day).
+
+6.3 calendarLinks.js (src/lib/calendarLinks.js)
+  - buildGoogleCalendarAllDayUrl: Google Calendar template URL per all-day spec.
+  - buildAllDayICS: VCALENDAR body with PRODID kuhlshit.com.
+  - downloadICSFile: client-side Blob download helper.
+
+6.4 artistJsonLd.js (src/utils/artistJsonLd.js)
+  - artistInFestivalLineup: compares normalized lineup entry names to artist.name.
+  - buildArtistJsonLd: emits @graph with schema.org MusicGroup or Person (heuristic
+    band name) or Person for non-musicians; includes sameAs from socialLinks,
+    musicLinks, links values that look like https URLs; optional Event node tied
+    to PorchFest dates/location with OfflineEventAttendanceMode.
+
+6.5 siteSearch.js (src/lib/siteSearch.js)
+  - searchSite(query, data): lowercase substring match across artist name,
+    location, bio; events by name, city/state, description — powers header search.
+
+6.6 useCachedFestivalData.js (src/hooks/useCachedFestivalData.js)
+  - Attempts runtime fetch of bundled data.json URL; caches JSON in localStorage
+    under kuhlshit:festival-data:v1; falls back to last cache then bundled import.
+
+--------------------------------------------------------------------------------
+7. TECHNICAL STACK & RUNTIME ARCHITECTURE
+--------------------------------------------------------------------------------
+7.1 Core dependencies (package.json)
+  - react 18, react-dom 18, react-router-dom 6, react-helmet-async 3,
+    @vercel/analytics, @vercel/speed-insights.
+  - Build: vite 5, @vitejs/plugin-react.
+  - Quality: eslint 9 ecosystem, playwright for audit script.
+
+7.2 Application entry
+  - index.html: static meta, OG/Twitter tags, Google site verification meta,
+    font preconnect/preload, PWA manifest link, theme-color, gtag bootstrap for
+    GA4 (measurement configuration present in file — do not treat as secret; it
+    is public client-side ID).
+  - src/main.jsx: HelmetProvider, BrowserRouter, routes /retro then App catch-all.
+
+7.3 SPA rendering model (vite.config.js comments)
+  - No SSR/prerender plugin: crawlers receive shell HTML; route-level head from
+    react-helmet-async at runtime (vite.config.js comment).
+
+7.4 Code splitting (vite.config.js)
+  - manualChunks splits react, react-dom, react-router, @vercel/* into vendor
+    chunks for caching.
+
+7.5 Dev server
+  - Default port from env PORT or 3000; HMR clientPort optional via
+    VITE_HMR_CLIENT_PORT (vite.config.js).
+
+7.6 PWA / installability (public/manifest.json)
+  - name Kuhlshit, start_url /, display standalone, colors aligned with dark theme.
+
+--------------------------------------------------------------------------------
+8. SEO, CANONICALIZATION, JSON-LD
+--------------------------------------------------------------------------------
+8.1 Central constants (src/constants/seoDefaults.js)
+  - GLOBAL_SEO_DEFAULT_PROPS: default title/description/image path /.
+  - PORCHFEST_SEO_DEFAULT_PROPS: archived fest tone, poster image path.
+  - ARTISTS_INDEX_SEO, PORCHFEST_ARTISTS_INDEX_SEO, PORCH_TALK_SEO,
+    CLOSED_ON_SUNDAYS_SEO, SPOTCHECK_SEO: per-route title/description/path hints.
+
+8.2 DefaultSeoHelmet (src/components/DefaultSeoHelmet.jsx)
+  - Applies GLOBAL defaults when route does not override; uses getSiteOrigin and
+    toAbsoluteUrl for og:image absolute URL; duplicates google-site-verification
+    meta (also in index.html).
+
+8.3 SiteWideJsonLd
+  - Imported on HomePage (src/pages/HomePage.jsx) — implementation in
+    src/components/SiteWideJsonLd.jsx (not fully read in this pass; exists for
+    sitewide structured data).
+
+8.4 robots.txt (public/robots.txt)
+  - Allow all; Sitemap directive https://www.kuhlshit.com/sitemap.xml
+
+--------------------------------------------------------------------------------
+9. BUILD, SITEMAP, NPM SCRIPTS
+--------------------------------------------------------------------------------
+9.1 package.json scripts
+  - dev: vite
+  - build: vite build && node scripts/generate-sitemap.mjs
+  - preview: vite preview
+  - lint / lint:fix: eslint
+  - audit:mobile: node scripts/playwright-site-audit.mjs (expects BASE_URL env)
+  - scrape:huey-site, scrape:meganlea-site: content ops scrapers
+  - sync:artist-photos, optimize:images: image pipeline helpers
+
+9.2 Sitemap generator (scripts/generate-sitemap.mjs)
+  - Post-build writes dist/sitemap.xml.
+  - Site origin from env VITE_SITE_ORIGIN or default https://www.kuhlshit.com.
+  - Logs URL count and GSC hint to stdout.
+
+9.3 Output directory
+  - vite build outDir: dist (vite.config.js).
+
+--------------------------------------------------------------------------------
+10. DEPLOYMENT — VERCEL + VITE SPA
+--------------------------------------------------------------------------------
+10.1 Platform assumptions
+  - README states repo is linked to Vercel project name "kuhlshit"; committed
+    .vercel/project.json exists (path only; IDs omitted here as operational
+    identifiers).
+  - vercel.json rewrite sends all paths to index.html — standard SPA hosting.
+
+10.2 Vercel Web Analytics / Speed Insights (src/App.jsx)
+  - VercelMetrics component: if hostname is not localhost/127.0.0.1, renders
+    <Analytics /> and <SpeedInsights /> from @vercel/* packages. Comment notes
+    Vercel injects /_vercel/* scripts on platform only.
+
+10.3 Environment variables (documented names only — no values)
+  - .env.example lists:
+      VITE_SITE_ORIGIN (optional; SEO absolute URLs)
+      PORT, VITE_HMR_CLIENT_PORT (dev/HMR)
+      VITE_YOUTUBE_API_KEY, VITE_YOUTUBE_PLAYLIST_ID
+      VITE_WAITLIST_ENDPOINT (optional custom POST)
+      VITE_WEB3FORMS_ACCESS_KEY (optional Web3Forms)
+  - ClosedOnSundaysPage also reads legacy YOUTUBE_API_KEY / YOUTUBE_PLAYLIST_ID
+    without VITE_ prefix as fallback (ClosedOnSundaysPage.jsx).
+
+--------------------------------------------------------------------------------
+11. EXTERNAL INTEGRATIONS (EXPLICIT SECTION)
+--------------------------------------------------------------------------------
+11.1 YouTube
+  - Data API v3 HTTPS calls to www.googleapis.com/youtube/v3/playlistItems
+    (PorchTalkPage.jsx, ClosedOnSundaysPage.jsx).
+  - Episode/video links out to https://www.youtube.com/watch?v=...
+  - Public brand YouTube @porchtalk_101 linked in Footer.
+
+11.2 Google Calendar
+  - calendar.google.com calendar/render template links built client-side
+    (calendarLinks.js, PorchFestPage.jsx for multi-day fest).
+
+11.3 Bandsintown
+  - Widget script https://widget.bandsintown.com/main.min.js loaded on demand when
+    artist.bandsintown_slug present (GigTracker.jsx).
+  - data.json may include links.bandsintown URLs for outbound artist pages.
+
+11.4 Google Maps
+  - Event mapUrl fields open Google Maps URLs (data.json, VaultPage, GigTracker).
+
+11.5 Google Fonts
+  - fonts.googleapis.com CSS for Permanent Marker, Montserrat, Inter (index.html).
+
+11.6 Google Analytics (GA4)
+  - gtag.js loaded on idle from index.html; trackEvent helper wraps gtag event
+    calls (src/utils/analytics.js).
+
+11.7 Web3Forms (waitlist)
+  - Optional POST to https://api.web3forms.com/submit with access_key from
+    VITE_WEB3FORMS_ACCESS_KEY (WaitlistPage.jsx). Subject line constant:
+    "Kuhlshit creator waitlist".
+
+11.8 Vercel platform SDK (browser)
+  - @vercel/analytics/react and @vercel/speed-insights/react (App.jsx,
+    package.json).
+
+11.9 Instagram / Facebook (brand)
+  - Footer social URLs for Porch Talk brand properties.
+
+--------------------------------------------------------------------------------
+12. ANALYTICS EVENTS (INSTRUMENTED IN CODE — NON-EXHAUSTIVE)
+--------------------------------------------------------------------------------
+  - trackEvent usage includes: share (artist detail), louie_spotted, louie_clicked,
+    waitlist_submit (see ArtistDetailPage.jsx, LouieEasterEgg.jsx, WaitlistPage.jsx).
+
+--------------------------------------------------------------------------------
+13. OPERATIONS & CONTENT WORKFLOWS
+--------------------------------------------------------------------------------
+13.1 Adding creators
+  - Primary workflow: edit src/data/data.json artists array (README.md).
+  - Artist photos: workspace rule .cursor/rules/artist-photos-source.mdc — drop
+    originals in Artist/ at repo root, copy to public/resources/artists/<slug>/,
+    run node scripts/optimize-images.mjs, point imageUrl/thumbnailUrl to webp.
+
+13.2 Adding Closed on Sundays dates
+  - Add porchfest.events row with id prefix closed-on-sundays-, ISO date, Al's
+    location, copy, vaultLinks to series page and artist profile paths.
+
+13.3 Scrapers & maintenance scripts (package.json)
+  - scripts/scrape-huey-music.mjs, scrape-meganlea-bandzoogle.mjs referenced from
+    npm scripts; CHANGELOG mentions scrape-jodie-ross-music.mjs — verify scripts/
+    directory on disk when running (file set may change by branch).
+
+13.4 Mobile audit
+  - README: run preview server then BASE_URL=http://localhost:4173 npm run audit:mobile.
+
+--------------------------------------------------------------------------------
+14. TEST / AUDIT NOTES
+--------------------------------------------------------------------------------
+  - Playwright listed as devDependency; audit script path scripts/playwright-site-
+    audit.mjs (not executed in this dossier authoring).
+
+--------------------------------------------------------------------------------
+15. SECURITY & PRIVACY (HIGH LEVEL)
+--------------------------------------------------------------------------------
+  - No server-side auth in this SPA repo; all data public in built JSON.
+  - Waitlist may POST PII to third-party endpoints configured via env — operators
+    must configure Vercel env and avoid committing .env (README warns).
+  - YouTube API key is browser-exposed when used from client fetch — README
+    recommends HTTP referrer restrictions on Google Cloud credentials.
+
+--------------------------------------------------------------------------------
+16. WHAT IS NOT IN THIS REPO / ASSUMPTIONS (EXPLICIT SECTION)
+--------------------------------------------------------------------------------
+  - DNS registrar, apex vs www policy, TLS certificates: configured outside repo;
+    code assumes production host often https://www.kuhlshit.com for sitemap/OG.
+  - YouTube/Google Cloud project billing and API quotas: external.
+  - Actual waitlist inbox delivery depends on Web3Forms or custom endpoint backing
+    VITE_WAITLIST_ENDPOINT — not implemented as a first-party API route in this
+    repository's src tree (no /api server routes in Vite SPA as shipped).
+  - User accounts, CMS, database-backed artist CRUD: not present; README lists
+    future enhancements (Supabase/Firebase, admin dashboard, etc.).
+  - Backend secrets storage: not in repo; use Vercel env or local .env (gitignored).
+  - Git remote display name: package.json repository.url references GitHub
+    github.com/lostsonofloki/kuhlshit.github.io.git — actual workspace folder name
+    may differ; remote is metadata not enforced by app runtime.
+  - Content accuracy of bios, dates, and show times: editorial responsibility of
+    operators editing data.json; GigTracker manual rows depend on correct sortDate.
+
+--------------------------------------------------------------------------------
+17. README VS CODE DRIFT (FOR ANALYSTS)
+--------------------------------------------------------------------------------
+  - README "Routes" table still lists /search as advanced search — code routes
+    /search to home (App.jsx) and CHANGELOG notes dedicated SearchPage removed.
+  - README still mentions TrinityPlayer, MerchSection, VideoRotator, tag-first
+    SearchPage in project structure — git status / CHANGELOG suggest some files
+    deleted or reworked; trust src/ tree and App.jsx imports over README structure
+    diagram where they conflict.
+  - README says API key "stored in PorchTalkPage.jsx" — current code uses env
+    import.meta.env.VITE_YOUTUBE_API_KEY (PorchTalkPage.jsx) plus README env table.
+
+--------------------------------------------------------------------------------
+18. CHANGELOG SNAPSHOT (TOP OF FILE, ~UNRELEASED / RECENT FACTS)
+--------------------------------------------------------------------------------
+Source: CHANGELOG.md lines ~7–42 (skimmed). Highlights:
+  - Closed on Sundays hub rows and artists: Jodie Ross, Janet Simpson, Goodloe
+    Chilcutt, Megan Lea, etc., with data + asset paths cited.
+  - Home UpcomingAtAlsStrip + shared getUpcomingCosHubRowsForDisplay.
+  - Header site search; /search redirect; sitemap/audit lists updated.
+  - GigTracker + upcomingShows + calendar resolution utilities.
+  - Vault film galleries + Barbi lightbox behavior.
+  - SEO stack: DefaultSeoHelmet, CanonicalLink, JSON-LD, generate-sitemap.mjs,
+    robots.txt.
+  - Performance: static HomePage import for LCP.
+  - Louie spawn rarity 1 in 200.
+  - Visual system tokens and global buttons.css rollout (broad UI refactor).
+
+--------------------------------------------------------------------------------
+19. FILE PATH QUICK INDEX (PRIMARY ARTIFACTS)
+--------------------------------------------------------------------------------
+  - Root: README.md, package.json, vercel.json, vite.config.js, index.html,
+    .env.example, .vercel/project.json, public/robots.txt, public/manifest.json
+  - Routing: src/main.jsx, src/App.jsx
+  - Data: src/data/data.json
+  - SEO constants: src/constants/seoDefaults.js
+  - SEO components: src/components/DefaultSeoHelmet.jsx, CanonicalLink (imported
+    from src/components/CanonicalLink per App.jsx), src/components/SEO.jsx
+  - Pages: src/pages/*.jsx (especially HomePage, PorchFestPage,
+    ClosedOnSundaysPage, ArtistDetailPage, VaultPage, PorchTalkPage, WaitlistPage,
+    ArtistsPage, FeaturedArtistsPage, SpotCheckPage, MySpaceRetroView)
+  - Layout chrome: src/components/Header.jsx, Footer.jsx, AnnouncementBar.jsx,
+    LouieEasterEgg.jsx, HeaderSiteSearch.jsx
+  - Libs: src/lib/closedOnSundayHubEvents.js, upcomingShowCalendar.js,
+    calendarLinks.js, siteSearch.js
+  - JSON-LD: src/utils/artistJsonLd.js, src/utils/porchfestHubJsonLd.js (imported
+    by PorchFestPage.jsx)
+  - Build aux: scripts/generate-sitemap.mjs, scripts/optimize-images.mjs,
+    scripts/playwright-site-audit.mjs
+
+--------------------------------------------------------------------------------
+20. ADDITIONAL STRUCTURED DATA & CANONICAL URLS
+--------------------------------------------------------------------------------
+20.1 PorchFest hub JSON-LD (src/utils/porchfestHubJsonLd.js)
+  - buildPorchfestHubJsonLd(event) returns null if event.date missing.
+  - Emits schema.org Festival in @graph with @id `${origin}/porchfest#festival`,
+    OfflineEventAttendanceMode, start/end dates from event, description, url
+    `${origin}/porchfest`, optional image from event.imageUrl or
+    event.lineupImageUrl (absolute via getSiteOrigin + toAbsoluteUrl).
+  - Place: venue name, PostalAddress when address/city/state present; MS rows get
+    addressCountry US; mapUrl → hasMap; location.website → place.url.
+
+20.2 Canonical link (src/components/CanonicalLink.jsx)
+  - Renders <link rel="canonical"> with href = getSiteOrigin() + current pathname.
+  - Ensures preview deployments can still advertise production origin when
+    VITE_SITE_ORIGIN is set to production URL (siteOrigin.js).
+
+--------------------------------------------------------------------------------
+21. scripts/ DIRECTORY INVENTORY (NODE HELPERS)
+--------------------------------------------------------------------------------
+  - generate-sitemap.mjs — post-build sitemap (see section 9).
+  - optimize-images.mjs — image pipeline for artist/public assets (referenced by
+    npm run optimize:images and workspace artist-photo rule).
+  - playwright-site-audit.mjs — mobile route smoke (README; BASE_URL env).
+  - sync-artist-photos.mjs — npm run sync:artist-photos.
+  - scrape-huey-music.mjs — npm run scrape:huey-site.
+  - scrape-meganlea-bandzoogle.mjs — npm run scrape:meganlea-site.
+  - scrape-jodie-ross-music.mjs — referenced in CHANGELOG for jodierossmusic.com.
+  - capture-portfolio-screenshots.mjs — visual capture helper (no npm script in
+    package.json at time of dossier; exists on disk).
+  - scripts/.kuhl-opt.json — JSON cache of per-file optimization metadata (sizes,
+    widthsEmitted, sig) consumed by optimize-images.mjs; safe to inspect locally.
+
+================================================================================
+END OF DOSSIER
+================================================================================

@@ -18,6 +18,7 @@ node_modules/
 .env.production.local
 
 # Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -29,6 +30,8 @@ lerna-debug.log*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.suo
 *.ntvs*
 *.njsproj
@@ -44,9 +47,16 @@ lerna-debug.log*
 !public/resources/**/*.webp
 stifftones-debug.png
 
-# Misc
-archive/
-"*.html"  
+# Misc (root only — do not use `archive/` or it ignores `docs/archive/`)
+/archive/
+# Root HTML exports (not the Vite app shell)
+/*.html
+!/index.html
+# Playwright audit snapshots next to repo root (legacy output dir)
+/audit/
+
+# Local AI / editor tooling
+.qwen/
 
 # Vercel CLI — commit project.json for shared link; ignore local cache
 .vercel/*
@@ -67,3 +77,6 @@ tmp/
 
 # Scratch media outside public/ (ship via public/resources/)
 /resources/
+
+# Generated page-capture output (see docs/archive/audit-page-capture.mjs)
+/docs/archive/audit-output/

@@ -8,7 +8,7 @@ echo - Bio/About section
 echo - Events/Tour dates
 echo - Social media links
 echo.
-echo Add URLs to input.txt first!
+echo Add URLs to docs\archive\scrapes\input.txt first!
 echo.
 pause
 node scraper-website.js

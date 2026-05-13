@@ -1,141 +1,101 @@
 {
   "artists": [
     {
-      "id": "the-stifftones",
-      "name": "The Stifftones",
-      "bio": "What started as a Goonie adventure in 2019 has become the journey of a lifetime. Since 2021 The Stifftones have been traveling the US living in their 1996 Cadillac Hearse named Tania with their two dogs. Logging over 200,000 miles, they have performed hundreds of shows in almost as many towns. Shaun and Rachel Stief are a dynamic duo whose sound is a unique fusion of influences captivating audiences with their vocal harmonies and guitar weaves. Hailing from the heartland, their music embodies a mix of Midwest meets Bakersfield country, a dash of East Coast flair, and a healthy dose of good ol' Rock and Roll, all wrapped in magic. Hometown: Greenville, Illinois. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/the-stifftones/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/the-stifftones/photo-1.webp",
-      "genre": "Folk / Rock",
+      "id": "abe-partridge",
+      "name": "Abe Partridge",
+      "location": "Mobile, AL",
+      "bio": "Abe Partridge is a heralded singer-songwriter, visual artist, storyteller, and documentarian based in Mobile, Alabama. Since his 2018 debut Cotton Fields and Blood for Days, he has toured relentlessly across the U.S. and Europe, with performances at major festivals and iconic rooms including 30A Songwriters Festival, Laurel Cove, The Bluebird Cafe, Eddie's Attic, and Duke's. He has appeared on syndicated NPR programs including Mountain Stage and Woodsongs Old Time Radio Hour, and recently toured with Matthew Sweet, Drivin' N Cryin', and Dar Williams in support of Love in the Dark. Partridge also co-created the Alabama Astronaut podcast documenting previously unrecorded songs from holiness and serpent-handling churches in Appalachia. Beyond music, he is an acclaimed visual artist whose work has appeared in galleries and notable private collections, including art connected to Dr. Sleep, Tyler Childers, Charlie Parr, and the Red Clay Strays. He is currently preparing a 2026 album produced by Steve Shelley of Sonic Youth.",
+      "imageUrl": "/resources/artists/abe-partridge/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/abe-partridge/photo-1.jpg",
+      "genre": "Singer/Songwriter",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/the_stifftones/",
-        "website": "https://www.thestifftones.com/",
+        "instagram": "https://www.instagram.com/abepartridge",
+        "facebook": "https://www.facebook.com/abepartridge",
         "twitter": "",
-        "facebook": "https://www.facebook.com/TheStifftonesmusic/"
+        "youtube": "https://www.youtube.com/c/AbePartridge",
+        "spotify": "https://open.spotify.com/artist/1RQeZdPAK7c7QakzTfcA2q",
+        "appleMusic": "https://music.apple.com/us/artist/abe-partridge/1299986709",
+        "tiktok": "https://www.tiktok.com/@abepartridge",
+        "website": ""
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/61dEO1faJuwNOHf3BNFafK",
-        "appleMusic": "https://music.apple.com/artist/1499156598",
-        "youtube": "https://www.youtube.com/@thestifftones9440",
-        "amazonMusic": "https://music.amazon.com/artists/B07QYCM16K/the-stifftones",
-        "shazam": "https://www.shazam.com/artist/-/1499156598"
+        "spotify": "https://open.spotify.com/artist/1RQeZdPAK7c7QakzTfcA2q",
+        "appleMusic": "https://music.apple.com/us/artist/abe-partridge/1299986709",
+        "youtube": "https://www.youtube.com/c/AbePartridge"
       },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/15507703-the-stifftones?came_from=703&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
-      },
-      "bandsintown_slug": "The Stifftones",
       "videos": [
         {
-          "title": "Closed on Sundays - The Stifftones",
-          "videoId": "-0jyqvM8pDc",
-          "thumbnail": "https://img.youtube.com/vi/-0jyqvM8pDc/maxresdefault.jpg",
-          "url": "https://youtu.be/-0jyqvM8pDc?si=aO2NySOf6z8CYitQ",
+          "title": "Closed on Sundays - Abe Partridge",
+          "videoId": "OTs6iy1TFbA",
+          "thumbnail": "https://img.youtube.com/vi/OTs6iy1TFbA/maxresdefault.jpg",
+          "url": "https://youtu.be/OTs6iy1TFbA?si=n2A5fq2HDx1vAZHQ",
           "source": "Closed on Sundays"
         }
       ],
       "featured": true,
-      "publishDate": "2026-03-30"
+      "publishDate": "2026-04-15"
     },
     {
-      "id": "fire-camino",
-      "name": "Fire Camino",
-      "location": "Birmingham, AL",
-      "bio": "Your friendly neighborhood folk singer.",
-      "imageUrl": "/resources/artists/fire-camino/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/fire-camino/photo-1.jpg",
-      "genre": "Folk",
+      "id": "bb-palmer",
+      "name": "B.B. Palmer",
+      "bio": "Ageless storytelling with twangy mystic stew. Baroque twang style inspired by George Harrison, Father John Misty, and Devendra Banhart. Performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/bb-palmer/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/bb-palmer/photo-1.jpg",
+      "genre": "Folk / Rock",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/bbpalmermusic/",
+        "facebook": "https://www.facebook.com/bbpalmermusic",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UCtOpDoSWAKcu4SIM8OK0nRg",
+        "spotify": "https://open.spotify.com/track/67r2texwqgtlEb5XToJ8L1?si=PIyBGINvQvSHfI5VDo0egg",
+        "appleMusic": "",
+        "website": "https://bbpalmermusic.com/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/track/67r2texwqgtlEb5XToJ8L1?si=PIyBGINvQvSHfI5VDo0egg",
+        "appleMusic": "",
+        "youtube": "https://www.youtube.com/channel/UCtOpDoSWAKcu4SIM8OK0nRg"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/13092094?came_from=278&utm_medium=web&utm_source=settings_my_artist&utm_campaign=artist"
+      },
+      "bandsintown_slug": "BB Palmer",
+      "videos": [
+        {
+          "title": "Closed on Sundays - B.B. Palmer",
+          "videoId": "UgZuoBOHZvM",
+          "thumbnail": "https://img.youtube.com/vi/UgZuoBOHZvM/maxresdefault.jpg",
+          "url": "https://youtu.be/UgZuoBOHZvM?si=HYZyXdDq0Ev0WTro",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-03-31"
+    },
+    {
+      "id": "brad-and-wes",
+      "name": "Brad & Wes",
+      "bio": "Rockabilly duo performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/brad-and-wes/photo-1.png",
+      "thumbnailUrl": "/resources/artists/brad-and-wes/photo-1.png",
+      "genre": "Rockabilly",
       "socialLinks": {
         "instagram": "",
         "facebook": "",
         "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UCoUteSlsNnADZoIbq0N26iw",
-        "spotify": "https://open.spotify.com/artist/0izvufR7AzTh1ZWrX5a6ju",
-        "appleMusic": "https://music.apple.com/us/artist/firecamino/1582237143",
-        "website": "https://linktr.ee/firecamino"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/0izvufR7AzTh1ZWrX5a6ju",
-        "appleMusic": "https://music.apple.com/us/artist/firecamino/1582237143",
-        "youtube": "https://www.youtube.com/channel/UCoUteSlsNnADZoIbq0N26iw"
-      },
-      "videos": [
-        {
-          "title": "Fire Camino - Live Performance",
-          "videoId": "KRsYv6zugEI",
-          "thumbnail": "https://img.youtube.com/vi/KRsYv6zugEI/maxresdefault.jpg",
-          "url": "https://youtu.be/KRsYv6zugEI?si=g90eidzyXBiRPKRo",
-          "source": "YouTube"
-        }
-      ],
-      "jingle": {
-        "audioUrl": "/resources/promo/als-package-store-jingle.m4a"
-      },
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "katie-burkhardt",
-      "name": "Katie Burkhardt",
-      "bio": "Folk/alternative singer-songwriter from a small town in Kentucky, blending honest storytelling with haunting melodies and a voice that cuts right through the noise. Her songs carry the weight of lived experience—raw, relatable, and rooted in emotion. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/katie-burkhardt/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/katie-burkhardt/photo-1.jpg",
-      "genre": "Country / Folk",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/katiebmusic/reels/",
-        "facebook": "",
-        "twitter": "",
-        "youtube": "https://music.youtube.com/channel/UC2L9uV1AbpflWp40-3nn2rg",
+        "youtube": "",
         "spotify": "",
-        "appleMusic": "https://music.apple.com/us/artist/katie-burkhardt/1472907423",
+        "appleMusic": "",
         "website": ""
       },
       "musicLinks": {
         "spotify": "",
-        "appleMusic": "https://music.apple.com/us/artist/katie-burkhardt/1472907423",
-        "youtube": "https://music.youtube.com/channel/UC2L9uV1AbpflWp40-3nn2rg"
+        "appleMusic": "",
+        "youtube": ""
       },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/15604830-katie-burkhardt?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
-      },
-      "bandsintown_slug": "Katie Burkhardt",
       "videos": [],
       "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "kyla-diane",
-      "name": "Kyla Diane",
-      "location": "Birmingham, AL",
-      "bio": "Kyla Diane is a singer-songwriter from Birmingham, AL. Stream the Venus EP and follow the links below for more.",
-      "imageUrl": "/resources/artists/kyla-diane/photo-1.png",
-      "thumbnailUrl": "/resources/artists/kyla-diane/photo-1.png",
-      "cardImageFit": "contain",
-      "genre": "Singer-Songwriter / Soul",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/kyla.dunning/",
-        "facebook": "",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/watch?v=LP2Dud4D_DY",
-        "spotify": "https://open.spotify.com/album/11YHp5xECgJbSaLQeUmHpB",
-        "appleMusic": "https://music.apple.com/us/album/venus-ep/1828064856",
-        "website": "https://linktr.ee/kyladianemusic"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/album/11YHp5xECgJbSaLQeUmHpB",
-        "appleMusic": "https://music.apple.com/us/album/venus-ep/1828064856",
-        "youtube": "https://www.youtube.com/watch?v=LP2Dud4D_DY"
-      },
-      "videos": [
-        {
-          "title": "Venus (live)",
-          "videoId": "LP2Dud4D_DY",
-          "thumbnail": "https://img.youtube.com/vi/LP2Dud4D_DY/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=LP2Dud4D_DY",
-          "source": "YouTube"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-04-30"
+      "publishDate": "2026-04-12"
     },
     {
       "id": "elliot-devaughn",
@@ -253,33 +213,157 @@
       "publishDate": "2026-03-30"
     },
     {
-      "id": "phillip-savell",
-      "name": "Phillip Savell",
-      "bio": "Musician performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/phillip-savell/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/phillip-savell/photo-1.jpg",
-      "genre": "Blues Rock",
+      "id": "fire-camino",
+      "name": "Fire Camino",
+      "location": "Birmingham, AL",
+      "bio": "Your friendly neighborhood folk singer.",
+      "imageUrl": "/resources/artists/fire-camino/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/fire-camino/photo-1.jpg",
+      "genre": "Folk",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/phillipsavell/",
-        "facebook": "https://www.facebook.com/biglegphil/",
+        "instagram": "",
+        "facebook": "",
         "twitter": "",
-        "youtube": "https://youtu.be/L-yAestLP8Y?si=u-4mSYhjJ7FSInod",
-        "spotify": "",
-        "appleMusic": "",
-        "website": "https://soundcloud.com/phillip-savell"
+        "youtube": "https://www.youtube.com/channel/UCoUteSlsNnADZoIbq0N26iw",
+        "spotify": "https://open.spotify.com/artist/0izvufR7AzTh1ZWrX5a6ju",
+        "appleMusic": "https://music.apple.com/us/artist/firecamino/1582237143",
+        "website": "https://linktr.ee/firecamino"
       },
       "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": "https://youtu.be/L-yAestLP8Y?si=u-4mSYhjJ7FSInod",
-        "soundcloud": "https://soundcloud.com/phillip-savell"
+        "spotify": "https://open.spotify.com/artist/0izvufR7AzTh1ZWrX5a6ju",
+        "appleMusic": "https://music.apple.com/us/artist/firecamino/1582237143",
+        "youtube": "https://www.youtube.com/channel/UCoUteSlsNnADZoIbq0N26iw"
       },
       "videos": [
         {
-          "title": "Closed on Sundays - Phillip Savell",
-          "videoId": "L-yAestLP8Y",
-          "thumbnail": "https://img.youtube.com/vi/L-yAestLP8Y/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=L-yAestLP8Y&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=6",
+          "title": "Fire Camino - Live Performance",
+          "videoId": "KRsYv6zugEI",
+          "thumbnail": "https://img.youtube.com/vi/KRsYv6zugEI/maxresdefault.jpg",
+          "url": "https://youtu.be/KRsYv6zugEI?si=g90eidzyXBiRPKRo",
+          "source": "YouTube"
+        }
+      ],
+      "jingle": {
+        "audioUrl": "/resources/promo/als-package-store-jingle.m4a"
+      },
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "goodloe-chilcutt",
+      "name": "Goodloe Chilcutt",
+      "location": "Alabama",
+      "bio": "Goodloe Chilcutt writes and performs music rooted in faith and storytelling — from hymn-inspired originals to family-friendly songs. His releases span streaming platforms.",
+      "imageUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
+      "genre": "Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "",
+        "facebook": "https://www.facebook.com/goodloe.chilcutt/",
+        "twitter": "https://x.com/rogerchilcutt",
+        "youtube": "https://www.youtube.com/channel/UC_ByYtjEI3iNp957oiA--Aw",
+        "spotify": "",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/2999U7Fz4gUkjDlwUrrrjj",
+        "appleMusic": "https://music.apple.com/us/artist/goodloe-chilcutt/1580233483",
+        "youtube": "https://www.youtube.com/channel/UC_ByYtjEI3iNp957oiA--Aw"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jun 14, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-06-14",
+          "allDayEndExclusive": "2026-06-15",
+          "title": "Closed on Sundays — Goodloe Chilcutt",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "goodloe-chilcutt-closed-on-sunday-2026-06-14",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-06-14",
+          "when": "Sun Jun 14, 2026 · time TBA · CT",
+          "title": "Closed on Sundays — Goodloe Chilcutt",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-05-12"
+    },
+    {
+      "id": "ham-bagby",
+      "name": "Ham Bagby",
+      "bio": "Alabama-based musician known for a blend of rock, country, and groovy R&B, characterized by guitar-heavy, humorous, and Southern-influenced songwriting. His music, including the album All Filler, mixes witty lyrics with classic rock influences. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/ham-bagby/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/ham-bagby/photo-1.jpg",
+      "genre": "Rock / Country / R&B",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/hambagby/",
+        "facebook": "https://www.facebook.com/ham.of.bagby",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/user/hambagbyyall",
+        "spotify": "https://open.spotify.com/artist/0k4yqJMbEaqnuuMu48loQP",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/0k4yqJMbEaqnuuMu48loQP",
+        "appleMusic": "https://music.apple.com/us/artist/ham-bagby/1540202858",
+        "youtube": "https://music.youtube.com/channel/UCzILplZhXL0jlOznriGlnkQ"
+      },
+      "videos": [
+        {
+          "title": "Closed on Sundays - Ham Bagby",
+          "videoId": "cAhwfo13KWY",
+          "thumbnail": "https://img.youtube.com/vi/cAhwfo13KWY/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=4",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-13"
+    },
+    {
+      "id": "hayden-hunter-and-the-yearly-trials",
+      "name": "Hayden Hunter & The Yearly Trials",
+      "bio": "Hayden Hunter and the Yearly Trials blend heartfelt songwriting with rootsy, road-worn instrumentation — a sound shaped by long nights, longer drives, and the stories picked up along the way. Drawing on Americana, indie folk, and alt-country influences, their music balances raw vulnerability with grounded, unshakable grit. Led by singer-songwriter Hayden Hunter, the band delivers lyrics that dig deep and arrangements that hit home. From intimate acoustic ballads to full-band anthems, their songs explore love, loss, change, and the quiet moments in between. Hometown: Jackson, Mississippi. Genres: Southern Alternative Rock. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
+      "genre": "Southern Rock",
+      "socialLinks": {
+        "instagram": "",
+        "facebook": "https://www.facebook.com/HHandtheYTs/",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UCtil9mOqoknnEJpl46HT67g",
+        "spotify": "https://open.spotify.com/artist/2KNgQLuIkzhVq1O3YpNT7H",
+        "appleMusic": "https://music.apple.com/au/artist/hayden-hunter-and-the-yearly-trials/1707059566",
+        "website": "https://linktr.ee/haydenhunterandtheyearlytrials"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/2KNgQLuIkzhVq1O3YpNT7H",
+        "appleMusic": "https://music.apple.com/au/artist/hayden-hunter-and-the-yearly-trials/1707059566",
+        "youtube": "https://www.youtube.com/channel/UCtil9mOqoknnEJpl46HT67g"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15590520-hayden-hunter-and-the-yearly-trials?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Hayden Hunter and The Yearly Trials",
+      "videos": [
+        {
+          "title": "Closed on Sundays - Hayden Hunter & The Yearly Trials",
+          "videoId": "YcjysGPux5w",
+          "thumbnail": "https://img.youtube.com/vi/YcjysGPux5w/maxresdefault.jpg",
+          "url": "https://youtu.be/YcjysGPux5w?si=MANcfTgwaz0-uuVH",
           "source": "Closed on Sundays"
         }
       ],
@@ -287,26 +371,32 @@
       "publishDate": "2026-03-30"
     },
     {
-      "id": "the-wright-moves",
-      "name": "The Wright Moves",
-      "bio": "Four friends trying to find their way through a whole lotta life. Performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/the-wright-moves/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/the-wright-moves/photo-1.jpg",
+      "id": "haysop",
+      "name": "Haysop",
+      "bio": "Band from Tuscaloosa, AL. Debut self-titled album released 11/14/25 on Cornelius Chapel Records. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/haysop/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/haysop/photo-1.jpg",
       "genre": "Rock",
       "socialLinks": {
-        "instagram": "",
-        "facebook": "https://www.facebook.com/thewrightmovesband/",
+        "instagram": "https://www.instagram.com/haysopsongs",
+        "facebook": "https://www.facebook.com/p/Haysop-61564609457906/",
         "twitter": "",
         "youtube": "",
-        "spotify": "",
-        "appleMusic": "",
-        "website": "https://www.reverbnation.com/thewrightmoves"
+        "spotify": "https://open.spotify.com/album/57D1XvSrbiukqQe1WuJqR4?si=tfl25e0_SvWcGYqWEytgXQ",
+        "appleMusic": "https://music.apple.com/us/album/haysop/1823147268",
+        "website": "https://haysop.bandcamp.com/album/haysop"
       },
       "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": ""
+        "spotify": "https://open.spotify.com/artist/6R5juyTlbBV1mRoAyXRwGY",
+        "appleMusic": "https://music.apple.com/us/artist/haysop/1815433726",
+        "youtube": "",
+        "bandcamp": "https://haysop.bandcamp.com/album/haysop",
+        "soundcloud": "https://soundcloud.com/haysop/02-haysop-let-down?utm_medium=api&utm_campaign=social_sharing&utm_source=id_283625"
       },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15622828-haysop?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Haysop",
       "videos": [],
       "featured": true,
       "publishDate": "2026-03-30"
@@ -349,41 +439,39 @@
       "publishDate": "2026-03-31"
     },
     {
-      "id": "hayden-hunter-and-the-yearly-trials",
-      "name": "Hayden Hunter & The Yearly Trials",
-      "bio": "Hayden Hunter and the Yearly Trials blend heartfelt songwriting with rootsy, road-worn instrumentation — a sound shaped by long nights, longer drives, and the stories picked up along the way. Drawing on Americana, indie folk, and alt-country influences, their music balances raw vulnerability with grounded, unshakable grit. Led by singer-songwriter Hayden Hunter, the band delivers lyrics that dig deep and arrangements that hit home. From intimate acoustic ballads to full-band anthems, their songs explore love, loss, change, and the quiet moments in between. Hometown: Jackson, Mississippi. Genres: Southern Alternative Rock. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/hayden-hunter-and-the-yearly-trials/photo-1.jpg",
-      "genre": "Southern Rock",
+      "id": "huey",
+      "name": "Huey",
+      "location": "Atlanta, GA",
+      "bio": "Huey (Atlanta, GA) writes Southern folk with jazz and indie edges—solo and with Huey & The Heaven-sent. Atwood Magazine has highlighted how she stretches what people expect from Southern music, especially around the band's second LP, How to Keep Things Alive. Her NPR Tiny Desk Contest entry \"Buy In\" drew national attention. Fellowships and residencies—including Slough Farm on Martha's Vineyard and Chalk Hill in Napa Valley—fed songs like Passerby and Chimes, while she works toward a psych-folk solo EP targeted for early 2027. Tour dates, merch, donate, and booking all live on huey-music.com.",
+      "imageUrl": "/resources/artists/huey/photo-1.png",
+      "thumbnailUrl": "/resources/artists/huey/photo-1.png",
+      "genre": "Singer-Songwriter / Americana",
       "socialLinks": {
-        "instagram": "",
-        "facebook": "https://www.facebook.com/HHandtheYTs/",
+        "instagram": "https://www.instagram.com/huey__music/",
+        "facebook": "https://www.facebook.com/hueymusicatl/",
         "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UCtil9mOqoknnEJpl46HT67g",
-        "spotify": "https://open.spotify.com/artist/2KNgQLuIkzhVq1O3YpNT7H",
-        "appleMusic": "https://music.apple.com/au/artist/hayden-hunter-and-the-yearly-trials/1707059566",
-        "website": "https://linktr.ee/haydenhunterandtheyearlytrials"
+        "youtube": "https://www.youtube.com/watch?v=j3HRiwnLXHM",
+        "spotify": "https://open.spotify.com/artist/7Lj2xax76vnMSLBuXGVYlL",
+        "appleMusic": "",
+        "website": "https://www.huey-music.com/"
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/2KNgQLuIkzhVq1O3YpNT7H",
-        "appleMusic": "https://music.apple.com/au/artist/hayden-hunter-and-the-yearly-trials/1707059566",
-        "youtube": "https://www.youtube.com/channel/UCtil9mOqoknnEJpl46HT67g"
+        "spotify": "https://open.spotify.com/artist/7Lj2xax76vnMSLBuXGVYlL",
+        "appleMusic": "",
+        "youtube": "https://www.youtube.com/watch?v=j3HRiwnLXHM",
+        "bandcamp": "https://hueys.bandcamp.com/"
       },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/15590520-hayden-hunter-and-the-yearly-trials?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "withArtistId": "jacob-kynard",
+        "withArtistName": "Jacob Kynard",
+        "when": "Sun May 3, 2026 · 3:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL"
       },
-      "bandsintown_slug": "Hayden Hunter and The Yearly Trials",
-      "videos": [
-        {
-          "title": "Closed on Sundays - Hayden Hunter & The Yearly Trials",
-          "videoId": "YcjysGPux5w",
-          "thumbnail": "https://img.youtube.com/vi/YcjysGPux5w/maxresdefault.jpg",
-          "url": "https://youtu.be/YcjysGPux5w?si=MANcfTgwaz0-uuVH",
-          "source": "Closed on Sundays"
-        }
-      ],
+      "videos": [],
       "featured": true,
-      "publishDate": "2026-03-30"
+      "publishDate": "2026-04-29"
     },
     {
       "id": "hunter-myers",
@@ -406,263 +494,6 @@
         "appleMusic": "",
         "youtube": "https://www.youtube.com/watch?v=xmJDtLSbdgs&list=RDxmJDtLSbdgs&start_radio=1"
       },
-      "videos": [],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "taylor-hollingsworth",
-      "name": "Taylor Hollingsworth",
-      "bio": "Fingerpicking songwriter from Birmingham, AL, blending folk, rock, and blues into a style he calls \"folk n' roll.\" Back with his latest album \"Yahola,\" recorded at Dialback Sound in Water Valley, MS, Taylor stands apart as a true maverick of original music. His talent has earned him recognition from artists like Conor Oberst and Phoebe Bridgers, who covered one of his songs. Taylor has served as lead guitar player for Conor Oberst on worldwide tours and late-night TV appearances. Despite brushes with major labels, he walked away to maintain artistic freedom, prioritizing his family and his own vision. Founder of Dead Fingers alongside his wife, crafting tunes like \"Ring Around Saturn\" which hit nearly 3 million streams. His songs with The Blips earned \"Coolest Song in the World\" on Little Steven's Underground Garage. Whether playing intimate local bars, busking at farmers markets, or festival stages, Taylor's music tells stories that resonate deeply. Hometown: Birmingham, Alabama. Genres: Folk N Roll. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/taylor-hollingsworth/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/taylor-hollingsworth/photo-1.jpg",
-      "genre": "Folk n' Roll",
-      "socialLinks": {
-        "instagram": "https://instagram.com/tapdancindaddy",
-        "facebook": "https://www.facebook.com/tapdancindaddy",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UCo81Eu-OSm-tA-lvvTPeY0Q",
-        "spotify": "https://open.spotify.com/artist/2LU1vQ6CSUh2IDlfwQWS6k?si=twLgs8bqRa25FrplW_LZbg",
-        "appleMusic": "https://music.apple.com/us/artist/taylor-hollingsworth/95747439",
-        "website": "https://taylorhollingsworth.org/home"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/2LU1vQ6CSUh2IDlfwQWS6k?si=twLgs8bqRa25FrplW_LZbg",
-        "appleMusic": "https://music.apple.com/us/artist/taylor-hollingsworth/95747439",
-        "youtube": "https://www.youtube.com/channel/UCo81Eu-OSm-tA-lvvTPeY0Q"
-      },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/174916-taylor-hollingsworth"
-      },
-      "bandsintown_slug": "Taylor Hollingsworth",
-      "videos": [
-        {
-          "title": "Closed on Sundays - Taylor Hollingsworth",
-          "videoId": "j9nQkZzUwXg",
-          "thumbnail": "https://img.youtube.com/vi/j9nQkZzUwXg/maxresdefault.jpg",
-          "url": "https://youtu.be/j9nQkZzUwXg?si=DAwgeo_fysxRw4pK",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "will-stewart",
-      "name": "Will Stewart",
-      "bio": "Singer-songwriter from Birmingham, AL, crafting a unique blend he calls \"Space Twang.\" Known for heartfelt songwriting and captivating live performances across the Southeast. Hometown: Birmingham, Alabama. Genres: Space Twang, Folk / Americana. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/will-stewart/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/will-stewart/photo-1.jpg",
-      "genre": "Folk / Americana",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/whstewart",
-        "facebook": "https://www.facebook.com/willstewartmusic/",
-        "twitter": "https://twitter.com/willhstewart",
-        "youtube": "https://www.youtube.com/@willhstewart",
-        "website": "https://www.willstewartmusic.com/"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/243xFvjyls79NvZx2efP5m",
-        "appleMusic": "https://music.apple.com/artist/1091337903",
-        "youtube": "https://www.youtube.com/@willhstewart",
-        "shazam": "https://www.shazam.com/artist/-/1091337903?utm_source=bandsintown"
-      },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/1051383-will-stewart?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
-      },
-      "bandsintown_slug": "Will Stewart",
-      "videos": [
-        {
-          "title": "Closed on Sundays - Will Stewart",
-          "videoId": "hkqK0yxshwk",
-          "thumbnail": "https://img.youtube.com/vi/hkqK0yxshwk/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=hkqK0yxshwk&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=21",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-03-31"
-    },
-    {
-      "id": "bb-palmer",
-      "name": "B.B. Palmer",
-      "bio": "Ageless storytelling with twangy mystic stew. Baroque twang style inspired by George Harrison, Father John Misty, and Devendra Banhart. Performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/bb-palmer/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/bb-palmer/photo-1.jpg",
-      "genre": "Folk / Rock",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/bbpalmermusic/",
-        "facebook": "https://www.facebook.com/bbpalmermusic",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UCtOpDoSWAKcu4SIM8OK0nRg",
-        "spotify": "https://open.spotify.com/track/67r2texwqgtlEb5XToJ8L1?si=PIyBGINvQvSHfI5VDo0egg",
-        "appleMusic": "",
-        "website": "https://bbpalmermusic.com/"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/track/67r2texwqgtlEb5XToJ8L1?si=PIyBGINvQvSHfI5VDo0egg",
-        "appleMusic": "",
-        "youtube": "https://www.youtube.com/channel/UCtOpDoSWAKcu4SIM8OK0nRg"
-      },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/13092094?came_from=278&utm_medium=web&utm_source=settings_my_artist&utm_campaign=artist"
-      },
-      "bandsintown_slug": "BB Palmer",
-      "videos": [
-        {
-          "title": "Closed on Sundays - B.B. Palmer",
-          "videoId": "UgZuoBOHZvM",
-          "thumbnail": "https://img.youtube.com/vi/UgZuoBOHZvM/maxresdefault.jpg",
-          "url": "https://youtu.be/UgZuoBOHZvM?si=HYZyXdDq0Ev0WTro",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-03-31"
-    },
-    {
-      "id": "shake-it-like-a-caveman",
-      "name": "Shake It Like a Caveman",
-      "bio": "No stranger to the highway — a one man band dance party, thrusting somewhere between poolside film scores and early American work songs. Simultaneously playing slide guitar, harmonica, kick drum, kick snare, hi hat, and vocals. Sonic and visual dynamite that makes you move that thang. Formed in Tennessee in 2005, Shake It Like a Caveman currently performs worldwide at festivals, club dates, radio and TV. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/shake-it-like-a-caveman/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/shake-it-like-a-caveman/photo-1.jpg",
-      "genre": "Rock / Alternative",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/shakeitlikeacaveman",
-        "facebook": "https://www.facebook.com/shakeitlikeacaveman",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/user/cavebone/featured",
-        "website": "https://www.shakeitlikeacaveman.com/",
-        "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/1vOuuhguax4pjp8uj5NPKo",
-        "appleMusic": "https://music.apple.com/artist/611119768",
-        "youtube": "https://www.youtube.com/user/cavebone/featured",
-        "soundcloud": "https://soundcloud.com/shakeitlikeacaveman",
-        "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/",
-        "shazam": "https://www.shazam.com/artist/-/611119768?utm_source=bandsintown"
-      },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/176890-shake-it-like-a-caveman?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
-      },
-      "bandsintown_slug": "Shake It Like a Caveman",
-      "videos": [],
-      "featured": true,
-      "publishDate": "2026-03-31"
-    },
-    {
-      "id": "ming-donkey",
-      "name": "Ming Donkey",
-      "bio": "Mississippi-born interdisciplinary artist and musician. Blends rural and urban elements, intertwining past with present through installations and performances. MFA in Electronic Visualization. Has exhibited nationally and performed with acts ranging from Marty Stuart to Subhumans. Featured in Visit Mississippi Tourism campaign and publications like Juxtapoz. Performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/ming-donkey/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/ming-donkey/photo-1.jpg",
-      "genre": "Folk / Rock",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/ming_donkey",
-        "facebook": "https://www.facebook.com/MING.DONKEY.ONE.MAN.BAND",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UC6yBppW6H19GTBwjNb9H09g",
-        "spotify": "",
-        "appleMusic": "",
-        "website": "https://mingdonkey.wordpress.com/",
-        "bandcamp": "https://mingdonkey.bandcamp.com/"
-      },
-      "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": "https://www.youtube.com/channel/UC6yBppW6H19GTBwjNb9H09g",
-        "bandcamp": "https://mingdonkey.bandcamp.com/"
-      },
-      "videos": [],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "jonny-hollis",
-      "name": "Jonny Hollis",
-      "bio": "Multi-instrumentalist based in Starkville, MS. Has been playing music for over ten years, traveling and performing across the US and England. Plays acoustic guitar, harmonica, and vocals. Also proficient in drums, bass, banjo, ukulele, and mandolin. Performs blues, folk, rock, and Americana. Performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/jonny-hollis/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/jonny-hollis/photo-1.jpg",
-      "genre": "Folk / Americana",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/happy_life_of_jonny_hollis/",
-        "facebook": "https://www.facebook.com/jonnyhollismusic/",
-        "twitter": "",
-        "youtube": "",
-        "spotify": "",
-        "appleMusic": "",
-        "website": "https://www.bandmix.com/jonnyhollis/"
-      },
-      "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": ""
-      },
-      "videos": [],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "the-kites",
-      "name": "The Kites",
-      "bio": "THE KITES are an indie pop band from Oxford, MS. Inspired by jangle rock and modern pop, their energetic, catchy tunes will make you move and get stuck in your head.",
-      "imageUrl": "/resources/artists/the-kites/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/the-kites/photo-1.jpg",
-      "genre": "Indie Pop",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/itsthekites",
-        "facebook": "",
-        "twitter": "",
-        "youtube": "",
-        "spotify": "",
-        "appleMusic": "",
-        "website": ""
-      },
-      "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": ""
-      },
-      "videos": [
-        {
-          "title": "Closed on Sundays - The Kites",
-          "videoId": "5o8yU_maB6s",
-          "thumbnail": "https://img.youtube.com/vi/5o8yU_maB6s/maxresdefault.jpg",
-          "url": "https://youtu.be/5o8yU_maB6s?si=VBiqIK7NzqklnuLd",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-03-30"
-    },
-    {
-      "id": "haysop",
-      "name": "Haysop",
-      "bio": "Band from Tuscaloosa, AL. Debut self-titled album released 11/14/25 on Cornelius Chapel Records. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/haysop/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/haysop/photo-1.jpg",
-      "genre": "Rock",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/haysopsongs",
-        "facebook": "https://www.facebook.com/p/Haysop-61564609457906/",
-        "twitter": "",
-        "youtube": "",
-        "spotify": "https://open.spotify.com/album/57D1XvSrbiukqQe1WuJqR4?si=tfl25e0_SvWcGYqWEytgXQ",
-        "appleMusic": "https://music.apple.com/us/album/haysop/1823147268",
-        "website": "https://haysop.bandcamp.com/album/haysop"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/6R5juyTlbBV1mRoAyXRwGY",
-        "appleMusic": "https://music.apple.com/us/artist/haysop/1815433726",
-        "youtube": "",
-        "bandcamp": "https://haysop.bandcamp.com/album/haysop",
-        "soundcloud": "https://soundcloud.com/haysop/02-haysop-let-down?utm_medium=api&utm_campaign=social_sharing&utm_source=id_283625"
-      },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/15622828-haysop?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
-      },
-      "bandsintown_slug": "Haysop",
       "videos": [],
       "featured": true,
       "publishDate": "2026-03-30"
@@ -693,169 +524,158 @@
       "publishDate": "2026-03-30"
     },
     {
-      "id": "tyler-tisdale",
-      "name": "Tyler Tisdale",
-      "bio": "Master of Americana music, weaves the soul of the heartland into every note. His melodies resonate like the echoes of open fields, and his lyrics paint a vivid canvas of American stories. Performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/tyler-tisdale/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/tyler-tisdale/photo-1.webp",
+      "id": "jacob-kynard",
+      "name": "Jacob Kynard",
+      "location": "Pine Hill, AL",
+      "bio": "Jacob Kynard (Pine Hill, AL) has spent a few years driving around playing songs in backyards, bars, churches, nursing homes, and vape stores. He's recording a debut album at Dial Back Sound in Water Valley, MS produced by Matt Patton (Drive-By Truckers) and featuring John Smith (Dexateens) on lead guitar.",
+      "imageUrl": "/resources/artists/jacob-kynard/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/jacob-kynard/photo-1.jpg",
       "genre": "Americana",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/tylertisdaleofficial/",
-        "facebook": "https://www.facebook.com/tylertisdalemusic",
-        "twitter": "https://twitter.com/tylertisdale_",
-        "youtube": "https://youtu.be/Pw1cX_dxaCM?si=isOsUsY8mGtj6hlw",
-        "spotify": "https://open.spotify.com/artist/1Of7aVOXWy4Suma2zycJcy",
-        "appleMusic": "https://music.apple.com/us/album/_/1580771969?i=1580771970&mt=1&app=music&ls=1",
-        "website": "https://www.tylertisdalemusic.com/",
-        "tiktok": "https://www.tiktok.com/@tylertisdaleofficial"
+        "instagram": "https://www.instagram.com/jacobkynard/",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ",
+        "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
+        "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
+        "website": ""
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/1Of7aVOXWy4Suma2zycJcy",
-        "appleMusic": "https://music.apple.com/us/album/_/1580771969?i=1580771970&mt=1&app=music&ls=1",
-        "youtube": "https://youtu.be/Pw1cX_dxaCM?si=isOsUsY8mGtj6hlw"
+        "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
+        "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
+        "youtube": "https://music.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "withArtistId": "huey",
+        "withArtistName": "Huey",
+        "when": "Sun May 3, 2026 · 3:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL"
       },
       "videos": [],
       "featured": true,
-      "publishDate": "2026-03-30"
+      "publishDate": "2026-04-15"
     },
     {
-      "id": "ritch-henderson",
-      "name": "Ritch Henderson",
-      "bio": "Marine Corps veteran and Berklee College of Music student. Fronts a 4-piece Red Clay Rock & Roll band. Has toured with Arlo McKinley, 49 Winchester, and Nolan Taylor. Writes raw, emotional songs about loss, love, redemption, and addiction. Music featured on a Billboard Bluegrass Chart #11 album. Performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/ritch-henderson/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/ritch-henderson/photo-1.jpg",
-      "genre": "Country Rock",
+      "id": "janet-simpson",
+      "name": "Janet Simpson",
+      "location": "Birmingham, Alabama",
+      "bio": "Janet Simpson is a Birmingham-bred singer, guitarist, and keyboardist — a deep listener and collaborator across Wooden Wand (World War IV), Delicate Cutters, Teen Getaway, and Timber, her duo with Will Stewart (who also anchors her solo band).\n\nHer solo debut Safe Distance (2021) set a high bar; Can I See You Tonight?, out September 19, 2025 via Cornelius Chapel, widens a wry, haunted alt-country lens with Jody Nelson, David Somerall, and Shawn Avery. The album was tracked at Cypress Moon Studios on the Tennessee River, where Brad Timko captured the room's Muscle Shoals lineage.\n\nHer songs trade in longing, place, and the space between people.",
+      "imageUrl": "/resources/artists/janet-simpson/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/janet-simpson/photo-1.webp",
+      "genre": "Alt-Country / Folk Rock",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/ritch_af/?hl=en",
-        "facebook": "https://www.facebook.com/ritchhendersonmusic",
-        "twitter": "https://x.com/RitchHenderson",
-        "tiktok": "https://www.tiktok.com/@ritchhenderson",
-        "youtube": "https://music.youtube.com/channel/UCb_8SLH7ys51FA_O7bsVVtA",
-        "spotify": "https://open.spotify.com/artist/5AalYW78DfRm49q0W0dpuT?si=daxI2ZwuRDWCZ7flDXk4LA",
-        "appleMusic": "https://music.apple.com/us/artist/ritch-henderson/1483529695",
-        "website": "https://ritchhenderson.com/"
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/5AalYW78DfRm49q0W0dpuT?si=daxI2ZwuRDWCZ7flDXk4LA",
-        "appleMusic": "https://music.apple.com/artist/1483529695",
-        "youtube": "https://www.youtube.com/@ritchhenderson",
-        "shazam": "https://www.shazam.com/artist/-/1483529695?utm_source=bandsintown"
-      },
-      "links": {
-        "bandsintown": "https://www.bandsintown.com/a/10835167-ritch-henderson?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
-      },
-      "bandsintown_slug": "Ritch Henderson",
-      "videos": [
-        {
-          "title": "Closed on Sundays - Ritch Henderson (Performance 1)",
-          "videoId": "P8RDNvjTYaM",
-          "thumbnail": "https://img.youtube.com/vi/P8RDNvjTYaM/maxresdefault.jpg",
-          "url": "https://youtu.be/P8RDNvjTYaM?si=yehXE_nqxpC0wV6g",
-          "source": "Closed on Sundays"
-        },
-        {
-          "title": "Closed on Sundays - Ritch Henderson (Performance 2)",
-          "videoId": "4Ac1twRArGc",
-          "thumbnail": "https://img.youtube.com/vi/4Ac1twRArGc/maxresdefault.jpg",
-          "url": "https://youtu.be/4Ac1twRArGc?si=jDWnMlS1n37k7TDF",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-03-31"
-    },
-    {
-      "id": "brad-and-wes",
-      "name": "Brad & Wes",
-      "bio": "Rockabilly duo performing at PorchFest 2026.",
-      "imageUrl": "/resources/artists/brad-and-wes/photo-1.png",
-      "thumbnailUrl": "/resources/artists/brad-and-wes/photo-1.png",
-      "genre": "Rockabilly",
-      "socialLinks": {
-        "instagram": "",
-        "facebook": "",
+        "instagram": "https://www.instagram.com/janetsimpsonmusic/",
+        "facebook": "https://www.facebook.com/p/Janet-Simpson-100035399516702/",
         "twitter": "",
         "youtube": "",
         "spotify": "",
         "appleMusic": "",
-        "website": ""
+        "website": "",
+        "tiktok": ""
       },
       "musicLinks": {
-        "spotify": "",
-        "appleMusic": "",
-        "youtube": ""
+        "spotify": "https://open.spotify.com/artist/1SKWqv865jvZcRXurnGN2Q",
+        "appleMusic": "https://music.apple.com/us/artist/janet-simpson/1545025020",
+        "youtube": "https://www.youtube.com/channel/UCmKyeroV5fjcEKLwwWyC1KA",
+        "amazonMusic": "https://music.amazon.com/artists/B000Q3AZCO/janet-simpson",
+        "bandcamp": "https://janetsimpson.bandcamp.com/album/can-i-see-you-tonight",
+        "tidal": "https://tidal.com/artist/5956944",
+        "pandora": "https://www.pandora.com/artist/janet-simpson/tonight/tonight/TRm7ZZPxqwl4XXq"
       },
+      "links": {
+        "youtubeMusic": "https://music.youtube.com/channel/UCmKyeroV5fjcEKLwwWyC1KA"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jul 19, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-07-19",
+          "allDayEndExclusive": "2026-07-20",
+          "title": "Closed on Sundays — Janet Simpson",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "janet-simpson-closed-on-sunday-2026-07-19",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-07-19",
+          "when": "Sun Jul 19, 2026 · time TBA · CT",
+          "title": "Closed on Sundays — Janet Simpson",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Janet Simpson — Tonight",
+          "videoId": "cUjX86uPOoQ",
+          "thumbnail": "https://img.youtube.com/vi/cUjX86uPOoQ/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=cUjX86uPOoQ",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-05-11"
+    },
+    {
+      "id": "jodie-ross",
+      "name": "Jodie Ross",
+      "location": "Louisville, Mississippi",
+      "bio": "Jodie Ross is a Mississippi singer-songwriter from Louisville, shaped by southern gospel, Motown, classic rock, and country — with inspiration from Stevie Nicks, Melissa Etheridge, and Dolly Parton. Recognition includes a 2024 Josie Music Award nomination (Song of the Year), 2021 Mississippi Songwriter of the Year (People's Choice), and 2019 Mississippi Music Foundation Best Original Song of the Year. A former board-certified music therapist, she writes with empathy and grit; singles including \"My Favorite Memory\" are out now on streaming. Her official site is jodierossmusic.com.",
+      "imageUrl": "/resources/artists/jodie-ross/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/jodie-ross/photo-1.webp",
+      "cardImageFit": "contain",
+      "genre": "Country / Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/jodierossmusic/",
+        "facebook": "https://www.facebook.com/jodierossmusic/",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UChBL-bdKbwEDxkrh9M0KhoQ",
+        "spotify": "https://open.spotify.com/artist/0LzzK2Tns8GPnjHZF63wMP",
+        "appleMusic": "https://music.apple.com/us/artist/jodie-ross/1531218641",
+        "website": "https://www.jodierossmusic.com/",
+        "tiktok": "https://www.tiktok.com/@jodierossmusic"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/0LzzK2Tns8GPnjHZF63wMP",
+        "appleMusic": "https://music.apple.com/us/artist/jodie-ross/1531218641",
+        "youtube": "https://www.youtube.com/channel/UChBL-bdKbwEDxkrh9M0KhoQ"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jun 28, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-06-28",
+          "allDayEndExclusive": "2026-06-29",
+          "title": "Closed on Sundays — Jodie Ross",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "jodie-ross-closed-on-sunday-2026-06-28",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-06-28",
+          "when": "Sun Jun 28, 2026 · time TBA · CT",
+          "title": "Closed on Sundays — Jodie Ross",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
       "videos": [],
       "featured": true,
-      "publishDate": "2026-04-12"
-    },
-    {
-      "id": "ham-bagby",
-      "name": "Ham Bagby",
-      "bio": "Alabama-based musician known for a blend of rock, country, and groovy R&B, characterized by guitar-heavy, humorous, and Southern-influenced songwriting. His music, including the album All Filler, mixes witty lyrics with classic rock influences. Performing at PorchFest 2026!",
-      "imageUrl": "/resources/artists/ham-bagby/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/ham-bagby/photo-1.jpg",
-      "genre": "Rock / Country / R&B",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/hambagby/",
-        "facebook": "https://www.facebook.com/ham.of.bagby",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/user/hambagbyyall",
-        "spotify": "https://open.spotify.com/artist/0k4yqJMbEaqnuuMu48loQP",
-        "appleMusic": "",
-        "website": ""
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/0k4yqJMbEaqnuuMu48loQP",
-        "appleMusic": "https://music.apple.com/us/artist/ham-bagby/1540202858",
-        "youtube": "https://music.youtube.com/channel/UCzILplZhXL0jlOznriGlnkQ"
-      },
-      "videos": [
-        {
-          "title": "Closed on Sundays - Ham Bagby",
-          "videoId": "cAhwfo13KWY",
-          "thumbnail": "https://img.youtube.com/vi/cAhwfo13KWY/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=4",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-04-13"
-    },
-    {
-      "id": "abe-partridge",
-      "name": "Abe Partridge",
-      "location": "Mobile, AL",
-      "bio": "Abe Partridge is a heralded singer-songwriter, visual artist, storyteller, and documentarian based in Mobile, Alabama. Since his 2018 debut Cotton Fields and Blood for Days, he has toured relentlessly across the U.S. and Europe, with performances at major festivals and iconic rooms including 30A Songwriters Festival, Laurel Cove, The Bluebird Cafe, Eddie's Attic, and Duke's. He has appeared on syndicated NPR programs including Mountain Stage and Woodsongs Old Time Radio Hour, and recently toured with Matthew Sweet, Drivin' N Cryin', and Dar Williams in support of Love in the Dark. Partridge also co-created the Alabama Astronaut podcast documenting previously unrecorded songs from holiness and serpent-handling churches in Appalachia. Beyond music, he is an acclaimed visual artist whose work has appeared in galleries and notable private collections, including art connected to Dr. Sleep, Tyler Childers, Charlie Parr, and the Red Clay Strays. He is currently preparing a 2026 album produced by Steve Shelley of Sonic Youth.",
-      "imageUrl": "/resources/artists/abe-partridge/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/abe-partridge/photo-1.jpg",
-      "genre": "Singer/Songwriter",
-      "socialLinks": {
-        "instagram": "https://www.instagram.com/abepartridge",
-        "facebook": "https://www.facebook.com/abepartridge",
-        "twitter": "",
-        "youtube": "https://www.youtube.com/c/AbePartridge",
-        "spotify": "https://open.spotify.com/artist/1RQeZdPAK7c7QakzTfcA2q",
-        "appleMusic": "https://music.apple.com/us/artist/abe-partridge/1299986709",
-        "tiktok": "https://www.tiktok.com/@abepartridge",
-        "website": ""
-      },
-      "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/1RQeZdPAK7c7QakzTfcA2q",
-        "appleMusic": "https://music.apple.com/us/artist/abe-partridge/1299986709",
-        "youtube": "https://www.youtube.com/c/AbePartridge"
-      },
-      "videos": [
-        {
-          "title": "Closed on Sundays - Abe Partridge",
-          "videoId": "OTs6iy1TFbA",
-          "thumbnail": "https://img.youtube.com/vi/OTs6iy1TFbA/maxresdefault.jpg",
-          "url": "https://youtu.be/OTs6iy1TFbA?si=n2A5fq2HDx1vAZHQ",
-          "source": "Closed on Sundays"
-        }
-      ],
-      "featured": true,
-      "publishDate": "2026-04-15"
+      "publishDate": "2026-05-11"
     },
     {
       "id": "john-keys",
@@ -893,73 +713,144 @@
       "publishDate": "2026-04-15"
     },
     {
-      "id": "huey",
-      "name": "Huey",
-      "location": "Atlanta, GA",
-      "bio": "Huey (Atlanta, GA) writes Southern folk with jazz and indie edges—solo and with Huey & The Heaven-sent. Atwood Magazine has highlighted how she stretches what people expect from Southern music, especially around the band's second LP, How to Keep Things Alive. Her NPR Tiny Desk Contest entry \"Buy In\" drew national attention. Fellowships and residencies—including Slough Farm on Martha's Vineyard and Chalk Hill in Napa Valley—fed songs like Passerby and Chimes, while she works toward a psych-folk solo EP targeted for early 2027. Tour dates, merch, donate, and booking all live on huey-music.com.",
-      "imageUrl": "/resources/artists/huey/photo-1.png",
-      "thumbnailUrl": "/resources/artists/huey/photo-1.png",
-      "genre": "Singer-Songwriter / Americana",
+      "id": "jonny-hollis",
+      "name": "Jonny Hollis",
+      "bio": "Multi-instrumentalist based in Starkville, MS. Has been playing music for over ten years, traveling and performing across the US and England. Plays acoustic guitar, harmonica, and vocals. Also proficient in drums, bass, banjo, ukulele, and mandolin. Performs blues, folk, rock, and Americana. Performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/jonny-hollis/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/jonny-hollis/photo-1.jpg",
+      "genre": "Folk / Americana",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/huey__music/",
-        "facebook": "https://www.facebook.com/hueymusicatl/",
+        "instagram": "https://www.instagram.com/happy_life_of_jonny_hollis/",
+        "facebook": "https://www.facebook.com/jonnyhollismusic/",
         "twitter": "",
-        "youtube": "https://www.youtube.com/watch?v=j3HRiwnLXHM",
-        "spotify": "https://open.spotify.com/artist/7Lj2xax76vnMSLBuXGVYlL",
+        "youtube": "",
+        "spotify": "",
         "appleMusic": "",
-        "website": "https://www.huey-music.com/"
+        "website": "https://www.bandmix.com/jonnyhollis/"
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/7Lj2xax76vnMSLBuXGVYlL",
+        "spotify": "",
         "appleMusic": "",
-        "youtube": "https://www.youtube.com/watch?v=j3HRiwnLXHM",
-        "bandcamp": "https://hueys.bandcamp.com/"
-      },
-      "featuredShow": {
-        "eyebrow": "Porch Talk presents",
-        "title": "Closed on Sundays",
-        "withArtistId": "jacob-kynard",
-        "withArtistName": "Jacob Kynard",
-        "when": "Sun May 3, 2026 · 3:00 PM CT",
-        "where": "Al's Spirits & Music · Reform, AL"
+        "youtube": ""
       },
       "videos": [],
       "featured": true,
-      "publishDate": "2026-04-29"
+      "publishDate": "2026-03-30"
     },
     {
-      "id": "jacob-kynard",
-      "name": "Jacob Kynard",
-      "location": "Pine Hill, AL",
-      "bio": "Jacob Kynard (Pine Hill, AL) has spent a few years driving around playing songs in backyards, bars, churches, nursing homes, and vape stores. He's recording a debut album at Dial Back Sound in Water Valley, MS produced by Matt Patton (Drive-By Truckers) and featuring John Smith (Dexateens) on lead guitar.",
-      "imageUrl": "/resources/artists/jacob-kynard/photo-1.jpg",
-      "thumbnailUrl": "/resources/artists/jacob-kynard/photo-1.jpg",
-      "genre": "Americana",
+      "id": "katie-burkhardt",
+      "name": "Katie Burkhardt",
+      "bio": "Folk/alternative singer-songwriter from a small town in Kentucky, blending honest storytelling with haunting melodies and a voice that cuts right through the noise. Her songs carry the weight of lived experience—raw, relatable, and rooted in emotion. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/katie-burkhardt/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/katie-burkhardt/photo-1.jpg",
+      "genre": "Country / Folk",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/jacobkynard/",
+        "instagram": "https://www.instagram.com/katiebmusic/reels/",
         "facebook": "",
         "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ",
-        "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
-        "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
+        "youtube": "https://music.youtube.com/channel/UC2L9uV1AbpflWp40-3nn2rg",
+        "spotify": "",
+        "appleMusic": "https://music.apple.com/us/artist/katie-burkhardt/1472907423",
         "website": ""
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/0qWb2GulIlW919m00Y8Bbs",
-        "appleMusic": "https://music.apple.com/us/artist/jacob-kynard/1837994101",
-        "youtube": "https://music.youtube.com/channel/UC1G7P73_ITITVqtDAs6HYnQ"
+        "spotify": "",
+        "appleMusic": "https://music.apple.com/us/artist/katie-burkhardt/1472907423",
+        "youtube": "https://music.youtube.com/channel/UC2L9uV1AbpflWp40-3nn2rg"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15604830-katie-burkhardt?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Katie Burkhardt",
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "kyla-diane",
+      "name": "Kyla Diane",
+      "location": "Birmingham, AL",
+      "bio": "Kyla Diane is a singer-songwriter from Birmingham, AL. Stream the Venus EP and follow the links below for more.",
+      "imageUrl": "/resources/artists/kyla-diane/photo-1.png",
+      "thumbnailUrl": "/resources/artists/kyla-diane/photo-1.png",
+      "cardImageFit": "contain",
+      "genre": "Singer-Songwriter / Soul",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/kyla.dunning/",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/watch?v=LP2Dud4D_DY",
+        "spotify": "https://open.spotify.com/album/11YHp5xECgJbSaLQeUmHpB",
+        "appleMusic": "https://music.apple.com/us/album/venus-ep/1828064856",
+        "website": "https://linktr.ee/kyladianemusic"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/album/11YHp5xECgJbSaLQeUmHpB",
+        "appleMusic": "https://music.apple.com/us/album/venus-ep/1828064856",
+        "youtube": "https://www.youtube.com/watch?v=LP2Dud4D_DY"
+      },
+      "videos": [
+        {
+          "title": "Venus (live)",
+          "videoId": "LP2Dud4D_DY",
+          "thumbnail": "https://img.youtube.com/vi/LP2Dud4D_DY/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=LP2Dud4D_DY",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-04-30"
+    },
+    {
+      "id": "lance-cooper",
+      "name": "Lance Cooper",
+      "location": "Columbus, MS",
+      "bio": "Lance Cooper is a singer-songwriter from Columbus, Mississippi. He’s filming a solo listening-room set for Closed on Sundays at Al’s Spirits & Music — time TBA.",
+      "imageUrl": "/resources/artists/lance-cooper/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/lance-cooper/photo-1.webp",
+      "genre": "Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "",
+        "spotify": "",
+        "appleMusic": "",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": ""
       },
       "featuredShow": {
         "eyebrow": "Porch Talk presents",
         "title": "Closed on Sundays",
-        "withArtistId": "huey",
-        "withArtistName": "Huey",
-        "when": "Sun May 3, 2026 · 3:00 PM CT",
-        "where": "Al's Spirits & Music · Reform, AL"
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jun 7, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-06-07",
+          "allDayEndExclusive": "2026-06-08",
+          "title": "Closed on Sundays — Lance Cooper",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "lance-cooper-closed-on-sunday-2026-06-07",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
       },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-06-07",
+          "when": "Sun Jun 7, 2026 · time TBA · CT",
+          "title": "Closed on Sundays — Lance Cooper",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
       "videos": [],
       "featured": true,
-      "publishDate": "2026-04-15"
+      "publishDate": "2026-05-12"
     },
     {
       "id": "megan-lea",
@@ -1051,174 +942,273 @@
       "publishDate": "2026-05-11"
     },
     {
-      "id": "goodloe-chilcutt",
-      "name": "Goodloe Chilcutt",
-      "location": "Alabama",
-      "bio": "Goodloe Chilcutt writes and performs music rooted in faith and storytelling — from hymn-inspired originals to family-friendly songs. His releases span streaming platforms.",
-      "imageUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
-      "genre": "Singer-Songwriter",
+      "id": "ming-donkey",
+      "name": "Ming Donkey",
+      "bio": "Mississippi-born interdisciplinary artist and musician. Blends rural and urban elements, intertwining past with present through installations and performances. MFA in Electronic Visualization. Has exhibited nationally and performed with acts ranging from Marty Stuart to Subhumans. Featured in Visit Mississippi Tourism campaign and publications like Juxtapoz. Performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/ming-donkey/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/ming-donkey/photo-1.jpg",
+      "genre": "Folk / Rock",
       "socialLinks": {
-        "instagram": "",
-        "facebook": "https://www.facebook.com/goodloe.chilcutt/",
-        "twitter": "https://x.com/rogerchilcutt",
-        "youtube": "https://www.youtube.com/channel/UC_ByYtjEI3iNp957oiA--Aw",
+        "instagram": "https://www.instagram.com/ming_donkey",
+        "facebook": "https://www.facebook.com/MING.DONKEY.ONE.MAN.BAND",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UC6yBppW6H19GTBwjNb9H09g",
+        "spotify": "",
+        "appleMusic": "",
+        "website": "https://mingdonkey.wordpress.com/",
+        "bandcamp": "https://mingdonkey.bandcamp.com/"
+      },
+      "musicLinks": {
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": "https://www.youtube.com/channel/UC6yBppW6H19GTBwjNb9H09g",
+        "bandcamp": "https://mingdonkey.bandcamp.com/"
+      },
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "phillip-savell",
+      "name": "Phillip Savell",
+      "bio": "Musician performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/phillip-savell/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/phillip-savell/photo-1.jpg",
+      "genre": "Blues Rock",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/phillipsavell/",
+        "facebook": "https://www.facebook.com/biglegphil/",
+        "twitter": "",
+        "youtube": "https://youtu.be/L-yAestLP8Y?si=u-4mSYhjJ7FSInod",
+        "spotify": "",
+        "appleMusic": "",
+        "website": "https://soundcloud.com/phillip-savell"
+      },
+      "musicLinks": {
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": "https://youtu.be/L-yAestLP8Y?si=u-4mSYhjJ7FSInod",
+        "soundcloud": "https://soundcloud.com/phillip-savell"
+      },
+      "videos": [
+        {
+          "title": "Closed on Sundays - Phillip Savell",
+          "videoId": "L-yAestLP8Y",
+          "thumbnail": "https://img.youtube.com/vi/L-yAestLP8Y/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=L-yAestLP8Y&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=6",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "ritch-henderson",
+      "name": "Ritch Henderson",
+      "bio": "Marine Corps veteran and Berklee College of Music student. Fronts a 4-piece Red Clay Rock & Roll band. Has toured with Arlo McKinley, 49 Winchester, and Nolan Taylor. Writes raw, emotional songs about loss, love, redemption, and addiction. Music featured on a Billboard Bluegrass Chart #11 album. Performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/ritch-henderson/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/ritch-henderson/photo-1.jpg",
+      "genre": "Country Rock",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/ritch_af/?hl=en",
+        "facebook": "https://www.facebook.com/ritchhendersonmusic",
+        "twitter": "https://x.com/RitchHenderson",
+        "tiktok": "https://www.tiktok.com/@ritchhenderson",
+        "youtube": "https://music.youtube.com/channel/UCb_8SLH7ys51FA_O7bsVVtA",
+        "spotify": "https://open.spotify.com/artist/5AalYW78DfRm49q0W0dpuT?si=daxI2ZwuRDWCZ7flDXk4LA",
+        "appleMusic": "https://music.apple.com/us/artist/ritch-henderson/1483529695",
+        "website": "https://ritchhenderson.com/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/5AalYW78DfRm49q0W0dpuT?si=daxI2ZwuRDWCZ7flDXk4LA",
+        "appleMusic": "https://music.apple.com/artist/1483529695",
+        "youtube": "https://www.youtube.com/@ritchhenderson",
+        "shazam": "https://www.shazam.com/artist/-/1483529695?utm_source=bandsintown"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/10835167-ritch-henderson?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Ritch Henderson",
+      "videos": [
+        {
+          "title": "Closed on Sundays - Ritch Henderson (Performance 1)",
+          "videoId": "P8RDNvjTYaM",
+          "thumbnail": "https://img.youtube.com/vi/P8RDNvjTYaM/maxresdefault.jpg",
+          "url": "https://youtu.be/P8RDNvjTYaM?si=yehXE_nqxpC0wV6g",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Ritch Henderson (Performance 2)",
+          "videoId": "4Ac1twRArGc",
+          "thumbnail": "https://img.youtube.com/vi/4Ac1twRArGc/maxresdefault.jpg",
+          "url": "https://youtu.be/4Ac1twRArGc?si=jDWnMlS1n37k7TDF",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-03-31"
+    },
+    {
+      "id": "shake-it-like-a-caveman",
+      "name": "Shake It Like a Caveman",
+      "bio": "No stranger to the highway — a one man band dance party, thrusting somewhere between poolside film scores and early American work songs. Simultaneously playing slide guitar, harmonica, kick drum, kick snare, hi hat, and vocals. Sonic and visual dynamite that makes you move that thang. Formed in Tennessee in 2005, Shake It Like a Caveman currently performs worldwide at festivals, club dates, radio and TV. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/shake-it-like-a-caveman/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/shake-it-like-a-caveman/photo-1.jpg",
+      "genre": "Rock / Alternative",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/shakeitlikeacaveman",
+        "facebook": "https://www.facebook.com/shakeitlikeacaveman",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/user/cavebone/featured",
+        "website": "https://www.shakeitlikeacaveman.com/",
+        "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/1vOuuhguax4pjp8uj5NPKo",
+        "appleMusic": "https://music.apple.com/artist/611119768",
+        "youtube": "https://www.youtube.com/user/cavebone/featured",
+        "soundcloud": "https://soundcloud.com/shakeitlikeacaveman",
+        "bandcamp": "https://shakeitlikeacaveman.bandcamp.com/",
+        "shazam": "https://www.shazam.com/artist/-/611119768?utm_source=bandsintown"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/176890-shake-it-like-a-caveman?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Shake It Like a Caveman",
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-03-31"
+    },
+    {
+      "id": "taylor-hollingsworth",
+      "name": "Taylor Hollingsworth",
+      "bio": "Fingerpicking songwriter from Birmingham, AL, blending folk, rock, and blues into a style he calls \"folk n' roll.\" Back with his latest album \"Yahola,\" recorded at Dialback Sound in Water Valley, MS, Taylor stands apart as a true maverick of original music. His talent has earned him recognition from artists like Conor Oberst and Phoebe Bridgers, who covered one of his songs. Taylor has served as lead guitar player for Conor Oberst on worldwide tours and late-night TV appearances. Despite brushes with major labels, he walked away to maintain artistic freedom, prioritizing his family and his own vision. Founder of Dead Fingers alongside his wife, crafting tunes like \"Ring Around Saturn\" which hit nearly 3 million streams. His songs with The Blips earned \"Coolest Song in the World\" on Little Steven's Underground Garage. Whether playing intimate local bars, busking at farmers markets, or festival stages, Taylor's music tells stories that resonate deeply. Hometown: Birmingham, Alabama. Genres: Folk N Roll. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/taylor-hollingsworth/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/taylor-hollingsworth/photo-1.jpg",
+      "genre": "Folk n' Roll",
+      "socialLinks": {
+        "instagram": "https://instagram.com/tapdancindaddy",
+        "facebook": "https://www.facebook.com/tapdancindaddy",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UCo81Eu-OSm-tA-lvvTPeY0Q",
+        "spotify": "https://open.spotify.com/artist/2LU1vQ6CSUh2IDlfwQWS6k?si=twLgs8bqRa25FrplW_LZbg",
+        "appleMusic": "https://music.apple.com/us/artist/taylor-hollingsworth/95747439",
+        "website": "https://taylorhollingsworth.org/home"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/2LU1vQ6CSUh2IDlfwQWS6k?si=twLgs8bqRa25FrplW_LZbg",
+        "appleMusic": "https://music.apple.com/us/artist/taylor-hollingsworth/95747439",
+        "youtube": "https://www.youtube.com/channel/UCo81Eu-OSm-tA-lvvTPeY0Q"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/174916-taylor-hollingsworth"
+      },
+      "bandsintown_slug": "Taylor Hollingsworth",
+      "videos": [
+        {
+          "title": "Closed on Sundays - Taylor Hollingsworth",
+          "videoId": "j9nQkZzUwXg",
+          "thumbnail": "https://img.youtube.com/vi/j9nQkZzUwXg/maxresdefault.jpg",
+          "url": "https://youtu.be/j9nQkZzUwXg?si=DAwgeo_fysxRw4pK",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "the-kites",
+      "name": "The Kites",
+      "bio": "THE KITES are an indie pop band from Oxford, MS. Inspired by jangle rock and modern pop, their energetic, catchy tunes will make you move and get stuck in your head.",
+      "imageUrl": "/resources/artists/the-kites/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/the-kites/photo-1.jpg",
+      "genre": "Indie Pop",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/itsthekites",
+        "facebook": "",
+        "twitter": "",
+        "youtube": "",
         "spotify": "",
         "appleMusic": "",
         "website": ""
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/2999U7Fz4gUkjDlwUrrrjj",
-        "appleMusic": "https://music.apple.com/us/artist/goodloe-chilcutt/1580233483",
-        "youtube": "https://www.youtube.com/channel/UC_ByYtjEI3iNp957oiA--Aw"
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": ""
       },
-      "featuredShow": {
-        "eyebrow": "Porch Talk presents",
-        "title": "Closed on Sundays",
-        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
-        "when": "Sun Jun 14, 2026 · time TBA · CT",
-        "where": "Al's Spirits & Music · Reform, AL",
-        "calendar": {
-          "allDayStart": "2026-06-14",
-          "allDayEndExclusive": "2026-06-15",
-          "title": "Closed on Sundays — Goodloe Chilcutt",
-          "location": "Al's Spirits & Music, Reform, AL",
-          "fileSlug": "goodloe-chilcutt-closed-on-sunday-2026-06-14",
-          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
-        }
-      },
-      "upcomingShows": [
+      "videos": [
         {
-          "sortDate": "2026-06-14",
-          "when": "Sun Jun 14, 2026 · time TBA · CT",
-          "title": "Closed on Sundays — Goodloe Chilcutt",
-          "where": "Al's Spirits & Music · Reform, AL",
-          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
-          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+          "title": "Closed on Sundays - The Kites",
+          "videoId": "5o8yU_maB6s",
+          "thumbnail": "https://img.youtube.com/vi/5o8yU_maB6s/maxresdefault.jpg",
+          "url": "https://youtu.be/5o8yU_maB6s?si=VBiqIK7NzqklnuLd",
+          "source": "Closed on Sundays"
         }
       ],
-      "videos": [],
       "featured": true,
-      "publishDate": "2026-05-12"
+      "publishDate": "2026-03-30"
     },
     {
-      "id": "jodie-ross",
-      "name": "Jodie Ross",
-      "location": "Louisville, Mississippi",
-      "bio": "Jodie Ross is a Mississippi singer-songwriter from Louisville, shaped by southern gospel, Motown, classic rock, and country — with inspiration from Stevie Nicks, Melissa Etheridge, and Dolly Parton. Recognition includes a 2024 Josie Music Award nomination (Song of the Year), 2021 Mississippi Songwriter of the Year (People's Choice), and 2019 Mississippi Music Foundation Best Original Song of the Year. A former board-certified music therapist, she writes with empathy and grit; singles including \"My Favorite Memory\" are out now on streaming. Her official site is jodierossmusic.com.",
-      "imageUrl": "/resources/artists/jodie-ross/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/jodie-ross/photo-1.webp",
-      "genre": "Country / Singer-Songwriter",
+      "id": "the-stifftones",
+      "name": "The Stifftones",
+      "bio": "What started as a Goonie adventure in 2019 has become the journey of a lifetime. Since 2021 The Stifftones have been traveling the US living in their 1996 Cadillac Hearse named Tania with their two dogs. Logging over 200,000 miles, they have performed hundreds of shows in almost as many towns. Shaun and Rachel Stief are a dynamic duo whose sound is a unique fusion of influences captivating audiences with their vocal harmonies and guitar weaves. Hailing from the heartland, their music embodies a mix of Midwest meets Bakersfield country, a dash of East Coast flair, and a healthy dose of good ol' Rock and Roll, all wrapped in magic. Hometown: Greenville, Illinois. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/the-stifftones/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/the-stifftones/photo-1.webp",
+      "genre": "Folk / Rock",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/jodierossmusic/",
-        "facebook": "https://www.facebook.com/jodierossmusic/",
+        "instagram": "https://www.instagram.com/the_stifftones/",
+        "website": "https://www.thestifftones.com/",
         "twitter": "",
-        "youtube": "https://www.youtube.com/channel/UChBL-bdKbwEDxkrh9M0KhoQ",
-        "spotify": "https://open.spotify.com/artist/0LzzK2Tns8GPnjHZF63wMP",
-        "appleMusic": "https://music.apple.com/us/artist/jodie-ross/1531218641",
-        "website": "https://www.jodierossmusic.com/",
-        "tiktok": "https://www.tiktok.com/@jodierossmusic"
+        "facebook": "https://www.facebook.com/TheStifftonesmusic/"
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/0LzzK2Tns8GPnjHZF63wMP",
-        "appleMusic": "https://music.apple.com/us/artist/jodie-ross/1531218641",
-        "youtube": "https://www.youtube.com/channel/UChBL-bdKbwEDxkrh9M0KhoQ"
+        "spotify": "https://open.spotify.com/artist/61dEO1faJuwNOHf3BNFafK",
+        "appleMusic": "https://music.apple.com/artist/1499156598",
+        "youtube": "https://www.youtube.com/@thestifftones9440",
+        "amazonMusic": "https://music.amazon.com/artists/B07QYCM16K/the-stifftones",
+        "shazam": "https://www.shazam.com/artist/-/1499156598"
       },
-      "featuredShow": {
-        "eyebrow": "Porch Talk presents",
-        "title": "Closed on Sundays",
-        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
-        "when": "Sun Jun 28, 2026 · time TBA · CT",
-        "where": "Al's Spirits & Music · Reform, AL",
-        "calendar": {
-          "allDayStart": "2026-06-28",
-          "allDayEndExclusive": "2026-06-29",
-          "title": "Closed on Sundays — Jodie Ross",
-          "location": "Al's Spirits & Music, Reform, AL",
-          "fileSlug": "jodie-ross-closed-on-sunday-2026-06-28",
-          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
-        }
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/15507703-the-stifftones?came_from=703&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
       },
-      "upcomingShows": [
+      "bandsintown_slug": "The Stifftones",
+      "videos": [
         {
-          "sortDate": "2026-06-28",
-          "when": "Sun Jun 28, 2026 · time TBA · CT",
-          "title": "Closed on Sundays — Jodie Ross",
-          "where": "Al's Spirits & Music · Reform, AL",
-          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
-          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+          "title": "Closed on Sundays - The Stifftones",
+          "videoId": "-0jyqvM8pDc",
+          "thumbnail": "https://img.youtube.com/vi/-0jyqvM8pDc/maxresdefault.jpg",
+          "url": "https://youtu.be/-0jyqvM8pDc?si=aO2NySOf6z8CYitQ",
+          "source": "Closed on Sundays"
         }
       ],
-      "videos": [],
       "featured": true,
-      "publishDate": "2026-05-11"
+      "publishDate": "2026-03-30"
     },
     {
-      "id": "janet-simpson",
-      "name": "Janet Simpson",
-      "location": "Birmingham, Alabama",
-      "bio": "Janet Simpson is a Birmingham-bred singer, guitarist, and keyboardist — a deep listener and collaborator across Wooden Wand (World War IV), Delicate Cutters, Teen Getaway, and Timber, her duo with Will Stewart (who also anchors her solo band).\n\nHer solo debut Safe Distance (2021) set a high bar; Can I See You Tonight?, out September 19, 2025 via Cornelius Chapel, widens a wry, haunted alt-country lens with Jody Nelson, David Somerall, and Shawn Avery. The album was tracked at Cypress Moon Studios on the Tennessee River, where Brad Timko captured the room's Muscle Shoals lineage.\n\nHer songs trade in longing, place, and the space between people.",
-      "imageUrl": "/resources/artists/janet-simpson/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/janet-simpson/photo-1.webp",
-      "genre": "Alt-Country / Folk Rock",
+      "id": "the-wright-moves",
+      "name": "The Wright Moves",
+      "bio": "Four friends trying to find their way through a whole lotta life. Performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/the-wright-moves/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/the-wright-moves/photo-1.jpg",
+      "genre": "Rock",
       "socialLinks": {
-        "instagram": "https://www.instagram.com/janetsimpsonmusic/",
-        "facebook": "https://www.facebook.com/p/Janet-Simpson-100035399516702/",
+        "instagram": "",
+        "facebook": "https://www.facebook.com/thewrightmovesband/",
         "twitter": "",
         "youtube": "",
         "spotify": "",
         "appleMusic": "",
-        "website": "",
-        "tiktok": ""
+        "website": "https://www.reverbnation.com/thewrightmoves"
       },
       "musicLinks": {
-        "spotify": "https://open.spotify.com/artist/1SKWqv865jvZcRXurnGN2Q",
-        "appleMusic": "https://music.apple.com/us/artist/janet-simpson/1545025020",
-        "youtube": "https://www.youtube.com/channel/UCmKyeroV5fjcEKLwwWyC1KA",
-        "amazonMusic": "https://music.amazon.com/artists/B000Q3AZCO/janet-simpson",
-        "bandcamp": "https://janetsimpson.bandcamp.com/album/can-i-see-you-tonight",
-        "tidal": "https://tidal.com/artist/5956944",
-        "pandora": "https://www.pandora.com/artist/janet-simpson/tonight/tonight/TRm7ZZPxqwl4XXq"
+        "spotify": "",
+        "appleMusic": "",
+        "youtube": ""
       },
-      "links": {
-        "youtubeMusic": "https://music.youtube.com/channel/UCmKyeroV5fjcEKLwwWyC1KA"
-      },
-      "featuredShow": {
-        "eyebrow": "Porch Talk presents",
-        "title": "Closed on Sundays",
-        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
-        "when": "Sun Jul 19, 2026 · time TBA · CT",
-        "where": "Al's Spirits & Music · Reform, AL",
-        "calendar": {
-          "allDayStart": "2026-07-19",
-          "allDayEndExclusive": "2026-07-20",
-          "title": "Closed on Sundays — Janet Simpson",
-          "location": "Al's Spirits & Music, Reform, AL",
-          "fileSlug": "janet-simpson-closed-on-sunday-2026-07-19",
-          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
-        }
-      },
-      "upcomingShows": [
-        {
-          "sortDate": "2026-07-19",
-          "when": "Sun Jul 19, 2026 · time TBA · CT",
-          "title": "Closed on Sundays — Janet Simpson",
-          "where": "Al's Spirits & Music · Reform, AL",
-          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
-          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
-        }
-      ],
-      "videos": [
-        {
-          "title": "Janet Simpson — Tonight",
-          "videoId": "cUjX86uPOoQ",
-          "thumbnail": "https://img.youtube.com/vi/cUjX86uPOoQ/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=cUjX86uPOoQ",
-          "source": "YouTube"
-        }
-      ],
+      "videos": [],
       "featured": true,
-      "publishDate": "2026-05-11"
+      "publishDate": "2026-03-30"
     },
     {
       "id": "too-darn-loud",
@@ -1254,6 +1244,68 @@
       ],
       "featured": true,
       "publishDate": "2026-04-17"
+    },
+    {
+      "id": "tyler-tisdale",
+      "name": "Tyler Tisdale",
+      "bio": "Master of Americana music, weaves the soul of the heartland into every note. His melodies resonate like the echoes of open fields, and his lyrics paint a vivid canvas of American stories. Performing at PorchFest 2026.",
+      "imageUrl": "/resources/artists/tyler-tisdale/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/tyler-tisdale/photo-1.webp",
+      "genre": "Americana",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/tylertisdaleofficial/",
+        "facebook": "https://www.facebook.com/tylertisdalemusic",
+        "twitter": "https://twitter.com/tylertisdale_",
+        "youtube": "https://youtu.be/Pw1cX_dxaCM?si=isOsUsY8mGtj6hlw",
+        "spotify": "https://open.spotify.com/artist/1Of7aVOXWy4Suma2zycJcy",
+        "appleMusic": "https://music.apple.com/us/album/_/1580771969?i=1580771970&mt=1&app=music&ls=1",
+        "website": "https://www.tylertisdalemusic.com/",
+        "tiktok": "https://www.tiktok.com/@tylertisdaleofficial"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/1Of7aVOXWy4Suma2zycJcy",
+        "appleMusic": "https://music.apple.com/us/album/_/1580771969?i=1580771970&mt=1&app=music&ls=1",
+        "youtube": "https://youtu.be/Pw1cX_dxaCM?si=isOsUsY8mGtj6hlw"
+      },
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-03-30"
+    },
+    {
+      "id": "will-stewart",
+      "name": "Will Stewart",
+      "bio": "Singer-songwriter from Birmingham, AL, crafting a unique blend he calls \"Space Twang.\" Known for heartfelt songwriting and captivating live performances across the Southeast. Hometown: Birmingham, Alabama. Genres: Space Twang, Folk / Americana. Performing at PorchFest 2026!",
+      "imageUrl": "/resources/artists/will-stewart/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/will-stewart/photo-1.jpg",
+      "genre": "Folk / Americana",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/whstewart",
+        "facebook": "https://www.facebook.com/willstewartmusic/",
+        "twitter": "https://twitter.com/willhstewart",
+        "youtube": "https://www.youtube.com/@willhstewart",
+        "website": "https://www.willstewartmusic.com/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/243xFvjyls79NvZx2efP5m",
+        "appleMusic": "https://music.apple.com/artist/1091337903",
+        "youtube": "https://www.youtube.com/@willhstewart",
+        "shazam": "https://www.shazam.com/artist/-/1091337903?utm_source=bandsintown"
+      },
+      "links": {
+        "bandsintown": "https://www.bandsintown.com/a/1051383-will-stewart?came_from=278&utm_medium=web&utm_source=artist_page&utm_campaign=search_bar"
+      },
+      "bandsintown_slug": "Will Stewart",
+      "videos": [
+        {
+          "title": "Closed on Sundays - Will Stewart",
+          "videoId": "hkqK0yxshwk",
+          "thumbnail": "https://img.youtube.com/vi/hkqK0yxshwk/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=hkqK0yxshwk&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=21",
+          "source": "Closed on Sundays"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-03-31"
     }
   ],
   "comedy": [
@@ -1427,9 +1479,41 @@
         "description": "First field test: Huey & Jacob, live in the room.",
         "lineup": [],
         "vaultLinks": {
-          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/artists/huey", "label": "Huey" },
-          "tertiary": { "to": "/porchfest/artists/jacob-kynard", "label": "Jacob Kynard" }
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/huey",
+            "label": "Huey"
+          },
+          "tertiary": {
+            "to": "/porchfest/artists/jacob-kynard",
+            "label": "Jacob Kynard"
+          }
+        }
+      },
+      {
+        "id": "closed-on-sundays-2026-06-07",
+        "name": "Closed on Sundays: Lance Cooper",
+        "date": "2026-06-07",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Lance’s solo set for the channel (time TBA).",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/lance-cooper",
+            "label": "Lance Cooper"
+          }
         }
       },
       {
@@ -1445,8 +1529,14 @@
         "description": "Megan’s solo set for the channel (time TBA).",
         "lineup": [],
         "vaultLinks": {
-          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/artists/megan-lea", "label": "Megan Lea" }
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/megan-lea",
+            "label": "Megan Lea"
+          }
         }
       },
       {
@@ -1462,8 +1552,14 @@
         "description": "Goodloe’s solo originals; faith-forward catalogue (time TBA).",
         "lineup": [],
         "vaultLinks": {
-          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/artists/goodloe-chilcutt", "label": "Goodloe Chilcutt" }
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/goodloe-chilcutt",
+            "label": "Goodloe Chilcutt"
+          }
         }
       },
       {
@@ -1479,8 +1575,14 @@
         "description": "Jodie’s solo set — country & songwriter roots (time TBA).",
         "lineup": [],
         "vaultLinks": {
-          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/artists/jodie-ross", "label": "Jodie Ross" }
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/jodie-ross",
+            "label": "Jodie Ross"
+          }
         }
       },
       {
@@ -1496,17 +1598,23 @@
         "description": "Janet’s solo set — Birmingham songwriter roots (time TBA).",
         "lineup": [],
         "vaultLinks": {
-          "primary": { "to": "/closed-on-sundays", "label": "Watch Closed on Sundays" },
-          "secondary": { "to": "/artists/janet-simpson", "label": "Janet Simpson" }
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/janet-simpson",
+            "label": "Janet Simpson"
+          }
         }
       }
     ]
   },
   "metadata": {
-    "lastUpdated": "2026-05-11",
+    "lastUpdated": "2026-05-12",
     "version": "2.0.0",
     "totalArtists": 0,
     "totalComedy": 1,
-    "totalEvents": 6
+    "totalEvents": 7
   }
 }

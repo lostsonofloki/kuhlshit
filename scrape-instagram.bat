@@ -8,7 +8,7 @@ echo - Video URL
 echo - Caption
 echo - Poster Image
 echo.
-echo Add URLs to input.txt first!
+echo Add URLs to docs\archive\scrapes\input.txt first!
 echo.
 pause
 node scraper-instagram.js

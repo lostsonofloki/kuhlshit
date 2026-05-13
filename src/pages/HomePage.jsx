@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import data from "../data/data.json";
 import SEO from "../components/SEO";
@@ -22,6 +22,9 @@ const CREATOR_SUBTITLE = [
 const FIRE_CAMINO_JINGLE_URL = data.artists.find((a) => a.id === "fire-camino")
   ?.jingle?.audioUrl;
 
+/** How often the home “Meet the Creators” trio advances through the full roster. */
+const MEET_CREATORS_ROTATE_MS = 6000;
+
 /** PorchFest hub event for Vault teaser — not every `porchfest.events` row is a PorchFest festival. */
 function selectVaultTeaserEvent(events) {
   if (!events?.length) return null;
@@ -41,42 +44,46 @@ function selectVaultTeaserEvent(events) {
 }
 
 function HomePage() {
-  const [featuredArtists, setFeaturedArtists] = useState([]);
+  const [rotateIndex, setRotateIndex] = useState(0);
   const [vaultEvent, setVaultEvent] = useState(null);
 
-  useEffect(() => {
-    // Get all artists with images
-    const allArtists = data.artists.filter((artist) => artist.imageUrl);
+  /** Full roster from `data.artists`, order shuffled once per hour (stable for all visitors that hour). */
+  const shuffledArtists = useMemo(() => {
+    const allArtists = [...data.artists];
+    if (!allArtists.length) return [];
 
-    // Rotate featured artists based on hour of day with random shuffle
-    const currentHour = new Date().getHours();
-    const artistCount = allArtists.length;
+    const seed = new Date().getHours();
+    const seededRandom = (index) => {
+      const x = Math.sin(seed * 1000 + index) * 10000;
+      return x - Math.floor(x);
+    };
 
-    if (artistCount > 0) {
-      // Create a seeded random shuffle based on current hour
-      // This ensures same random selection for all users during the same hour
-      const seed = currentHour;
-
-      // Seeded random number generator
-      const seededRandom = (index) => {
-        const x = Math.sin(seed * 1000 + index) * 10000;
-        return x - Math.floor(x);
-      };
-
-      // Fisher-Yates shuffle with seed
-      const shuffled = [...allArtists];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(seededRandom(i) * (i + 1));
-        const temp = shuffled[i];
-        shuffled[i] = shuffled[j];
-        shuffled[j] = temp;
-      }
-
-      // Take first 3 from shuffled array
-      const featured = shuffled.slice(0, 3);
-      setFeaturedArtists(featured);
+    const shuffled = [...allArtists];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(seededRandom(i) * (i + 1));
+      const temp = shuffled[i];
+      shuffled[i] = shuffled[j];
+      shuffled[j] = temp;
     }
+    return shuffled;
+  }, []);
 
+  const featuredArtists = useMemo(() => {
+    if (!shuffledArtists.length) return [];
+    const n = shuffledArtists.length;
+    const count = Math.min(3, n);
+    return Array.from({ length: count }, (_, k) => shuffledArtists[(rotateIndex + k) % n]);
+  }, [shuffledArtists, rotateIndex]);
+
+  useEffect(() => {
+    if (!shuffledArtists.length) return undefined;
+    const id = window.setInterval(() => {
+      setRotateIndex((i) => (i + 1) % shuffledArtists.length);
+    }, MEET_CREATORS_ROTATE_MS);
+    return () => window.clearInterval(id);
+  }, [shuffledArtists.length]);
+
+  useEffect(() => {
     // Vault teaser: prefer the main PorchFest festival (pf-001), not other dated hub items.
     const teaser = selectVaultTeaserEvent(data.porchfest?.events);
     if (teaser) setVaultEvent(teaser);

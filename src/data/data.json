@@ -439,6 +439,69 @@
       "publishDate": "2026-03-31"
     },
     {
+      "id": "hope-macgregor",
+      "name": "Hope MacGregor",
+      "location": "Jackson, Tennessee",
+      "bio": "Hope MacGregor is a songwriter, storyteller, artist, and Army Aviation Veteran. After eight years of active duty military service, Hope put down her uniform and found herself in law school. Then, in the middle of the global pandemic and the middle of school, her car broke down, her grandmother died, her dog got cancer, and her husband ran off with a blonde to Texas. With the encouragement of her father, MacGregor picked up her old guitar and pen – she started writing songs.\n\nAfter graduating law school, Hope moved to Jackson, Tennessee where she found a town full of the best kind of music scene: one full of talented, authentic artists that support and care about one another. In short order she put together a band and over the last few years has released two studio albums, toured nationally, been featured on music festival line ups with Grammy-award winning artists, and was recently named a Rising Star in Tennessee music by the Tennessee Entertainment Commission!\n\nHope's music is a unique blend of Americana, blues, country, and honesty. She knows how to speak to the most tender parts of life with songs like Why Dogs and For Now. But it is MacGregor's own brand of take-no-crap humor in her writing, with songs like Screwed and Sloppy Seconds, that keeps folks coming back for more. If you want to get to know Hope, just ask her about her beloved yellow lab, Lucy.",
+      "imageUrl": "/resources/artists/hope-macgregor/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/hope-macgregor/photo-1.webp",
+      "genre": "Americana, blues & country",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/hopemacgregormusic/",
+        "facebook": "https://www.facebook.com/hopemacgregormusic",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UCajLWKFQckH1jS5PvT2hkBA",
+        "spotify": "https://open.spotify.com/artist/6aQYtjro4EMbv0V0JHSwGS",
+        "appleMusic": "https://music.apple.com/us/artist/hope-macgregor/1626504510",
+        "website": "https://www.hopemacgregormusic.com/",
+        "tiktok": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/6aQYtjro4EMbv0V0JHSwGS",
+        "appleMusic": "https://music.apple.com/us/artist/hope-macgregor/1626504510",
+        "youtube": "https://www.youtube.com/channel/UCajLWKFQckH1jS5PvT2hkBA"
+      },
+      "links": {
+        "youtubeMusic": "https://music.youtube.com/channel/UCajLWKFQckH1jS5PvT2hkBA"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Jul 12, 2026 · time TBA · CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-07-12",
+          "allDayEndExclusive": "2026-07-13",
+          "title": "Closed on Sundays — Hope MacGregor",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "hope-macgregor-closed-on-sunday-2026-07-12",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-07-12",
+          "when": "Sun Jul 12, 2026 · time TBA · CT",
+          "title": "Closed on Sundays — Hope MacGregor",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Hope MacGregor - Sloppy Seconds (Official Video)",
+          "videoId": "dIXVTeyLgbA",
+          "thumbnail": "https://img.youtube.com/vi/dIXVTeyLgbA/maxresdefault.jpg",
+          "url": "https://music.youtube.com/watch?v=dIXVTeyLgbA",
+          "source": "YouTube Music"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-05-13"
+    },
+    {
       "id": "huey",
       "name": "Huey",
       "location": "Atlanta, GA",
@@ -1586,6 +1649,29 @@
         }
       },
       {
+        "id": "closed-on-sundays-2026-07-12",
+        "name": "Closed on Sundays: Hope MacGregor",
+        "date": "2026-07-12",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Hope’s solo set — Americana, blues & country (time TBA).",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/hope-macgregor",
+            "label": "Hope MacGregor"
+          }
+        }
+      },
+      {
         "id": "closed-on-sundays-2026-07-19",
         "name": "Closed on Sundays: Janet Simpson",
         "date": "2026-07-19",
@@ -1611,10 +1697,10 @@
     ]
   },
   "metadata": {
-    "lastUpdated": "2026-05-12",
+    "lastUpdated": "2026-05-13",
     "version": "2.0.0",
     "totalArtists": 0,
     "totalComedy": 1,
-    "totalEvents": 7
+    "totalEvents": 8
   }
 }

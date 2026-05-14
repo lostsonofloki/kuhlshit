@@ -25,7 +25,7 @@ Priorities until the data layer and public site are clearly ahead of “backend 
 - [ ] `bb-palmer` — B.B. Palmer
 - [ ] `ming-donkey` — Ming Donkey
 - [ ] `jonny-hollis` — Jonny Hollis
-- [ ] `j-d-spencer` — J.D. Spencer
+- [ ] `j-d-spencer` — JD Spencer
 - [ ] `tyler-tisdale` — Tyler Tisdale
 - [ ] `ritch-henderson` — Ritch Henderson
 - [ ] `elliot-devaughn` — Elliot Devaughn *(long bio already; optional: drop or rewrite trailing “Performing at PorchFest 2026.” line only)*

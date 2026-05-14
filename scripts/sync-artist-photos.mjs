@@ -22,7 +22,7 @@ function normalizeName(value) {
 const aliases = new Map([
   // Common source filename mismatch from Artist intake folder
   ["abepartridge", "abepartrige"],
-  // "J.D. Spencer" is often dropped as "JD.*"
+  // "JD Spencer" is often dropped as "JD.*"
   ["jdspencer", "jd"],
 ]);
 

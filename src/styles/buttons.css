@@ -17,7 +17,8 @@
   cursor: pointer;
   border: 2px solid transparent;
   text-align: center;
-  min-width: 160px;
+  min-width: min(160px, 100%);
+  max-width: 100%;
 }
 
 .btn-primary {

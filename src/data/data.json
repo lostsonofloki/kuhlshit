@@ -8,6 +8,7 @@
       "imageUrl": "/resources/artists/abe-partridge/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/abe-partridge/photo-1.jpg",
       "genre": "Singer/Songwriter",
+      "creatorTypes": ["musician", "painter"],
       "socialLinks": {
         "instagram": "https://www.instagram.com/abepartridge",
         "facebook": "https://www.facebook.com/abepartridge",
@@ -443,8 +444,8 @@
       "name": "Hope MacGregor",
       "location": "Jackson, Tennessee",
       "bio": "Hope MacGregor is a songwriter, storyteller, artist, and Army Aviation Veteran. After eight years of active duty military service, Hope put down her uniform and found herself in law school. Then, in the middle of the global pandemic and the middle of school, her car broke down, her grandmother died, her dog got cancer, and her husband ran off with a blonde to Texas. With the encouragement of her father, MacGregor picked up her old guitar and pen – she started writing songs.\n\nAfter graduating law school, Hope moved to Jackson, Tennessee where she found a town full of the best kind of music scene: one full of talented, authentic artists that support and care about one another. In short order she put together a band and over the last few years has released two studio albums, toured nationally, been featured on music festival line ups with Grammy-award winning artists, and was recently named a Rising Star in Tennessee music by the Tennessee Entertainment Commission!\n\nHope's music is a unique blend of Americana, blues, country, and honesty. She knows how to speak to the most tender parts of life with songs like Why Dogs and For Now. But it is MacGregor's own brand of take-no-crap humor in her writing, with songs like Screwed and Sloppy Seconds, that keeps folks coming back for more. If you want to get to know Hope, just ask her about her beloved yellow lab, Lucy.",
-      "imageUrl": "/resources/artists/hope-macgregor/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/hope-macgregor/photo-1.webp",
+      "imageUrl": "/resources/artists/hope-macgregor/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/hope-macgregor/photo-1.jpg",
       "genre": "Americana, blues & country",
       "socialLinks": {
         "instagram": "https://www.instagram.com/hopemacgregormusic/",
@@ -625,8 +626,8 @@
       "name": "Janet Simpson",
       "location": "Birmingham, Alabama",
       "bio": "Janet Simpson is a Birmingham-bred singer, guitarist, and keyboardist — a deep listener and collaborator across Wooden Wand (World War IV), Delicate Cutters, Teen Getaway, and Timber, her duo with Will Stewart (who also anchors her solo band).\n\nHer solo debut Safe Distance (2021) set a high bar; Can I See You Tonight?, out September 19, 2025 via Cornelius Chapel, widens a wry, haunted alt-country lens with Jody Nelson, David Somerall, and Shawn Avery. The album was tracked at Cypress Moon Studios on the Tennessee River, where Brad Timko captured the room's Muscle Shoals lineage.\n\nHer songs trade in longing, place, and the space between people.",
-      "imageUrl": "/resources/artists/janet-simpson/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/janet-simpson/photo-1.webp",
+      "imageUrl": "/resources/artists/janet-simpson/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/janet-simpson/photo-1.jpg",
       "genre": "Alt-Country / Folk Rock",
       "socialLinks": {
         "instagram": "https://www.instagram.com/janetsimpsonmusic/",
@@ -692,8 +693,8 @@
       "name": "Jodie Ross",
       "location": "Louisville, Mississippi",
       "bio": "Jodie Ross is a Mississippi singer-songwriter from Louisville, shaped by southern gospel, Motown, classic rock, and country — with inspiration from Stevie Nicks, Melissa Etheridge, and Dolly Parton. Recognition includes a 2024 Josie Music Award nomination (Song of the Year), 2021 Mississippi Songwriter of the Year (People's Choice), and 2019 Mississippi Music Foundation Best Original Song of the Year. A former board-certified music therapist, she writes with empathy and grit; singles including \"My Favorite Memory\" are out now on streaming. Her official site is jodierossmusic.com.",
-      "imageUrl": "/resources/artists/jodie-ross/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/jodie-ross/photo-1.webp",
+      "imageUrl": "/resources/artists/jodie-ross/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/jodie-ross/photo-1.jpg",
       "cardImageFit": "contain",
       "genre": "Country / Singer-Songwriter",
       "socialLinks": {
@@ -774,6 +775,105 @@
       ],
       "featured": true,
       "publishDate": "2026-04-15"
+    },
+    {
+      "id": "joe-macgown",
+      "name": "Joe A. MacGown",
+      "creatorType": "painter",
+      "location": "Starkville, MS",
+      "genre": "Neogothic surrealism · Subconscious Meandering",
+      "bio": "Joe A. MacGown is a Mississippi artist who creates chaotic assemblages of strange mutated creatures, crowded surreal landscapes, and mandala-like designs that reflect his thoughts and observations of life on this planet. Using imaginative imagery and random patterns, he produces detailed drawings and mixed media paintings by simply allowing ideas to flow out of his head using a method he describes as \"Subconscious Meandering.\" MacGown's background in entomology and natural history, coupled with his love of science fiction and cynicism of all things human, provide ample fodder for his surreal visions, which range from dark and foreboding to light and whimsical.\n\nMacGown's work has been featured in numerous local and regional exhibitions as well as in international group shows in Dallas, TX; Chicago, IL; Memphis, TN; San Francisco, CA; Washington DC; Colombia; Toronto, Canada; Great Britain; the Philippines; Moscow and St. Petersburg, Russia; Belgrade, Serbia; the Netherlands; various venues in France; Dresden, Germany; Venice, Italy; Portugal; and other regions.\n\nTo see Joe's work or his son Joseph's work in person, contact Joe at art@joemacgown.com or text 662-418-5286 to schedule a visit to the MacGown Art Retreat and Studio (MARS) at 211 Sessums Road, Starkville, MS. Most weekday and Sunday afternoons from 1–6 pm are the best times to arrange a visit (by appointment only).",
+      "imageUrl": "/resources/artists/joe-macgown/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/joe-macgown/photo-1.jpg",
+      "inquiryEmail": "art@joemacgown.com",
+      "gallery": [
+        {
+          "src": "/resources/artists/joe-macgown/work-01.jpg",
+          "alt": "Joe A. MacGown — Dragon",
+          "caption": "Dragon · ink on wood"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-02.jpg",
+          "alt": "Joe A. MacGown — Self Searching",
+          "caption": "Self Searching · ink on bristol"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-03.jpg",
+          "alt": "Joe A. MacGown — surreal color",
+          "caption": "Surreal color"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-04.jpg",
+          "alt": "Joe A. MacGown — mammals",
+          "caption": "Mammals"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-05.jpg",
+          "alt": "Joe A. MacGown — surreal color",
+          "caption": "Surreal color"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-06.jpg",
+          "alt": "Joe A. MacGown — Echinodermatter",
+          "caption": "Echinodermatter · ink on illustration board"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-07.jpg",
+          "alt": "Joe A. MacGown — surreal sold work",
+          "caption": "Surreal color (sold)"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-08.jpg",
+          "alt": "Joe A. MacGown — mammals",
+          "caption": "Mammals"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-09.jpg",
+          "alt": "Joe A. MacGown — Redbird",
+          "caption": "Redbird · ink on wood"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-10.jpg",
+          "alt": "Joe A. MacGown — Worship",
+          "caption": "Worship · ink on illustration board"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-11.jpg",
+          "alt": "Joe A. MacGown — surreal sold work",
+          "caption": "Surreal color (sold)"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-12.jpg",
+          "alt": "Joe A. MacGown — mammals",
+          "caption": "Mammals"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-13.jpg",
+          "alt": "Joe A. MacGown — BlueBird",
+          "caption": "BlueBird · ink on wood"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-14.jpg",
+          "alt": "Joe A. MacGown — Separation",
+          "caption": "Separation · ink on illustration board"
+        },
+        {
+          "src": "/resources/artists/joe-macgown/work-15.jpg",
+          "alt": "Joe A. MacGown — surreal sold work",
+          "caption": "Surreal color (sold)"
+        }
+      ],
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/macgown_art/",
+        "facebook": "https://www.facebook.com/joe.macgown.3/",
+        "twitter": "",
+        "youtube": "",
+        "spotify": "",
+        "appleMusic": "",
+        "website": "https://www.joemacgown.com/"
+      },
+      "featured": true,
+      "publishDate": "2026-05-29"
     },
     {
       "id": "jonny-hollis",
@@ -869,8 +969,8 @@
       "name": "Lance Cooper",
       "location": "Columbus, MS",
       "bio": "Hey friends! I'm Lance. I've been playing and supporting local music for over 20 years. I've performed solo for many years, as well as with AMFM and The Moves (formerly The Wright Moves). My love for music sparked when my older brother got a Les Paul—I was amazed. I slowly taught myself guitar at 13 and haven't put it down since.\n\nI'm influenced by a lot of things. In my originals, I tend to write about my own life experiences. I cover a wide range of artists—The Avett Brothers, Ryan Adams, Dave Matthews, Goose, Prince, Ray LaMontagne, Counting Crows, and many more. I play what I love, and I'm inspired by life on a daily basis.\n\nMusic is my passion. Whether I'm listening, supporting, or playing, it fills my cup and keeps me wanting more. I always knew I wanted to be a musician and a father, and I've been blessed to become both—everything else is a bonus.\n\nCome hang with me and enjoy yourself. You deserve it. Peace ✌️",
-      "imageUrl": "/resources/artists/lance-cooper/photo-1.webp",
-      "thumbnailUrl": "/resources/artists/lance-cooper/photo-1.webp",
+      "imageUrl": "/resources/artists/lance-cooper/photo-1.jpg",
+      "thumbnailUrl": "/resources/artists/lance-cooper/photo-1.jpg",
       "genre": "Singer-Songwriter",
       "socialLinks": {
         "instagram": "",
@@ -1499,7 +1599,7 @@
             ]
           }
         ],
-        "imageUrl": "/resources/Porchfest26.jpg",
+        "imageUrl": "/resources/porchfest/poster.jpg",
         "lineupImageUrl": "/resources/Porchfest26lineup.jpg",
         "gallery": {
           "title": "PorchFest 2026 on Film",

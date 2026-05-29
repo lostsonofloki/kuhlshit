@@ -16,7 +16,7 @@
 
 .vault-header h1 {
   font-family: var(--font-family-heading);
-  font-size: 2rem;
+  font-size: clamp(1.75rem, 8vw, 2rem);
   font-weight: 800;
   line-height: 1.15;
   margin: 0 0 var(--spacing-md);
@@ -42,7 +42,22 @@
   border: var(--card-border);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-lg);
+}
+
+.vault-event-actions .btn {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (min-width: 480px) {
+  .vault-event-card {
+    padding: var(--spacing-xl);
+  }
+
+  .vault-event-actions .btn {
+    width: auto;
+  }
 }
 
 .vault-event-meta {

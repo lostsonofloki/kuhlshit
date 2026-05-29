@@ -9,6 +9,18 @@ function Header() {
   const [logoClickCount, setLogoClickCount] = useState(0)
   const navigate = useNavigate()
 
+  const navLinks = [
+    { path: '/closed-on-sundays', label: 'Closed on Sundays' },
+    { path: '/porch-talk', label: 'Porch Talk' },
+    { path: '/artists', label: 'Artists' },
+    { path: '/whats-kuhl', label: "What's Kuhl" },
+    { path: '/vault', label: 'The Vault' },
+  ]
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   useEffect(() => {
     if (logoClickCount >= 5) {
       setLogoClickCount(0)
@@ -16,20 +28,26 @@ function Header() {
     }
   }, [logoClickCount, navigate])
 
-  const navLinks = [
-    { path: '/closed-on-sundays', label: 'Closed on Sundays' },
-    { path: '/porch-talk', label: 'Porch Talk' },
-    { path: '/artists', label: 'Artists' },
-    { path: '/vault', label: 'The Vault' },
-    { path: '/waitlist', label: 'Waitlist' },
-  ]
+  useEffect(() => {
+    closeMenu()
+  }, [location.pathname])
+
+  useEffect(() => {
+    document.body.classList.toggle('nav-menu-open', isMenuOpen)
+    return () => document.body.classList.remove('nav-menu-open')
+  }, [isMenuOpen])
+
+  useEffect(() => {
+    if (!isMenuOpen) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeMenu()
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [isMenuOpen])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
-  }
-
-  const closeMenu = () => {
-    setIsMenuOpen(false)
   }
 
   const handleLogoClick = () => {
@@ -83,7 +101,10 @@ function Header() {
       <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
 
       {/* Mobile Navigation — OUTSIDE header */}
-      <nav className={`main-nav ${isMenuOpen ? 'menu-open' : ''}`}>
+      <nav
+        className={`main-nav ${isMenuOpen ? 'menu-open' : ''}`}
+        aria-hidden={!isMenuOpen}
+      >
         <ul className="mobile-nav-list">
           {navLinks.map((link) => (
             <li key={link.path} className="nav-item">

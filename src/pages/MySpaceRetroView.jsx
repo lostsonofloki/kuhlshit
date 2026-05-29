@@ -87,7 +87,7 @@ export default function MySpaceRetroView({ artists = [] }) {
 
   const ownerName = profileOwner?.name || 'Mystery Artist'
   const ownerImage =
-    profileOwner?.imageUrl || profileOwner?.thumbnailUrl || '/resources/artists/default-avatar.jpg'
+    profileOwner?.imageUrl || profileOwner?.thumbnailUrl || '/resources/placeholder-artist.svg'
 
   return (
     <div className="myspace-theme">

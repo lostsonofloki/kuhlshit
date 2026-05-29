@@ -19,6 +19,8 @@ function Footer() {
             <ul className="footer-links">
               <li><a href="/closed-on-sundays">Closed on Sundays</a></li>
               <li><a href="/porch-talk">Porch Talk</a></li>
+              <li><a href="/artists">Artists</a></li>
+              <li><a href="/whats-kuhl">What&apos;s Kuhl</a></li>
               <li><a href="/vault">The Vault</a></li>
               <li><a href="/waitlist">Waitlist</a></li>
             </ul>

@@ -90,6 +90,10 @@
   --transition-fast: 150ms ease;
   --transition-normal: 300ms ease;
   --transition-slow: 500ms ease;
+
+  /* Sticky chrome (announcement + header); overridden when banner is present */
+  --announcement-bar-height: 0px;
+  --header-chrome-height: 52px;
 }
 
 /* Reset & Base Styles */
@@ -114,6 +118,12 @@ body {
   -moz-osx-fontsmoothing: grayscale;
   width: 100%;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(212, 140, 41, 0.2);
+}
+
+body.nav-menu-open {
+  overflow: hidden;
+  overscroll-behavior: none;
 }
 
 /* App Container */
@@ -129,6 +139,8 @@ body {
   flex: 1;
   width: 100%;
   padding: var(--spacing-md);
+  padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+  padding-right: max(var(--spacing-md), env(safe-area-inset-right));
   overflow-x: hidden;
 }
 

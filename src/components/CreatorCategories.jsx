@@ -19,8 +19,8 @@ const CATEGORIES = [
     title: "Painters & Photographers",
     blurb: "High-res galleries where the image is the hero, not the menu bar.",
     accent: "visual",
-    to: "/waitlist?source=categories",
-    cta: "Get on the list →",
+    to: "/artists/joe-macgown",
+    cta: "See Joe MacGown →",
   },
   {
     id: "writer",

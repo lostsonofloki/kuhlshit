@@ -19,6 +19,7 @@ import {
 } from "../utils/artistJsonLd";
 import { getSiteOrigin, toAbsoluteUrl } from "../utils/siteOrigin";
 import { trackEvent } from "../utils/analytics";
+import { resolvePrimaryCreatorType } from "../utils/creatorCategories";
 import bundledFestivalData from "../data/data.json";
 import "./ArtistDetail.css";
 
@@ -45,11 +46,7 @@ function buildArtistMetaDescription(artist) {
 }
 
 function resolveCreatorType(artist) {
-  const raw = String(artist?.creatorType || "musician").toLowerCase();
-  if (raw === "visual" || raw === "painter" || raw === "photographer")
-    return "visual";
-  if (raw === "writer" || raw === "poet") return "writer";
-  return "musician";
+  return resolvePrimaryCreatorType(artist);
 }
 
 function findArtistByRouteId(artists, artistId) {

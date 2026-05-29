@@ -1,18 +1,31 @@
 /* ========== ANNOUNCEMENT BAR ========== */
+.app:has(.announcement-bar) {
+  --announcement-bar-height: calc(34px + env(safe-area-inset-top, 0px));
+}
+
+@media (min-width: 640px) {
+  .app:has(.announcement-bar) {
+    --announcement-bar-height: calc(40px + env(safe-area-inset-top, 0px));
+  }
+}
+
 .announcement-bar {
   background: linear-gradient(90deg, var(--color-bg-primary) 0%, var(--color-wood-dark) 100%);
   border-bottom: 1px solid var(--border-color);
   padding: 6px 0;
+  padding-top: max(6px, env(safe-area-inset-top));
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  min-height: var(--announcement-bar-height, 34px);
+  box-sizing: border-box;
 }
 
 .announcement-bar-content {
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 32px 0 10px;
+  padding: 0 max(40px, calc(32px + env(safe-area-inset-right))) 0 max(10px, env(safe-area-inset-left));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,20 +168,33 @@ a.price-badge:focus-visible {
 
 .announcement-dismiss {
   position: absolute;
-  right: 10px;
+  right: max(6px, env(safe-area-inset-right));
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background: transparent;
   border: none;
   color: var(--color-text-muted);
   cursor: pointer;
   font-size: 0.9rem;
-  padding: 4px;
+  padding: 0;
   line-height: 1;
   transition: color var(--transition-fast);
   flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 6px;
 }
 
 .announcement-dismiss:hover {
+  color: var(--color-accent-primary);
+}
+
+.announcement-dismiss:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
   color: var(--color-accent-primary);
 }

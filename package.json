@@ -13,6 +13,7 @@
     "audit:mobile": "node scripts/playwright-site-audit.mjs",
     "scrape:huey-site": "node scripts/scrape-huey-music.mjs",
     "scrape:meganlea-site": "node scripts/scrape-meganlea-bandzoogle.mjs",
+    "scrape:joemacgown": "node scripts/scrape-joemacgown-gallery.mjs",
     "sync:artist-photos": "node scripts/sync-artist-photos.mjs",
     "optimize:images": "node scripts/optimize-images.mjs"
   },

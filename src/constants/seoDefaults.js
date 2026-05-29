@@ -34,6 +34,14 @@ export const ARTISTS_INDEX_SEO = {
   path: "/artists",
 };
 
+export const WHATS_KUHL_SEO = {
+  title: "What's Kuhl | Partners & affiliates | kuhlshit.com",
+  description:
+    "Sponsors, labels, studios, and partners in the Kuhl orbit — including MARS (MacGown Art Retreat & Studio) and the Del Rendon Foundation.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/whats-kuhl",
+};
+
 export const PORCHFEST_ARTISTS_INDEX_SEO = {
   title: "PorchFest lineup | kuhlshit.com",
   description:

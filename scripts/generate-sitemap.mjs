@@ -44,6 +44,7 @@ const staticPaths = [
   { loc: "/porchfest/artists", changefreq: "weekly", priority: "0.9" },
   { loc: "/porch-talk", changefreq: "weekly", priority: "0.75" },
   { loc: "/vault", changefreq: "weekly", priority: "0.8" },
+  { loc: "/whats-kuhl", changefreq: "monthly", priority: "0.75" },
   { loc: "/waitlist", changefreq: "monthly", priority: "0.7" },
   { loc: "/spotcheck", changefreq: "yearly", priority: "0.3" },
 ];

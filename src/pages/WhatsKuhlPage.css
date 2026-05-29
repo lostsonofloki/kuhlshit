@@ -1,0 +1,177 @@
+.whats-kuhl-page {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-md);
+}
+
+.whats-kuhl-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.whats-kuhl-eyebrow {
+  font-family: var(--font-family-heading);
+  color: var(--color-accent-primary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.whats-kuhl-header h1 {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 var(--spacing-md);
+  color: var(--color-accent-primary);
+  letter-spacing: -0.03em;
+}
+
+.whats-kuhl-lede {
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 36rem;
+  font-size: 1rem;
+}
+
+.whats-kuhl-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.whats-kuhl-card {
+  background: var(--surface-card);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.whats-kuhl-card-image {
+  aspect-ratio: 16 / 9;
+  background: var(--surface-inset);
+  overflow: hidden;
+}
+
+.whats-kuhl-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.whats-kuhl-card-body {
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.whats-kuhl-card-body h2 {
+  margin: 0 0 var(--spacing-xs);
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.whats-kuhl-tagline {
+  margin: 0 0 var(--spacing-md);
+  font-family: var(--font-family-heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.whats-kuhl-copy {
+  margin: 0 0 var(--spacing-md);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  font-size: 0.975rem;
+}
+
+.whats-kuhl-copy:last-of-type {
+  margin-bottom: var(--spacing-lg);
+}
+
+.whats-kuhl-contact {
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: var(--surface-inset);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-hairline);
+}
+
+.whats-kuhl-contact-line {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.whats-kuhl-contact-line + .whats-kuhl-contact-line {
+  margin-top: var(--spacing-xs);
+}
+
+.whats-kuhl-contact-line a {
+  color: var(--color-accent-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.whats-kuhl-contact-line a:hover,
+.whats-kuhl-contact-line a:focus-visible {
+  text-decoration: underline;
+}
+
+.whats-kuhl-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.whats-kuhl-actions .btn {
+  width: 100%;
+  min-width: 0;
+}
+
+.whats-kuhl-back {
+  text-align: center;
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--border-hairline);
+}
+
+.whats-kuhl-back .back-link {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: 2px solid var(--color-gray-light);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-muted);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.whats-kuhl-back .back-link:hover {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+}
+
+@media (min-width: 768px) {
+  .whats-kuhl-header h1 {
+    font-size: 3rem;
+  }
+
+  .whats-kuhl-lede {
+    font-size: 1.05rem;
+  }
+
+  .whats-kuhl-actions .btn {
+    width: auto;
+  }
+}

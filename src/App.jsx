@@ -20,6 +20,7 @@ const ArtistDetailPage = lazy(() => import('./pages/ArtistDetailPage'))
 const SpotCheckPage = lazy(() => import('./pages/SpotCheckPage'))
 const VaultPage = lazy(() => import('./pages/VaultPage'))
 const WaitlistPage = lazy(() => import('./pages/WaitlistPage'))
+const WhatsKuhlPage = lazy(() => import('./pages/WhatsKuhlPage'))
 
 /** Vercel injects /_vercel/* scripts only on their platform; skip locally to avoid 404 console noise. */
 function VercelMetrics() {
@@ -56,6 +57,7 @@ function App() {
               <Route path="/search" element={<Navigate to="/" replace />} />
               <Route path="/spotcheck" element={<SpotCheckPage />} />
               <Route path="/vault" element={<VaultPage />} />
+              <Route path="/whats-kuhl" element={<WhatsKuhlPage />} />
               <Route path="/waitlist" element={<WaitlistPage />} />
             </Routes>
           </Suspense>

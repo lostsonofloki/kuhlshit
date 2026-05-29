@@ -23,7 +23,7 @@ export default function VisualArtistBody({ artist }) {
     : "/waitlist?source=inquiry";
 
   return (
-    <div className="visual-body">
+    <div className="artist-content visual-body">
       {gallery.length > 0 ? (
         <div className="visual-gallery">
           {gallery.map((piece, i) => (
@@ -42,16 +42,18 @@ export default function VisualArtistBody({ artist }) {
         </div>
       ) : null}
 
-      <section className="visual-statement">
+      <div className="artist-section visual-statement">
         <h2>Artist Statement</h2>
-        <p>{artist.bio}</p>
-      </section>
+        <p className="artist-bio" style={{ whiteSpace: "pre-line" }}>
+          {artist.bio}
+        </p>
+      </div>
 
-      <section className="visual-inquiry">
+      <div className="artist-section artist-section--featured-show visual-inquiry">
         <h2>Interested in a piece?</h2>
-        <p>
-          Reach out directly — no middleman, no gallery cut. This is a
-          creator-first home.
+        <p className="featured-show-billing">
+          Contact {artist.name} directly for availability, pricing, and studio
+          visits.
         </p>
         <div className="visual-inquiry-actions">
           <a className="btn btn-primary" href={inquiryHref}>
@@ -59,7 +61,7 @@ export default function VisualArtistBody({ artist }) {
           </a>
           {artist.socialLinks?.website ? (
             <a
-              className="btn btn-ghost"
+              className="btn btn-secondary"
               href={artist.socialLinks.website}
               target="_blank"
               rel="noopener noreferrer"
@@ -67,12 +69,12 @@ export default function VisualArtistBody({ artist }) {
               Visit portfolio
             </a>
           ) : (
-            <Link to="/waitlist" className="btn btn-ghost">
+            <Link to="/waitlist" className="btn btn-secondary">
               Join the creator waitlist
             </Link>
           )}
         </div>
-      </section>
+      </div>
     </div>
   );
 }

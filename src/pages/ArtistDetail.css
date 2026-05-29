@@ -101,11 +101,12 @@
 }
 
 .artist-hero-content h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-sm);
   text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.65);
   font-family: var(--font-family-heading);
+  overflow-wrap: break-word;
 }
 
 .artist-location {
@@ -362,6 +363,7 @@
   align-items: center;
   gap: var(--spacing-md);
   padding: var(--spacing-md);
+  min-height: 44px;
   background: var(--surface-card);
   border-radius: var(--border-radius-md);
   border: var(--card-border);
@@ -465,14 +467,15 @@
 
 .artist-share-fab {
   position: fixed;
-  right: 16px;
-  bottom: 20px;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(20px, env(safe-area-inset-bottom));
   z-index: 1200;
   border-radius: 999px;
   border: 1px solid var(--border-accent-soft);
   background: rgba(18, 18, 18, 0.95);
   color: var(--color-accent-primary);
   padding: 10px 16px;
+  min-height: 44px;
   font-size: 0.9rem;
   font-weight: 700;
   box-shadow: var(--shadow-md);
@@ -524,6 +527,7 @@
 
   .social-links,
   .music-links {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -550,6 +554,7 @@
 
   .social-links,
   .music-links {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }

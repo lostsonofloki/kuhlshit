@@ -1,0 +1,40 @@
+{
+  "intro": "Sponsors, labels, studios, and partners in the Kuhl orbit — the people and places that help this platform stay weird and worth showing up for.",
+  "affiliates": [
+    {
+      "id": "mars",
+      "name": "MacGown Art Retreat & Studio (MARS)",
+      "tagline": "Artist residency · Starkville, MS",
+      "website": "https://www.joemacgown.com/macgownartretreatandstudio",
+      "residencyProgramUrl": "https://www.joemacgown.com/mars-residencyprogram",
+      "profilePath": "/artists/joe-macgown",
+      "imageUrl": "/resources/artists/joe-macgown/photo-1.jpg",
+      "body": [
+        "The MacGown Art Retreat and Studio (MARS), established by Joe and Joseph MacGown, offers a rich creative backdrop for visiting artists, writers, musicians, scientists, and others. MARS is located at 211 Sessums Road, Starkville, MS (10 miles from the MSU campus) and rests upon a Cretaceous based Black Belt Prairie remnant.",
+        "The MARS compound including the studio, cabin, art house, and gallery is open for visits by appointment only on most weekday and Sunday afternoons from 1 to 6 pm. Visits can be scheduled by contacting Joe MacGown at art@joemacgown.com or by text at 662-418-5286.",
+        "The MacGowns' art styles are unique and they have exhibited their artwork in numerous local, regional, national, and international exhibitions. Most recently, the MacGowns have established an artist in residence program. Residencies vary with some artists receiving stipends to others being provided free housing in exchange for work. Stipends for the residency is supported in part by the Del Rendon Foundation, the Mississippi Arts Commission, and various private sponsors."
+      ],
+      "contact": {
+        "email": "art@joemacgown.com",
+        "phone": "662-418-5286",
+        "hours": "Weekday & Sunday afternoons, 1–6 pm (by appointment)"
+      },
+      "applicationPdf": "/resources/affiliates/mars-residency-application.pdf"
+    },
+    {
+      "id": "del-rendon-foundation",
+      "name": "The Del Rendon Foundation",
+      "tagline": "501(c)(3) · Art & music in Starkville",
+      "website": "https://www.delrendonfoundation.org/",
+      "body": [
+        "Del Rendon was a talented and regionally known musician and artist from Starkville, Mississippi who loved and embraced his community.",
+        "Known for selflessly giving his time and energy towards helping others, when he died on September 4th, 2005, he left a void that was and is still felt by all. Del's love for life and compassion for others touched many.",
+        "Desiring to embrace Del's love of art, music, and community, friends and family established the Del Rendon Foundation in 2006 and its goals have consistently remained the same.",
+        "The Del Rendon Foundation, a 501(c)(3) public charity, raises funds in support of local and regional art and music activities. Establishing an MSU art scholarship that is currently endowed at $100K (and growing), the foundation is also seeking out other ways in which to channel its fundraising efforts."
+      ],
+      "contact": {
+        "email": "casterbunch@gmail.com"
+      }
+    }
+  ]
+}

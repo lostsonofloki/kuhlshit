@@ -13,7 +13,7 @@
 
 .page-header h1 {
   font-family: var(--font-family-heading);
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
   font-weight: 800;
   color: var(--color-accent-primary);
   margin-bottom: var(--spacing-sm);
@@ -26,6 +26,52 @@
   font-size: 1rem;
   color: var(--color-text-secondary);
   font-weight: 500;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.55;
+}
+
+/* Creator type tabs */
+.creator-tab-filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin: 0 auto var(--spacing-xl);
+  max-width: 720px;
+}
+
+.creator-tab-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--surface-inset);
+  border: var(--card-border);
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-secondary);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.creator-tab-btn:hover {
+  border-color: var(--color-accent-primary);
+  color: var(--color-accent-primary);
+}
+
+.creator-tab-btn.active {
+  background: linear-gradient(
+    90deg,
+    var(--color-accent-primary) 0%,
+    var(--color-accent-secondary) 100%
+  );
+  border-color: var(--color-accent-primary);
+  color: var(--color-bg-primary);
+}
+
+.creator-tab-btn:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
 }
 
 /* Search Section */
@@ -81,8 +127,10 @@
 /* Results Info */
 .results-info {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-lg);
   padding: 0 var(--spacing-sm);
 }
@@ -98,6 +146,7 @@
   background: transparent;
   border: 1px solid var(--color-gray-light);
   color: var(--color-text-muted);
+  min-height: 44px;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--border-radius-sm);
   font-family: var(--font-family-heading);
@@ -114,7 +163,7 @@
 /* Artists Grid */
 .artists-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   gap: var(--spacing-lg);
   max-width: 1400px;
   margin: 0 auto var(--spacing-2xl);
@@ -301,6 +350,18 @@
 
   .page-header p {
     font-size: 1.125rem;
+  }
+
+  .creator-tab-filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .creator-tab-btn {
+    min-width: 120px;
+    flex: 1 1 auto;
+    max-width: 180px;
   }
 
   .artists-grid {

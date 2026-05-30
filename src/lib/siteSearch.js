@@ -1,30 +1,35 @@
+import { fieldsMatchSearch } from "../utils/searchMatch.js";
+
 /**
  * Client-side search over bundled festival data (artists + PorchFest events).
  * @param {string} query
  * @param {{ artists?: unknown[], porchfest?: { events?: unknown[] } }} data
  */
 export function searchSite(query, data) {
-  const q = String(query || "").trim().toLowerCase()
+  const q = String(query || "").trim();
   if (!q) {
-    return { artists: [], events: [] }
+    return { artists: [], events: [] };
   }
 
-  const artistResults = (data.artists || []).filter((artist) => {
-    const nameMatch = artist.name.toLowerCase().includes(q)
-    const locationMatch = artist.location?.toLowerCase().includes(q) ?? false
-    const bioMatch = artist.bio?.toLowerCase().includes(q)
-    return nameMatch || locationMatch || bioMatch
-  })
+  const artistResults = (data.artists || []).filter((artist) =>
+    fieldsMatchSearch(
+      [artist.name, artist.location, artist.bio],
+      q,
+    ),
+  );
 
-  const events = data.porchfest?.events || []
-  const eventResults = events.filter((event) => {
-    const nameMatch = event.name.toLowerCase().includes(q)
-    const locationMatch =
-      event.location?.city?.toLowerCase().includes(q) ||
-      event.location?.state?.toLowerCase().includes(q)
-    const descMatch = event.description?.toLowerCase().includes(q)
-    return nameMatch || locationMatch || descMatch
-  })
+  const events = data.porchfest?.events || [];
+  const eventResults = events.filter((event) =>
+    fieldsMatchSearch(
+      [
+        event.name,
+        event.location?.city,
+        event.location?.state,
+        event.description,
+      ],
+      q,
+    ),
+  );
 
-  return { artists: artistResults, events: eventResults }
+  return { artists: artistResults, events: eventResults };
 }

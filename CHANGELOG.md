@@ -41,6 +41,29 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **Vault gallery presentation:** film stills use `object-fit: contain` so full-frame 35mm-style shots are not cropped in the grid.
 - **Tooling (repo maintenance):** image optimization script (`scripts/optimize-images.mjs`), Playwright site audit helper, and related scraper/sync utilities added or extended alongside audit/screenshot workflows.
 
+## [2.3.0] - 2026-05-29
+
+### Added
+
+- **Joe A. MacGown — first painter profile:** `creatorType` visual artist in **`data.json`**, 15-work gallery under **`public/resources/artists/joe-macgown/`**, **`VisualArtistBody`** layout with styled inquiry block; **`scripts/scrape-joemacgown-gallery.mjs`** + **`npm run scrape:joemacgown`** for Wix gallery harvest.
+- **What's Kuhl — affiliates page:** **`/whats-kuhl`**, **`WhatsKuhlPage`**, **`whatsKuhl.json`** (MARS + Del Rendon Foundation), residency application PDF at **`public/resources/affiliates/mars-residency-application.pdf`**, **`WHATS_KUHL_SEO`**, sitemap entry.
+- **Creators browse tabs:** **`/artists`** filter tabs (All / Musicians / Painters / Poets & Writers) via **`creatorCategories.js`**; **`?tab=`** query param for deep links (e.g. home **Painters & Photographers** card → **`/artists?tab=visual`**).
+- **Multi-category creators:** optional **`creatorTypes[]`** in **`data.json`** (e.g. Abe Partridge — musician + painter).
+- **Poets & Writers — coming soon:** **`/poets-writers`**, **`ComingSoonPage`**, waitlist + **Meet the artists** CTAs; home **Poets & Writers** card routes there instead of Porch Talk.
+- **Loose site search:** **`src/utils/searchMatch.js`** — punctuation-insensitive matching (e.g. **BB** finds **B.B. Palmer**); wired into **`ArtistsPage`** and **`siteSearch.js`** (header dropdown).
+- **Mike Rainey comedy assets** under **`public/resources/comedy/`** (headshot + thumb, optimized variants).
+
+### Changed
+
+- **Header / footer nav:** **What's Kuhl** in header (before **The Vault**); Waitlist moved to footer only; footer link order aligned with header.
+- **Mobile go-live polish:** header drawer scroll lock, Escape/route close, 44px touch targets, safe-area insets, dynamic announcement-bar offset; overflow-safe grids and full-width mobile CTAs across home, artists, vault, Closed on Sundays, Porch Talk, What's Kuhl, and visual-artist layouts.
+- **CreatorCategories (home):** painters card → **`/artists?tab=visual`**; poets card → **`/poets-writers`**.
+- **Abe Partridge:** **`socialLinks.website`** → **`https://www.abepartridge.com/`**.
+- **JD Spencer:** display name **JD Spencer**; genre **Folk Rock / Singer-Songwriter**.
+- **MARS residency link:** **`whatsKuhl.json`** uses working **`/mars-residencyprogram`** URL (not broken **`/residency-program`** path).
+- **PorchFest hub image:** event **`imageUrl`** points at existing **`/resources/porchfest/poster.jpg`** (was missing **`Porchfest26.jpg`**).
+- **SEO / deploy:** **`index.html`** meta descriptions synced with **`seoDefaults.js`**; **`.env.example`** production origin **`https://www.kuhlshit.com`**.
+
 ## [2.2.2] - 2026-04-29
 
 ### 🎵 Fire Camino — Al’s Package Store jingle

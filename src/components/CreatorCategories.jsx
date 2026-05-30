@@ -3,7 +3,7 @@ import "./CreatorCategories.css";
 
 /**
  * Teaser strip for creator types the platform will support — cards link
- * to shows (Closed on Sundays, PorchTalk) or the waitlist where relevant.
+ * to shows (Closed on Sundays, painters tab) or coming-soon / waitlist where relevant.
  */
 const CATEGORIES = [
   {
@@ -19,16 +19,16 @@ const CATEGORIES = [
     title: "Painters & Photographers",
     blurb: "High-res galleries where the image is the hero, not the menu bar.",
     accent: "visual",
-    to: "/artists/joe-macgown",
-    cta: "See Joe MacGown →",
+    to: "/artists?tab=visual",
+    cta: "Browse painters →",
   },
   {
     id: "writer",
     title: "Poets & Writers",
     blurb: "Distraction-free reading. Your words, not our chrome.",
     accent: "writer",
-    to: "/porch-talk",
-    cta: "Hear the stories on PorchTalk →",
+    to: "/poets-writers",
+    cta: "Coming soon →",
   },
 ];
 

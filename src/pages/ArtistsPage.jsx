@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import data from "../data/data.json";
 import SEO from "../components/SEO";
 import { ARTISTS_INDEX_SEO } from "../constants/seoDefaults";
@@ -10,13 +10,22 @@ import {
   artistMatchesCreatorTab,
   countArtistsInCreatorTab,
 } from "../utils/creatorCategories";
+import { fieldsMatchSearch } from "../utils/searchMatch";
 import "./ArtistsPage.css";
 
 function ArtistsPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [artists, setArtists] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState(CREATOR_TAB_ALL);
   const [filteredArtists, setFilteredArtists] = useState([]);
+
+  useEffect(() => {
+    const tabParam = searchParams.get("tab");
+    if (tabParam && CREATOR_TABS.some((t) => t.id === tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     const allArtists = data.artists || [];
@@ -39,12 +48,11 @@ function ArtistsPage() {
     );
 
     if (searchQuery.trim()) {
-      const query = searchQuery.toLowerCase();
-      list = list.filter(
-        (artist) =>
-          artist.name.toLowerCase().includes(query) ||
-          artist.location?.toLowerCase().includes(query) ||
-          artist.genre?.toLowerCase().includes(query),
+      list = list.filter((artist) =>
+        fieldsMatchSearch(
+          [artist.name, artist.location, artist.genre],
+          searchQuery,
+        ),
       );
     }
 
@@ -101,7 +109,14 @@ function ArtistsPage() {
               role="tab"
               aria-selected={activeTab === tab.id}
               className={`creator-tab-btn ${activeTab === tab.id ? "active" : ""}`}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => {
+                setActiveTab(tab.id);
+                if (tab.id === CREATOR_TAB_ALL) {
+                  setSearchParams({});
+                } else {
+                  setSearchParams({ tab: tab.id });
+                }
+              }}
             >
               {tab.label}
             </button>
@@ -199,6 +214,7 @@ function ArtistsPage() {
                 onClick={() => {
                   clearSearch();
                   setActiveTab(CREATOR_TAB_ALL);
+                  setSearchParams({});
                 }}
               >
                 Show all creators

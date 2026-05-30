@@ -73,3 +73,11 @@ export const SPOTCHECK_SEO = {
   image: GLOBAL_SEO_DEFAULT_PROPS.image,
   path: "/spotcheck",
 };
+
+export const POETS_WRITERS_COMING_SOON_SEO = {
+  title: "Poets & Writers — Coming soon | kuhlshit.com",
+  description:
+    "Dedicated homes for poets and writers are coming to kuhlshit.com. Join the creator waitlist for early access.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/poets-writers",
+};

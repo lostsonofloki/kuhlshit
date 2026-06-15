@@ -16,8 +16,9 @@ function getEventEndYmd(event) {
   return "";
 }
 
-/** True once the event’s last day is strictly before today (America/Chicago). */
+/** True once the event’s last day is strictly before today (America/Chicago), or marked completed. */
 function isPastVaultEvent(event, now = new Date()) {
+  if (event?.completed === true) return true;
   const end = getEventEndYmd(event);
   if (!end) return false;
   const today = getChicagoDateKey(now);

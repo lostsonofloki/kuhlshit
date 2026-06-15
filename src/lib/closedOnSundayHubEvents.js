@@ -30,6 +30,11 @@ export function isClosedOnSundayHubEvent(e) {
   )
 }
 
+/** Manually marked in `data.json` when a session has been recorded (same-day or before midnight rollover). */
+export function isClosedOnSundayHubEventCompleted(e) {
+  return Boolean(e && e.completed === true)
+}
+
 /** @param {unknown[]} events */
 export function getClosedOnSundayHubEvents(events) {
   if (!Array.isArray(events)) return []
@@ -44,7 +49,7 @@ export function getUpcomingClosedOnSundayHubEventsSorted(events, now = new Date(
   const today = getChicagoDateKey(now)
   if (!today) return []
   return getClosedOnSundayHubEvents(events)
-    .filter((e) => e.date >= today)
+    .filter((e) => !isClosedOnSundayHubEventCompleted(e) && e.date >= today)
     .sort((a, b) => a.date.localeCompare(b.date))
 }
 
@@ -56,7 +61,7 @@ export function getPastClosedOnSundayHubEventsSorted(events, now = new Date()) {
   const today = getChicagoDateKey(now)
   if (!today) return []
   return getClosedOnSundayHubEvents(events)
-    .filter((e) => e.date < today)
+    .filter((e) => isClosedOnSundayHubEventCompleted(e) || e.date < today)
     .sort((a, b) => b.date.localeCompare(a.date))
 }
 

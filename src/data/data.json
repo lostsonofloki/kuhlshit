@@ -254,7 +254,7 @@
       "id": "goodloe-chilcutt",
       "name": "Goodloe Chilcutt",
       "location": "Alabama",
-      "bio": "Goodloe Chilcutt writes and performs music rooted in faith and storytelling — from hymn-inspired originals to family-friendly songs. His releases span streaming platforms.",
+      "bio": "Goodloe Chilcutt writes and performs music rooted in faith and storytelling — from hymn-inspired originals to family-friendly songs. His releases span streaming platforms. Recorded for Closed on Sundays at Al's Spirits & Music, Reform, AL (June 14, 2026).",
       "imageUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
       "thumbnailUrl": "/resources/artists/goodloe-chilcutt/photo-1.webp",
       "genre": "Singer-Songwriter",
@@ -275,28 +275,11 @@
       "featuredShow": {
         "eyebrow": "Porch Talk presents",
         "title": "Closed on Sundays",
-        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "billingLine": "Recorded for Closed on Sundays at Al's Spirits & Music — June 14, 2026 (filming for the Closed on Sundays series on YouTube).",
         "when": "Sun Jun 14, 2026 · 3:00 PM CT",
-        "where": "Al's Spirits & Music · Reform, AL",
-        "calendar": {
-          "allDayStart": "2026-06-14",
-          "allDayEndExclusive": "2026-06-15",
-          "title": "Closed on Sundays — Goodloe Chilcutt",
-          "location": "Al's Spirits & Music, Reform, AL",
-          "fileSlug": "goodloe-chilcutt-closed-on-sunday-2026-06-14",
-          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
-        }
+        "where": "Al's Spirits & Music · Reform, AL"
       },
-      "upcomingShows": [
-        {
-          "sortDate": "2026-06-14",
-          "when": "Sun Jun 14, 2026 · 3:00 PM CT",
-          "title": "Closed on Sundays — Goodloe Chilcutt",
-          "where": "Al's Spirits & Music · Reform, AL",
-          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
-          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
-        }
-      ],
+      "upcomingShows": [],
       "videos": [],
       "featured": true,
       "publishDate": "2026-05-12"
@@ -1435,6 +1418,65 @@
       "publishDate": "2026-03-30"
     },
     {
+      "id": "wesley-hill",
+      "name": "Wesley Hill",
+      "location": "Birmingham, AL",
+      "bio": "Wesley Hill is an artist out of Birmingham, Alabama. Streaming releases include Died to Myself, Make Me Say It, and Little Job to Do.",
+      "imageUrl": "/resources/artists/wesley-hill/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/wesley-hill/photo-1.webp",
+      "genre": "Singer-Songwriter",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/_wesley_hill_",
+        "facebook": "https://www.facebook.com/wesley.hill.520",
+        "twitter": "",
+        "youtube": "https://www.youtube.com/channel/UCNkp7oxlx1ls0-rgZ2jTn8g",
+        "spotify": "https://open.spotify.com/artist/2t525YEs7ntwF4lKQSzomb",
+        "appleMusic": "https://music.apple.com/us/artist/wesley-hill/1581059279",
+        "website": ""
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/2t525YEs7ntwF4lKQSzomb",
+        "appleMusic": "https://music.apple.com/us/artist/wesley-hill/1581059279",
+        "youtube": "https://www.youtube.com/channel/UCNkp7oxlx1ls0-rgZ2jTn8g"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Aug 30, 2026 · 8:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-08-30",
+          "allDayEndExclusive": "2026-08-31",
+          "title": "Closed on Sundays — Wesley Hill",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "wesley-hill-closed-on-sunday-2026-08-30",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL at 8:00 PM CT (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-08-30",
+          "when": "Sun Aug 30, 2026 · 8:00 PM CT",
+          "title": "Closed on Sundays — Wesley Hill",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [
+        {
+          "title": "Wesley Hill — Died to Myself",
+          "videoId": "LGRP0SS6mss",
+          "thumbnail": "https://img.youtube.com/vi/LGRP0SS6mss/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=LGRP0SS6mss",
+          "source": "YouTube"
+        }
+      ],
+      "featured": true,
+      "publishDate": "2026-06-14"
+    },
+    {
       "id": "will-stewart",
       "name": "Will Stewart",
       "bio": "Singer-songwriter from Birmingham, AL, crafting a unique blend he calls \"Space Twang.\" Known for heartfelt songwriting and captivating live performances across the Southeast. Hometown: Birmingham, Alabama. Genres: Space Twang, Folk / Americana. Performed at PorchFest 2026!",
@@ -1706,13 +1748,14 @@
         "id": "closed-on-sundays-2026-06-14",
         "name": "Closed on Sundays: Goodloe Chilcutt",
         "date": "2026-06-14",
+        "completed": true,
         "location": {
           "venue": "Al's Spirits & Music",
           "city": "Reform",
           "state": "AL",
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         },
-        "description": "Goodloe’s solo originals; faith-forward catalogue (3:00 PM CT).",
+        "description": "Goodloe’s solo originals — recorded June 14, 2026 at Al's (3:00 PM CT).",
         "lineup": [],
         "vaultLinks": {
           "primary": {
@@ -1793,14 +1836,37 @@
             "label": "Janet Simpson"
           }
         }
+      },
+      {
+        "id": "closed-on-sundays-2026-08-30",
+        "name": "Closed on Sundays: Wesley Hill",
+        "date": "2026-08-30",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Wesley's solo set — Birmingham songwriter (8:00 PM CT).",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/wesley-hill",
+            "label": "Wesley Hill"
+          }
+        }
       }
     ]
   },
   "metadata": {
-    "lastUpdated": "2026-05-13",
+    "lastUpdated": "2026-06-14",
     "version": "2.0.0",
-    "totalArtists": 34,
+    "totalArtists": 35,
     "totalComedy": 1,
-    "totalEvents": 8
+    "totalEvents": 9
   }
 }

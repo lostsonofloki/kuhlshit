@@ -638,21 +638,21 @@
         "eyebrow": "Porch Talk presents",
         "title": "Closed on Sundays",
         "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
-        "when": "Sun Jul 19, 2026 · 3:00 PM CT",
+        "when": "Sun Sep 13, 2026 · 3:00 PM CT",
         "where": "Al's Spirits & Music · Reform, AL",
         "calendar": {
-          "allDayStart": "2026-07-19",
-          "allDayEndExclusive": "2026-07-20",
+          "allDayStart": "2026-09-13",
+          "allDayEndExclusive": "2026-09-14",
           "title": "Closed on Sundays — Janet Simpson",
           "location": "Al's Spirits & Music, Reform, AL",
-          "fileSlug": "janet-simpson-closed-on-sunday-2026-07-19",
+          "fileSlug": "janet-simpson-closed-on-sunday-2026-09-13",
           "detailLine": "Solo set at Al's Spirits & Music, Reform, AL (filmed for Closed on Sundays on YouTube)."
         }
       },
       "upcomingShows": [
         {
-          "sortDate": "2026-07-19",
-          "when": "Sun Jul 19, 2026 · 3:00 PM CT",
+          "sortDate": "2026-09-13",
+          "when": "Sun Sep 13, 2026 · 3:00 PM CT",
           "title": "Closed on Sundays — Janet Simpson",
           "where": "Al's Spirits & Music · Reform, AL",
           "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
@@ -1815,9 +1815,9 @@
         }
       },
       {
-        "id": "closed-on-sundays-2026-07-19",
+        "id": "closed-on-sundays-2026-09-13",
         "name": "Closed on Sundays: Janet Simpson",
-        "date": "2026-07-19",
+        "date": "2026-09-13",
         "location": {
           "venue": "Al's Spirits & Music",
           "city": "Reform",

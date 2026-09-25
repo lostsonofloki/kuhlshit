@@ -132,8 +132,8 @@ const CLOSED_ON_SUNDAYS_INTRO = (
     <p>
       <strong>Closed on Sundays</strong> — listening-room performances: short sets to camera for our YouTube
       series, with the same room-focused spirit as{' '}
-      <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>. Episodes live on YouTube; upcoming dates
-      at Al&apos;s are listed below, then the full archive you can search. In person at Al&apos;s it&apos;s a
+      <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>.       The latest full show is featured below. Upcoming dates
+      at Al&apos;s follow, then the archive you can search. In person at Al&apos;s it&apos;s a
       small listening lounge—<strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
@@ -149,6 +149,50 @@ const CLOSED_ON_SUNDAYS_INTRO = (
 // Check for VITE_ prefix (Vite standard) or plain name (Vercel import)
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || import.meta.env.YOUTUBE_API_KEY || '';
 const PLAYLIST_ID = import.meta.env.VITE_YOUTUBE_PLAYLIST_ID || import.meta.env.YOUTUBE_PLAYLIST_ID || 'PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek';
+
+/** Latest full Closed on Sundays set, pinned above the playlist archive. */
+const FEATURED_COS_SHOW = {
+  videoId: 'NCKSztNWVpE',
+  title: 'Closed on Sundays — Taylor Hollingsworth',
+  artistName: 'Taylor Hollingsworth',
+  artistPath: '/artists/taylor-hollingsworth',
+  when: 'Sunday, September 20, 2026',
+  where: "Al's Spirits & Music, Reform, AL",
+}
+
+function FeaturedCosShow() {
+  const { videoId, title, artistName, artistPath, when, where } = FEATURED_COS_SHOW
+  const watchUrl = `https://www.youtube.com/watch?v=${videoId}`
+
+  return (
+    <section className="cos-featured" aria-labelledby="cos-featured-heading">
+      <p className="cos-featured-eyebrow">Featured</p>
+      <h2 id="cos-featured-heading" className="cos-featured-heading">
+        <Link to={artistPath}>{artistName}</Link>
+      </h2>
+      <p className="cos-featured-meta">
+        Full show · {when} · {where}
+      </p>
+      <div className="cos-featured-frame">
+        <iframe
+          src={`https://www.youtube.com/embed/${videoId}`}
+          title={title}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+      <p className="cos-featured-actions">
+        <a href={watchUrl} target="_blank" rel="noopener noreferrer" className="watch-btn">
+          Watch on YouTube →
+        </a>
+        <Link to={artistPath} className="watch-btn">
+          {artistName} profile
+        </Link>
+      </p>
+    </section>
+  )
+}
 
 function ClosedOnSundaysPage() {
   const [episodes, setEpisodes] = useState([])
@@ -199,7 +243,9 @@ function ClosedOnSundaysPage() {
         nextPageToken = data.nextPageToken
       } while (nextPageToken)
 
-      const episodesData = allItems.map(item => {
+      const episodesData = allItems
+        .filter((item) => item.snippet?.resourceId?.videoId !== FEATURED_COS_SHOW.videoId)
+        .map(item => {
         const video = item.snippet
         const videoId = video.resourceId.videoId
         const thumbnails = video.thumbnails
@@ -250,6 +296,7 @@ function ClosedOnSundaysPage() {
           </p>
           {pastSessionsBlock}
         </div>
+        <FeaturedCosShow />
         <UpcomingCosShowsSection />
         <div className="loading">
           <p>Loading episodes...</p>
@@ -272,6 +319,7 @@ function ClosedOnSundaysPage() {
           </p>
           {pastSessionsBlock}
         </div>
+        <FeaturedCosShow />
         <UpcomingCosShowsSection />
         <div className="error">
           <p>{error}</p>
@@ -293,6 +341,8 @@ function ClosedOnSundaysPage() {
         </p>
         {pastSessionsBlock}
       </div>
+
+      <FeaturedCosShow />
 
       <UpcomingCosShowsSection />
 

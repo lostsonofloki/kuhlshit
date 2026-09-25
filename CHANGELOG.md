@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- **Closed on Sundays — Taylor Hollingsworth full show (Sep 20, 2026):** featured embed on **`/closed-on-sundays`** for YouTube **`NCKSztNWVpE`**, plus the video on his profile and hub row **`closed-on-sundays-2026-09-20`**.
 - **Jodie Ross — Closed on Sundays (Jun 28, 2026):** artist entry and hub row **`closed-on-sundays-2026-06-28`** in **`data.json`**, headshots under **`public/resources/artists/jodie-ross/`**; **`scripts/scrape-jodie-ross-music.mjs`** (Playwright) for **jodierossmusic.com** (writes **`tmp/jodie-ross-music.json`** when run — `tmp/` gitignored).
 - **Janet Simpson — Closed on Sundays (Jul 19, 2026):** artist entry and hub row **`closed-on-sundays-2026-07-19`**, assets **`public/resources/artists/janet-simpson/`**; **Listen** supports optional **`musicLinks.tidal`** and **`musicLinks.pandora`** on **MusicianBody** (no squatted personal-site domain in data).
 - **`.cursor/rules/artist-photos-source.mdc`:** project rule — source headshots live in **`Artist/`** before **`public/resources/artists/<slug>/`** + **`optimize-images.mjs`**.

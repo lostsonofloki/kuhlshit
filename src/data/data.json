@@ -1252,6 +1252,13 @@
       "bandsintown_slug": "Taylor Hollingsworth",
       "videos": [
         {
+          "title": "Closed on Sundays — Taylor Hollingsworth (full show)",
+          "videoId": "NCKSztNWVpE",
+          "thumbnail": "https://img.youtube.com/vi/NCKSztNWVpE/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=NCKSztNWVpE",
+          "source": "Closed on Sundays"
+        },
+        {
           "title": "Closed on Sundays - Taylor Hollingsworth",
           "videoId": "j9nQkZzUwXg",
           "thumbnail": "https://img.youtube.com/vi/j9nQkZzUwXg/maxresdefault.jpg",
@@ -1815,6 +1822,30 @@
         }
       },
       {
+        "id": "closed-on-sundays-2026-09-20",
+        "name": "Closed on Sundays: Taylor Hollingsworth",
+        "date": "2026-09-20",
+        "completed": true,
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Taylor’s full set — recorded September 20, 2026 at Al's.",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/taylor-hollingsworth",
+            "label": "Taylor Hollingsworth"
+          }
+        }
+      },
+      {
         "id": "closed-on-sundays-2026-09-13",
         "name": "Closed on Sundays: Janet Simpson",
         "date": "2026-09-13",
@@ -1867,6 +1898,6 @@
     "version": "2.0.0",
     "totalArtists": 35,
     "totalComedy": 1,
-    "totalEvents": 9
+    "totalEvents": 10
   }
 }

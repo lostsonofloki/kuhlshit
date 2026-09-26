@@ -131,10 +131,9 @@ const CLOSED_ON_SUNDAYS_INTRO = (
   <div className="page-static-intro">
     <p>
       <strong>Closed on Sundays</strong> — listening-room performances: short sets to camera for our YouTube
-      series, with the same room-focused spirit as{' '}
-      <Link to="/porchfest">PorchFest in Columbus, Mississippi</Link>.       The latest full show is featured below. Upcoming dates
-      at Al&apos;s follow, then the archive you can search. In person at Al&apos;s it&apos;s a
-      small listening lounge—<strong>bring a chair</strong>.
+      series. The latest full show is featured below. Upcoming dates at Al&apos;s follow, then the
+      archive you can search. In person at Al&apos;s it&apos;s a small listening lounge—
+      <strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
       <Link to="/porch-talk">Porch Talk interviews</Link>

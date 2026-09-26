@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AlsPackageStoreJingle from "../AlsPackageStoreJingle";
 import AddToCalendarRow from "../AddToCalendarRow";
 import FeaturedShowWhereLine from "../FeaturedShowWhereLine";
+import { isYmdOnOrAfterChicagoToday } from "../../lib/closedOnSundayHubEvents";
 
 /**
  * Musician content body — the original PorchFest artist-detail layout
@@ -214,6 +215,7 @@ export default function MusicianBody({
             </div>
             {artist.featuredShow.calendar &&
             artist.featuredShow.calendar.allDayStart &&
+            isYmdOnOrAfterChicagoToday(artist.featuredShow.calendar.allDayStart) &&
             artist.featuredShow.calendar.allDayEndExclusive &&
             artist.featuredShow.calendar.title ? (
               <AddToCalendarRow

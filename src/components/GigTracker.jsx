@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react'
 import AddToCalendarRow from './AddToCalendarRow'
 import { resolveCalendarForUpcomingShow } from '../lib/upcomingShowCalendar'
+import { isYmdOnOrAfterChicagoToday } from '../lib/closedOnSundayHubEvents'
 import './GigTracker.css'
 
 function sortedShows(list) {
@@ -22,7 +23,11 @@ function GigTracker({
   artistId = '',
   profilePath = '',
 }) {
-  const shows = useMemo(() => sortedShows(upcomingShows), [upcomingShows])
+  const shows = useMemo(() => {
+    const list = Array.isArray(upcomingShows) ? upcomingShows : []
+    const stillAhead = list.filter((show) => isYmdOnOrAfterChicagoToday(show?.sortDate))
+    return sortedShows(stillAhead)
+  }, [upcomingShows])
   const hasManual = shows.length > 0
   const hasBit = Boolean(artistSlug)
 

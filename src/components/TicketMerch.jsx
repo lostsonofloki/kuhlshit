@@ -8,7 +8,7 @@ function TicketMerch() {
       <div className="ticket-merch-inner">
         {/* Pricing */}
         <div className="ticket-pricing">
-          <h2 className="ticket-merch-title">Get Your Tickets</h2>
+          <h2 className="ticket-merch-title">Weekend passes</h2>
           <div className="price-options">
             <div className="price-option">
               <span className="price-amount">$10</span>
@@ -21,7 +21,7 @@ function TicketMerch() {
             </div>
           </div>
           <p className="ticket-note">
-            Tickets available at the Gate. Cash or Card accepted.
+            The weekend is over. Passes were $10 a day and $20 for the weekend, sold at the gate.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ function TicketMerch() {
             </div>
           </div>
           <p className="merch-caption">
-            Limited Edition — Get yours at the Merch Table, Beside the Stage
+            Limited edition — sold at the merch table beside the stage.
           </p>
           <Link to="/porchfest" className="btn btn-primary merch-cta-btn">
             See the Lineup →

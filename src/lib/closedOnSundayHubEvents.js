@@ -20,6 +20,20 @@ export function getChicagoDateKey(now = new Date()) {
   return `${y}-${m}-${d}`
 }
 
+/**
+ * True when `ymd` is today or later in Chicago, or when the date is missing
+ * (undated rows stay visible). Past YYYY-MM-DD values are false.
+ * @param {unknown} ymd
+ * @param {Date} [now]
+ */
+export function isYmdOnOrAfterChicagoToday(ymd, now = new Date()) {
+  const key = typeof ymd === 'string' ? ymd.trim() : ''
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(key)) return true
+  const today = getChicagoDateKey(now)
+  if (!today) return true
+  return key >= today
+}
+
 export function isClosedOnSundayHubEvent(e) {
   return (
     e &&

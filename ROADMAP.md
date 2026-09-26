@@ -6,6 +6,7 @@ Status key: `[done]` `[in-progress]` `[pending]`
 
 Priorities until the data layer and public site are clearly ahead of “backend for payments.” **Paid tiers / billing provider choice are deferred** until you explicitly prioritize monetization.
 
+- [done] **Pre-meeting fixes (2026-09-26):** PorchFest hub shows the festival only; search, playlists, and live-date lists no longer treat Closed on Sundays rows or past gigs as current PorchFest.
 - [done] **Closed on Sundays copy:** indoor listening room inside Al’s Spirits & Music (the package store in Reform, AL) — not an outdoor PorchFest. Shows are free; bring a chair.
 - [in-progress] **The Vault:** permanent archive for past events (galleries, credits, accurate links).
 - [pending] **Supabase foundation:** CLI migrations in-repo, schema aligned to `data.json`, import/seed + parity checks, adapter + env toggle + JSON fallback.

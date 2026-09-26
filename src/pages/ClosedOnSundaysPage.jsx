@@ -9,6 +9,7 @@ import {
   getPastClosedOnSundayHubEventsSorted,
   getUpcomingCosHubRowsForDisplay,
 } from '../lib/closedOnSundayHubEvents'
+import { mapPlaylistItemsToVideos } from '../lib/youtubePlaylist'
 import './ClosedOnSundays.css'
 
 function cosSessionShortTitle(name) {
@@ -33,7 +34,7 @@ function PastCosSessionsArchive() {
   return (
     <div className="page-header-archive-list" aria-label="Past sessions at Al's">
       <p className="page-header-archive-intro">
-        Past shoots at Al&apos;s for this series (newest first). Upcoming dates are in the list below.
+        Past shoots at Al&apos;s for this series (newest first).
       </p>
       <ul className="page-header-archive-items">
         {past.map((e) => {
@@ -132,7 +133,8 @@ const CLOSED_ON_SUNDAYS_INTRO = (
     <p>
       <strong>Closed on Sundays</strong> — short sets to camera for our YouTube series, recorded in the
       listening room inside Al&apos;s Spirits &amp; Music, the package store in Reform, AL. The latest full
-      show is featured below. Upcoming dates at Al&apos;s follow, then the archive you can search. Shows
+      show is featured below, then the archive you can search. Upcoming dates at Al&apos;s are listed
+      when they&apos;re booked. Shows
       are free to attend. It&apos;s a small room, so just <strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
@@ -242,22 +244,8 @@ function ClosedOnSundaysPage() {
         nextPageToken = data.nextPageToken
       } while (nextPageToken)
 
-      const episodesData = allItems
-        .filter((item) => item.snippet?.resourceId?.videoId !== FEATURED_COS_SHOW.videoId)
-        .map(item => {
-        const video = item.snippet
-        const videoId = video.resourceId.videoId
-        const thumbnails = video.thumbnails
-
-        return {
-          id: videoId,
-          title: typeof video.title === 'string' ? video.title : '',
-          description: typeof video.description === 'string' ? video.description : '',
-          thumbnail: thumbnails.high?.url || thumbnails.medium?.url || thumbnails.default?.url || '',
-          videoId: videoId,
-          publishedAt: video.publishedAt
-        }
-      })
+      const episodesData = mapPlaylistItemsToVideos(allItems)
+        .filter((episode) => episode.videoId !== FEATURED_COS_SHOW.videoId)
 
       setEpisodes(episodesData)
       setFilteredEpisodes(episodesData)

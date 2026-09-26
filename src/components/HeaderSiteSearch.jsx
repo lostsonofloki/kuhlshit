@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import data from '../data/data.json'
-import { searchSite } from '../lib/siteSearch'
+import { eventSearchHref, searchSite } from '../lib/siteSearch'
+import { isClosedOnSundayHubEvent } from '../lib/closedOnSundayHubEvents'
 import './HeaderSiteSearch.css'
 
 function HeaderSiteSearch({ onNavigate }) {
@@ -13,6 +14,8 @@ function HeaderSiteSearch({ onNavigate }) {
   const panelId = useId()
 
   const results = useMemo(() => searchSite(query, data), [query])
+  const porchfestHits = results.events.filter((event) => !isClosedOnSundayHubEvent(event))
+  const cosHits = results.events.filter((event) => isClosedOnSundayHubEvent(event))
 
   const total = results.artists.length + results.events.length
 
@@ -131,31 +134,36 @@ function HeaderSiteSearch({ onNavigate }) {
                     </ul>
                   </div>
                 ) : null}
-                {results.events.length > 0 ? (
-                  <div className="header-site-search-group">
-                    <div className="header-site-search-group-title">PorchFest</div>
-                    <ul className="header-site-search-list">
-                      {results.events.map((ev) => (
-                        <li key={ev.id}>
-                          <Link to="/porchfest" className="header-site-search-hit" onClick={onPick}>
-                            <span className="header-site-search-thumb header-site-search-thumb--ev" aria-hidden>
-                              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <rect x="3" y="5" width="18" height="16" rx="2" />
-                                <path d="M16 3v4M8 3v4M3 11h18" />
-                              </svg>
-                            </span>
-                            <span className="header-site-search-hit-text">
-                              <span className="header-site-search-hit-name">{ev.name}</span>
-                              <span className="header-site-search-hit-meta">
-                                {[ev.location?.city, ev.location?.state].filter(Boolean).join(', ')}
+                {[
+                  ['PorchFest', porchfestHits],
+                  ['Closed on Sundays', cosHits],
+                ].map(([title, hits]) =>
+                  hits.length > 0 ? (
+                    <div className="header-site-search-group" key={title}>
+                      <div className="header-site-search-group-title">{title}</div>
+                      <ul className="header-site-search-list">
+                        {hits.map((ev) => (
+                          <li key={ev.id}>
+                            <Link to={eventSearchHref(ev)} className="header-site-search-hit" onClick={onPick}>
+                              <span className="header-site-search-thumb header-site-search-thumb--ev" aria-hidden>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                                  <path d="M16 3v4M8 3v4M3 11h18" />
+                                </svg>
                               </span>
-                            </span>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
+                              <span className="header-site-search-hit-text">
+                                <span className="header-site-search-hit-name">{ev.name}</span>
+                                <span className="header-site-search-hit-meta">
+                                  {[ev.location?.city, ev.location?.state].filter(Boolean).join(', ')}
+                                </span>
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null,
+                )}
               </>
             )}
           </div>

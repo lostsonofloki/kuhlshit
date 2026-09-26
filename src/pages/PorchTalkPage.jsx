@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import { PORCH_TALK_SEO } from '../constants/seoDefaults'
+import { mapPlaylistItemsToVideos } from '../lib/youtubePlaylist'
 import './PorchTalkPage.css'
 
 const PORCH_TALK_INTRO = (
@@ -60,15 +61,7 @@ function PorchTalkPage() {
         }
       } while (nextPageToken)
 
-      const formattedVideos = allItems.map(item => ({
-        id: item.snippet.resourceId.videoId,
-        title: item.snippet.title,
-        description: item.snippet.description,
-        thumbnail: item.snippet.thumbnails.high?.url ||
-                   item.snippet.thumbnails.medium?.url ||
-                   item.snippet.thumbnails.default?.url || '',
-        publishedAt: item.snippet.publishedAt
-      }))
+      const formattedVideos = mapPlaylistItemsToVideos(allItems)
 
       setVideos(formattedVideos)
       setFilteredVideos(formattedVideos)

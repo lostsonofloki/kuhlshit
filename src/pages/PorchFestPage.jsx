@@ -10,6 +10,7 @@ import { useFestivalClock } from "../hooks/useFestivalClock";
 import { useCachedFestivalData } from "../hooks/useCachedFestivalData";
 import { getSlotStatus } from "../utils/porchfestScheduleStatus";
 import { buildPorchfestHubJsonLd } from "../utils/porchfestHubJsonLd";
+import { isClosedOnSundayHubEvent } from "../lib/closedOnSundayHubEvents";
 import "./PorchFestPage.css";
 
 const APPLE_CALENDAR_URL = "/calendar/porchfest-2026.ics";
@@ -53,9 +54,9 @@ function PorchFestPage() {
   const [showMapFab, setShowMapFab] = useState(false);
 
   useEffect(() => {
-    const upcomingEvents = (data?.porchfest?.events || []).sort(
-      (a, b) => new Date(a.date) - new Date(b.date),
-    );
+    const upcomingEvents = (data?.porchfest?.events || [])
+      .filter((event) => !isClosedOnSundayHubEvent(event))
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
     setEvents(upcomingEvents);
 
     // Build a lookup map: artist name -> artist object
@@ -223,11 +224,19 @@ function PorchFestPage() {
                             ) : (
                               <span>{event.location.venue}</span>
                             )}
-                            <span> • </span>
                           </>
                         )}
-                        {event.location.address}, {event.location.city},{" "}
-                        {event.location.state}
+                        {event.location.venue &&
+                        [event.location.address, event.location.city, event.location.state].some(Boolean) ? (
+                          <span> • </span>
+                        ) : null}
+                        {[
+                          event.location.address,
+                          event.location.city,
+                          event.location.state,
+                        ]
+                          .filter(Boolean)
+                          .join(", ")}
                       </p>
                     </div>
                   </div>

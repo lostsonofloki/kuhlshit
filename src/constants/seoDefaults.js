@@ -61,7 +61,7 @@ export const PORCH_TALK_SEO = {
 export const CLOSED_ON_SUNDAYS_SEO = {
   title: "Closed on Sundays | Listening-room performances | Kuhlshit.com",
   description:
-    "Closed on Sundays — short sets to camera in the listening room inside Al's Spirits & Music, the package store in Reform, AL. Bring a chair. Browse the playlist archive on Kuhlshit.com and YouTube.",
+    "Closed on Sundays — short sets to camera in the listening room inside Al's Spirits & Music, the package store in Reform, AL. Free to attend — just bring a chair. Browse the playlist archive on Kuhlshit.com and YouTube.",
   image: GLOBAL_SEO_DEFAULT_PROPS.image,
   path: "/closed-on-sundays",
 };

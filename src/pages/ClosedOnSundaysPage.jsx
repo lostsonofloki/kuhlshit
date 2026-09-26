@@ -82,7 +82,7 @@ function UpcomingCosShowsSection() {
       </h2>
       <p className="cos-upcoming-lead">
         Listening-room sets at Al&apos;s Spirits &amp; Music (Reform, AL), filmed for this series. Dates are
-        Central Time unless noted. If you&apos;re coming out in person: bring a chair.
+        Central Time unless noted. Coming out in person is free — just bring a chair.
       </p>
       <ul className="cos-upcoming-list">
         {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, hubCalendar }) => {
@@ -132,8 +132,8 @@ const CLOSED_ON_SUNDAYS_INTRO = (
     <p>
       <strong>Closed on Sundays</strong> — short sets to camera for our YouTube series, recorded in the
       listening room inside Al&apos;s Spirits &amp; Music, the package store in Reform, AL. The latest full
-      show is featured below. Upcoming dates at Al&apos;s follow, then the archive you can search. It&apos;s
-      a small room, so if you come out in person—<strong>bring a chair</strong>.
+      show is featured below. Upcoming dates at Al&apos;s follow, then the archive you can search. Shows
+      are free to attend. It&apos;s a small room, so just <strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
       <Link to="/porch-talk">Porch Talk interviews</Link>
@@ -291,7 +291,7 @@ function ClosedOnSundaysPage() {
         <div className="page-header">
           <h1>Closed on Sundays</h1>
           <p className="page-header-tagline">
-            Listening-room performances — short sets to camera. (Tell people to bring a chair.)
+            Listening-room performances — short sets to camera. Free to attend; just bring a chair.
           </p>
           {pastSessionsBlock}
         </div>
@@ -314,7 +314,7 @@ function ClosedOnSundaysPage() {
         <div className="page-header">
           <h1>Closed on Sundays</h1>
           <p className="page-header-tagline">
-            Listening-room performances — short sets to camera. (Tell people to bring a chair.)
+            Listening-room performances — short sets to camera. Free to attend; just bring a chair.
           </p>
           {pastSessionsBlock}
         </div>
@@ -336,7 +336,7 @@ function ClosedOnSundaysPage() {
       <div className="page-header">
         <h1>Closed on Sundays</h1>
         <p className="page-header-tagline">
-          Listening-room performances — short sets to camera. (Tell people to bring a chair.)
+          Listening-room performances — short sets to camera. Free to attend; just bring a chair.
         </p>
         {pastSessionsBlock}
       </div>

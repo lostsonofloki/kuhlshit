@@ -30,6 +30,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- **Closed on Sundays copy:** dropped the PorchFest “room-focused spirit” comparison (PorchFest is the outdoor Columbus, MS festival). Hub intro, page tagline, homepage Watch & listen card, upcoming-shows lead, and **`CLOSED_ON_SUNDAYS_SEO`** now say the sets are recorded in the listening room inside Al’s Spirits & Music (the package store in Reform, AL), and that shows are **free to attend — just bring a chair**. Removed the shipped note-to-self “(Tell people to bring a chair.)”.
 - **Creator profile URLs:** **`/artists/:artistId`** route alongside **`/porchfest/artists/:artistId`**; hub **`vaultLinks`**, live promo, sitemap/audit lists, and **MySpaceRetroView** updated to resolve artist paths consistently (**`artistIdFromCreatorProfilePath`** in **`closedOnSundayHubEvents.js`**).
 - **Closed on Sundays copy:** hub + home positioning — **listening-room performances, short sets to camera**, in-room **bring a chair**; **GLOBAL_SEO_DEFAULT_PROPS** and **CLOSED_ON_SUNDAYS_SEO** descriptions updated; **ClosedOnSundays.css** styles **`page-header-tagline`** like the subtitle line.
 - **Series language:** prefer **recording** over “taping” in bios and **`closedOnSundayHubEvents`** comments; **GigTracker** titles for COS rows no longer append **“(solo taping)”**; trimmed redundant long Al’s blurbs on select bios.

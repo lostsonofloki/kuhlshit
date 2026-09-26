@@ -31,9 +31,11 @@ Domain / brand: kuhlshit.com (canonical URLs in code default to https://www.kuhl
 
 1.2 Named product surfaces (user-facing series)
   A) Closed on Sundays
-     - Listening-room performances: short sets to camera; filmed for YouTube;
-       in-person framing at Al's Spirits & Music (Reform, AL) with "bring a
-       chair" copy (ClosedOnSundaysPage.jsx, seoDefaults, HomePage.jsx).
+     - Short sets to camera, filmed for YouTube, recorded in the listening room
+       inside Al's Spirits & Music — the package store in Reform, AL. Distinct
+       from outdoor PorchFest (Columbus, MS). In person the shows are free;
+       bring a chair (ClosedOnSundaysPage.jsx, seoDefaults CLOSED_ON_SUNDAYS_SEO,
+       HomePage.jsx showcase card).
      - Hub schedule rows live as first-class objects inside porchfest.events
        with ids prefixed closed-on-sundays-YYYY-MM-DD (see section 7).
 
@@ -543,6 +545,8 @@ Routes are split across src/main.jsx (outer shell) and src/App.jsx (site app).
 18. CHANGELOG SNAPSHOT (TOP OF FILE, ~UNRELEASED / RECENT FACTS)
 --------------------------------------------------------------------------------
 Source: CHANGELOG.md lines ~7–42 (skimmed). Highlights:
+  - Closed on Sundays copy: listening room inside Al's package store (Reform, AL);
+    free to attend, bring a chair; PorchFest comparison removed.
   - Closed on Sundays hub rows and artists: Jodie Ross, Janet Simpson, Goodloe
     Chilcutt, Megan Lea, etc., with data + asset paths cited.
   - Home UpcomingAtAlsStrip + shared getUpcomingCosHubRowsForDisplay.

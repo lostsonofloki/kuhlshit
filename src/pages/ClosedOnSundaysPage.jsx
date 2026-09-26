@@ -130,10 +130,10 @@ function UpcomingCosShowsSection() {
 const CLOSED_ON_SUNDAYS_INTRO = (
   <div className="page-static-intro">
     <p>
-      <strong>Closed on Sundays</strong> — listening-room performances: short sets to camera for our YouTube
-      series. The latest full show is featured below. Upcoming dates at Al&apos;s follow, then the
-      archive you can search. In person at Al&apos;s it&apos;s a small listening lounge—
-      <strong>bring a chair</strong>.
+      <strong>Closed on Sundays</strong> — short sets to camera for our YouTube series, recorded in the
+      listening room inside Al&apos;s Spirits &amp; Music, the package store in Reform, AL. The latest full
+      show is featured below. Upcoming dates at Al&apos;s follow, then the archive you can search. It&apos;s
+      a small room, so if you come out in person—<strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
       <Link to="/porch-talk">Porch Talk interviews</Link>

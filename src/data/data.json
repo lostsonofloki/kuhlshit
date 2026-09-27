@@ -387,8 +387,8 @@
     },
     {
       "id": "honey-boy-and-boots",
-      "name": "Honey Boy and Boots",
-      "bio": "Honeyboy and Boots are a husband/wife duo from Starkville Mississippi. Drew and Courtney Blackwell have a unique style that is all their own. This guitar/cello duo plays a blend of old blues and folk covers, country ballads, and originals that are straight from the heart.",
+      "name": "Drew and Courtney Blackwell",
+      "bio": "Drew and Courtney Blackwell, formerly Honeyboy and Boots, are a husband and wife duo from Starkville, Mississippi. This guitar and cello duo plays a blend of old blues and folk covers, country ballads, and originals that are straight from the heart.",
       "imageUrl": "/resources/artists/honey-boy-and-boots/photo-1.jpg",
       "thumbnailUrl": "/resources/artists/honey-boy-and-boots/photo-1.jpg",
       "genre": "Folk / Americana",
@@ -417,6 +417,31 @@
           "thumbnail": "https://img.youtube.com/vi/uUOF8cq6jrk/maxresdefault.jpg",
           "url": "https://youtu.be/uUOF8cq6jrk?si=Adt8ExTp2Q7mh7fi",
           "source": "Closed on Sundays"
+        }
+      ],
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Dec 13, 2026 · 4:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-12-13",
+          "allDayEndExclusive": "2026-12-14",
+          "title": "Closed on Sundays — Drew and Courtney Blackwell",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "drew-courtney-blackwell-closed-on-sunday-2026-12-13",
+          "detailLine": "Set at Al's Spirits & Music, Reform, AL at 4:00 PM CT (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-12-13",
+          "when": "Sun Dec 13, 2026 · 4:00 PM CT",
+          "title": "Closed on Sundays — Drew and Courtney Blackwell",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
       "featured": true,
@@ -1518,13 +1543,60 @@
       ],
       "featured": true,
       "publishDate": "2026-03-31"
+    },
+    {
+      "id": "huge-ghost",
+      "name": "Huge Ghost",
+      "location": "Starkville, MS",
+      "genre": "Indie Rock",
+      "bio": "Huge Ghost is a Starkville, Mississippi indie rock trio: Ben Hodge (bass), Troy DeRego (drums), and Joe Whaley (guitar and vocals). Formed in 2016, they describe the music as a mix of alt-rock, country, punk, and pop. The band released the three-song EP Curtains Drawn in 2016. Earlier projects named by the band include Young Agent Jones, Joe Whaley & the Benders, Poacher, and Mortar Kit. Booking: hugeghostband@gmail.com.",
+      "imageUrl": "/resources/artists/huge-ghost/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/huge-ghost/photo-1.webp",
+      "socialLinks": {
+        "instagram": "https://www.instagram.com/hugeghostband/",
+        "facebook": "https://www.facebook.com/hugeghostband/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/artist/0CnDEf0NhB9l4879jS3enx",
+        "soundcloud": "https://soundcloud.com/hugeghost"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Nov 1, 2026 · 4:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-11-01",
+          "allDayEndExclusive": "2026-11-02",
+          "title": "Closed on Sundays — Huge Ghost",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "huge-ghost-closed-on-sunday-2026-11-01",
+          "detailLine": "Set at Al's Spirits & Music, Reform, AL at 4:00 PM CT (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-11-01",
+          "when": "Sun Nov 1, 2026 · 4:00 PM CT",
+          "title": "Closed on Sundays — Huge Ghost",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [],
+      "featured": false,
+      "publishDate": "2026-09-27"
     }
   ],
   "comedy": [
     {
-      "id": "comedy-001",
+      "id": "mike-rainey",
       "name": "Mike Rainey",
       "location": "Chicago, IL",
+      "creatorType": "comedian",
+      "genre": "Comedy",
       "bio": "Stand-up comedian with a razor-sharp wit and observational humor. Catch his work at onpercs.com.",
       "imageUrl": "/resources/comedy/mike-rainey.jpg",
       "thumbnailUrl": "/resources/comedy/thumbs/mike-rainey-thumb.jpg",
@@ -1895,6 +1967,52 @@
           "secondary": {
             "to": "/artists/wesley-hill",
             "label": "Wesley Hill"
+          }
+        }
+      },
+      {
+        "id": "closed-on-sundays-2026-11-01",
+        "name": "Closed on Sundays: Huge Ghost",
+        "date": "2026-11-01",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Huge Ghost — Sunday, November 1, 2026 at 4:00 PM CT at Al's Spirits & Music. Free to attend.",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/huge-ghost",
+            "label": "Huge Ghost"
+          }
+        }
+      },
+      {
+        "id": "closed-on-sundays-2026-12-13",
+        "name": "Closed on Sundays: Drew and Courtney Blackwell",
+        "date": "2026-12-13",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Drew and Courtney Blackwell, formerly Honeyboy and Boots — Sunday, December 13, 2026 at 4:00 PM CT at Al's Spirits & Music.",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/honey-boy-and-boots",
+            "label": "Drew and Courtney Blackwell"
           }
         }
       }

@@ -9,6 +9,7 @@ import {
   CREATOR_TABS,
   artistMatchesCreatorTab,
   countArtistsInCreatorTab,
+  listBrowseCreators,
 } from "../utils/creatorCategories";
 import { fieldsMatchSearch } from "../utils/searchMatch";
 import "./ArtistsPage.css";
@@ -28,7 +29,7 @@ function ArtistsPage() {
   }, [searchParams]);
 
   useEffect(() => {
-    const allArtists = data.artists || [];
+    const allArtists = listBrowseCreators(data);
     setArtists(allArtists);
   }, []);
 
@@ -80,10 +81,12 @@ function ArtistsPage() {
 
   const activeTabLabel =
     CREATOR_TABS.find((t) => t.id === activeTab)?.label || "Creators";
+  const pluralNoun =
+    activeTab === CREATOR_TAB_ALL ? "creators" : activeTabLabel.toLowerCase();
   const resultsNoun =
-    activeTab === CREATOR_TAB_ALL
-      ? "creators"
-      : activeTabLabel.toLowerCase();
+    filteredArtists.length === 1 && pluralNoun.endsWith("s")
+      ? pluralNoun.slice(0, -1)
+      : pluralNoun;
 
   return (
     <>
@@ -92,7 +95,7 @@ function ArtistsPage() {
         <div className="page-header">
           <h1>Creators</h1>
           <p>
-            Musicians, painters, poets, and writers building homes on
+            Musicians, comedians, painters, poets, and writers building homes on
             kuhlshit.com
           </p>
         </div>

@@ -82,7 +82,7 @@ function UpcomingCosShowsSection() {
         Upcoming shows
       </h2>
       <p className="cos-upcoming-lead">
-        Listening-room sets at Al&apos;s Spirits &amp; Music (Reform, AL), filmed for this series. Dates are
+        Sets at Al&apos;s Spirits &amp; Music (Reform, AL) — the store is the listening room — filmed for this series. Dates are
         Central Time unless noted. Coming out in person is free — just bring a chair.
       </p>
       <ul className="cos-upcoming-list">
@@ -131,11 +131,11 @@ function UpcomingCosShowsSection() {
 const CLOSED_ON_SUNDAYS_INTRO = (
   <div className="page-static-intro">
     <p>
-      <strong>Closed on Sundays</strong> — short sets to camera for our YouTube series, recorded in the
-      listening room inside Al&apos;s Spirits &amp; Music, the package store in Reform, AL. The latest full
-      show is featured below, then the archive you can search. Upcoming dates at Al&apos;s are listed
-      when they&apos;re booked. Shows
-      are free to attend. It&apos;s a small room, so just <strong>bring a chair</strong>.
+      <strong>Closed on Sundays</strong> — short sets to camera for our YouTube series, recorded at
+      Al&apos;s Spirits &amp; Music, the package store in Reform, AL. The store is the listening room.
+      The latest full show is featured below, then the archive you can search. Upcoming dates at
+      Al&apos;s are listed when they&apos;re booked. Shows are free to attend. It&apos;s a small store,
+      so just <strong>bring a chair</strong>.
     </p>
     <p className="page-static-intro-links">
       <Link to="/porch-talk">Porch Talk interviews</Link>
@@ -279,7 +279,7 @@ function ClosedOnSundaysPage() {
         <div className="page-header">
           <h1>Closed on Sundays</h1>
           <p className="page-header-tagline">
-            Listening-room performances — short sets to camera. Free to attend; just bring a chair.
+            Short sets to camera at Al&apos;s Spirits &amp; Music. The store is the listening room. Free to attend; just bring a chair.
           </p>
           {pastSessionsBlock}
         </div>
@@ -302,7 +302,7 @@ function ClosedOnSundaysPage() {
         <div className="page-header">
           <h1>Closed on Sundays</h1>
           <p className="page-header-tagline">
-            Listening-room performances — short sets to camera. Free to attend; just bring a chair.
+            Short sets to camera at Al&apos;s Spirits &amp; Music. The store is the listening room. Free to attend; just bring a chair.
           </p>
           {pastSessionsBlock}
         </div>
@@ -324,7 +324,7 @@ function ClosedOnSundaysPage() {
       <div className="page-header">
         <h1>Closed on Sundays</h1>
         <p className="page-header-tagline">
-          Listening-room performances — short sets to camera. Free to attend; just bring a chair.
+          Short sets to camera at Al&apos;s Spirits &amp; Music. The store is the listening room. Free to attend; just bring a chair.
         </p>
         {pastSessionsBlock}
       </div>

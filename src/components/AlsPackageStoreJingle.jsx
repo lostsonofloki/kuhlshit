@@ -17,7 +17,7 @@ export default function AlsPackageStoreJingle({
       <div className="als-jingle-shell">
         <div className="als-jingle-card">
           <div className="als-jingle-inner">
-            <p className="als-jingle-kicker">Same room · Reform, AL</p>
+            <p className="als-jingle-kicker">The store · Reform, AL</p>
             <p className="als-jingle-eyebrow">Al&apos;s Spirits &amp; Music</p>
             <h2 id="als-jingle-heading" className="als-jingle-title">
               Package store jingle

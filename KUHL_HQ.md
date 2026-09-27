@@ -2,16 +2,18 @@
 
 Living strategy and execution doc for product, pricing, and rollout decisions.
 
-Last updated: 2026-05-11
+Last updated: 2026-08-18
 Owners: Josh (Architecture/Dev), Alan (Business/Strategy)
 
 ---
 
-## 1) NOW - POST-PORCHFEST
+## 1) NOW - PORCHFEST 2027
 
-Goal: ship a credible public site (Vault, accurate event story, solid routes) while laying **Supabase foundation without rushing billing**.
+**PorchFest 2027:** Friday April 9, 5:00 PM–11:00 PM, and Saturday April 10, 12:00 PM–11:00 PM (two days). Lineup includes **comedians** as well as musicians. Execution plan: [`ROADMAP.md`](ROADMAP.md).
 
-PorchFest week is complete; the old lockdown rules are lifted for **structural backend work**, but still prefer **small, reversible steps** (adapter + JSON fallback, feature flags).
+Goal: festival-first public site (announce, lineup, map, tickets copy, **online merch shop**, Vault) plus identity **Artist, Comedians, and Musicians**. **Supabase and Professional-tier billing stay parked** until after the 2027 weekend. Merch checkout is in scope.
+
+Prefer **small, reversible steps**. Do not start backend migration slices in this window.
 
 ### 30-Minute UI Strike Plan (Immediate Pass)
 - [x] **10 min - CTA hierarchy pass:** keep one primary filled button style; make secondary actions outlined.
@@ -30,7 +32,7 @@ PorchFest week is complete; the old lockdown rules are lifted for **structural b
 ### Non-Negotiables
 - Protect mobile performance and route reliability.
 - Prefer migration slices + parity checks over big-bang rewrites.
-- Billing/paid launch stays **parked** until explicitly scheduled (no forced “Day 12 provider lock”).
+- Billing/paid **creator** launch stays **parked** (no Professional subscriptions). Merch storefront is scheduled for PorchFest 2027.
 
 ### Active Checklist
 - [ ] Run social preview spot-checks for primary URLs when shipping visible content changes.
@@ -39,8 +41,9 @@ PorchFest week is complete; the old lockdown rules are lifted for **structural b
 - [ ] Log incidents + any JSON/DB fallback used during migration experiments.
 
 ### Owners / Deadlines
-- Josh: backend migration slices, QA, rollback readiness.
-- Alan: comms + partner/artist coordination as needed.
+- Josh: festival hub, identity copy, lineup/data, QA.
+- Alan: comms + partner/artist coordination; 2027 announce.
+- Deadline: PorchFest weekend **April 9–10, 2027**.
 
 ---
 

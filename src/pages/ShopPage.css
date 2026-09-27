@@ -1,0 +1,51 @@
+.shop-page {
+  padding-bottom: var(--spacing-2xl);
+}
+
+.shop-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  gap: var(--spacing-lg);
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.shop-card {
+  background: var(--surface-card);
+  border: var(--card-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.shop-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--surface-band);
+}
+
+.shop-card-body {
+  padding: var(--spacing-lg);
+}
+
+.shop-card-body h2 {
+  margin: 0 0 var(--spacing-sm);
+}
+
+.shop-price {
+  margin: 0 0 var(--spacing-sm);
+  font-weight: 600;
+}
+
+.shop-card-body p {
+  margin: 0 0 var(--spacing-md);
+}
+
+.shop-hold,
+.shop-empty {
+  margin: 0;
+  color: var(--color-text-secondary, inherit);
+}

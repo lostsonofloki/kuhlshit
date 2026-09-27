@@ -58,16 +58,23 @@ function esc(s) {
 }
 
 const mainFest = data.porchfest?.events?.[0] ?? null;
-const artistUrls = (data.artists || []).map((a) => {
-  const onPorchfestLineup = mainFest && artistOnMainFestLineup(a, mainFest);
-  return {
-    loc: onPorchfestLineup
-      ? `/porchfest/artists/${a.id}`
-      : `/artists/${a.id}`,
+const artistUrls = [
+  ...(data.artists || []).map((a) => {
+    const onPorchfestLineup = mainFest && artistOnMainFestLineup(a, mainFest);
+    return {
+      loc: onPorchfestLineup
+        ? `/porchfest/artists/${a.id}`
+        : `/artists/${a.id}`,
+      changefreq: "monthly",
+      priority: "0.65",
+    };
+  }),
+  ...(data.comedy || []).map((a) => ({
+    loc: `/artists/${a.id}`,
     changefreq: "monthly",
     priority: "0.65",
-  };
-});
+  })),
+];
 
 const urls = [...staticPaths, ...artistUrls];
 

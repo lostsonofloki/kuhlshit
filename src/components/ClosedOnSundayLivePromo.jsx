@@ -104,7 +104,7 @@ function ClosedOnSundayLivePromo() {
                 Closed on Sundays
               </h2>
               <p className="cos-live-promo-artists">{artistLine}</p>
-              <p className="cos-live-promo-tagline">Listening room · filmed to camera</p>
+              <p className="cos-live-promo-tagline">The store is the listening room · filmed to camera</p>
               <dl className="cos-live-promo-details">
                 <div className="cos-live-promo-detail">
                   <dt>When</dt>

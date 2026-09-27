@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- **Drew and Courtney Blackwell:** public name replaces Honeyboy and Boots. Closed on Sundays **`closed-on-sundays-2026-12-13`** at 4:00 PM CT. Profile URL stays **`/artists/honey-boy-and-boots`**.
 - **Closed on Sundays — Taylor Hollingsworth full show (Sep 20, 2026):** featured embed on **`/closed-on-sundays`** for YouTube **`NCKSztNWVpE`**, plus the video on his profile and hub row **`closed-on-sundays-2026-09-20`**.
 - **Jodie Ross — Closed on Sundays (Jun 28, 2026):** artist entry and hub row **`closed-on-sundays-2026-06-28`** in **`data.json`**, headshots under **`public/resources/artists/jodie-ross/`**; **`scripts/scrape-jodie-ross-music.mjs`** (Playwright) for **jodierossmusic.com** (writes **`tmp/jodie-ross-music.json`** when run — `tmp/` gitignored).
 - **Janet Simpson — Closed on Sundays (Jul 19, 2026):** artist entry and hub row **`closed-on-sundays-2026-07-19`**, assets **`public/resources/artists/janet-simpson/`**; **Listen** supports optional **`musicLinks.tidal`** and **`musicLinks.pandora`** on **MusicianBody** (no squatted personal-site domain in data).
@@ -30,6 +31,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- **Huge Ghost:** profile filled from the band’s public SoundCloud, Spotify, Instagram, and Facebook pages (Starkville indie rock trio, Connect and Listen links, local photo). Closed on Sundays **`closed-on-sundays-2026-11-01`** stays Sunday, November 1, 2026 at 4:00 PM CT.
+- **Creators browse:** `/artists` has a **Comedians** tab. Comedy records in `data.comedy` (Mike Rainey) show in All and Comedians, and open at `/artists/mike-rainey`.
 - **Vault — past Closed on Sundays copy:** hub descriptions for sessions before 2026-09-26 now read as recorded sets at Al's (names, dates, times, and genre notes kept). Those rows are marked `completed`, matching Taylor Hollingsworth and Goodloe Chilcutt.
 - **Pre-meeting bug pass:** PorchFest hub no longer renders Closed on Sundays rows as festival cards (hard-coded Apr 17–19 badge, fest calendar, leading comma on Reform addresses). Header search splits those rows into **Closed on Sundays** and links them to the artist profile. YouTube playlists drop deleted/private videos and duplicate ids (the empty “Deleted video” card and the doubled Stifftones episode). **GigTracker** and featured-show **Add to calendar** hide dates before today in Chicago. Calendar details use `detailLine` instead of always saying 3:00 PM. Archived PorchFest ticket copy is past tense. Footer quick links use in-app routing. Closed on Sundays intro no longer promises an upcoming list when none is booked.
 - **Closed on Sundays copy:** dropped the PorchFest “room-focused spirit” comparison (PorchFest is the outdoor Columbus, MS festival). Hub intro, page tagline, homepage Watch & listen card, upcoming-shows lead, and **`CLOSED_ON_SUNDAYS_SEO`** now say the sets are recorded in the listening room inside Al’s Spirits & Music (the package store in Reform, AL), and that shows are **free to attend — just bring a chair**. Removed the shipped note-to-self “(Tell people to bring a chair.)”.

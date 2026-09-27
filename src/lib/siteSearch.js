@@ -12,7 +12,7 @@ export function searchSite(query, data) {
     return { artists: [], events: [] };
   }
 
-  const artistResults = (data.artists || []).filter((artist) =>
+  const artistResults = [...(data.artists || []), ...(data.comedy || [])].filter((artist) =>
     fieldsMatchSearch(
       [artist.name, artist.location, artist.genre, artist.bio],
       q,

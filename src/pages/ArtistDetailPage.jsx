@@ -19,7 +19,7 @@ import {
 } from "../utils/artistJsonLd";
 import { getSiteOrigin, toAbsoluteUrl } from "../utils/siteOrigin";
 import { trackEvent } from "../utils/analytics";
-import { resolvePrimaryCreatorType } from "../utils/creatorCategories";
+import { resolvePrimaryCreatorType, listBrowseCreators } from "../utils/creatorCategories";
 import bundledFestivalData from "../data/data.json";
 import "./ArtistDetail.css";
 
@@ -69,11 +69,11 @@ function ArtistDetailPage() {
   const venueMapUrl = data.porchfest?.events?.[0]?.location?.mapUrl;
 
   const artist = useMemo(() => {
-    const fromRuntime = findArtistByRouteId(data?.artists, artistId);
+    const fromRuntime = findArtistByRouteId(listBrowseCreators(data), artistId);
     if (fromRuntime) return fromRuntime;
     if (data?.artists === bundledFestivalData?.artists) return null;
-    return findArtistByRouteId(bundledFestivalData?.artists, artistId);
-  }, [artistId, data?.artists]);
+    return findArtistByRouteId(listBrowseCreators(bundledFestivalData), artistId);
+  }, [artistId, data]);
 
   const festivalEvent = data.porchfest?.events?.[0] ?? null;
   const origin = getSiteOrigin();

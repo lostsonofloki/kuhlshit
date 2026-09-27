@@ -11,7 +11,7 @@
 export const GLOBAL_SEO_DEFAULT_PROPS = {
   title: "Kuhlshit.com — A Home for Musicians, Painters, and Poets",
   description:
-    "Find musicians, painters, poets, and more on Kuhlshit.com — discover artists, Porch Talk interviews, Closed on Sundays (listening-room performances, short sets to camera — bring a chair in the room), PorchFest in Columbus MS, and The Vault.",
+    "Find musicians, painters, poets, and more on Kuhlshit.com — discover artists, Porch Talk interviews, Closed on Sundays (short sets to camera at Al's Spirits & Music — the store is the listening room; bring a chair), PorchFest in Columbus MS, and The Vault.",
   image: "/resources/share/kuhlshit-og.png",
   path: "/",
 };
@@ -29,9 +29,17 @@ export const PORCHFEST_SEO_DEFAULT_PROPS = {
 export const ARTISTS_INDEX_SEO = {
   title: "Creators | kuhlshit.com",
   description:
-    "Browse musicians, visual artists, and writers building homes on the internet through kuhlshit.com.",
+    "Browse musicians, comedians, painters, and writers building homes on the internet through kuhlshit.com.",
   image: GLOBAL_SEO_DEFAULT_PROPS.image,
   path: "/artists",
+};
+
+export const SHOP_SEO = {
+  title: "Shop | kuhlshit.com",
+  description:
+    "Shirts and albums from kuhlshit.com. Online checkout is not open yet.",
+  image: GLOBAL_SEO_DEFAULT_PROPS.image,
+  path: "/shop",
 };
 
 export const WHATS_KUHL_SEO = {
@@ -59,9 +67,9 @@ export const PORCH_TALK_SEO = {
 };
 
 export const CLOSED_ON_SUNDAYS_SEO = {
-  title: "Closed on Sundays | Listening-room performances | Kuhlshit.com",
+  title: "Closed on Sundays | Short sets at Al's | Kuhlshit.com",
   description:
-    "Closed on Sundays — short sets to camera in the listening room inside Al's Spirits & Music, the package store in Reform, AL. Free to attend — just bring a chair. Browse the playlist archive on Kuhlshit.com and YouTube.",
+    "Closed on Sundays — short sets to camera at Al's Spirits & Music, the package store in Reform, AL. The store is the listening room. Free to attend — just bring a chair. Browse the playlist archive on Kuhlshit.com and YouTube.",
   image: GLOBAL_SEO_DEFAULT_PROPS.image,
   path: "/closed-on-sundays",
 };

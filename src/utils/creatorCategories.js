@@ -1,10 +1,11 @@
-/** @typedef {'musician' | 'visual' | 'writer'} CreatorCategory */
+/** @typedef {'musician' | 'visual' | 'writer' | 'comedian'} CreatorCategory */
 
 export const CREATOR_TAB_ALL = "all";
 
 export const CREATOR_TABS = [
   { id: CREATOR_TAB_ALL, label: "All" },
   { id: "musician", label: "Musicians" },
+  { id: "comedian", label: "Comedians" },
   { id: "visual", label: "Painters" },
   { id: "writer", label: "Poets & Writers" },
 ];
@@ -18,6 +19,7 @@ export function normalizeCreatorCategory(raw) {
   const t = String(raw || "musician").toLowerCase();
   if (t === "visual" || t === "painter" || t === "photographer") return "visual";
   if (t === "writer" || t === "poet") return "writer";
+  if (t === "comedian" || t === "comedy" || t === "comic") return "comedian";
   return "musician";
 }
 
@@ -77,4 +79,29 @@ export function artistMatchesCreatorTab(artist, tabId) {
 export function countArtistsInCreatorTab(artists, tabId) {
   if (!Array.isArray(artists)) return 0;
   return artists.filter((a) => artistMatchesCreatorTab(a, tabId)).length;
+}
+
+/**
+ * Comedy records live in `data.comedy`, not `artists`. Browse and profiles
+ * treat them as comedians so the Comedians tab is not empty.
+ * @param {object[] | undefined} comedy
+ */
+export function comedyEntriesAsCreators(comedy) {
+  if (!Array.isArray(comedy)) return [];
+  return comedy.map((person) => ({
+    ...person,
+    creatorType: person?.creatorType || "comedian",
+    genre: person?.genre || "Comedy",
+  }));
+}
+
+/**
+ * Musicians, painters, writers, and comedians for /artists.
+ * @param {{ artists?: object[], comedy?: object[] } | null | undefined} data
+ */
+export function listBrowseCreators(data) {
+  return [
+    ...(data?.artists || []),
+    ...comedyEntriesAsCreators(data?.comedy),
+  ];
 }

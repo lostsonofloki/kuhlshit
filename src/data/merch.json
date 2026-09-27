@@ -1,0 +1,15 @@
+{
+  "holdCheckout": true,
+  "products": [
+    {
+      "id": "alan-aldridge-compilation",
+      "name": "Compilation produced by Alan Aldridge",
+      "kind": "album",
+      "imageUrl": "/resources/merch/alan-aldridge-album.jpg",
+      "imageAlt": "Album cover produced by Alan Aldridge, with the side A and side B track list and painted artwork",
+      "summary": "Cover is in. Title, price, and format (vinyl, CD, or download) still need to be set. Checkout stays off until Alan's Stripe account is live.",
+      "priceCents": null,
+      "paymentUrl": ""
+    }
+  ]
+}

@@ -210,7 +210,7 @@ function HomePage() {
           <div className="showcase-card">
             <h3>Closed on Sundays</h3>
             <p>
-              Listening-room performances — short sets to camera. Free to attend; just bring a chair.
+              Short sets to camera at Al&apos;s Spirits &amp; Music. The store is the listening room. Free to attend; just bring a chair.
             </p>
             <div className="showcase-card-actions">
               <Link to="/closed-on-sundays" className="btn btn-primary">

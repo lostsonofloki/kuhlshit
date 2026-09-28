@@ -1588,6 +1588,49 @@
       "videos": [],
       "featured": false,
       "publishDate": "2026-09-27"
+    },
+    {
+      "id": "samuel-young",
+      "name": "Samuel Young",
+      "location": "Saint Jo, TX",
+      "genre": "Country / Rock",
+      "bio": "Samuel Young brings an authenticity to his music that is palpable. His storytelling is the type that only comes from the trials of life, and the will power to persevere. Raised in Saint Jo, Texas, Samuel grew up in a household where music was always playing–either from his father’s guitar or the stereo crooning the greats like Haggard, Jones, or Jennings. Those musical influences stayed with Samuel through a full, fast life. Through dealing poker, riding motorcycles, traveling, or growing in the Colorado Rockies, there has been one constant by Samuel’s side–music.\n\nCreating a sound that is a little bit swampy twang, rock and roll, and a lot of country. Whether you want to do some boot scootin or hear tales of tough roads and crossroads, Samuel sings to you. His tunes have brought him to stages across the south and southwest such as legendary Luckenbach, TX, The Eagles Nest New Mexico Art Festival, The Old Main Music Festival in Starkville, MS, and Germanfest of Muenster, TX.\n\nHis music is uniquely his own while encapsulating the likes of John Prine, Roger Miller, and Tom T. Hall with a healthy dose of classic rock’s Little Feat, ZZ Top, and Leon Russell. Whether an intimate, acoustic setting, or the main stage with a full band, a show with Samuel is one you won’t soon forget.",
+      "imageUrl": "/resources/artists/samuel-young/photo-1.webp",
+      "thumbnailUrl": "/resources/artists/samuel-young/photo-1.webp",
+      "socialLinks": {
+        "website": "https://samuelyoungmusic.com/"
+      },
+      "musicLinks": {
+        "spotify": "https://open.spotify.com/album/0ivyTgXfSj9un2F9QcIVp0"
+      },
+      "featuredShow": {
+        "eyebrow": "Porch Talk presents",
+        "title": "Closed on Sundays",
+        "billingLine": "Solo set for Closed on Sundays at Al's Spirits & Music — filmed for the Closed on Sundays series on YouTube.",
+        "when": "Sun Oct 4, 2026 · 5:00 PM CT",
+        "where": "Al's Spirits & Music · Reform, AL",
+        "calendar": {
+          "allDayStart": "2026-10-04",
+          "allDayEndExclusive": "2026-10-05",
+          "title": "Closed on Sundays — Samuel Young",
+          "location": "Al's Spirits & Music, Reform, AL",
+          "fileSlug": "samuel-young-closed-on-sunday-2026-10-04",
+          "detailLine": "Solo set at Al's Spirits & Music, Reform, AL at 5:00 PM CT (filmed for Closed on Sundays on YouTube)."
+        }
+      },
+      "upcomingShows": [
+        {
+          "sortDate": "2026-10-04",
+          "when": "Sun Oct 4, 2026 · 5:00 PM CT",
+          "title": "Closed on Sundays — Samuel Young",
+          "where": "Al's Spirits & Music · Reform, AL",
+          "notes": "Solo set to camera at Al's for the Closed on Sundays series.",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        }
+      ],
+      "videos": [],
+      "featured": true,
+      "publishDate": "2026-09-28"
     }
   ],
   "comedy": [
@@ -1971,6 +2014,29 @@
         }
       },
       {
+        "id": "closed-on-sundays-2026-10-04",
+        "name": "Closed on Sundays: Samuel Young",
+        "date": "2026-10-04",
+        "location": {
+          "venue": "Al's Spirits & Music",
+          "city": "Reform",
+          "state": "AL",
+          "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
+        },
+        "description": "Samuel Young — Sunday, October 4, 2026 at 5:00 PM CT at Al's Spirits & Music. Free to attend.",
+        "lineup": [],
+        "vaultLinks": {
+          "primary": {
+            "to": "/closed-on-sundays",
+            "label": "Watch Closed on Sundays"
+          },
+          "secondary": {
+            "to": "/artists/samuel-young",
+            "label": "Samuel Young"
+          }
+        }
+      },
+      {
         "id": "closed-on-sundays-2026-11-01",
         "name": "Closed on Sundays: Huge Ghost",
         "date": "2026-11-01",
@@ -2019,10 +2085,10 @@
     ]
   },
   "metadata": {
-    "lastUpdated": "2026-06-14",
+    "lastUpdated": "2026-09-28",
     "version": "2.0.0",
-    "totalArtists": 35,
+    "totalArtists": 38,
     "totalComedy": 1,
-    "totalEvents": 10
+    "totalEvents": 13
   }
 }

@@ -17,7 +17,8 @@ Status key: `[done]` `[in-progress]` `[pending]` `[parked]`
 Festival-first through the 2027 weekend. Site work is announce, lineup, artist pages, map, tickets copy, **online merch shop**, event-week stability, then Vault — plus the public identity **Artist, Comedians, and Musicians**.
 
 - [in-progress] **Public identity:** replace Musicians / Painters / Poets / Photographers / Filmmakers with **Artist, Comedians and Musicians** (hero, home cards, `/artists` tabs, SEO). Painters, photographers, filmmakers, and poets fold under Artist. Comedians get a real browse tab (Mike Rainey lives in `data.comedy` today) **and booked PorchFest 2027 comics must appear on the festival lineup**, not only the comedy archive.
-- [pending] **Online merch shop:** catalog is in `src/data/merch.json`. **`ShopPage` is not mounted**, so there is no public `/shop` until Alan's Stripe account exists. Then route it, add `https://buy.stripe.com/...` links, and set `holdCheckout` to false. Site never holds a secret key. **Does not** un-park Professional-tier subscriptions.
+- [pending] **Turn the store on:** order shirts, records, art, and goods for Porch Talk, PorchFest, Closed on Sundays, and Al's Spirits and Music. Catalog is already in `src/data/merch.json` (one album listing; `holdCheckout` is true). **`ShopPage` is not mounted**, so there is no public `/shop` until Alan's Stripe account exists. Then route it, add `https://buy.stripe.com/...` links, and set `holdCheckout` to false. Site never holds a secret key. **Does not** un-park Professional-tier subscriptions.
+- [pending] **The Sunday Driver:** email list for news, music, movies, art, inventory, and show updates. Not built yet. Separate from the creator waitlist.
 - [pending] **Un-archive** `/porchfest`**:** festival ids only (`pf-001` archive + `pf-2027` live); do not mix Closed on Sundays into the hub. Stop treating `events[0]` as “the” festival.
 - [pending] **Save the date:** Apr 9–10, 2027 on the hub, home, calendar ICS, OG — no PorchFest header link until this ships.
 - [in-progress] **The Vault:** keep 2026 film/credits accurate; 2027 gallery after the weekend.
@@ -71,7 +72,7 @@ Same add-artist path: drop photo in `Artist/`, copy to `public/resources/artists
 - [pending] Link lineup by **artist id** (avoid `the-moves` vs `the-wright-moves` slug mismatches).
 - [pending] Real bios for **booked 2027** musicians and comedians; 2026 leftover taglines below.
 - [pending] Optional: show `lineupImageUrl` as a shareable schedule graphic.
-- [pending] **Merch shop:** pick provider; catalog 2027 (and evergreen) items; replace `TicketMerch` “beside the stage” CTA with **Buy** links. Hide shop CTAs on the 2026 archive event.
+- [pending] **Merch shop:** turn the held catalog on — shirts, records, art, and goods for Porch Talk, PorchFest, Closed on Sundays, and Al's Spirits and Music. Replace `TicketMerch` “beside the stage” CTA with **Buy** links. Hide shop CTAs on the 2026 archive event.
 
 
 

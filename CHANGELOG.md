@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
-- **Closed on Sundays — Haysop with Jacob Kynard (Sun Oct 18, 2026):** hub row **`closed-on-sundays-2026-10-18`** at Al's Spirits & Music. No start time was given, so the listing is the date only. Haysop is the headliner; Jacob Kynard’s profile now points at this date (the May 3 set with Huey stays on Huey’s profile and in the past-sessions archive).
+- **Closed on Sundays — Haysop with Jacob Kynard (Sun Oct 18, 2026 · 5:00 PM CT):** hub row **`closed-on-sundays-2026-10-18`** at Al's Spirits & Music. Haysop is the headliner; Jacob Kynard’s profile now points at this date (the May 3 set with Huey stays on Huey’s profile and in the past-sessions archive).
 - **Drew and Courtney Blackwell:** public name replaces Honeyboy and Boots. Closed on Sundays **`closed-on-sundays-2026-12-13`** at 4:00 PM CT. Profile URL stays **`/artists/honey-boy-and-boots`**.
 - **Closed on Sundays — Taylor Hollingsworth full show (Sep 20, 2026):** featured embed on **`/closed-on-sundays`** for YouTube **`NCKSztNWVpE`**, plus the video on his profile and hub row **`closed-on-sundays-2026-09-20`**.
 - **Jodie Ross — Closed on Sundays (Jun 28, 2026):** artist entry and hub row **`closed-on-sundays-2026-06-28`** in **`data.json`**, headshots under **`public/resources/artists/jodie-ross/`**; **`scripts/scrape-jodie-ross-music.mjs`** (Playwright) for **jodierossmusic.com** (writes **`tmp/jodie-ross-music.json`** when run — `tmp/` gitignored).

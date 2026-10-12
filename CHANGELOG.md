@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- **Closed on Sundays — Jacob Kynard beside Haysop:** the October 18 homepage post and upcoming lists show Jacob’s photo and profile link next to Haysop’s.
 - **Closed on Sundays — Haysop with Jacob Kynard (Sun Oct 18, 2026 · 5:00 PM CT):** hub row **`closed-on-sundays-2026-10-18`** at Al's Spirits & Music. Haysop is the headliner; Jacob Kynard’s profile now points at this date (the May 3 set with Huey stays on Huey’s profile and in the past-sessions archive).
 - **Drew and Courtney Blackwell:** public name replaces Honeyboy and Boots. Closed on Sundays **`closed-on-sundays-2026-12-13`** at 4:00 PM CT. Profile URL stays **`/artists/honey-boy-and-boots`**.
 - **Closed on Sundays — Taylor Hollingsworth full show (Sep 20, 2026):** featured embed on **`/closed-on-sundays`** for YouTube **`NCKSztNWVpE`**, plus the video on his profile and hub row **`closed-on-sundays-2026-09-20`**.

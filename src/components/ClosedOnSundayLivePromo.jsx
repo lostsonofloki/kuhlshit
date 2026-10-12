@@ -77,6 +77,10 @@ function ClosedOnSundayLivePromo() {
       ? featuredArtist.featuredShow.withArtistId.trim()
       : ''
   const supportPath = supportId ? `/artists/${supportId}` : ''
+  const supportArtist = supportId
+    ? (data.artists || []).find((a) => a.id === supportId) || null
+    : null
+  const supportSrc = promoHeroImageSrc(supportArtist)
   const artistLine =
     featuredArtist?.name ||
     nextEvent?.name?.replace(/^Closed on Sundays?:\s*/i, '') ||
@@ -92,19 +96,48 @@ function ClosedOnSundayLivePromo() {
       <div className="cos-live-promo-shell">
         <div className="cos-live-promo-card">
           <div className="cos-live-promo-inner">
-            <div className="cos-live-promo-media">
-              {heroSrc ? (
-                <SmartImage
-                  src={heroSrc}
-                  alt={imgAlt}
-                  className="cos-live-promo-img"
-                  width="560"
-                  height="560"
-                  sizes="(max-width: 768px) 100vw, min(420px, 45vw)"
-                  enableZoom
-                />
-              ) : null}
-            </div>
+            {supportSrc && supportPath && heroSrc && profilePath ? (
+              <div className="cos-live-promo-portraits">
+                <Link to={profilePath} className="cos-live-promo-media" aria-label={featuredArtist?.name || 'Artist'}>
+                  <SmartImage
+                    src={heroSrc}
+                    alt=""
+                    className="cos-live-promo-img"
+                    width="560"
+                    height="560"
+                    sizes="(max-width: 768px) 42vw, 200px"
+                  />
+                </Link>
+                <Link
+                  to={supportPath}
+                  className="cos-live-promo-media"
+                  aria-label={supportName}
+                >
+                  <SmartImage
+                    src={supportSrc}
+                    alt=""
+                    className="cos-live-promo-img"
+                    width="560"
+                    height="560"
+                    sizes="(max-width: 768px) 42vw, 200px"
+                  />
+                </Link>
+              </div>
+            ) : (
+              <div className="cos-live-promo-media">
+                {heroSrc ? (
+                  <SmartImage
+                    src={heroSrc}
+                    alt={imgAlt}
+                    className="cos-live-promo-img"
+                    width="560"
+                    height="560"
+                    sizes="(max-width: 768px) 100vw, min(420px, 45vw)"
+                    enableZoom
+                  />
+                ) : null}
+              </div>
+            )}
             <div className="cos-live-promo-copy">
               <p className="cos-live-promo-kicker">Porch Talk presents</p>
               <p className="cos-live-promo-eyebrow">
@@ -139,10 +172,15 @@ function ClosedOnSundayLivePromo() {
                   />
                 </div>
               </dl>
-              <div className="cos-live-promo-actions">
+              <div className={`cos-live-promo-actions${supportPath ? ' cos-live-promo-actions--pair' : ''}`}>
                 {profilePath ? (
                   <Link to={profilePath} className="btn btn-primary cos-live-promo-btn">
                     {profileLabel}
+                  </Link>
+                ) : null}
+                {supportPath ? (
+                  <Link to={supportPath} className="btn btn-primary cos-live-promo-btn">
+                    {supportName} profile
                   </Link>
                 ) : null}
                 <Link to="/closed-on-sundays" className="btn btn-secondary cos-live-promo-btn">

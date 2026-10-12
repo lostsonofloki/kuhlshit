@@ -201,6 +201,11 @@ export function getUpcomingCosHubRowsForDisplay(events, artists, opts = {}) {
         ? artist.featuredShow.withArtistId.trim()
         : ''
     const withArtistTo = withArtistId ? `/artists/${withArtistId}` : null
+    const withArtist = withArtistId ? artistList.find((a) => a.id === withArtistId) : null
+    const profileImage = (person) => {
+      const src = person?.imageUrl || person?.thumbnailUrl
+      return typeof src === 'string' ? src : ''
+    }
     const hubCalendar = getCosHubEventCalendar(e, artist)
     return {
       event: e,
@@ -209,8 +214,10 @@ export function getUpcomingCosHubRowsForDisplay(events, artists, opts = {}) {
       whenExtra,
       profileTo: typeof to === 'string' && to ? to : null,
       artistName: artist?.name ?? null,
+      artistImage: profileImage(artist),
       withArtistName,
       withArtistTo,
+      withArtistImage: profileImage(withArtist),
       hubCalendar,
     }
   })

@@ -191,6 +191,16 @@ export function getUpcomingCosHubRowsForDisplay(events, artists, opts = {}) {
       artist?.featuredShow?.when && artist.featuredShow.calendar?.allDayStart === e.date
         ? artist.featuredShow.when
         : null
+    const supportOnThisDate =
+      artist?.featuredShow?.calendar?.allDayStart === e.date &&
+      typeof artist?.featuredShow?.withArtistName === 'string' &&
+      artist.featuredShow.withArtistName.trim()
+    const withArtistName = supportOnThisDate ? artist.featuredShow.withArtistName.trim() : null
+    const withArtistId =
+      supportOnThisDate && typeof artist?.featuredShow?.withArtistId === 'string'
+        ? artist.featuredShow.withArtistId.trim()
+        : ''
+    const withArtistTo = withArtistId ? `/artists/${withArtistId}` : null
     const hubCalendar = getCosHubEventCalendar(e, artist)
     return {
       event: e,
@@ -199,6 +209,8 @@ export function getUpcomingCosHubRowsForDisplay(events, artists, opts = {}) {
       whenExtra,
       profileTo: typeof to === 'string' && to ? to : null,
       artistName: artist?.name ?? null,
+      withArtistName,
+      withArtistTo,
       hubCalendar,
     }
   })

@@ -34,7 +34,7 @@ function UpcomingAtAlsStrip() {
         Upcoming Closed on Sundays
       </h2>
       <ul className="als-upcoming-strip__list">
-        {rows.map(({ event: e, dateLabel, title, whenExtra, artistName, profileTo, hubCalendar }) => {
+        {rows.map(({ event: e, dateLabel, title, whenExtra, artistName, profileTo, withArtistName, withArtistTo, hubCalendar }) => {
           const primary = artistName || title
           const nameEl =
             profileTo && artistName ? (
@@ -55,6 +55,18 @@ function UpcomingAtAlsStrip() {
               </time>
               <span className="als-upcoming-strip__title-wrap">
                 {nameEl}
+                {withArtistName ? (
+                  <span className="als-upcoming-strip__when ui-meta">
+                    with{' '}
+                    {withArtistTo ? (
+                      <Link to={withArtistTo} className="als-upcoming-strip__title-link">
+                        {withArtistName}
+                      </Link>
+                    ) : (
+                      withArtistName
+                    )}
+                  </span>
+                ) : null}
                 {whenExtra ? (
                   <span className="als-upcoming-strip__when ui-meta">{whenExtra}</span>
                 ) : null}

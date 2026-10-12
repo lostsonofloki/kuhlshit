@@ -86,7 +86,7 @@ function UpcomingCosShowsSection() {
         Central Time unless noted. Coming out in person is free — just bring a chair.
       </p>
       <ul className="cos-upcoming-list">
-        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, hubCalendar }) => {
+        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, withArtistName, withArtistTo, hubCalendar }) => {
           const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · 3:00 PM CT`
           const customDetails = [calLine, typeof e.description === 'string' && e.description.trim()]
             .filter(Boolean)
@@ -104,6 +104,18 @@ function UpcomingCosShowsSection() {
                     title
                   )}
                 </h3>
+                {withArtistName ? (
+                  <p className="cos-upcoming-when">
+                    with{' '}
+                    {withArtistTo ? (
+                      <Link to={withArtistTo} className="cos-upcoming-title-link">
+                        {withArtistName}
+                      </Link>
+                    ) : (
+                      withArtistName
+                    )}
+                  </p>
+                ) : null}
                 {whenExtra ? <p className="cos-upcoming-when">{whenExtra}</p> : null}
                 {hubCalendar ? (
                   <AddToCalendarRow

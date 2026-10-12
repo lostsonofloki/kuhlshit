@@ -179,6 +179,16 @@
   letter-spacing: 0.04em;
 }
 
+.cos-live-promo-artists a {
+  color: var(--color-accent-primary);
+  font-weight: 600;
+}
+
+.cos-live-promo-artists a:hover,
+.cos-live-promo-artists a:focus-visible {
+  text-decoration: underline;
+}
+
 .cos-live-promo-tagline {
   margin: 0 0 1rem;
   font-family: var(--font-family-body);

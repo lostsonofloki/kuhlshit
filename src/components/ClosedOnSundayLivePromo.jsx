@@ -67,6 +67,16 @@ function ClosedOnSundayLivePromo() {
       : null
 
   const eyebrowDate = nextEvent?.date ? formatCosHubDateShort(nextEvent.date) : ''
+  const supportOnThisDate =
+    featuredArtist?.featuredShow?.calendar?.allDayStart === nextEvent?.date &&
+    typeof featuredArtist?.featuredShow?.withArtistName === 'string' &&
+    featuredArtist.featuredShow.withArtistName.trim()
+  const supportName = supportOnThisDate ? featuredArtist.featuredShow.withArtistName.trim() : ''
+  const supportId =
+    supportOnThisDate && typeof featuredArtist?.featuredShow?.withArtistId === 'string'
+      ? featuredArtist.featuredShow.withArtistId.trim()
+      : ''
+  const supportPath = supportId ? `/artists/${supportId}` : ''
   const artistLine =
     featuredArtist?.name ||
     nextEvent?.name?.replace(/^Closed on Sundays?:\s*/i, '') ||
@@ -103,7 +113,15 @@ function ClosedOnSundayLivePromo() {
               <h2 id="cos-live-promo-heading" className="cos-live-promo-title">
                 Closed on Sundays
               </h2>
-              <p className="cos-live-promo-artists">{artistLine}</p>
+              <p className="cos-live-promo-artists">
+                {artistLine}
+                {supportName ? (
+                  <>
+                    {' with '}
+                    {supportPath ? <Link to={supportPath}>{supportName}</Link> : supportName}
+                  </>
+                ) : null}
+              </p>
               <p className="cos-live-promo-tagline">The store is the listening room · filmed to camera</p>
               <dl className="cos-live-promo-details">
                 <div className="cos-live-promo-detail">

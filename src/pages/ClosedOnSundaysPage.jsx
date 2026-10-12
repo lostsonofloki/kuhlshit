@@ -9,6 +9,7 @@ import {
   getPastClosedOnSundayHubEventsSorted,
   getUpcomingCosHubRowsForDisplay,
 } from '../lib/closedOnSundayHubEvents'
+import { whenLineHasWallClock } from '../lib/upcomingShowCalendar'
 import { mapPlaylistItemsToVideos } from '../lib/youtubePlaylist'
 import './ClosedOnSundays.css'
 
@@ -116,7 +117,9 @@ function UpcomingCosShowsSection() {
                     )}
                   </p>
                 ) : null}
-                {whenExtra ? <p className="cos-upcoming-when">{whenExtra}</p> : null}
+                {whenExtra && whenLineHasWallClock(whenExtra) ? (
+                  <p className="cos-upcoming-when">{whenExtra}</p>
+                ) : null}
                 {hubCalendar ? (
                   <AddToCalendarRow
                     calendar={hubCalendar}

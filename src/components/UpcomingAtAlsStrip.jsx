@@ -6,6 +6,7 @@ import {
   formatCosHubDateShort,
   getUpcomingCosHubRowsForDisplay,
 } from '../lib/closedOnSundayHubEvents'
+import { whenLineHasWallClock } from '../lib/upcomingShowCalendar'
 import './UpcomingAtAlsStrip.css'
 
 const HEADING_ID = 'home-upcoming-als-heading'
@@ -67,7 +68,7 @@ function UpcomingAtAlsStrip() {
                     )}
                   </span>
                 ) : null}
-                {whenExtra ? (
+                {whenExtra && whenLineHasWallClock(whenExtra) ? (
                   <span className="als-upcoming-strip__when ui-meta">{whenExtra}</span>
                 ) : null}
               </span>

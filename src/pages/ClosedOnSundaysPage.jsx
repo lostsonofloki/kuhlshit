@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import data from '../data/data.json'
 import SEO from '../components/SEO'
+import SmartImage from '../components/SmartImage'
 import { CLOSED_ON_SUNDAYS_SEO } from '../constants/seoDefaults'
 import AddToCalendarRow from '../components/AddToCalendarRow'
 import {
@@ -87,7 +88,7 @@ function UpcomingCosShowsSection() {
         Central Time unless noted. Coming out in person is free — just bring a chair.
       </p>
       <ul className="cos-upcoming-list">
-        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, withArtistName, withArtistTo, hubCalendar }) => {
+        {rows.map(({ event: e, dateLabel, title, whenExtra, profileTo, artistName, artistImage, withArtistName, withArtistTo, withArtistImage, hubCalendar }) => {
           const calLine = whenExtra || `${formatCosHubDateShort(e.date)} · 3:00 PM CT`
           const customDetails = [calLine, typeof e.description === 'string' && e.description.trim()]
             .filter(Boolean)
@@ -105,17 +106,8 @@ function UpcomingCosShowsSection() {
                     title
                   )}
                 </h3>
-                {withArtistName ? (
-                  <p className="cos-upcoming-when">
-                    with{' '}
-                    {withArtistTo ? (
-                      <Link to={withArtistTo} className="cos-upcoming-title-link">
-                        {withArtistName}
-                      </Link>
-                    ) : (
-                      withArtistName
-                    )}
-                  </p>
+                {withArtistName && !withArtistTo ? (
+                  <p className="cos-upcoming-when">with {withArtistName}</p>
                 ) : null}
                 {whenExtra && whenLineHasWallClock(whenExtra) ? (
                   <p className="cos-upcoming-when">{whenExtra}</p>
@@ -130,7 +122,22 @@ function UpcomingCosShowsSection() {
                   />
                 ) : null}
               </div>
-              {profileTo ? (
+              {withArtistTo && profileTo ? (
+                <div className="cos-upcoming-cta-row">
+                  <Link to={profileTo} className="btn btn-secondary cos-upcoming-cta cos-upcoming-profile">
+                    {artistImage ? (
+                      <SmartImage src={artistImage} alt="" width="40" height="40" className="cos-upcoming-profile-img" />
+                    ) : null}
+                    <span>{artistName ? `${artistName} profile` : 'Artist profile'}</span>
+                  </Link>
+                  <Link to={withArtistTo} className="btn btn-secondary cos-upcoming-cta cos-upcoming-profile">
+                    {withArtistImage ? (
+                      <SmartImage src={withArtistImage} alt="" width="40" height="40" className="cos-upcoming-profile-img" />
+                    ) : null}
+                    <span>{withArtistName ? `${withArtistName} profile` : 'Artist profile'}</span>
+                  </Link>
+                </div>
+              ) : profileTo ? (
                 <Link to={profileTo} className="btn btn-secondary cos-upcoming-cta">
                   {artistName ? `${artistName} profile` : 'Artist profile'}
                 </Link>

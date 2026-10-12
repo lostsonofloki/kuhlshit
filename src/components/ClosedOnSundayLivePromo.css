@@ -84,6 +84,23 @@
   }
 }
 
+.cos-live-promo-portraits {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.65rem;
+  width: 100%;
+  max-width: min(420px, 100%);
+  flex-shrink: 0;
+}
+
+.cos-live-promo-portraits .cos-live-promo-media {
+  display: block;
+  flex: 1 1 0;
+  width: auto;
+  max-width: none;
+}
+
 .cos-live-promo-media {
   position: relative;
   flex-shrink: 0;
@@ -266,6 +283,17 @@ a.cos-live-promo-venue:focus-visible {
   align-items: stretch;
   width: 100%;
   max-width: min(20rem, 100%);
+}
+
+.cos-live-promo-actions--pair {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: none;
+}
+
+.cos-live-promo-actions--pair .cos-live-promo-btn {
+  width: auto;
+  flex: 1 1 9.5rem;
 }
 
 @media (min-width: 480px) {

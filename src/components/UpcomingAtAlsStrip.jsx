@@ -1,6 +1,7 @@
 import { useMemo, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import AddToCalendarRow from './AddToCalendarRow'
+import SmartImage from './SmartImage'
 import data from '../data/data.json'
 import {
   formatCosHubDateShort,
@@ -35,10 +36,25 @@ function UpcomingAtAlsStrip() {
         Upcoming Closed on Sundays
       </h2>
       <ul className="als-upcoming-strip__list">
-        {rows.map(({ event: e, dateLabel, title, whenExtra, artistName, profileTo, withArtistName, withArtistTo, hubCalendar }) => {
+        {rows.map(({ event: e, dateLabel, title, whenExtra, artistName, artistImage, profileTo, withArtistName, withArtistTo, withArtistImage, hubCalendar }) => {
           const primary = artistName || title
           const nameEl =
-            profileTo && artistName ? (
+            withArtistTo && profileTo && artistName ? (
+              <span className="als-upcoming-strip__profiles">
+                <Link to={profileTo} className="als-upcoming-strip__profile">
+                  {artistImage ? (
+                    <SmartImage src={artistImage} alt="" width="36" height="36" className="als-upcoming-strip__profile-img" />
+                  ) : null}
+                  <span>{artistName}</span>
+                </Link>
+                <Link to={withArtistTo} className="als-upcoming-strip__profile">
+                  {withArtistImage ? (
+                    <SmartImage src={withArtistImage} alt="" width="36" height="36" className="als-upcoming-strip__profile-img" />
+                  ) : null}
+                  <span>{withArtistName}</span>
+                </Link>
+              </span>
+            ) : profileTo && artistName ? (
               <Link to={profileTo} className="als-upcoming-strip__title-link">
                 {primary}
               </Link>
@@ -56,17 +72,8 @@ function UpcomingAtAlsStrip() {
               </time>
               <span className="als-upcoming-strip__title-wrap">
                 {nameEl}
-                {withArtistName ? (
-                  <span className="als-upcoming-strip__when ui-meta">
-                    with{' '}
-                    {withArtistTo ? (
-                      <Link to={withArtistTo} className="als-upcoming-strip__title-link">
-                        {withArtistName}
-                      </Link>
-                    ) : (
-                      withArtistName
-                    )}
-                  </span>
+                {withArtistName && !withArtistTo ? (
+                  <span className="als-upcoming-strip__when ui-meta">with {withArtistName}</span>
                 ) : null}
                 {whenExtra && whenLineHasWallClock(whenExtra) ? (
                   <span className="als-upcoming-strip__when ui-meta">{whenExtra}</span>

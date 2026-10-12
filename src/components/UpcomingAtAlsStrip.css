@@ -73,6 +73,58 @@
   border-radius: 2px;
 }
 
+.als-upcoming-strip__profiles {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.45rem 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .als-upcoming-strip__item:has(.als-upcoming-strip__profiles) .als-upcoming-strip__title-wrap {
+    flex: 1 1 100%;
+  }
+
+  .als-upcoming-strip__profile {
+    white-space: nowrap;
+  }
+}
+
+.als-upcoming-strip__profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-accent-primary);
+  font-weight: 600;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.als-upcoming-strip__profile picture {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.als-upcoming-strip__profile-img,
+.als-upcoming-strip__profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.als-upcoming-strip__profile:hover,
+.als-upcoming-strip__profile:focus-visible {
+  color: var(--color-accent-hover);
+}
+
+.als-upcoming-strip__profile:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .als-upcoming-strip__when {
   font-size: 0.8rem;
 }

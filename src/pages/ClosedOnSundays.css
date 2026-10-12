@@ -536,6 +536,49 @@
   color: var(--color-text-muted);
 }
 
+.cos-upcoming-cta-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 639px) {
+  .cos-upcoming-cta-row {
+    width: 100%;
+  }
+
+  .cos-upcoming-cta-row .cos-upcoming-cta {
+    min-width: 0;
+    flex: 1 1 0;
+    width: auto;
+  }
+}
+
+.btn.cos-upcoming-profile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 48px;
+}
+
+.cos-upcoming-profile picture {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.cos-upcoming-profile-img,
+.cos-upcoming-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .cos-upcoming-cta {
   flex-shrink: 0;
   align-self: flex-start;

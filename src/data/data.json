@@ -322,17 +322,17 @@
       },
       "videos": [
         {
-          "title": "Closed on Sundays - Ham Bagby",
-          "videoId": "cAhwfo13KWY",
-          "thumbnail": "https://img.youtube.com/vi/cAhwfo13KWY/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY",
-          "source": "Closed on Sundays"
-        },
-        {
           "title": "Closed on Sundays - Caitlin Cannon w/ Ham Bagby",
           "videoId": "K6t5rRAPBKE",
           "thumbnail": "https://img.youtube.com/vi/K6t5rRAPBKE/maxresdefault.jpg",
           "url": "https://www.youtube.com/watch?v=K6t5rRAPBKE",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Ham Bagby",
+          "videoId": "cAhwfo13KWY",
+          "thumbnail": "https://img.youtube.com/vi/cAhwfo13KWY/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY",
           "source": "Closed on Sundays"
         }
       ],
@@ -1182,6 +1182,13 @@
           "thumbnail": "https://img.youtube.com/vi/qWhkrDRqXcQ/maxresdefault.jpg",
           "url": "https://www.youtube.com/watch?v=qWhkrDRqXcQ",
           "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays — Lance Cooper — Sleepyhead",
+          "videoId": "H7-E9OJ9YqU",
+          "thumbnail": "https://img.youtube.com/vi/H7-E9OJ9YqU/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=H7-E9OJ9YqU",
+          "source": "Closed on Sundays"
         }
       ],
       "featured": true,
@@ -1373,17 +1380,17 @@
       "bandsintown_slug": "Ritch Henderson",
       "videos": [
         {
-          "title": "Closed on Sundays - Ritch Henderson (Performance 1)",
-          "videoId": "P8RDNvjTYaM",
-          "thumbnail": "https://img.youtube.com/vi/P8RDNvjTYaM/maxresdefault.jpg",
-          "url": "https://youtu.be/P8RDNvjTYaM?si=yehXE_nqxpC0wV6g",
-          "source": "Closed on Sundays"
-        },
-        {
           "title": "Closed on Sundays - Ritch Henderson (Performance 2)",
           "videoId": "4Ac1twRArGc",
           "thumbnail": "https://img.youtube.com/vi/4Ac1twRArGc/maxresdefault.jpg",
           "url": "https://youtu.be/4Ac1twRArGc?si=jDWnMlS1n37k7TDF",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Ritch Henderson (Performance 1)",
+          "videoId": "P8RDNvjTYaM",
+          "thumbnail": "https://img.youtube.com/vi/P8RDNvjTYaM/maxresdefault.jpg",
+          "url": "https://youtu.be/P8RDNvjTYaM?si=yehXE_nqxpC0wV6g",
           "source": "Closed on Sundays"
         }
       ],

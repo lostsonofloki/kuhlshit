@@ -237,11 +237,11 @@
       },
       "videos": [
         {
-          "title": "Fire Camino - Live Performance",
+          "title": "Closed on Sundays - Fire Camino",
           "videoId": "KRsYv6zugEI",
           "thumbnail": "https://img.youtube.com/vi/KRsYv6zugEI/maxresdefault.jpg",
-          "url": "https://youtu.be/KRsYv6zugEI?si=g90eidzyXBiRPKRo",
-          "source": "YouTube"
+          "url": "https://www.youtube.com/watch?v=KRsYv6zugEI",
+          "source": "Closed on Sundays"
         }
       ],
       "jingle": {
@@ -280,7 +280,15 @@
         "where": "Al's Spirits & Music · Reform, AL"
       },
       "upcomingShows": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Goodloe & Kailee Chilcutt",
+          "videoId": "KWP30y6A7-U",
+          "thumbnail": "https://img.youtube.com/vi/KWP30y6A7-U/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=KWP30y6A7-U",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-05-12"
     },
@@ -310,7 +318,14 @@
           "title": "Closed on Sundays - Ham Bagby",
           "videoId": "cAhwfo13KWY",
           "thumbnail": "https://img.youtube.com/vi/cAhwfo13KWY/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=4",
+          "url": "https://www.youtube.com/watch?v=cAhwfo13KWY",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Caitlin Cannon w/ Ham Bagby",
+          "videoId": "K6t5rRAPBKE",
+          "thumbnail": "https://img.youtube.com/vi/K6t5rRAPBKE/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=K6t5rRAPBKE",
           "source": "Closed on Sundays"
         }
       ],
@@ -344,10 +359,17 @@
       "bandsintown_slug": "Hayden Hunter and The Yearly Trials",
       "videos": [
         {
+          "title": "Closed on Sundays - Hayden Hunter & the Yearly Trials",
+          "videoId": "EbkcHNHNoHI",
+          "thumbnail": "https://img.youtube.com/vi/EbkcHNHNoHI/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=EbkcHNHNoHI",
+          "source": "Closed on Sundays"
+        },
+        {
           "title": "Closed on Sundays - Hayden Hunter & The Yearly Trials",
           "videoId": "YcjysGPux5w",
           "thumbnail": "https://img.youtube.com/vi/YcjysGPux5w/maxresdefault.jpg",
-          "url": "https://youtu.be/YcjysGPux5w?si=MANcfTgwaz0-uuVH",
+          "url": "https://www.youtube.com/watch?v=YcjysGPux5w",
           "source": "Closed on Sundays"
         }
       ],
@@ -407,7 +429,15 @@
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays — Haysop & Jacob Kynard",
+          "videoId": "N2CAIOTdzEs",
+          "thumbnail": "https://img.youtube.com/vi/N2CAIOTdzEs/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=N2CAIOTdzEs",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -438,10 +468,10 @@
       "bandsintown_slug": "Honey Boy and Boots",
       "videos": [
         {
-          "title": "Closed on Sundays - Honey Boy and Boots",
+          "title": "Closed on Sundays - Drew & Courtney Blackwell",
           "videoId": "uUOF8cq6jrk",
           "thumbnail": "https://img.youtube.com/vi/uUOF8cq6jrk/maxresdefault.jpg",
-          "url": "https://youtu.be/uUOF8cq6jrk?si=Adt8ExTp2Q7mh7fi",
+          "url": "https://www.youtube.com/watch?v=uUOF8cq6jrk",
           "source": "Closed on Sundays"
         }
       ],
@@ -526,6 +556,13 @@
       ],
       "videos": [
         {
+          "title": "Closed on Sundays - Hope MacGregor",
+          "videoId": "L1OaYBHBXtU",
+          "thumbnail": "https://img.youtube.com/vi/L1OaYBHBXtU/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=L1OaYBHBXtU",
+          "source": "Closed on Sundays"
+        },
+        {
           "title": "Hope MacGregor - Sloppy Seconds (Official Video)",
           "videoId": "dIXVTeyLgbA",
           "thumbnail": "https://img.youtube.com/vi/dIXVTeyLgbA/maxresdefault.jpg",
@@ -567,7 +604,22 @@
         "when": "Sun May 3, 2026 · 3:00 PM CT",
         "where": "Al's Spirits & Music · Reform, AL"
       },
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Huey & Jacob Kynard",
+          "videoId": "H74S3A-ev9Q",
+          "thumbnail": "https://img.youtube.com/vi/H74S3A-ev9Q/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=H74S3A-ev9Q",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Huey and the Heaven-Sent",
+          "videoId": "mrFVYoD7sTw",
+          "thumbnail": "https://img.youtube.com/vi/mrFVYoD7sTw/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=mrFVYoD7sTw",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-04-29"
     },
@@ -592,7 +644,15 @@
         "appleMusic": "",
         "youtube": "https://www.youtube.com/watch?v=xmJDtLSbdgs&list=RDxmJDtLSbdgs&start_radio=1"
       },
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Hunter Myers",
+          "videoId": "xmJDtLSbdgs",
+          "thumbnail": "https://img.youtube.com/vi/xmJDtLSbdgs/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=xmJDtLSbdgs",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -669,7 +729,29 @@
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays — Jacob Kynard & Haysop",
+          "videoId": "N2CAIOTdzEs",
+          "thumbnail": "https://img.youtube.com/vi/N2CAIOTdzEs/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=N2CAIOTdzEs",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Huey & Jacob Kynard",
+          "videoId": "H74S3A-ev9Q",
+          "thumbnail": "https://img.youtube.com/vi/H74S3A-ev9Q/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=H74S3A-ev9Q",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays - Jacob Kynard",
+          "videoId": "9L7aFWaT7cE",
+          "thumbnail": "https://img.youtube.com/vi/9L7aFWaT7cE/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=9L7aFWaT7cE",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-04-15"
     },
@@ -730,6 +812,13 @@
       ],
       "videos": [
         {
+          "title": "Closed on Sundays - Janet Simpson",
+          "videoId": "QRjm5fq-l8I",
+          "thumbnail": "https://img.youtube.com/vi/QRjm5fq-l8I/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=QRjm5fq-l8I",
+          "source": "Closed on Sundays"
+        },
+        {
           "title": "Janet Simpson — Tonight",
           "videoId": "cUjX86uPOoQ",
           "thumbnail": "https://img.youtube.com/vi/cUjX86uPOoQ/maxresdefault.jpg",
@@ -789,7 +878,15 @@
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Jodie Ross",
+          "videoId": "TEf-9rPi0Jk",
+          "thumbnail": "https://img.youtube.com/vi/TEf-9rPi0Jk/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=TEf-9rPi0Jk",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-05-11"
     },
@@ -818,11 +915,11 @@
       },
       "videos": [
         {
-          "title": "John Keys - Live Video",
+          "title": "Closed on Sundays - John Keys",
           "videoId": "NU-oWnR1wDE",
           "thumbnail": "https://img.youtube.com/vi/NU-oWnR1wDE/maxresdefault.jpg",
-          "url": "https://youtu.be/NU-oWnR1wDE?si=FUEEL-OeJy4hJ2Uj",
-          "source": "YouTube"
+          "url": "https://www.youtube.com/watch?v=NU-oWnR1wDE",
+          "source": "Closed on Sundays"
         }
       ],
       "featured": true,
@@ -948,7 +1045,15 @@
         "appleMusic": "",
         "youtube": ""
       },
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Jonny Hollis",
+          "videoId": "fZPk-jaYQM4",
+          "thumbnail": "https://img.youtube.com/vi/fZPk-jaYQM4/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=fZPk-jaYQM4",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -1063,7 +1168,15 @@
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Lance Cooper",
+          "videoId": "qWhkrDRqXcQ",
+          "thumbnail": "https://img.youtube.com/vi/qWhkrDRqXcQ/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=qWhkrDRqXcQ",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-05-12"
     },
@@ -1145,6 +1258,13 @@
         }
       ],
       "videos": [
+        {
+          "title": "Closed on Sundays - Megan Lea",
+          "videoId": "3_YYOxT9vlQ",
+          "thumbnail": "https://img.youtube.com/vi/3_YYOxT9vlQ/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=3_YYOxT9vlQ",
+          "source": "Closed on Sundays"
+        },
         {
           "title": "Megan Lea — YouTube",
           "videoId": "f9wsvsMwjl4",
@@ -1489,7 +1609,15 @@
         "appleMusic": "https://music.apple.com/us/album/_/1580771969?i=1580771970&mt=1&app=music&ls=1",
         "youtube": "https://youtu.be/Pw1cX_dxaCM?si=isOsUsY8mGtj6hlw"
       },
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Tyler Tisdale",
+          "videoId": "Pw1cX_dxaCM",
+          "thumbnail": "https://img.youtube.com/vi/Pw1cX_dxaCM/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=Pw1cX_dxaCM",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-03-30"
     },
@@ -1542,6 +1670,13 @@
       ],
       "videos": [
         {
+          "title": "Closed on Sundays - Wesley Hill",
+          "videoId": "BkFkDnGTZqM",
+          "thumbnail": "https://img.youtube.com/vi/BkFkDnGTZqM/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=BkFkDnGTZqM",
+          "source": "Closed on Sundays"
+        },
+        {
           "title": "Wesley Hill — Died to Myself",
           "videoId": "LGRP0SS6mss",
           "thumbnail": "https://img.youtube.com/vi/LGRP0SS6mss/maxresdefault.jpg",
@@ -1578,10 +1713,10 @@
       "bandsintown_slug": "Will Stewart",
       "videos": [
         {
-          "title": "Closed on Sundays - Will Stewart",
+          "title": "Closed on Sundays - Will Stewart & Ford Boswell",
           "videoId": "hkqK0yxshwk",
           "thumbnail": "https://img.youtube.com/vi/hkqK0yxshwk/maxresdefault.jpg",
-          "url": "https://www.youtube.com/watch?v=hkqK0yxshwk&list=PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek&index=21",
+          "url": "https://www.youtube.com/watch?v=hkqK0yxshwk",
           "source": "Closed on Sundays"
         }
       ],
@@ -1672,7 +1807,15 @@
           "mapUrl": "https://www.google.com/maps/place/Al%E2%80%99s+Spirits+and+Music/@33.3782126,-88.0138816,16z/data=!3m1!4b1!4m6!3m5!1s0x888667d5b332ffd5:0x5867b2cdbe5ef2ff!8m2!3d33.3782081!4d-88.0113067!16s%2Fg%2F11c2p93cdp?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D"
         }
       ],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Closed on Sundays - Samuel Young",
+          "videoId": "oRvmC6JUA38",
+          "thumbnail": "https://img.youtube.com/vi/oRvmC6JUA38/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=oRvmC6JUA38",
+          "source": "Closed on Sundays"
+        }
+      ],
       "featured": true,
       "publishDate": "2026-09-28"
     }

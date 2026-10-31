@@ -12,6 +12,7 @@ import {
 } from '../lib/closedOnSundayHubEvents'
 import { whenLineHasWallClock } from '../lib/upcomingShowCalendar'
 import { mapPlaylistItemsToVideos } from '../lib/youtubePlaylist'
+import { closedOnSundayProfileTags } from '../lib/matchClosedOnSundayArtists'
 import './ClosedOnSundays.css'
 
 function cosSessionShortTitle(name) {
@@ -234,7 +235,12 @@ function ClosedOnSundaysPage() {
       const filtered = episodes.filter((ep) => {
         const title = typeof ep.title === 'string' ? ep.title : ''
         const desc = typeof ep.description === 'string' ? ep.description : ''
-        return title.toLowerCase().includes(query) || desc.toLowerCase().includes(query)
+        const names = (ep.profiles || []).map((profile) => profile.name).join(' ')
+        return (
+          title.toLowerCase().includes(query) ||
+          desc.toLowerCase().includes(query) ||
+          names.toLowerCase().includes(query)
+        )
       })
       setFilteredEpisodes(filtered)
     } else {
@@ -268,6 +274,10 @@ function ClosedOnSundaysPage() {
 
       const episodesData = mapPlaylistItemsToVideos(allItems)
         .filter((episode) => episode.videoId !== FEATURED_COS_SHOW.videoId)
+        .map((episode) => ({
+          ...episode,
+          profiles: closedOnSundayProfileTags(data.artists, episode),
+        }))
 
       setEpisodes(episodesData)
       setFilteredEpisodes(episodesData)
@@ -387,6 +397,7 @@ function ClosedOnSundaysPage() {
           {filteredEpisodes.map(episode => {
             const epTitle = typeof episode.title === 'string' ? episode.title : ''
             const epDesc = typeof episode.description === 'string' ? episode.description : ''
+            const profiles = Array.isArray(episode.profiles) ? episode.profiles : []
             return (
             <div key={episode.id} className="episode-card">
               <a
@@ -402,6 +413,24 @@ function ClosedOnSundaysPage() {
               </a>
               <div className="episode-content">
                 <h3>{epTitle}</h3>
+                {profiles.length > 0 ? (
+                  <div className="episode-profiles">
+                    {profiles.map((profile) => (
+                      <Link key={profile.id} to={profile.to} className="episode-profile">
+                        {profile.image ? (
+                          <SmartImage
+                            src={profile.image}
+                            alt=""
+                            width="28"
+                            height="28"
+                            className="episode-profile-img"
+                          />
+                        ) : null}
+                        <span>{profile.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
                 <p className="episode-description">
                   {epDesc.substring(0, 150)}
                   {epDesc.length > 150 ? '...' : ''}

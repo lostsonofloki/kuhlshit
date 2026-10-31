@@ -237,6 +237,13 @@
       },
       "videos": [
         {
+          "title": "Closed on Sundays — Taylor Hollingsworth with Fire Camino & Kevin Stripling",
+          "videoId": "jl5aNLeULWw",
+          "thumbnail": "https://img.youtube.com/vi/jl5aNLeULWw/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=jl5aNLeULWw",
+          "source": "Closed on Sundays"
+        },
+        {
           "title": "Closed on Sundays - Fire Camino",
           "videoId": "KRsYv6zugEI",
           "thumbnail": "https://img.youtube.com/vi/KRsYv6zugEI/maxresdefault.jpg",
@@ -1445,6 +1452,13 @@
           "videoId": "NCKSztNWVpE",
           "thumbnail": "https://img.youtube.com/vi/NCKSztNWVpE/maxresdefault.jpg",
           "url": "https://www.youtube.com/watch?v=NCKSztNWVpE",
+          "source": "Closed on Sundays"
+        },
+        {
+          "title": "Closed on Sundays — Taylor Hollingsworth with Fire Camino & Kevin Stripling",
+          "videoId": "jl5aNLeULWw",
+          "thumbnail": "https://img.youtube.com/vi/jl5aNLeULWw/maxresdefault.jpg",
+          "url": "https://www.youtube.com/watch?v=jl5aNLeULWw",
           "source": "Closed on Sundays"
         },
         {

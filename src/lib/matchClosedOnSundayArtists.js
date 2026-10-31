@@ -28,13 +28,17 @@ function containsPhrase(haystack, phrase) {
 
 /**
  * Artists whose profile belongs on a Closed on Sundays upload.
- * Matches a stored video id, the profile name, or a known alias.
+ * Compares the YouTube title and description to profile names.
+ * A stored video id, the profile name, or a known alias all count.
  * @param {unknown[]} artists
- * @param {{ title?: string, videoId?: string }} video
+ * @param {{ title?: string, description?: string, videoId?: string }} video
  */
 export function matchArtistsForClosedOnSundayVideo(artists, video) {
   const title = normalizeSearchText(cleanTitle(video?.title))
+  const description = normalizeSearchText(cleanTitle(video?.description))
+  const haystack = [title, description].filter(Boolean).join(' ')
   const titleCompact = compactSearchText(cleanTitle(video?.title))
+  const descriptionCompact = compactSearchText(cleanTitle(video?.description))
   const videoId = typeof video?.videoId === 'string' ? video.videoId : ''
   const titleWords = new Set(title.split(' ').filter(Boolean))
 
@@ -51,9 +55,9 @@ export function matchArtistsForClosedOnSundayVideo(artists, video) {
     const aliases = ALIASES_BY_ID[artist.id] || []
     const phrases = [nameNorm, ...aliases.map((alias) => normalizeSearchText(alias))].filter(Boolean)
     const phraseHit = phrases.some((phrase) => {
-      if (containsPhrase(title, phrase)) return true
+      if (containsPhrase(haystack, phrase)) return true
       const compact = compactSearchText(phrase)
-      return compact.length >= 6 && titleCompact.includes(compact)
+      return compact.length >= 6 && (titleCompact.includes(compact) || descriptionCompact.includes(compact))
     })
     const tokens = significantTokens(nameNorm)
     const tokenHit = tokens.length >= 2 && tokens.every((token) => titleWords.has(token))
@@ -62,7 +66,7 @@ export function matchArtistsForClosedOnSundayVideo(artists, video) {
 
     let order = Number.POSITIVE_INFINITY
     for (const phrase of phrases) {
-      const index = title.indexOf(phrase)
+      const index = haystack.indexOf(phrase)
       if (index >= 0) order = Math.min(order, index)
     }
     for (const token of tokens) {

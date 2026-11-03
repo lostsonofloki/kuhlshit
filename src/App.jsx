@@ -6,7 +6,6 @@ import CanonicalLink from './components/CanonicalLink'
 import DefaultSeoHelmet from './components/DefaultSeoHelmet'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import AnnouncementBar from './components/AnnouncementBar'
 import LouieEasterEgg from './components/LouieEasterEgg'
 import './App.css'
 import HomePage from './pages/HomePage'
@@ -41,7 +40,6 @@ function App() {
     <div className="app">
       <CanonicalLink />
       <DefaultSeoHelmet />
-      <AnnouncementBar />
       <Header />
       <main className="main-content">
         <div className="content-wrapper">

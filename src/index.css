@@ -91,7 +91,7 @@
   --transition-normal: 300ms ease;
   --transition-slow: 500ms ease;
 
-  /* Sticky chrome (announcement + header); overridden when banner is present */
+  /* Sticky header offset. Kept at 0 so chrome that used to sit under the porch banner stays flush. */
   --announcement-bar-height: 0px;
   --header-chrome-height: 52px;
 }

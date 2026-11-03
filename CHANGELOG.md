@@ -33,6 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- **Closed on Sundays YouTube playlist:** the previous playlist was deleted. The archive and the Ham Bagby, Phillip Savell, and Will Stewart watch links now use the replacement playlist (`PLfwLN6GyJMg4`, 48 sets). A `VITE_YOUTUBE_PLAYLIST_ID` still set to the deleted id is ignored so the next deploy does not keep requesting it.
 - **Huge Ghost:** profile filled from the band’s public SoundCloud, Spotify, Instagram, and Facebook pages (Starkville indie rock trio, Connect and Listen links, local photo). Closed on Sundays **`closed-on-sundays-2026-11-01`** stays Sunday, November 1, 2026 at 4:00 PM CT.
 - **Creators browse:** `/artists` has a **Comedians** tab. Comedy records in `data.comedy` (Mike Rainey) show in All and Comedians, and open at `/artists/mike-rainey`.
 - **Vault — past Closed on Sundays copy:** hub descriptions for sessions before 2026-09-26 now read as recorded sets at Al's (names, dates, times, and genre notes kept). Those rows are marked `completed`, matching Taylor Hollingsworth and Goodloe Chilcutt.

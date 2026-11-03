@@ -171,7 +171,23 @@ const CLOSED_ON_SUNDAYS_INTRO = (
 
 // Check for VITE_ prefix (Vite standard) or plain name (Vercel import)
 const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY || import.meta.env.YOUTUBE_API_KEY || '';
-const PLAYLIST_ID = import.meta.env.VITE_YOUTUBE_PLAYLIST_ID || import.meta.env.YOUTUBE_PLAYLIST_ID || 'PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek';
+
+/** Current Closed on Sundays playlist on the Porch Talk channel. */
+const CLOSED_ON_SUNDAYS_PLAYLIST_ID = 'PLfwLN6GyJMg4';
+
+/**
+ * Alan deleted this playlist on Nov 2, 2026 and published the replacement above.
+ * Vite inlines VITE_YOUTUBE_PLAYLIST_ID at build time, so a stale Production value
+ * would keep shipping the deleted id until someone edits it in Vercel.
+ */
+const DELETED_CLOSED_ON_SUNDAYS_PLAYLIST_IDS = new Set(['PLzKakvgn9O5SVJcmGFIRc77zk8Asib1Ek']);
+
+const configuredPlaylistId =
+  import.meta.env.VITE_YOUTUBE_PLAYLIST_ID || import.meta.env.YOUTUBE_PLAYLIST_ID || '';
+const PLAYLIST_ID =
+  configuredPlaylistId && !DELETED_CLOSED_ON_SUNDAYS_PLAYLIST_IDS.has(configuredPlaylistId)
+    ? configuredPlaylistId
+    : CLOSED_ON_SUNDAYS_PLAYLIST_ID;
 
 /** Latest full Closed on Sundays set, pinned above the playlist archive. */
 const FEATURED_COS_SHOW = {
